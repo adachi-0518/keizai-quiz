@@ -49,9 +49,72 @@ button.none{border-color:var(--warn);color:var(--warn)}
 .foot{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
 .msg{background:var(--accentbg);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.7}
 .credit{font-size:11px;color:var(--sub);margin-top:34px;line-height:1.7}
+
+/* --- ドリルモード --- */
+#dfab{position:fixed;right:16px;bottom:16px;z-index:60;padding:13px 20px;border-radius:99px;background:var(--accent);color:#fff;border:none;font-size:15px;font-weight:600;font-family:inherit;box-shadow:0 4px 16px rgba(0,0,0,.22);cursor:pointer;line-height:1.4}
+#dfab:hover{opacity:.9}
+#dov{position:fixed;inset:0;z-index:100;background:var(--bg);display:none;flex-direction:column}
+#dov.on{display:flex}
+#dbar{flex:0 0 auto;display:flex;align-items:center;gap:12px;padding:11px 16px;border-bottom:1px solid var(--line);background:var(--card);flex-wrap:wrap}
+#dttl{font-size:14px;font-weight:600;flex:1;min-width:120px;line-height:1.5}
+.dpill{font-size:12px;color:var(--sub);white-space:nowrap}
+.dpill b{font-size:15px;font-weight:600}
+.dpill.ok b{color:var(--ok)}.dpill.ng b{color:var(--ng)}
+#dbar button{font-family:inherit;font-size:13px;padding:6px 13px;border:1px solid var(--line);background:var(--bg);color:var(--txt);border-radius:8px;cursor:pointer}
+#dprog{flex:0 0 auto;height:4px;background:var(--card)}
+#dprog i{display:block;height:100%;background:var(--accent);width:0;transition:width .25s}
+#dbody{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.dinner{max-width:760px;margin:0 auto;padding:20px 16px 120px}
+.dsec{margin-bottom:22px}
+.dsec h3{font-size:13px;font-weight:600;color:var(--sub);margin:0 0 9px;letter-spacing:.02em}
+.dchips{display:flex;flex-wrap:wrap;gap:7px}
+.dchip{padding:8px 14px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:99px;cursor:pointer;font-size:13px;font-family:inherit;line-height:1.5}
+.dchip:hover{border-color:var(--accent)}
+.dchip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.dchip.dead{opacity:.42}
+.dchip small{opacity:.65;margin-left:4px;font-size:11px}
+#dstart{width:100%;padding:15px;border-radius:12px;background:var(--accent);color:#fff;border:none;font-size:16px;font-weight:600;font-family:inherit;cursor:pointer;margin-top:6px;line-height:1.5}
+#dstart:disabled{opacity:.4;cursor:default}
+.dnote{font-size:12px;color:var(--sub);line-height:1.75;margin:10px 0 0}
+.dq{font-size:19px;line-height:2;margin:8px 0 20px}
+.dq em{font-style:normal;background:var(--blank,var(--accentbg));border-bottom:2px solid var(--accent);padding:1px 30px;border-radius:3px}
+.dq em.filled{background:var(--okbg);border-bottom-color:var(--ok);padding:1px 10px;font-weight:600;color:var(--ok)}
+.dseg{cursor:pointer;border-radius:4px;padding:2px 1px;border-bottom:2px dotted var(--line)}
+.dseg:hover{background:var(--accentbg)}
+.dlocked .dseg{cursor:default;border-bottom-color:transparent}
+.dlocked .dseg:hover{background:transparent}
+.dseg.isbad{background:var(--ngbg);color:var(--ng);font-weight:600;border-bottom-color:var(--ng)}
+.dseg.wrongpick{outline:2px solid var(--ng);outline-offset:1px}
+.dopt{display:flex;gap:11px;align-items:flex-start;padding:13px 14px;border:1px solid var(--line);background:var(--card);border-radius:10px;cursor:pointer;font-size:16px;line-height:1.65;margin-bottom:8px}
+.dopt:hover{border-color:var(--accent)}
+.dopt.c{background:var(--okbg);border-color:var(--ok)}
+.dopt.x{background:var(--ngbg);border-color:var(--ng)}
+.dopt i{min-width:22px;height:22px;border-radius:6px;background:var(--bg);color:var(--sub);font-style:normal;font-size:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:3px}
+.dopt.c i{background:var(--ok);color:#fff}.dopt.x i{background:var(--ng);color:#fff}
+.dbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.dbtns button{flex:1;min-width:130px;padding:13px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--txt);font-size:15px;font-family:inherit;cursor:pointer;line-height:1.5}
+.dbtns button.g{border-color:var(--ok);color:var(--ok);font-weight:600}
+.dbtns button.r{border-color:var(--ng);color:var(--ng);font-weight:600}
+.dbtns button.p{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600}
+.dfix{margin-top:16px;padding:13px 15px;background:var(--okbg);border-radius:10px;font-size:16px;line-height:1.75}
+.dfix b{color:var(--ok)}
+.dverdict{display:inline-block;padding:4px 12px;border-radius:99px;font-size:13px;font-weight:600;margin-bottom:10px}
+.dverdict.ok{background:var(--okbg);color:var(--ok)}
+.dverdict.ng{background:var(--ngbg);color:var(--ng)}
+.dexp{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--sub);line-height:1.9}
+.dsrc{font-size:12px;color:var(--sub);margin-bottom:6px}
+.dkeys{position:fixed;left:0;right:0;bottom:0;padding:9px 16px;background:var(--card);border-top:1px solid var(--line);font-size:11.5px;color:var(--sub);text-align:center;line-height:1.7}
+.dkeys kbd{display:inline-block;padding:1px 6px;border:1px solid var(--line);border-radius:4px;background:var(--bg);font-family:inherit;font-size:11px;margin:0 1px}
+@media(max-width:520px){.dq{font-size:17px}.dopt{font-size:15px}.dkeys{display:none}.dinner{padding-bottom:40px}}
+.dbig{font-size:34px;font-weight:600;line-height:1.4;margin:0 0 6px}
+
+.dans{margin-top:16px;padding:14px 16px;background:var(--okbg);border:1px solid var(--ok);border-radius:10px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.dans span{font-size:12px;color:var(--sub);flex-shrink:0}
+.dans b{font-size:22px;font-weight:600;color:var(--ok);line-height:1.5}
+@media(max-width:520px){.dans b{font-size:19px}}
 </style></head><body><div class="wrap">
 <h1>組織行動論 間違い探し</h1>
-<p class="lead">8/6（3限・C102）／<b>間違い探し25問＋α・持込一切不可・50分</b>。全8章・133問、うち<b>誤りのない文が27問</b>。文中の誤り1箇所をクリックしてください。誤りが数語にわたる場合は、そのどこをクリックしても正解になります。<br>初期状態では<b>区切り線を表示していません</b>（本番と同じく、文を読んで自分で誤りを見つける形）。区切りを見たいときは下のボタンで切り替えられます。<b>令和7年度の記入済みレジュメ（プリント1〜32ページ）に照合済み</b>。</p>
+<p class="lead">8/6（3限・C102）／<b>間違い探し25問＋α・持込一切不可・50分</b>。全8章・133問、うち<b>誤りのない文が27問</b>。文中の誤り1箇所をクリックしてください。誤りが数語にわたる場合は、そのどこをクリックしても正解になります。<br>初期状態では<b>区切り線を表示していません</b>（本番と同じく、文を読んで自分で誤りを見つける形）。区切りを見たいときは下のボタンで切り替えられます。<b>令和7年度の記入済みレジュメ（プリント1〜32ページ）に照合済み</b>。<br><b style="color:var(--ng)">第4章「職務満足感」は試験範囲外</b>（試験案内に明記）のため、ドリルの出題対象から外しています。<br><b>右下の「ドリルを始める」</b>から、1問ずつ・キーボードで高速に回せます（✕だけを全章まとめて回すのもここから）。</p>
 <div class="tabs" id="tabs"></div>
 <div class="opts"><button class="tg" id="th">区切りを隠す（本番モード）</button><button class="tg" id="ts">順番をシャッフル</button></div>
 <div class="stats">
@@ -154,4 +217,255 @@ document.getElementById('ba').onclick=function(){wrongOnly=false;this.style.disp
 document.getElementById('br').onclick=function(){LEC[cur].qs.forEach((q,qi)=>delete S[cur+'_'+qi]);delete ORD[cur];wrongOnly=false;rb();save();render();};
 load();render();
 
-</script></body></html>
+</script>
+<script>
+(function(){
+if(typeof LEC==='undefined'||typeof S==='undefined')return;
+var CFG={"kind": "OB", "unit": "章", "skip": [3]};
+var UN=CFG.unit, OB=(CFG.kind==='OB');
+
+var SEL=[], FILTER='all', SHUF=true, AUTO=true, DM='sel';
+var Q=[], IX=0, ST='ask', PICKED=null, TOK=0, ROUND={n:0,ok:0,wrong:[]};
+
+function E(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function keyOf(li,qi){return OB?(li+'_'+qi):(DM+'_'+li+'_'+qi);}
+function live(li){return CFG.skip.indexOf(li)<0;}
+function count(li,f){var n=0;LEC[li].qs.forEach(function(q,qi){var st=S[keyOf(li,qi)];
+  if(f==='wrong'){if(st&&!st.ok)n++;}else if(f==='new'){if(!st)n++;}else n++;});return n;}
+function totals(f){var n=0;LEC.forEach(function(L,li){if(live(li))n+=count(li,f);});return n;}
+
+/* ---------- overlay ---------- */
+var ov=document.createElement('div');ov.id='dov';
+ov.innerHTML='<div id="dbar"><span id="dttl"></span>'
+ +'<span class="dpill" id="dleft"></span><span class="dpill ok" id="dok"></span><span class="dpill ng" id="dng"></span>'
+ +'<button id="dre">範囲を選び直す</button><button id="dclose">閉じる</button></div>'
+ +'<div id="dprog"><i></i></div><div id="dbody"><div class="dinner" id="dinner"></div></div>';
+document.body.appendChild(ov);
+var fab=document.createElement('button');fab.id='dfab';fab.textContent='ドリルを始める';
+document.body.appendChild(fab);
+var inner=document.getElementById('dinner');
+
+function open(){ov.classList.add('on');document.body.style.overflow='hidden';setup();}
+function close(){ov.classList.remove('on');document.body.style.overflow='';try{render();}catch(e){}}
+fab.onclick=open;
+document.getElementById('dclose').onclick=close;
+document.getElementById('dre').onclick=setup;
+
+function bar(t){document.getElementById('dttl').textContent=t;}
+function hud(){
+  var left=Q.length-IX;
+  document.getElementById('dleft').innerHTML=Q.length?('のこり <b>'+Math.max(left,0)+'</b>'):'';
+  document.getElementById('dok').innerHTML=ROUND.n?('○ <b>'+ROUND.ok+'</b>'):'';
+  document.getElementById('dng').innerHTML=ROUND.n?('✕ <b>'+(ROUND.n-ROUND.ok)+'</b>'):'';
+  document.querySelector('#dprog i').style.width=(Q.length?Math.round(IX/Q.length*100):0)+'%';
+}
+
+/* ---------- setup screen ---------- */
+function setup(){
+  ST='setup';bar('出題範囲をえらぶ');Q=[];IX=0;ROUND={n:0,ok:0,wrong:[]};hud();
+  var h='';
+  if(!OB){
+    h+='<div class="dsec"><h3>形式</h3><div class="dchips">'
+     +'<button class="dchip'+(DM==='sel'?' on':'')+'" data-dm="sel">4択で選ぶ</button>'
+     +'<button class="dchip'+(DM==='rec'?' on':'')+'" data-dm="rec">穴埋め（自己採点）</button>'
+     +'</div><p class="dnote">本番は穴埋め形式。1周目は4択、2周目以降は穴埋めがおすすめ。記録は別々に残ります。</p></div>';
+  }
+  h+='<div class="dsec"><h3>範囲</h3><div class="dchips" id="dsel">';
+  LEC.forEach(function(L,li){
+    if(!live(li)){h+='<button class="dchip dead" disabled>第'+L.k+UN+' 範囲外</button>';return;}
+    h+='<button class="dchip'+(SEL.indexOf(li)>=0?' on':'')+'" data-li="'+li+'">第'+L.k+UN+'<small>'+L.qs.length+'</small></button>';
+  });
+  h+='</div><div class="dchips" style="margin-top:8px">'
+   +'<button class="dchip" data-all="1">ぜんぶ選ぶ</button><button class="dchip" data-all="0">解除</button></div></div>';
+  h+='<div class="dsec"><h3>しぼりこみ</h3><div class="dchips">'
+   +'<button class="dchip'+(FILTER==='all'?' on':'')+'" data-f="all">すべて<small>'+totals('all')+'</small></button>'
+   +'<button class="dchip'+(FILTER==='wrong'?' on':'')+'" data-f="wrong">✕だけ<small>'+totals('wrong')+'</small></button>'
+   +'<button class="dchip'+(FILTER==='new'?' on':'')+'" data-f="new">未解答だけ<small>'+totals('new')+'</small></button>'
+   +'</div><p class="dnote">「✕だけ」は選んだ'+UN+'をまたいで集めます。朝と昼はこれだけ回せば足ります。</p></div>';
+  h+='<div class="dsec"><h3>オプション</h3><div class="dchips">'
+   +'<button class="dchip'+(SHUF?' on':'')+'" data-o="shuf">順番シャッフル</button>'
+   +'<button class="dchip'+(AUTO?' on':'')+'" data-o="auto">正解したら自動で次へ</button>'
+   +'</div></div>';
+  h+='<button id="dstart">はじめる</button><p class="dnote" id="dcntl"></p>';
+  inner.innerHTML=h;inner.parentNode.scrollTop=0;
+  inner.querySelectorAll('[data-dm]').forEach(function(b){b.onclick=function(){DM=b.dataset.dm;setup();};});
+  inner.querySelectorAll('[data-li]').forEach(function(b){b.onclick=function(){
+    var li=+b.dataset.li,i=SEL.indexOf(li);if(i>=0)SEL.splice(i,1);else SEL.push(li);setup();};});
+  inner.querySelectorAll('[data-all]').forEach(function(b){b.onclick=function(){
+    SEL=[];if(b.dataset.all==='1')LEC.forEach(function(L,li){if(live(li))SEL.push(li);});setup();};});
+  inner.querySelectorAll('[data-f]').forEach(function(b){b.onclick=function(){FILTER=b.dataset.f;setup();};});
+  inner.querySelectorAll('[data-o]').forEach(function(b){b.onclick=function(){
+    if(b.dataset.o==='shuf')SHUF=!SHUF;else AUTO=!AUTO;setup();};});
+  var n=build().length;
+  document.getElementById('dcntl').textContent=n?(n+'問を出題します'):'この条件だと0問です。範囲かしぼりこみを変えてください。';
+  var sb=document.getElementById('dstart');sb.disabled=!n;sb.onclick=start;
+}
+function build(){
+  var out=[];
+  LEC.forEach(function(L,li){
+    if(!live(li)||SEL.indexOf(li)<0)return;
+    L.qs.forEach(function(q,qi){
+      var st=S[keyOf(li,qi)];
+      if(FILTER==='wrong'&&(!st||st.ok))return;
+      if(FILTER==='new'&&st)return;
+      out.push([li,qi]);
+    });
+  });
+  if(SHUF)for(var i=out.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=out[i];out[i]=out[j];out[j]=t;}
+  return out;
+}
+function start(){Q=build();IX=0;ROUND={n:0,ok:0,wrong:[]};card();}
+
+/* ---------- question card ---------- */
+function card(){
+  if(IX>=Q.length)return done();
+  ST='ask';PICKED=null;
+  var li=Q[IX][0],qi=Q[IX][1],L=LEC[li],q=L.qs[qi];
+  bar('第'+L.k+UN+'  '+(IX+1)+' / '+Q.length);hud();
+  var h='<p class="dsrc">'+E(L.title)+'</p>';
+  if(OB){
+    h+='<div class="dq" id="dsent">';
+    q.s.forEach(function(seg,si){h+='<span class="dseg" data-s="'+si+'">'+E(seg)+'</span>';});
+    h+='</div><div class="dbtns"><button class="p" data-none="1">誤りなし　(N)</button></div>'
+     +'<p class="dnote">誤っていると思う語句をクリック。数字キー 1〜9 でも選べます。</p>';
+  }else if(DM==='sel'){
+    h+='<div class="dq">'+E(q.q).replace('（　）','<em></em>')+'</div>';
+    order(li,qi).forEach(function(it,i){
+      h+='<div class="dopt" data-i="'+i+'"><i>'+(i+1)+'</i><span>'+E(it.t)+'</span></div>';
+    });
+  }else{
+    h+='<div class="dq">'+E(q.q).replace('（　）','<em></em>')+'</div>'
+     +'<div class="dbtns"><button class="p" data-reveal="1">答えを見る　(Space)</button></div>'
+     +'<p class="dnote">まず頭のなかで言ってから押す。</p>';
+  }
+  inner.innerHTML=h;inner.parentNode.scrollTop=0;
+  inner.querySelectorAll('.dseg').forEach(function(el){el.onclick=function(){grade(+el.dataset.s);};});
+  inner.querySelectorAll('[data-none]').forEach(function(b){b.onclick=function(){grade(-1);};});
+  inner.querySelectorAll('.dopt').forEach(function(el){el.onclick=function(){grade(+el.dataset.i);};});
+  inner.querySelectorAll('[data-reveal]').forEach(function(b){b.onclick=reveal;});
+}
+function reveal(){
+  if(ST!=='ask')return;
+  ST='reveal';
+  var li=Q[IX][0],qi=Q[IX][1],q=LEC[li].qs[qi];
+  var d=document.querySelector('.dq');
+  if(d)d.innerHTML=E(q.q).replace('（　）','<em class="filled">'+E(q.a)+'</em>');
+  var b=document.querySelector('.dbtns');
+  var an=document.createElement('div');an.className='dans';an.id='dans';
+  an.innerHTML='<span>答え</span><b>'+E(q.a)+'</b>';
+  b.parentNode.insertBefore(an,b);
+  b.innerHTML='<button class="g" data-m="1">○ 言えた　(1)</button><button class="r" data-m="0">✕ 言えなかった　(2)</button>';
+  b.querySelectorAll('[data-m]').forEach(function(x){x.onclick=function(){grade(+x.dataset.m?1:0);};});
+  var n=document.querySelector('.dnote');if(n)n.textContent='';
+}
+function grade(v){
+  if(ST==='graded')return;
+  if(!OB&&DM==='rec'&&ST!=='reveal')return;
+  if(ST!=='ask'&&ST!=='reveal')return;
+  var li=Q[IX][0],qi=Q[IX][1],q=LEC[li].qs[qi],k=keyOf(li,qi),ok;
+  if(OB){ok=(v<0)?(q.bad.length===0):(q.bad.indexOf(v)>=0);S[k]={pick:v,ok:ok};}
+  else if(DM==='sel'){ok=!!order(li,qi)[v].ok;S[k]={sel:v,ok:ok};}
+  else{ok=!!v;S[k]={sel:-1,ok:ok};}
+  try{save();}catch(e){}
+  ST='graded';ROUND.n++;if(ok)ROUND.ok++;else ROUND.wrong.push([li,qi]);
+  showResult(ok,v);hud();
+  var my=++TOK;
+  if(ok&&AUTO)setTimeout(function(){if(ST==='graded'&&TOK===my)next();},1100);
+}
+function showResult(ok,v){
+  var li=Q[IX][0],qi=Q[IX][1],q=LEC[li].qs[qi];
+  if(OB){
+    var sent=document.getElementById('dsent');
+    if(sent){sent.className='dq dlocked';
+      sent.querySelectorAll('.dseg').forEach(function(el,si){
+        if(q.bad.indexOf(si)>=0)el.classList.add('isbad');
+        else if(si===v)el.classList.add('wrongpick');});}
+  }else if(DM==='sel'){
+    inner.querySelectorAll('.dopt').forEach(function(el,i){
+      if(order(li,qi)[i].ok)el.classList.add('c');else if(i===v)el.classList.add('x');});
+    var d=document.querySelector('.dq');
+    if(d)d.innerHTML=E(q.q).replace('（　）','<em class="filled">'+E(q.a)+'</em>');
+  }
+  var pre=document.getElementById('dans');if(pre)pre.remove();
+  var box=document.createElement('div');
+  var h='<div class="dverdict '+(ok?'ok':'ng')+'">'+(ok?'正解':'不正解')+'</div>';
+  if(OB)h+='<div class="dfix">'+(q.bad.length?('正しくは <b>'+E(q.fix)+'</b>'):'この文に<b>誤りはありません</b>')+'</div>';
+  else h+='<div class="dans"><span>答え</span><b>'+E(q.a)+'</b></div>';
+  h+='<div class="dexp">'+E(q.e)+'</div>';
+  h+='<div class="dbtns"><button class="p" id="dnext">つぎへ　(Enter)</button></div>';
+  box.innerHTML=h;
+  var old=document.querySelector('.dbtns');if(old&&!OB&&DM!=='sel')old.remove();
+  else if(old&&OB)old.remove();
+  inner.appendChild(box);
+  document.getElementById('dnext').onclick=next;
+}
+function next(){TOK++;IX++;card();}
+
+/* ---------- done ---------- */
+function done(){
+  ST='done';bar('おつかれさま');hud();
+  var w=ROUND.wrong.length,r=ROUND.n?Math.round(ROUND.ok/ROUND.n*100):0;
+  var h='<div class="dsec"><p class="dbig">'+ROUND.ok+' / '+ROUND.n+'</p>'
+   +'<p class="dnote" style="font-size:14px">正答率 '+r+'％　／　✕ '+w+'問</p></div>';
+  h+='<div class="dbtns">';
+  if(w)h+='<button class="p" id="dagain">✕だった'+w+'問をもう1周</button>';
+  h+='<button id="dback">範囲を選び直す</button><button id="dend">閉じる</button></div>';
+  if(w){
+    h+='<div class="dsec" style="margin-top:26px"><h3>今回まちがえた問題</h3>';
+    ROUND.wrong.forEach(function(p){
+      var q=LEC[p[0]].qs[p[1]];
+      h+='<div class="dexp" style="border-top:none;padding-top:0;margin-top:10px"><b style="color:var(--ng)">第'+LEC[p[0]].k+UN+'</b>　'
+       +E(OB?q.s.join(''):q.q.replace('（　）','＿＿'))+(OB?'':'　→ <b style="color:var(--ok)">'+E(q.a)+'</b>')+'</div>';
+    });
+    h+='</div>';
+  }
+  inner.innerHTML=h;inner.parentNode.scrollTop=0;
+  var a=document.getElementById('dagain');
+  if(a)a.onclick=function(){Q=ROUND.wrong.slice();IX=0;ROUND={n:0,ok:0,wrong:[]};card();};
+  document.getElementById('dback').onclick=setup;
+  document.getElementById('dend').onclick=close;
+}
+
+/* ---------- keyboard ---------- */
+document.addEventListener('keydown',function(e){
+  if(!ov.classList.contains('on'))return;
+  var k=e.key;
+  if(k==='Escape'){close();return;}
+  if(ST==='setup'||ST==='done'){
+    if(k==='Enter'){var b=document.getElementById('dstart')||document.getElementById('dagain');if(b&&!b.disabled){e.preventDefault();b.click();}}
+    return;
+  }
+  if(ST==='graded'){if(k==='Enter'||k===' '){e.preventDefault();next();}return;}
+  if(OB){
+    if(k==='n'||k==='N'||k==='0'){e.preventDefault();grade(-1);return;}
+    if(/^[1-9]$/.test(k)){var i=+k-1,segs=inner.querySelectorAll('.dseg');
+      if(i<segs.length){e.preventDefault();grade(i);}return;}
+    return;
+  }
+  if(DM==='sel'){if(/^[1-4]$/.test(k)){e.preventDefault();grade(+k-1);}return;}
+  if(ST==='ask'){if(k===' '||k==='Enter'){e.preventDefault();reveal();}return;}
+  if(ST==='reveal'){
+    if(k==='1'||k==='o'||k==='O'){e.preventDefault();grade(1);}
+    else if(k==='2'||k==='x'||k==='X'){e.preventDefault();grade(0);}
+  }
+});
+var kb=document.createElement('div');kb.className='dkeys';
+kb.innerHTML=OB
+ ? '<kbd>1</kbd>〜<kbd>9</kbd> 語句を選ぶ　<kbd>N</kbd> 誤りなし　<kbd>Enter</kbd> つぎへ　<kbd>Esc</kbd> 閉じる'
+ : '<kbd>1</kbd>〜<kbd>4</kbd> 解答　穴埋めは <kbd>Space</kbd> 答え → <kbd>1</kbd>言えた / <kbd>2</kbd>言えなかった　<kbd>Enter</kbd> つぎへ　<kbd>Esc</kbd> 閉じる';
+ov.appendChild(kb);
+
+/* ---------- 範囲外バッジ ---------- */
+if(CFG.skip.length&&typeof render==='function'){
+  var _r=render;
+  window.render=function(){_r();
+    document.querySelectorAll('#tabs .tab').forEach(function(b,i){
+      if(CFG.skip.indexOf(i)>=0){b.style.opacity='.45';b.title='試験範囲外';
+        if(b.textContent.indexOf('範囲外')<0)b.innerHTML=b.innerHTML+' <small>範囲外</small>';}
+    });};
+  window.render();
+}
+})();
+
+</script>
+</body></html>
