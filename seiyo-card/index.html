@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>西洋経済史 用語3行説明カード（全90語）</title>
+<style>
+:root{--bg:#fbfaf8;--card:#fff;--line:#e3e0d8;--txt:#23221f;--sub:#6d6a63;--accent:#6b4a2a;--accentbg:#f5efe8;--ok:#1d7a4f;--okbg:#e6f4ec;--ng:#b3312e;--ngbg:#fbeaea}
+@media(prefers-color-scheme:dark){:root{--bg:#1b1a18;--card:#252422;--line:#3a3833;--txt:#eceae4;--sub:#a5a29a;--accent:#c9a482;--accentbg:#33281f;--ok:#6cc79a;--okbg:#1e3a2c;--ng:#e88a88;--ngbg:#3c2322}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.8;-webkit-text-size-adjust:100%}
+.wrap{max-width:820px;margin:0 auto;padding:22px 16px 90px}
+h1{font-size:20px;font-weight:600;margin:0 0 3px;line-height:1.45}
+.lead{color:var(--sub);font-size:13px;margin:0 0 16px;line-height:1.7}
+.modes{display:flex;gap:6px;margin-bottom:14px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:4px}
+.mode{flex:1;padding:8px 6px;border:0;background:transparent;color:var(--sub);border-radius:7px;cursor:pointer;font-size:13px;font-family:inherit;line-height:1.5;text-align:center}
+.mode.on{background:var(--accent);color:#fff;font-weight:600}
+.bar{height:7px;background:var(--card);border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-bottom:6px}
+.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .35s}
+.barlab{font-size:12px;color:var(--sub);margin-bottom:14px;display:flex;justify-content:space-between}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.tab{padding:6px 13px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:99px;cursor:pointer;font-size:13px;font-family:inherit;line-height:1.5}
+.tab:hover{border-color:var(--accent)}
+.tab.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tab small{font-size:10px;opacity:.7;margin-left:3px}
+.tab.done::after{content:"\2713";margin-left:4px;color:var(--ok);font-weight:600}
+.tab.on.done::after{color:#fff}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;align-items:center}
+.f{padding:6px 12px;border:1px solid var(--line);background:var(--card);color:var(--sub);border-radius:8px;cursor:pointer;font-size:12.5px;font-family:inherit;line-height:1.5}
+.f:hover{border-color:var(--accent)}
+.f.on{background:var(--accentbg);border-color:var(--accent);color:var(--accent);font-weight:600}
+.f.hot{border-color:var(--ng);color:var(--ng)}
+.f.hot.on{background:var(--ngbg);border-color:var(--ng);color:var(--ng)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 11px}
+.stat b{display:block;font-size:21px;font-weight:600;line-height:1.35}
+.stat span{font-size:11px;color:var(--sub)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px;margin-bottom:12px}
+.card.ok{border-color:var(--ok)}.card.ng{border-color:var(--ng)}
+.cmeta{display:flex;gap:8px;align-items:center;font-size:11.5px;color:var(--sub);margin-bottom:11px;flex-wrap:wrap}
+.badge{background:var(--accentbg);color:var(--accent);border-radius:5px;padding:2px 8px;font-weight:600}
+.cmeta .sp{margin-left:auto}
+.cterm{font-size:21px;font-weight:600;line-height:1.6;margin:2px 0 14px}
+.ans{padding:13px 15px;background:var(--accentbg);border-radius:9px;font-size:15px;line-height:1.95}
+.ans .lab,.memo .lab{font-size:11px;color:var(--sub);display:block;margin-bottom:4px;font-weight:400}
+.memo{margin-top:9px;padding:11px 14px;background:var(--bg);border:1px solid var(--line);border-radius:9px;font-size:13px;line-height:1.85;color:var(--sub)}
+.act{margin-top:13px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+button{font-family:inherit;font-size:13px;padding:7px 15px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:8px;cursor:pointer;line-height:1.5}
+button:hover{border-color:var(--accent)}
+button.big{font-size:14px;padding:10px 22px}
+button.gd{border-color:var(--ok);color:var(--ok)}
+button.bd{border-color:var(--ng);color:var(--ng)}
+button.pri{background:var(--accent);color:#fff;border-color:var(--accent)}
+.hint{font-size:12px;color:var(--sub)}
+.res{margin-top:13px;padding-top:10px;border-top:1px solid var(--line);display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px}
+.res b.ok{color:var(--ok)}.res b.ng{color:var(--ng)}
+.nav{display:flex;gap:8px;margin-top:14px}
+.nav button{flex:0 0 auto;font-size:12.5px;padding:6px 13px;color:var(--sub)}
+.msg{background:var(--accentbg);border-radius:10px;padding:16px 18px;font-size:14px;line-height:1.8}
+.msg h3{margin:0 0 8px;font-size:15px;font-weight:600}
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:13px 16px;margin-bottom:14px;font-size:13.5px;line-height:1.85}
+.note h3{margin:0 0 6px;font-size:14px;font-weight:600}
+.note ul{margin:4px 0;padding-left:20px}.note li{margin-bottom:4px}
+.note p{margin:4px 0}
+kbd{font-family:inherit;font-size:11.5px;background:var(--bg);border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 6px;color:var(--txt)}
+.li{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:13px 15px;margin-bottom:9px}
+.li.ok{border-color:var(--ok)}.li.ng{border-color:var(--ng)}
+.li .lt{font-size:15.5px;font-weight:600;line-height:1.65;margin-bottom:6px}
+.li .la{font-size:14px;line-height:1.9}
+.li .lm{margin-top:7px;font-size:12.5px;color:var(--sub);line-height:1.8;padding-top:7px;border-top:1px dashed var(--line)}
+.li .lact{margin-top:9px;display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.li .lact button{font-size:12px;padding:4px 11px}
+.foot{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.credit{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--sub);line-height:1.8}
+@media(max-width:520px){.stats{grid-template-columns:repeat(2,1fr)}.cterm{font-size:19px}}
+</style></head><body><div class="wrap">
+<h1>西洋経済史　用語3行説明カード</h1>
+<p class="lead">8/10（2限）<b>問1「語彙3〜4個をそれぞれ3行程度で説明」</b>の直前練習用。全90語、レジュメ第1〜7回から抽出。模範解答はすべて<b>そのまま答案に書ける80〜120字</b>で、<b>いつ・どこで・何が・なぜ重要か</b>が入っています。</p>
+
+<div class="note">
+<h3>使い方（3ステップ）</h3>
+<ol style="margin:4px 0;padding-left:20px">
+<li>用語を見て、<b>声に出して3行言ってみる</b>（頭のなかだけだと言えたつもりになります）</li>
+<li><b>答えを見る</b>→ 模範解答と比べる</li>
+<li><b>○/✕で自己採点</b>。年号・人名・地名が抜けていたら容赦なく✕にしてください</li>
+</ol>
+<p>一周したら、上の<b class="hint" style="color:var(--ng)">「✕だけ（全回まとめて）」</b>を押して、落とした語だけを何周もします。記録はブラウザに自動保存され、閉じても消えません。</p>
+<p style="margin-top:8px">キーボード：<kbd>Space</kbd> 答えを見る　<kbd>1</kbd> ○言えた　<kbd>2</kbd> ✕言えなかった　<kbd>Enter</kbd> 次へ　<kbd>←</kbd><kbd>→</kbd> 前後</p>
+</div>
+
+<div class="modes">
+<button class="mode on" data-v="card">カード（1枚ずつ）</button>
+<button class="mode" data-v="list">一覧で読む</button>
+</div>
+<div class="bar"><i id="pbar"></i></div>
+<div class="barlab"><span id="plab"></span><span id="prate"></span></div>
+<div class="tabs" id="tabs"></div>
+<div class="filters" id="filters">
+<button class="f on" data-f="all">すべて</button>
+<button class="f hot" data-f="ng">✕だけ（全回まとめて）</button>
+<button class="f" data-f="new">未着手だけ</button>
+<button class="f" id="bshuf">シャッフル</button>
+<label class="hint" style="margin-left:4px;cursor:pointer"><input type="checkbox" id="auto"> 採点したら自動で次へ</label>
+</div>
+<div class="stats">
+<div class="stat"><b id="s1">0</b><span>いま回している枚数</span></div>
+<div class="stat"><b id="s2" style="color:var(--ok)">0</b><span>○ 言えた（全体）</span></div>
+<div class="stat"><b id="s3" style="color:var(--ng)">0</b><span>✕ 言えなかった（全体）</span></div>
+<div class="stat"><b id="s4">—</b><span>言えた率</span></div>
+</div>
+<div id="main"></div>
+<div class="foot">
+<button id="brs">いま回している範囲をリセット</button>
+<button id="brall">全部リセット</button>
+</div>
+<p class="credit">学生が試験対策用に作成した学習ツールです。内容は講義レジュメにもとづき、独自の文章で作成しています。講義資料そのものの複製ではありません。</p>
+</div>
+<script>
+var UNITS=[{"k":"I","n":"第1回","title":"東西交易とオランダの繁栄","terms":[{"t":"大航海時代（「地理上の発見の時代」）","a":"15世紀末以降、近世ヨーロッパ人が大挙して世界各地へ進出した時代。これにより東西通商が本格的に始まった。ポルトガルの東回り航海とスペインの新大陸貿易が二本柱で、以後ヨーロッパは他地域を自らの物産複合圏として取り込んでいく。"},{"t":"物産複合","a":"各社会において人間の衣食住を構成するものの集合体。ヨーロッパは毛織物・鉄砲・機械時計、アジアは香辛料・茶・コーヒー・砂糖・木綿・絹製品・染料・陶磁器。この違いこそが近世の東西交易を生んだ根本の理由である。"},{"t":"Push要因とPull要因","a":"大航海時代の開始を説明する二つの力。Pushはヨーロッパ側の押し出し要因、Pullはアジア側の引き寄せ要因で、香辛料・絹・陶磁器などの魅力ある物産を指す。両者が組み合わさって16世紀以降の東西通商が本格化した。"},{"t":"ポルトガルの東回り航海","a":"15世紀からポルトガルは地中海・アフリカ北岸やマデイラ・カナリア諸島でブドウや砂糖黍を栽培しつつ南下し、1488年ディアスが喜望峰に到達、1498年ヴァスコ・ダ・ガマがカリカットに着きインド航路を開いた。","m":"アフリカを回り込むので「東回り」。これに対しスペインは大西洋を西へ進む「西回り」を選んだ。"},{"t":"商業革命","a":"大航海時代の航路開拓によって、ヨーロッパ商業の中心地と取引される商品・規模が一変した変化。1498年のインド航路発見が契機で、アジアの物産が陸路の仲介を経ずに海路で直接ヨーロッパへ入るようになった。"},{"t":"スペインの新大陸貿易","a":"1492年10月コロンブスがバハマ諸島のサンサルバドル島に上陸し、1498年の第三回航海で新大陸本土に達した。1501年サント・ドミンゴで奴隷を使役する砂糖黍栽培が始まり、新大陸がヨーロッパの物産複合圏に組み込まれた。","m":"1494年トルデシリャス条約でスペインとポルトガルが新発見地の分割を取り決めた。アメリゴ・ヴェスプッチは1507年に探検記を出版。中南米原産のじゃがいも・トマト・かぼちゃ・とうもろこしが欧米へ、馬・牛・羊が中南米へ渡った。"},{"t":"価格革命","a":"16世紀半ば以降、中南米で銀鉱山が続々と発見され大量の銀がヨーロッパへ流入した結果、物価が持続的に高騰した現象。貴金属はスペインから他の欧州諸国へも流出し、貨幣量の増加が経済全体を動かした事例である。"},{"t":"オランダ＝最初の「覇権国家」","a":"オランダは本格的工業化以前の唯一の覇権国。中継貿易だけでなく製塩・製糖・鰊の食品加工・醸造・捕鯨・製材・造船、ライデンやハールレムの毛織物という工業基盤も持ち、農業も土地当たり生産性が高かった。","m":"17世紀の「バルト帝国」スウェーデンとも結び、蘭が技術と資金、スウェーデンが鉱物資源を出して製鉄所・真鍮製造所・武器製造所を育成した（ド・ヘール、トリップら蘭人が経営指導）。蘭は武器を輸入して再輸出した。"},{"t":"アントウェルペンからアムステルダムへ","a":"16世紀初頭から1585年まで商業都市アントウェルペンが最盛期にあったが、1585年スペイン軍の焼き討ちとスヘルデ川封鎖でその機能をアムステルダムが肩代わりした。1579年の宗教的寛容政策が商人の移住を促した。","m":"1568年に独立のための反乱が始まり、1581年に北部7州が独立を宣言した。"},{"t":"「母なる貿易」","a":"オランダがバルト海から南欧へ穀物を運んだ中継貿易の呼称。地中海沿岸国で穀物需要が急増し大量輸入が必要になったため、オランダはこの穀物輸出の四分の三を掌握し、これを17世紀の繁栄の土台とした。"},{"t":"フリュート船（造船業）","a":"オランダが建造した高性能の商船。造船所を内陸・農村に立地させてコストを削減できたため、造船業の優位がオランダの通商活動に決定的な強みをもたらした。イギリスと並ぶ海軍力で自国船を防衛した点も重要である。","m":"最盛期の17世紀半ばには、新大陸の銀の四分の三をオランダが自国市場に吸収していた。"},{"t":"オランダ東インド会社（VOC・1602年）","a":"都市・州ごとに貿易会社が乱立して現地の買付価格が高騰し蘭での販売価格が急落したため、1602年に統合して設立された世界初の株式会社。連邦議会から東インド貿易独占の特権を得て競争を回避し、永続的組織となった。","m":"1617年バタビア（ジャカルタ）を占拠して取引拠点とし、17世紀末には世界最大の収益会社に。当初は香辛料の比率が大きく、しだいに銅・銀・陶磁器・生糸・綿布へ比重が移った。"},{"t":"オランダ衰退の要因","a":"中継商業で栄えた反面、生産力的基盤の弱い経済構造を改変できなかったこと。加えて17世紀後半にバルト海・地中海貿易の重要性が相対的に縮小し、英仏が国内の混乱を脱して対外通商に本格進出し攻勢を強めた。","m":"ただし18世紀に入ってもアムステルダムはヨーロッパ金融の中心としての機能を維持した。"}]},{"k":"II","n":"第2回","title":"イギリス産業革命への道","terms":[{"t":"重商主義（mercantilism）","a":"本格的工業化に先立つ時期に、国の富を増大させるために採用された政策の総称。イギリスの場合は国内産業の保護育成が政策基調であった。この政策のもとで各国が世界各地で勢力を争い、産業革命の国際的前提がつくられた。"},{"t":"英蘭・英仏の覇権争いとインド支配","a":"16世紀末以来、ヨーロッパ諸国は世界各地で勢力を争い、17世紀には蘭対英、18世紀には英対仏が熾烈に対立した。イギリスは17世紀末にかけて東南アジアの拠点を奪われたため、インド支配に集中していく。","m":"その結果イギリスはインドの特産品、とくに綿製品を本国に大量輸入することになり、これが後のイースタン・インパクトにつながる。"},{"t":"毛織物工業＝「国民的産業」","a":"イギリスは中世末以来、毛織物工業が主導する形で発展した。原料を国内で豊富に調達でき、全工程を国産化でき、農村手工業として全国に広く展開したため「国民的産業」と呼ばれ、重商主義的保護の中心に置かれた。","m":"フランスに対抗して1689年に対仏貿易禁止条例。外国市場拡大のため生産の主力を薄手の梳毛製品にシフトし、市場も北・中部欧から南欧・新大陸へ広げた（1667・1669年の通商条約で関税割引）。"},{"t":"メシュエン条約（レジュメ表記1693年）","a":"1693年ブラジルで金鉱が発見されると、ポルトガルは植民地の権益をイギリスに保護してもらう代わりに、イギリス毛織物製品へ本国・植民地市場を開放した。イギリスの外国市場拡大策の代表例である。","m":"（レジュメ外の補足）一般の年表ではメシュエン条約は1703年とされるが、答案ではレジュメの記述に合わせておくのが安全。"},{"t":"キャリコ（キャラコ）","a":"インド綿の主力製品である薄手の綿布。名称は積出港カリカットに由来する。使いやすさ・快適性・価格の面で羊毛製品より優位な代替財であり、18世紀初頭にかけて大量流入してイギリスの繊維産業全体を苦境に陥れた。","m":"インド産綿製品はイギリスを経由して他国へ再輸出され、広大な環大西洋木綿市場圏が形成された。"},{"t":"キャリコ輸入禁止令（1701年）・使用禁止令（1721年）","a":"インド産綿製品の流入から国内の繊維産業を保護するためにイギリスが定めた法令。1701年は無地のキャリコを除外し、1721年は再輸出用を認めるという例外つきだった。国内で綿布を作る動機を強めた点で重要である。"},{"t":"イースタン・インパクト","a":"東方インドから安価で上質な綿製品が大量に流入したことが、「いかにしてインド綿に匹敵する製品を国内で生産可能にするか」という18世紀イギリスの課題を生み、結果的に産業革命の国際的誘因となったこと。"},{"t":"生産の三要素","a":"工業化の不可欠の前提として、土地・労働力・資本という生産要素の市場が成立している必要がある。18世紀イギリスは資源や市場へのアクセス、土地制度、人口と識字率、資本調達のすべてでこの条件を満たしていた。"},{"t":"freeholding（自由土地保有）","a":"土地の私的・排他的所有権にもとづく保有形態。イギリスでは土地の私的所有権の確立が早く、18世紀にはほぼ全土がこの状態になっていた。土地が商品として売買できることが工業化の前提条件のひとつであった。"},{"t":"労働力の質的側面と禁欲的プロテスタンティズム","a":"工場労働者・企業経営者としての資質が育つには、移動と職業選択の自由、一定水準の識字率が必要である。イギリスでは18世紀半ばまでに識字率が上昇し、節約・勤勉・禁欲を重んじる諸派の影響も指摘されている。","m":"メソジスト、バプテスト、クエーカーなど。識字率上昇の背景には初等教育の普及、教会の日曜学校、慈善組織の教育サービスがあった。"},{"t":"個別資本の調達方法","a":"個別企業の立ち上げや操業のための資金。イギリスでは地域社会の地縁的・血縁的ネットワークを利用して調達し、創設企業の規模は概して小さく必要な立上げ資本も多額ではなかった点が、後発国との重要な違いである。","m":"後発国では工業投資銀行（欧大陸諸国・日本）、商人資本の工業投資（米）、国営・官営企業（政府の直接投資）という別の方法がとられた。"},{"t":"社会資本とイギリス階級制度の開放性","a":"運河・道路（ターンパイク）・港湾設備・鉄道といった工業化に必要なインフラ。イギリスでは貴族を含む広範な層が積極的に投資し、上流階層にとっては有利な資産運用でもあった。階級間の流動性の高さがその背景にある。","m":"上流階層がビジネスに関わることは、社会全般でより上位階層の消費性向の模倣を生み、消費も刺激した。"}]},{"k":"III","n":"第3回","title":"イギリス産業革命とパクス・ブリタニカ","terms":[{"t":"Invention と Innovation","a":"Invention は原案となる着想や装置そのもの、Innovation はその発明が最初に実際に使用されることを指す。産業革命で問題になるのは発明そのものより実用化の方であり、この区別が技術革新を論じる出発点になる。","m":"英語の定義はレジュメどおり Innovation: the first use of invention／Invention: an original idea or device。答案に英語を添えると強い。"},{"t":"特許制度","a":"発明を保護する制度で、「知的財産権」の確立と不可分の関係にある。イギリスは17世紀初頭に特許制度を導入し、これが技術革新を促す制度的基盤となった。ただし特許を申請せず技術を秘匿する選択もあり得た。","m":"ミュール紡績機のクロンプトンは特許を申請せず技術を秘匿した。その結果ミュールはイギリスで最も多く普及した紡績機になった。"},{"t":"産業革命の発明の意義＝三要素の結合","a":"レジュメの定式。産業革命の発明の意義は単発の発明がどれだけ画期的だったかではなく、発明全体として原理・動力・素材の三要素を結合させた点にある。この一文は論述の冒頭にそのまま置ける最重要ポイントである。","m":"原理＝手作業の機械化（人間労働の代替・軽減）／動力＝自然的・生物的動力からエネルギー転換動力へ（生産行為を時間と場所の制約から解放）／素材＝植物性・動物性原料から鉱物性原料（鉄・鋼鉄）へ。"},{"t":"綿加工の主要な生産工程","a":"綿は準備工程（綿繰・洗綿・梳綿）、紡績工程（粗紡・精紡）、織布工程、仕上工程（染色・仕立）の順で加工される。この工程の並びを押さえておくと、どの工程が先に機械化されたかという不均衡の議論が書ける。"},{"t":"紡車（spinning wheel）と手織機","a":"産業革命以前の手工業的な道具。紡績工程では糸巻棒からボビン、さらに紡車へと発展した。織布工程では経糸を交互に上下させて緯糸を織り込む手織機が使われ、そうこう・杼・筬といった部品を備えていた。"},{"t":"多軸化","a":"紡績工程における引き延ばしと撚りかけの機械化。一度に扱える紡錘の数を増やして生産性を飛躍させた。これを可能にしたのが水力紡績機・ジェニー紡績機・ミュール紡績機という三つの発明であり、紡績が先に機械化された。"},{"t":"水力紡績機（waterframe・1769年・アークライト）","a":"ランカシャーの床屋兼鬘業者リチャード・アークライトが1769年に発明した紡績機。ローラードラフトとフライヤーの機構をもつ。ノッティンガム工場は馬力、ダービーシャーのクロムフォード工場はダーヴェント川の水力で稼働した。","m":"20番手の太めの糸に対応。機械動力で動かせる点がジェニー紡績機との決定的な違い。"},{"t":"ジェニー紡績機（1764年発明・1770年・ハーグリーヴズ）","a":"ランカシャーの紡績兼大工ジェームズ・ハーグリーヴズの発明。多軸化を実現したが、操作に手工業的熟練を要し機械動力での運転には向かなかった。「手工業的技術の残存」を示す代表例として論述で必ず使える。","m":"40番手でキャリコ向け。この欠点があったため、水力紡績機との長所を兼ね備えた紡績機が求められた。"},{"t":"ミュール紡績機（1780年・クロンプトン）","a":"ランカシャーのモスリン工サミュエル・クロンプトンが1780年に発明。ジェニー紡績機と水力紡績機の長所を兼ね備えた。80番手の細糸を紡げモスリン生産を可能にし、イギリスで最も多く普及した紡績機となった。","m":"クロンプトンは特許を申請せず技術を秘匿した。1790年に水力ミュール、1825年に自動ミュールへ発展する。"},{"t":"番手による三つの紡績機の使い分け","a":"番手は糸の細さを示す。水力紡績機は20番手、ジェニー紡績機は40番手でキャリコ向け、ミュール紡績機は80番手でモスリン向けと役割が分かれていた。機械ごとに作れる製品が違ったことが、併存した理由である。"},{"t":"自動ミュール（self-actor・1825年・ロバーツ）","a":"リチャード・ロバーツが1825年に実現した、蒸気機関と連結された自動のミュール紡績機。1790年の水力ミュールを経て到達した。熟練に依存していた紡績工程がここでようやく自動化され、手工業的技術の残存が解消に向かう。","m":"1820年代からは大型ミュールとともに導入が進み、労働力構成の変化を加速させた。"},{"t":"飛杼（flying shuttle・1733年・ジョン・ケイ）","a":"ランカシャーの手織工ジョン・ケイが1733年に発明した織布工程の装置。片手のみで操作でき、杼の受け損ねがなく、広幅織物を単独作業で織れた。織布の生産性を高めた一方、紡績が追いつかなくなり不均衡を生んだ。","m":"1733年の飛杼から1830年代の全工程機械化まで約100年を要した。「長期性」の起点となる年号。"},{"t":"力織機（power loom・1786年・カートライト）","a":"ノッティンガムシャーの牧師エドワード・カートライトが1786年に発明し、単一の努力のみで織布工程の全作業を機械化することに初めて成功した。しかし失業を恐れた手織工の焼き討ちにより建設中の工場が焼失した。","m":"1820年代にリチャード・ロバーツが改良力織機を実現し、1830年代に全工程の機械化・工場生産化が達成された。1840年代には自動停止メカニズムが考案され、のち19世紀末に米ノースロップ、20世紀初頭に豊田佐吉・喜一郎親子が自動織機で特許を得る。"},{"t":"工程間の不均衡（imbalance）","a":"綿工業の技術革新の第一の特徴。1733年の飛杼で織布が速くなると紡績が追いつかず、多軸化の三発明で紡績が先行すると今度は織布が滞る。ある工程の機械化が次の工程のボトルネックを生み、次の発明を誘発する連鎖である。"},{"t":"手工業的技術の残存","a":"綿工業の技術革新の第二の特徴。機械化が進んだ後も操作に手工業的熟練が必要な段階が長く残ったこと。ジェニー紡績機が熟練を要し機械動力運転に向かなかったことが典型で、1825年の自動ミュールでようやく解消に向かった。"},{"t":"技術革新の長期性","a":"綿工業の技術革新の第三の特徴。1733年の飛杼から1830年代の全工程機械化・工場生産化まで、およそ100年を要した。産業革命が一夜の断絶ではなく、連鎖的で漸進的な過程だったことを示す最重要の論点である。","m":"織布工程の機械化が遅れた理由は、機械自体の技術的信頼性、労働力コストの上昇、成人男子の失業への社会的抵抗の三つ。"},{"t":"産業革命期の労働生活の変化","a":"巨額の初期投資を早期回収するため工場の稼働時間が延ばされ労働時間が延長した。機械を操作する成人男子労働力が相対的に減少し、低賃金の児童・女性労働者が相対的にも絶対的にも増大して、深夜労働が日常化した。"},{"t":"工場法（factory act・1833年）","a":"1833年制定。18歳以下の年少労働者の深夜労働禁止、労働時間を一日12時間・週69時間以内に制限、9歳未満の児童の就労禁止、工場監督官制度を定めた。女性や児童の健康維持が重要と認識された結果である。","m":"1844年法で労働時間制限を女性労働力にも適用、1847年法で一日12時間規制を11時間に強化した。"},{"t":"小売市場の整備（ジェネラル・ショップとチェーン・ストア）","a":"都市労働者に日用品を売る小売市場の充実。ジェネラル・ショップは固定店舗のよろず屋で販売単位が小さく掛け売りにも対応した。チェーン・ストアはバター・ベーコン・卵・茶など売れ筋に限定し大量仕入れで販売単位も大きい。","m":"ほかにデパートメント・ストア、生活協同組合の店舗も拡大。街商や公開市場という伝統的小売市場も存続した。"},{"t":"穀物法（Corn Laws）と1846年の廃止","a":"17世紀に遡り国内の穀物生産者（地主・借地農）を保護した法。18世紀後半にイギリスが穀物輸入国へ転換すると関税による輸入制限が中心となった。マンチェスターの綿工業関係者が全廃を求め、1846年に廃止された。","m":"1841年マンチェスター商業会議所の報告書が、高い穀物価格が生計費を高騰させ工業製品への国内需要を減退させていると主張。1845年の小麦不作とアイルランド馬鈴薯飢饉を経て、綿工業経営者出身のピール首相が廃止を決断した。"},{"t":"「世界の工場」と19世紀半ばの輸出入構造","a":"ナポレオン戦争終結期から1870年代までのイギリスの地位。19世紀半ばの世界市場で綿布二分の一、鉄二分の一、鋼鉄七分の五、石炭三分の一を占めた。輸出は工業製品が圧倒的で、うち綿製品が半分を占めた。","m":"輸入は輸出品目とほとんど重ならず、温暖地域の産物（砂糖・茶・コーヒー）、農産物（穀物・油・米）、工業原料（綿花・羊毛・亜麻・皮革・藍など）であった。"},{"t":"パクス・ブリタニカ（Pax Britanica）","a":"イギリス経済を基軸として世界経済の構造が編成された19世紀の状態。「世界の工場」としての圧倒的な工業生産力に、自由主義（自由放任・自由貿易）を基調とする貿易政策が結びついて成立した。","m":"自由貿易は国内でも一枚岩ではなく、地主階級は農産物の保護貿易に固執し、マンチェスターの綿工業関係者が自由貿易の請願運動を展開した。"}]},{"k":"IV","n":"第4回","title":"後発国の工業化（ドイツの事例）","terms":[{"t":"GDP成長率の長期的動向（5局面）","a":"一人当たりGDPの長期的動向は五つの局面に分かれる。第1局面1820年〜1870年代、第2局面1870年代〜1913年、第3局面1914年〜1950年、第4局面1950年〜1973年、第5局面1973年〜。数百年を通じ格差は増大傾向にある。","m":"第1局面＝産業革命の成果が徐々に顕在化／第3局面＝多くの地域で成長が伸び悩み／第5局面＝前局面の高成長率をはるかに下回るが地域差あり。"},{"t":"第一次グローバリゼーションの時代","a":"1870年代から1913年にかけての第2局面の呼称。一人当たりGDPがすべての地域で前の局面より増大し、輸送・通信手段が急速に拡大して世界経済の結びつきが強まった。第6回で扱う世界経済ネットワークの時期と重なる。"},{"t":"高度経済成長期（第4局面）","a":"1950年から1973年までの局面。空前（絶後かもしれない）の成長率を記録した時期で、ロストウのいう大量消費の実現した豊かな社会が広がった。1973年以降の第5局面では成長率が大きく下がる。"},{"t":"ロストウのテイク・オフ・モデル","a":"W.W.ロストウ『経済発展の諸段階』（1961年）が示した五段階モデル。伝統的社会→離陸のための先行条件→テイク・オフ→成熟への前進→高度大衆消費時代と進む。工業化を飛行機の上昇にたとえた点に特徴がある。","m":"工業化への絶対的信頼にもとづく、「繁栄のアメリカ」に支えられたモデルである点も批判的に押さえておく。"},{"t":"テイク・オフ（decisive transition）","a":"ロストウ・モデルの第3段階で、本格的な工業化のスタートを指す。これは決定的転換であり、これ以降は成長が社会の常態となる。判定条件は生産的投資の比率、牽引車的製造工業部門（主導部門）、制度的・構造的変化の三つ。","m":"第4段階は離陸直後のやや不安定な時期で、労働環境の悪化、急激な都市化による生活・衛生水準の低下、所得格差が生じる。第5段階への到達の指標は耐久消費財の普及。"},{"t":"ガーシェンクロン・モデル","a":"A.ガーシェンクロンが示した、後発国であるがゆえの共通の特徴。①急速な工業化、②大規模な生産組織、③生産財（資本財）部門の早期的発展、④「制度的手段」の採用の四点からなり、ドイツがその典型例である。"},{"t":"後発性の利益（急速な工業化）","a":"ガーシェンクロン・モデルの第一の特徴。後発国は先発国から最新の技術や資本を導入できるため、先発国がたどった試行錯誤を省略して急速に工業化できる。製鋼法や化学工業の技術がその具体例にあたる。"},{"t":"ベッセマー転炉法とジーメンス・マルタン平炉法","a":"鋼鉄は炭素0.2〜2％で硬度と加工しやすさを兼ね備えるが、19世紀半ばまで大量生産できず高価だった。1857年ベッセマー転炉法、1864年ジーメンス・マルタン平炉法（屑鉄の利用と潜熱＝蓄熱の原理）がこれを変えた。","m":"アメリカはイギリス同様に原料の純度が高かったため、ベッセマー法が急速に普及した。"},{"t":"トマス法（1878年・塩基性転炉）","a":"S.G.トマスとP.C.ギルクリストが1878年に開発した製鋼法。石灰石という塩基性物質を投入して燐を亜燐酸として除去する。これによりロレーヌやルールに多い含燐鉄鉱石（ミネット鉱）が利用可能になり原料コストが下がった。","m":"ドイツが自国の鉄鉱石を使えるようになった点で、後発国の工業化を決定づけた技術。"},{"t":"合成染料とドイツ化学工業","a":"19世紀後半、石炭タールから合成染料を作る事業が化学工業の中心となった。原料コストが最小限で高価な天然染料をたちまち代替し、ドイツは五大企業体制を築いて1870年に世界総輸出の50％、1900年には90％を占めた。","m":"五大企業はバイエル、ヘキスト、カッセラ、AGFA、BASF。1904年からは六大化学会社が二大カルテルを結成し市場を独占した。開発に着手したのは英人パーキンだったが、工科大学や企業内R&D部署の設立が早い独で実用化が進んだ。1861年にはソルベー法（アンモニア曹達法）も登場。"},{"t":"ドイツの鉄道網と生産財部門の早期的発展","a":"ガーシェンクロン・モデルの第三の特徴。1834年のニュルンベルク〜フュルト間5マイル開通を皮切りに鉄道網が急伸長し、ライン川の水運と相まって流通を活性化させた。機械工業・鉄鋼・化学工業も同じ生産財部門にあたる。","m":"ドイツは輸送用内燃機関でも技術革新。ダイムラーとベンツがほぼ同時期にガソリン内燃機関を発明し、1886年に史上初の内燃機関自動車で特許。1892年にはディーゼルが重油・軽油を燃料とする内燃機関を開発した。"},{"t":"「制度的手段」（institutional implement）","a":"ガーシェンクロン・モデルの第四の特徴。後発国が工業化を推進するために採用する仕組みで、銀行が貯蓄を工業投資へ振り向ける、租税により政府が直接工業投資を行う、殖産興業政策や経済五か年計画を実施するなどがある。"}]},{"k":"V","n":"第5回","title":"アメリカ合衆国の登場","terms":[{"t":"大衆消費社会（豊かな社会）","a":"耐久消費財が一般家庭に広く普及した豊かな社会。アメリカは世界でもっとも早くこれを実現した。ロストウ・モデルの第5段階にあたり、なぜアメリカが最初だったのかを説明することがこの単元全体の課題である。"},{"t":"白人居住植民地","a":"アメリカが、白人自身がそこに定住する形の植民地として出発したこと。白人が支配者として入植したアジアの植民地とは性格が異なり、合理的思考様式や民主的統治原理という経済発展に適合的な要素が直接移植された。"},{"t":"勅許状（charter）と「領主支配地」","a":"国王が植民地建設を認可するために付与した文書で、これにより「領主支配地」が成立した。1630年マサチューセッツ、1632年メリーランド、1635年ニューハンプシャー、1680年ペンシルヴェニア、1732年ジョージアなど。","m":"本国の統治原理も移植され、国王の代理人である総督（governor）と議会にあたる参事（councillor）が置かれた。"},{"t":"「代表なくして課税なし」","a":"本国議会に代表を送れない植民地への課税は不当だとする主張。イギリスが新大陸への課税を強化したことへの反発を表し、1773年のボストン茶会、1775年の独立戦争開戦、1776年の13植民地独立宣言へとつながった。","m":"植民地は穀物（小麦・米）、タバコ、毛皮、木材、綿花の供給地であり、同時にイギリス製品の市場でもあった。"},{"t":"独立後の対英従属と課題","a":"独立後もアメリカは原綿と穀物の供給地としてイギリスへの経済的従属が続き、むしろ強化された。そのため独立以降のアメリカの課題は、イギリスに対する経済的自立と、西部・南部を含む国内の経済的統合の二つとなった。"},{"t":"ハミルトン体制","a":"ワシントン内閣財務長官アレクサンダー・ハミルトンが築いた経済制度。公債（1790年公債借換法）、租税（1789年関税法など）、銀行（1791年第一合衆国銀行、1816年第二合衆国銀行）、貨幣制度（1792年Coinage Act）からなる。","m":"公債では外債を直ちに償還、戦時公債を通常公債に切替、減債基金は公有地売却収入。租税は関税のほか91年ウイスキー消費税、94年車税、98年直接税。"},{"t":"製造業振興政策とS.U.M","a":"1791年の『製造業報告書』（Report on Manufactures）は東部製造業を国民経済の中心に据え、米経済全体を資本主義化しようとした。同年の「有用工業設立協会」（S.U.M）は複合工業都市の建設を試みたが成功しなかった。","m":"1801年に第三代大統領となったジェファソンは、これとは対照的に農村工業の自生的発展を理想とした。"},{"t":"「ターンパイクの時代」と運河","a":"独立後のアメリカでは交通インフラが急速に整備された。1797〜1808年に153の道路会社が設立されて「ターンパイクの時代」と呼ばれ、1803年ミドルセックス運河、1825年エリー運河（バッファロー〜オールバニ363マイル）が開通した。"},{"t":"S.スレイターと「家族ぐるみ雇用」","a":"イギリス出身で1789年に渡米したスレイターは、1793年ロードアイランド州ポータケットに紡績工場を建設した。「家族ぐるみ雇用」により工場を中心とするコミュニティを築き、19世紀前半には400以上の工業コミュニティが生まれた。","m":"初期工業化を支えたのは保護関税と技術革新でもあった。E.ホイットニーの綿繰機がその代表例。"},{"t":"F.ローウェルとウォルサム工場","a":"富裕なボストン商人ローウェルは1810〜12年にイギリスで繊維工場を視察し、1814年ウォルサムでボストン・マニュファクチャリング社を創業した。労働力は周辺農村の独身女性で、のちのアメリカのビッグ・ビジネスのモデルとなった。","m":"特徴は株式会社形態・生産工程の統合・製品の規格化。1835年までにメリマック川沿いに22工場、1855年までに52工場・女工7700人・男工4400人。1807〜09年と12〜14年の対英出港停止・第二次米英戦争で、ボストン商人が海外貿易資本を綿業へ投じたことが背景。"}]},{"k":"VI","n":"第6回","title":"19世紀後半の世界経済","terms":[{"t":"ヒトのネットワークと熟練労働者移住自由化（1825年）","a":"高度な技術や専門能力をもつ人の移動は技術を急速に伝播させた。イギリスは1825年に熟練労働者の国外移住を自由化し、1842年には機械類の輸出も全面解禁したため、技術を体現する人と機械が国境を越えて動くようになった。","m":"自由化以前からイギリスの技術者は外国と行き来しており、技術の密輸も頻繁だった。後発国から先発国へのヒトの流れも存在した。"},{"t":"移民のプル要因とプッシュ要因","a":"プルは受け入れ側の求心力で、新大陸での土地獲得や企業的成功という社会的上昇の機会。プッシュは押し出し要因で人口圧力・貧困・飢饉・迫害。19世紀特有の事情として、工業化の波及による農村からの人口流出があった。","m":"ヨーロッパ移民の受け入れ国は米62％、アルゼンチン9％、カナダ8％、ブラジル7％。"},{"t":"国際投資と資本移動の構図","a":"19世紀後半、資本輸出国はヨーロッパが9割近くを占め、輸入国は非ヨーロッパ地域が全体の約四分の三を占めた。ヨーロッパからの投資をヨーロッパ以外の地域が受け入れるという構図が、この時代の世界経済の骨格である。","m":"フランスはパリが金融の第二の中心となり、国内低金利のため資金が高い配当を求めて外国へ向かった。ドイツは重工業中心で国内資金需要が大きく植民地も少ない。アメリカは国内市場が大きく、経済力に比べ国外投資は少額だった。"},{"t":"「世界の銀行」（Bank of the World）","a":"19世紀後半、工業生産力に翳りが見え始めたイギリスが経済活動の重心を金融へ移して転身した姿。「世界の工場」からの転換を表す。輸出入の担い手としては「世界の商店主」とも呼ばれ、引き続き世界経済を主導した。"},{"t":"間接投資と直接投資（FDI）","a":"間接投資は債券や株式の取得など経営に直接関与しない投資、直接投資は現地に子会社や工場を設けて経営に関与する投資。19世紀後半においてイギリスとフランスは間接投資、アメリカとドイツは直接投資が主流であった。"},{"t":"政府債と鉄道投資","a":"イギリスの国際投資において比率がきわめて高かった二つの対象。鉄道は工業化に不可欠の社会資本でありながら巨額の初期投資を必要とするため、外部からの資金供給が不可欠だった。政府債は受入国政府の信用に対する投資である。"},{"t":"新定住地域（the regions of recent settlement）","a":"イギリスの投資額が大きかった投資先。温帯に属し広大・肥沃な平原をもち、植民地から独立ないし財政的自治権を獲得した地域を指す。カナダは政府債・鉄道の比率が際立って大きく、南アフリカはこの定義からは外れる。"},{"t":"多角的決済システム","a":"19世紀後半の世界経済に形成された決済の仕組み。各国間の債権債務を二国間で完結させず多角的に相殺することで、同額の金でより効率的に支払いを拡大することが可能になった。金本位制を支えた基盤でもある。","m":"（レジュメ外の補足）昨年度の過去問には「本国費」（植民地インドが本国イギリスへ行政費・軍事費・債務利子等として送った資金）が指定語句にあった。レジュメ本文には出てこないので、使う場合は多角的決済の一例として簡潔に触れる程度にとどめるのが安全。"},{"t":"「中核」と「周辺」（ウォーラーステイン）","a":"I.ウォーラーステインの「資本主義世界システム」論の概念。中核は英・仏・独ほか欧州数か国と米、やや遅れて露・日。周辺は経済的には中核国の原料供給地・工業製品市場・投資受入先、政治的には植民地に組み入れられた。","m":"1415年から1969年までに総数412の植民地が存在し、支配国は英172、スペイン81、仏65、独7、日5など。中核が一国に集中する「単一中心的中核」の時期Aと複数に分散する「多中心的中核」の時期Bは周期的に繰り返し、Bの方がはるかに長い。19世紀後半から20世紀なかばはBにあたる過渡期的局面。"},{"t":"アルゼンチンと「半周辺」","a":"新定住地域は中核と周辺の中間の「半周辺」的立場にある。アルゼンチンは16世紀初頭スペイン領となり1816年独立、1853年憲法制定で本格的な経済建設を開始し、移民導入と外資導入によりイギリス中心のネットワークへ組み込まれた。","m":"経済思想家アルベルディが憲法起草と経済政策に関与。独立直後の人口約50万人が、免税・兵役免除・格安な土地払い下げなどの移民優遇と1876年自作農創設法（米のホームステッド法に類似）により、1914年には289万人へ。"},{"t":"「世界の食糧庫」と「一匹の羊から二枚の皮を剥ぐ」","a":"アルゼンチンは1857年ブエノスアイレスから西方への鉄道が開通し1890年代に営業キロ数1万を超え、ラ・パンパの穀物と食肉に特化した。1880年代の冷凍船技術実用化で欧州へ冷凍肉を輸出し、19世紀末に「世界の食糧庫」となった。","m":"1910年時点でイギリスが投資の60％を占め、アルゼンチンはイギリスにとってもラテンアメリカ最大の投資先。「一匹の羊から二枚の皮を剥ぐ」とは、鉄道投資の利子と安価な食糧輸入という二重の利益を指す。イギリスとの緊密さから「名誉自治領」とも呼ばれた。"}]},{"k":"VII","n":"第7回","title":"両世界大戦間期の激動","terms":[{"t":"戦間期（1918年〜1939年）","a":"第一次世界大戦休戦の1918年から第二次世界大戦開戦の1939年までの期間。長くはないが、管理経済の登場、共産主義経済圏の成立、英から米への経済的覇権の移行など、戦後世界経済のあり方に直結する構造転換の時期だった。"},{"t":"経済的勢力配置図の一変","a":"第一次世界大戦がもたらした最大の変化。ヨーロッパ諸国は大戦の経済的打撃が甚大で深刻な問題を抱えた一方、アメリカは一人勝ち的な債権国となり「豊かな社会」の恩恵を享受した。この単元全体の出発点となる論点である。"},{"t":"管理経済（managed economy）と共産主義経済圏","a":"戦間期の構造転換を象徴する二つの動き。管理経済は政府が経済に介入して調整する仕組み、共産主義は政府による経済の全面的統制である。市場に任せる19世紀型の経済から、政府が関与する20世紀型へ移る転機となった。"},{"t":"戦債・賠償金問題","a":"第一次世界大戦は史上初の近代戦・総力戦であったため、勝った連合国側でも膨大な戦債が累積し、敗戦国の中心ドイツは巨額の賠償金支払いを負った。唯一の債権国アメリカがヨーロッパに資金を援助して支えた。","m":"米が英に代わりネットワークの要の役割を担ったが、これはドイツ経済の復興を前提とした脆弱でリスクを含む結びつきだった。"},{"t":"再建金本位制","a":"19世紀半ばから1914年まで続いた金＝ポンド体制の金本位制は、第一次大戦の金輸出入制限で一時的に機能停止した。戦後は復帰が当然視され、1919年米・1924年独・1925年英・1928年仏・1930年日と復帰した。","m":"基軸国イギリスが復帰した1925年から再建金本位制の時代。戦後の合言葉は Return to normalcy!（正常への復帰）。"},{"t":"ポンドの過大評価","a":"イギリスが1925年に戦前と同じ平価（par rate）で金本位制へ復帰したため、戦後に決定的に低下した経済的地位に比してポンドの価値が高すぎる状態になったこと。再建金本位制が順調に機能しなかった主因のひとつである。"},{"t":"覇権の空白（アメリカの不関与）","a":"アメリカはイギリスが戦前に果たしていた自由貿易・国際投資のリーダーの役割を担おうとせず、実際にはポンドとドル双方が基軸通貨となる不安定なシステムとなった。「世界は米を必要としたが、米はその気がなければ一人でもやっていけた」。"},{"t":"1920年代アメリカ農業の不振","a":"開戦後は連合国側への膨大な食糧提供で戦争特需があり、連邦政府も小麦を直接買い上げ価格支持政策をとった。しかし戦後は疲弊した欧州に購買力がなく、食糧不足の経験から穀物自給へ舵を切ったため不振が深刻化した。","m":"1920年代の農業不振は世界的な傾向（大量のストックと価格低下）と同一軌跡で、大恐慌に先駆ける状況だった。"},{"t":"耐久消費財の普及と販売金融会社","a":"1920年代アメリカでは電気冷蔵庫・電気洗濯機・真空掃除機・ラジオ・蓄音機が普及した。都市人口の増加とビッグビジネスの成長を背景に均質的で大量の需要が生まれ、少品種大量生産とブランドによる選択購入が広がった。","m":"1928年には全米で千社に達した販売金融会社が分割払い購入を可能にし、「消費のための借金」が広がった。セルフ形式のスーパーマーケットも登場。20世紀初頭にはすでに米の工業生産力は世界首位で、大戦後さらに強化されJazz Ageと呼ばれた。"},{"t":"T型フォード","a":"フォードが生産した自動車で、Tin Lizzieと呼ばれた。中産階級家族の所有・利用を想定し、運転や修理が容易で耐久性・耐候性に優れるという明白な商品コンセプトを持ち、アメリカで自動車を一般市民の日用品に変えた。","m":"1913年に流れ作業による組立生産ライン（assembly line）を導入。1914年に日給を2.3ドルから5ドルへ倍増（2.5ドルを基本給とし勤勉な従業員に同額を上乗せ）。1928年にA型車へ切替、1929年4月に自家用車販売がピークを迎えた。"}]}];
+var SK='seiyo3g';
+var FLAT=[];
+UNITS.forEach(function(u,ui){u.terms.forEach(function(t,ti){FLAT.push({id:u.k+'-'+ti,ui:ui,ti:ti,t:t.t,a:t.a,m:t.m||'',k:u.k,n:u.n});});});
+var R={};
+var view='card', scope='all', filt='all', pos=0, revealed=false, deck=[], shuffled=false;
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function save(){try{localStorage.setItem(SK,JSON.stringify({r:R}));}catch(e){}}
+function load(){try{var v=localStorage.getItem(SK);if(v){var o=JSON.parse(v);if(o&&o.r)R=o.r;}}catch(e){}}
+function shuf(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var x=a[i];a[i]=a[j];a[j]=x;}return a;}
+
+function inScope(it){return scope==='all'||it.ui===scope;}
+function passFilt(it){
+  var r=R[it.id];
+  if(filt==='ng')return r===0;
+  if(filt==='new')return r===undefined;
+  return true;
+}
+function buildDeck(keepShuffle){
+  deck=FLAT.filter(function(it){return inScope(it)&&passFilt(it);});
+  if(keepShuffle&&shuffled)shuf(deck);
+  pos=0;revealed=false;
+}
+
+function tabs(){
+  var el=document.getElementById('tabs');el.innerHTML='';
+  var mk=function(label,val,done,tot){
+    var b=document.createElement('button');
+    b.className='tab'+(scope===val?' on':'')+((tot>0&&done===tot)?' done':'');
+    b.innerHTML=esc(label)+'<small>'+done+'/'+tot+'</small>';
+    b.onclick=function(){scope=val;shuffled=false;buildDeck(false);render();window.scrollTo(0,0);};
+    el.appendChild(b);
+  };
+  var ad=0;FLAT.forEach(function(it){if(R[it.id]!==undefined)ad++;});
+  mk('全部','all',ad,FLAT.length);
+  UNITS.forEach(function(u,ui){
+    var d=0,n=u.terms.length;
+    for(var i=0;i<n;i++)if(R[u.k+'-'+i]!==undefined)d++;
+    mk(u.n,ui,d,n);
+  });
+}
+function filters(){
+  document.querySelectorAll('.f[data-f]').forEach(function(b){b.classList.toggle('on',b.dataset.f===filt);});
+}
+function stats(){
+  var ao=0,ax=0;
+  FLAT.forEach(function(it){var r=R[it.id];if(r===1)ao++;else if(r===0)ax++;});
+  var ad=ao+ax;
+  document.getElementById('s1').textContent=deck.length;
+  document.getElementById('s2').textContent=ao;
+  document.getElementById('s3').textContent=ax;
+  document.getElementById('s4').textContent=ad?Math.round(ao/ad*100)+'%':'\u2014';
+  document.getElementById('pbar').style.width=Math.round(ad/FLAT.length*100)+'%';
+  document.getElementById('plab').textContent='全体の進捗 '+ad+' / '+FLAT.length+' 語';
+  document.getElementById('prate').textContent=ad?('○ '+ao+'　✕ '+ax):'まだ1枚も採点していません';
+}
+function grade(id,v){R[id]=v;save();}
+
+function scopeName(){return scope==='all'?'全7回':UNITS[scope].n;}
+function emptyMsg(){
+  if(filt==='ng')return scopeName()+'に、✕をつけた用語はいまのところありません。「すべて」に戻して一周するか、ほかの回を選んでください。';
+  if(filt==='new')return scopeName()+'は未着手の用語がありません。全部さわり終えています。';
+  return scopeName()+'に出す用語がありません。';
+}
+function cardHTML(){
+  if(!deck.length)return '<div class="msg"><h3>0枚</h3>'+esc(emptyMsg())+'</div>';
+  if(pos>=deck.length){
+    var o=0,x=0;
+    deck.forEach(function(it){var r=R[it.id];if(r===1)o++;else if(r===0)x++;});
+    return '<div class="msg"><h3>この範囲を1周しました（'+deck.length+'枚）</h3>'
+      +'○ 言えた <b style="color:var(--ok)">'+o+'</b>　／　✕ 言えなかった <b style="color:var(--ng)">'+x+'</b>'
+      +'<div class="act"><button class="pri big" id="again-ng">✕だけをもう一周</button>'
+      +'<button class="big" id="again-all">この範囲を最初から</button></div></div>';
+  }
+  var it=deck[pos],r=R[it.id];
+  var h='<div class="card'+(r===1?' ok':(r===0?' ng':''))+'">';
+  h+='<div class="cmeta"><span class="badge">'+esc(it.n)+'　'+esc(UNITS[it.ui].title)+'</span>';
+  h+='<span class="sp">'+(pos+1)+' / '+deck.length+'</span></div>';
+  h+='<div class="cterm">'+esc(it.t)+'</div>';
+  if(!revealed&&r===undefined){
+    h+='<div class="act"><button class="pri big" id="reveal">答えを見る（Space）</button>'
+      +'<span class="hint">先に声に出して3行言ってみる</span></div>';
+  }else{
+    h+='<div class="ans"><span class="lab">答案にそのまま書ける3行（'+it.a.length+'字）</span>'+esc(it.a)+'</div>';
+    if(it.m)h+='<div class="memo"><span class="lab">深掘りメモ（余裕があれば）</span>'+esc(it.m)+'</div>';
+    if(r===undefined){
+      h+='<div class="act"><button class="gd big" data-g="1">○ 言えた（1）</button>'
+        +'<button class="bd big" data-g="0">✕ 言えなかった（2）</button></div>';
+    }else{
+      h+='<div class="res"><b class="'+(r===1?'ok':'ng')+'">'+(r===1?'○ 言えた':'✕ 言えなかった')+'</b>'
+        +'<button class="pri" id="next">次へ（Enter）</button>'
+        +'<button id="redo">やり直す</button></div>';
+    }
+  }
+  h+='<div class="nav"><button id="prev">← 前</button><button id="skip">次 →</button></div>';
+  h+='</div>';
+  return h;
+}
+function listHTML(){
+  if(!deck.length)return '<div class="msg"><h3>0枚</h3>'+esc(emptyMsg())+'</div>';
+  var h='<div class="note"><h3>一覧モード</h3>全'+deck.length+'語をまとめて読みます。試験直前の総ざらい用。○/✕はここでも付けられます。</div>';
+  deck.forEach(function(it,i){
+    var r=R[it.id];
+    h+='<div class="li'+(r===1?' ok':(r===0?' ng':''))+'">';
+    h+='<div class="cmeta"><span class="badge">'+esc(it.n)+'</span><span class="sp">'+(i+1)+' / '+deck.length+'</span></div>';
+    h+='<div class="lt">'+esc(it.t)+'</div>';
+    h+='<div class="la">'+esc(it.a)+'</div>';
+    if(it.m)h+='<div class="lm">'+esc(it.m)+'</div>';
+    h+='<div class="lact"><button class="gd" data-lg="1" data-id="'+esc(it.id)+'">○</button>'
+      +'<button class="bd" data-lg="0" data-id="'+esc(it.id)+'">✕</button>'
+      +'<span class="hint">'+(r===1?'○ 言えた':(r===0?'✕ 言えなかった':'未採点'))+'</span></div>';
+    h+='</div>';
+  });
+  return h;
+}
+
+function render(){
+  tabs();filters();
+  document.querySelectorAll('.mode').forEach(function(b){b.classList.toggle('on',b.dataset.v===view);});
+  document.getElementById('main').innerHTML=(view==='card')?cardHTML():listHTML();
+  bind();stats();
+  if(document.activeElement&&document.activeElement.blur)document.activeElement.blur();
+}
+function nextCard(){if(pos<deck.length){pos++;revealed=false;render();}}
+function prevCard(){if(pos>0){pos--;revealed=false;render();}}
+function doReveal(){if(!revealed){revealed=true;render();}}
+function doGrade(v){
+  if(pos>=deck.length)return;
+  grade(deck[pos].id,v);
+  if(document.getElementById('auto').checked){pos++;revealed=false;}
+  render();
+}
+function bind(){
+  var g=function(id){return document.getElementById(id);};
+  if(g('reveal'))g('reveal').onclick=doReveal;
+  document.querySelectorAll('[data-g]').forEach(function(b){b.onclick=function(){doGrade(+b.dataset.g);};});
+  if(g('next'))g('next').onclick=nextCard;
+  if(g('skip'))g('skip').onclick=nextCard;
+  if(g('prev'))g('prev').onclick=prevCard;
+  if(g('redo'))g('redo').onclick=function(){delete R[deck[pos].id];revealed=false;save();render();};
+  if(g('again-ng'))g('again-ng').onclick=function(){filt='ng';shuffled=false;buildDeck(false);render();window.scrollTo(0,0);};
+  if(g('again-all'))g('again-all').onclick=function(){pos=0;revealed=false;render();window.scrollTo(0,0);};
+  document.querySelectorAll('[data-lg]').forEach(function(b){
+    b.onclick=function(){grade(b.dataset.id,+b.dataset.lg);render();};
+  });
+}
+
+document.querySelectorAll('.mode').forEach(function(b){
+  b.onclick=function(){view=b.dataset.v;revealed=false;render();window.scrollTo(0,0);};
+});
+document.querySelectorAll('.f[data-f]').forEach(function(b){
+  b.onclick=function(){
+    filt=b.dataset.f;
+    if(filt==='ng')scope='all';
+    shuffled=false;buildDeck(false);render();window.scrollTo(0,0);
+  };
+});
+document.getElementById('bshuf').onclick=function(){shuffled=true;buildDeck(true);render();window.scrollTo(0,0);};
+document.getElementById('brs').onclick=function(){
+  if(!confirm('いま回している範囲（'+deck.length+'枚）の○/✕を消します。よろしいですか？'))return;
+  deck.forEach(function(it){delete R[it.id];});
+  save();buildDeck(false);render();
+};
+document.getElementById('brall').onclick=function(){
+  if(!confirm('全'+FLAT.length+'語の記録を消します。よろしいですか？'))return;
+  R={};save();buildDeck(false);render();
+};
+document.addEventListener('keydown',function(e){
+  if(view!=='card')return;
+  var tg=e.target&&e.target.tagName;
+  if(tg==='INPUT'||tg==='TEXTAREA')return;
+  if(e.metaKey||e.ctrlKey||e.altKey)return;
+  var k=e.key;
+  if(k===' '||k==='Spacebar'||e.code==='Space'){e.preventDefault();doReveal();return;}
+  if(k==='1'){e.preventDefault();if(revealed||(deck[pos]&&R[deck[pos].id]!==undefined))doGrade(1);return;}
+  if(k==='2'){e.preventDefault();if(revealed||(deck[pos]&&R[deck[pos].id]!==undefined))doGrade(0);return;}
+  if(k==='Enter'){e.preventDefault();nextCard();return;}
+  if(k==='ArrowRight'){e.preventDefault();nextCard();return;}
+  if(k==='ArrowLeft'){e.preventDefault();prevCard();return;}
+});
+load();buildDeck(false);render();
+</script></body></html>
