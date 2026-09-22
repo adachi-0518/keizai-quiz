@@ -1,167 +1,812 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>銀行論 試験対策（4択115問＋記述対策）</title>
+<title>銀行論 | 試験対策クイズ</title>
+<meta name="description" content="金融の基礎から、銀行の業務・機能・リスク管理・規制・経営指標まで。各部のはじめに要点ノートがあり、読んでから4択で確認できます。">
 <style>
-:root{--bg:#fbfaf8;--card:#fff;--line:#e3e0d8;--txt:#23221f;--sub:#6d6a63;--accent:#1e4d6b;--accentbg:#e6eef4;--ok:#1d7a4f;--okbg:#e6f4ec;--ng:#b3312e;--ngbg:#fbeaea}
-@media(prefers-color-scheme:dark){:root{--bg:#1b1a18;--card:#252422;--line:#3a3833;--txt:#eceae4;--sub:#a5a29a;--accent:#8fbdd9;--accentbg:#1f2f3a;--ok:#6cc79a;--okbg:#1e3a2c;--ng:#e88a88;--ngbg:#3c2322}}
+:root{
+ --bg:#fbfaf8;--card:#fff;--line:#e5e2da;--txt:#22211e;--sub:#6d6a63;--soft:#f4f2ed;
+ --ok:#1d7a4f;--okbg:#e7f4ec;--ng:#b3312e;--ngbg:#fbeaea;
+ --accent:#2f5d50;--accentbg:#e7f0ec;--on:#fff;
+}
+@media(prefers-color-scheme:dark){:root{
+ --bg:#1a1917;--card:#242320;--line:#3a3833;--txt:#ecebe5;--sub:#a6a39b;--soft:#2c2b27;
+ --ok:#6cc79a;--okbg:#1e3a2c;--ng:#e88a88;--ngbg:#3c2322;
+ --accent:#84c2ab;--accentbg:#1e332c;--on:#161513;
+}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.8;-webkit-text-size-adjust:100%}
-.wrap{max-width:800px;margin:0 auto;padding:22px 16px 90px}
-h1{font-size:20px;font-weight:600;margin:0 0 3px;line-height:1.45}
-.lead{color:var(--sub);font-size:13px;margin:0 0 18px;line-height:1.7}
-.bar{height:7px;background:var(--card);border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-bottom:6px}
-.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .35s}
-.barlab{font-size:12px;color:var(--sub);margin-bottom:16px;display:flex;justify-content:space-between}
-.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
-.tab{padding:6px 13px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:99px;cursor:pointer;font-size:13px;font-family:inherit;line-height:1.5}
-.tab:hover{border-color:var(--accent)}
-.tab.on{background:var(--accent);color:#fff;border-color:var(--accent)}
-.tab small{font-size:10px;opacity:.7;margin-left:3px}
-.tab.done::after{content:"✓";margin-left:4px;color:var(--ok);font-weight:600}
-.tab.on.done::after{color:#fff}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 11px}
-.stat b{display:block;font-size:21px;font-weight:600;line-height:1.35}
-.stat span{font-size:11px;color:var(--sub)}
-h2{font-size:16px;font-weight:600;margin:0 0 13px;padding-bottom:8px;border-bottom:2px solid var(--accent);line-height:1.5}
-.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 15px;margin-bottom:11px}
-.q.ok{border-color:var(--ok)}.q.ng{border-color:var(--ng)}
-.qh{display:flex;gap:8px;margin-bottom:9px}
-.qn{font-size:12px;color:var(--sub);min-width:28px;flex-shrink:0;padding-top:2px}
-.qt{font-size:15px;flex:1;line-height:1.85}
-.opts{display:flex;flex-direction:column;gap:6px;margin-left:36px}
-.o{display:flex;gap:9px;align-items:flex-start;padding:9px 11px;border:1px solid transparent;background:var(--bg);border-radius:8px;cursor:pointer;font-size:14px;line-height:1.6}
-.o:hover{border-color:var(--accent)}
-.o.sel{background:var(--accentbg);border-color:var(--accent)}
-.o.c{background:var(--okbg);border-color:var(--ok)}
-.o.x{background:var(--ngbg);border-color:var(--ng)}
-.o i{min-width:17px;color:var(--sub);font-style:normal;flex-shrink:0}
-.o.c i{color:var(--ok)}.o.x i{color:var(--ng)}
-.act{margin:10px 0 0 36px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-button{font-family:inherit;font-size:13px;padding:7px 15px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:8px;cursor:pointer;line-height:1.5}
-button:hover{border-color:var(--accent)}
-.exp{margin:10px 0 0 36px;padding-top:9px;border-top:1px solid var(--line);font-size:13px;color:var(--sub);line-height:1.75}
-.exp b.ok{color:var(--ok)}.exp b.ng{color:var(--ng)}
-.hint{font-size:12px;color:var(--sub)}
-.foot{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
-.msg{background:var(--accentbg);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.7}
-.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:13px 15px;margin-bottom:14px;font-size:14px;line-height:1.8}
-.note h3{margin:0 0 6px;font-size:14px;font-weight:600}
-.note p{margin:4px 0}
-.note .kwlist{font-size:13px;color:var(--sub);background:var(--bg);border-radius:7px;padding:9px 11px;line-height:2}
-.note ul{margin:4px 0;padding-left:20px}.note li{margin-bottom:3px}
-.credit{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--sub);line-height:1.8}
-@media(max-width:520px){.stats{grid-template-columns:repeat(2,1fr)}.opts,.act,.exp{margin-left:0}}
-</style></head><body><div class="wrap">
-<h1>銀行論 試験対策</h1>
-<p class="lead">8/4（2限）／<b>4択10問＋記述1題・60分・持ち込み不可</b>。全8部・119問。友人の今季ノートの内容を反映し、各部の冒頭に要点をまとめました。最後の「記述」タブに過去問の答案設計図があります。選択肢の並びは開くたびにシャッフルされます。</p>
-<div class="bar"><i id="pbar"></i></div>
-<div class="barlab"><span id="plab"></span><span id="prate"></span></div>
-<div class="tabs" id="tabs"></div>
-<div class="stats">
-<div class="stat"><b id="s1">0</b><span>この章の解答数</span></div>
-<div class="stat"><b id="s2" style="color:var(--ok)">0</b><span>正解</span></div>
-<div class="stat"><b id="s3" style="color:var(--ng)">0</b><span>不正解</span></div>
-<div class="stat"><b id="s4">—</b><span>正答率</span></div>
-</div>
-<div id="main"></div>
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.85;
+ font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+ font-feature-settings:"palt"}
+.wrap{max-width:720px;margin:0 auto;padding:26px 18px 60px}
+
+/* ---- header ---- */
+h1{font-size:22px;font-weight:600;margin:0 0 6px;line-height:1.45;letter-spacing:.01em}
+.lead{color:var(--sub);font-size:13.5px;line-height:1.8;margin:0 0 4px}
+.meta{font-size:12px;color:var(--sub);margin:6px 0 22px}
+.meta b{color:var(--accent);font-weight:600}
+
+/* ---- 共通パーツ ---- */
+.row{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.chip{font-family:inherit;font-size:13px;line-height:1.5;padding:7px 14px;border-radius:99px;
+ border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer;transition:border-color .12s}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--accent);color:var(--on);border-color:var(--accent)}
+.chip small{font-size:10.5px;opacity:.62;margin-left:5px;font-weight:400}
+.chip.on small{opacity:.8}
+
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--card);flex-wrap:wrap}
+.seg button{font-family:inherit;font-size:13.5px;padding:9px 18px;border:none;background:transparent;
+ color:var(--sub);cursor:pointer;line-height:1.5;white-space:nowrap}
+.seg button.on{background:var(--accent);color:var(--on);font-weight:600}
+.modehint{font-size:12.5px;color:var(--sub);margin:-6px 0 16px;line-height:1.75}
+
+/* ---- 進捗 ---- */
+.hud{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:20px 0 6px;font-size:12.5px;color:var(--sub)}
+.hud .n{font-variant-numeric:tabular-nums}
+.hud .ok{color:var(--ok);font-weight:600}
+.hud .ng{color:var(--ng);font-weight:600}
+.hud .sp{flex:1}
+.track{height:5px;border-radius:99px;background:var(--soft);overflow:hidden;margin-bottom:20px}
+.track i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s ease}
+
+/* ---- 要点ノート ---- */
+details.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);
+ border-radius:0 11px 11px 0;margin-bottom:16px;font-size:14px;line-height:1.85}
+details.note>summary{cursor:pointer;padding:11px 15px;font-size:13.5px;font-weight:600;color:var(--accent);list-style:none}
+details.note>summary::-webkit-details-marker{display:none}
+details.note>summary::before{content:"▸ ";font-size:11px}
+details.note[open]>summary::before{content:"▾ "}
+.note .body{padding:0 15px 14px}
+.note h3{margin:12px 0 5px;font-size:14px;font-weight:600}
+.note h3:first-child{margin-top:0}
+.note p{margin:5px 0}
+.note ul{margin:5px 0;padding-left:20px}
+.note li{margin-bottom:3px}
+.note .kwlist{font-size:13px;color:var(--sub);background:var(--soft);border-radius:8px;padding:9px 12px;line-height:2}
+
+/* ---- 問題カード ---- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;margin-bottom:14px}
+.src{font-size:11.5px;color:var(--sub);margin:0 0 12px;letter-spacing:.02em}
+.qtext{font-size:18px;line-height:1.95;margin:0 0 18px;font-weight:400}
+.qtext .blank{display:inline-block;min-width:78px;border-bottom:2px solid var(--accent);
+ background:var(--accentbg);border-radius:3px;padding:0 8px;text-align:center;color:transparent}
+.qtext .blank.on{color:var(--ok);font-weight:600;background:var(--okbg);border-bottom-color:var(--ok);min-width:0}
+u.bad{text-decoration:none;background:var(--ngbg);color:var(--ng);font-weight:600;
+ border-bottom:2px solid var(--ng);border-radius:3px;padding:0 3px;
+ -webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ask{font-size:13px;color:var(--sub);margin:0 0 11px}
+
+.choices{display:flex;flex-direction:column;gap:8px}
+.ch{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;
+ font-family:inherit;font-size:15.5px;line-height:1.7;padding:13px 15px;
+ border:1px solid var(--line);border-radius:11px;background:var(--bg);color:var(--txt);cursor:pointer;transition:border-color .12s,background .12s}
+.ch:hover{border-color:var(--accent)}
+.ch i{flex-shrink:0;width:23px;height:23px;margin-top:2px;border-radius:7px;background:var(--soft);
+ color:var(--sub);font-style:normal;font-size:12px;font-weight:600;
+ display:flex;align-items:center;justify-content:center}
+.ch.pick{border-color:var(--accent);background:var(--accentbg)}
+.ch.pick i{background:var(--accent);color:var(--on)}
+.ch.correct{border-color:var(--ok);background:var(--okbg)}
+.ch.correct i{background:var(--ok);color:var(--on)}
+.ch.miss{border-color:var(--ng);background:var(--ngbg)}
+.ch.miss i{background:var(--ng);color:var(--on)}
+.ch.none{color:var(--sub)}
+.ch.none.correct,.ch.none.miss{color:var(--txt)}
+.ch[disabled]{cursor:default}
+
+/* ---- 判定・解説 ---- */
+.verdict{display:inline-block;font-size:12.5px;font-weight:600;padding:3px 13px;border-radius:99px;margin:18px 0 0}
+.verdict.y{background:var(--okbg);color:var(--ok)}
+.verdict.n{background:var(--ngbg);color:var(--ng)}
+.fix{margin-top:11px;padding:12px 15px;background:var(--okbg);border-radius:10px;font-size:15.5px;line-height:1.8}
+.fix b{color:var(--ok)}
+.fix .lbl{font-size:12px;color:var(--sub);display:block;margin-bottom:1px}
+.fix.long{font-size:14.5px;background:var(--soft)}
+.fix.long b{color:var(--txt);font-weight:400}
+.item .a.long b{color:var(--txt);font-weight:400}
+.exp{margin-top:13px;padding-top:13px;border-top:1px solid var(--line);font-size:13.5px;color:var(--sub);line-height:1.9}
+
+/* ---- 操作ボタン ---- */
+.btns{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.btn{flex:1;min-width:120px;font-family:inherit;font-size:14.5px;padding:12px 16px;border-radius:11px;
+ border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer;line-height:1.5}
+.btn:hover{border-color:var(--accent)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--on);font-weight:600}
+.btn.pri:hover{opacity:.9}
+.btn.y{border-color:var(--ok);color:var(--ok);font-weight:600}
+.btn.n{border-color:var(--ng);color:var(--ng);font-weight:600}
+.btn[disabled]{opacity:.38;cursor:default}
+.btn[disabled]:hover{border-color:var(--line)}
+
+.nav{display:flex;gap:9px;align-items:center;margin-top:4px}
+.nav button{font-family:inherit;font-size:13.5px;padding:10px 18px;border-radius:10px;
+ border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer}
+.nav button:hover{border-color:var(--accent)}
+.nav button[disabled]{opacity:.35;cursor:default}
+.nav button[disabled]:hover{border-color:var(--line)}
+.nav .sp{flex:1}
+
+/* ---- 一覧ビュー ---- */
+.lsec{margin:0 0 30px}
+.lsec:first-child{margin-top:16px}
+.lsec h2{font-size:15px;font-weight:600;margin:0 0 13px;padding-bottom:8px;border-bottom:2px solid var(--accent);line-height:1.55}
+.item{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 16px;margin-bottom:10px}
+.item.err{border-left:3px solid var(--ng)}
+.item.clean{border-left:3px solid var(--ok)}
+.item .s{font-size:15.5px;margin:0;line-height:1.9}
+.item .a{margin:9px 0 0;font-size:15px;background:var(--okbg);border-radius:8px;padding:8px 12px;line-height:1.8}
+.item .a b{color:var(--ok)}
+.item .a .lbl{font-size:11.5px;color:var(--sub);margin-right:8px}
+.item .note-ok{margin:8px 0 0;font-size:13px;color:var(--ok)}
+.item .ex{margin:9px 0 0;padding-top:9px;border-top:1px solid var(--line);font-size:13px;color:var(--sub);line-height:1.9}
+body.hide .item .a,body.hide .item .ex,body.hide .item .note-ok{display:none}
+body.hide .item .s u.bad{background:transparent;color:inherit;font-weight:400;border-bottom:none;padding:0}
+body.hide .item .s .blank.on{color:transparent;background:var(--accentbg);border-bottom-color:var(--accent);min-width:78px}
+
+/* ---- 読み物 ---- */
+.doc{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:15px}
+.doc h3{font-size:16.5px;margin:0 0 5px;line-height:1.6;font-weight:600}
+.doc .why{font-size:13px;color:var(--sub);margin:0 0 13px;line-height:1.85}
+.doc pre{background:var(--soft);border-radius:10px;padding:14px 15px;margin:0;
+ font-size:13.5px;line-height:2;white-space:pre-wrap;font-family:inherit;overflow-x:auto}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.kw span{font-size:12px;padding:3px 10px;background:var(--accentbg);color:var(--accent);border-radius:99px;line-height:1.7}
+
+/* ---- 結果 ---- */
+.done{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 22px;text-align:center}
+.done .big{font-size:38px;font-weight:600;line-height:1.3;margin:0;font-variant-numeric:tabular-nums}
+.done .rate{font-size:14px;color:var(--sub);margin:4px 0 0}
+.done .btns{margin-top:22px}
+
+.empty{background:var(--soft);border-radius:11px;padding:16px 18px;font-size:14px;color:var(--sub);line-height:1.8}
+
+/* ---- footer ---- */
+.foot{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+ font-size:12px;color:var(--sub);line-height:1.9}
+.foot .tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.foot .tools button{font-family:inherit;font-size:12.5px;padding:7px 14px;border-radius:99px;
+ border:1px solid var(--line);background:var(--card);color:var(--sub);cursor:pointer;line-height:1.5}
+.foot .tools button:hover{border-color:var(--accent);color:var(--accent)}
+.foot .tools button.on{background:var(--accent);border-color:var(--accent);color:var(--on)}
+.foot a{color:var(--accent)}
+.keys{margin-top:10px;font-size:11.5px}
+.keys kbd{display:inline-block;padding:1px 6px;margin:0 1px;border:1px solid var(--line);
+ border-radius:4px;background:var(--card);font-family:inherit;font-size:11px}
+
+@media(max-width:560px){
+ .wrap{padding:20px 14px 50px}
+ h1{font-size:19.5px}
+ .card{padding:16px 15px 15px}
+ .qtext{font-size:16.5px}
+ .ch{font-size:15px;padding:12px 13px}
+ .keys{display:none}
+}
+</style><!-- DADS-ENHANCEMENT:START -->
+<style id="dads-enhancement">
+/* Digital Agency Design System v2.18.0 を参照した共通スタイル */
+:root{
+  --dads-link:#0017c1;
+  --dads-visited:#551a8b;
+  --dads-focus:#ffd43b;
+  --dads-neutral-900:#1a1a1a;
+  --dads-neutral-700:#4d4d4d;
+  --dads-radius-s:8px;
+  --dads-radius-m:12px;
+  --dads-space-1:4px;
+  --dads-space-2:8px;
+  --dads-space-3:12px;
+  --dads-space-4:16px;
+  --dads-space-6:24px;
+  --dads-space-8:32px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --dads-link:#9db7ff;
+  --dads-visited:#d9b7ff;
+  --dads-neutral-900:#f5f5f5;
+  --dads-neutral-700:#c7c7c7;
+}}
+html{scroll-behavior:smooth}
+body{font-size:16px;line-height:1.75;font-feature-settings:normal}
+.wrap{max-width:48rem;padding:var(--dads-space-8) var(--dads-space-6) 64px}
+h1{font-size:clamp(1.5rem,1.25rem + 1vw,2rem);font-weight:700;line-height:1.4;margin-bottom:var(--dads-space-3)}
+.lead{font-size:1rem;line-height:1.8;margin-bottom:var(--dads-space-2)}
+.meta{font-size:.875rem;line-height:1.6;margin-bottom:var(--dads-space-8)}
+.modehint,.hud,.ask,.src,.foot,.item .ex,.doc .why{font-size:.875rem}
+
+/* キーボード利用者の現在位置を、DADS準拠の黄＋黒の二重線で示す */
+:where(a,button,summary,[tabindex]):focus-visible{
+  outline:2px solid #000!important;
+  outline-offset:2px!important;
+  box-shadow:0 0 0 5px var(--dads-focus)!important;
+  position:relative;
+  z-index:10;
+}
+:where(button,[role="button"]){min-height:44px}
+button{touch-action:manipulation}
+button:disabled{cursor:not-allowed}
+
+/* リンクは色だけに依存させない */
+.foot a,.about a,.lead a,.doc a,.note a{
+  color:var(--dads-link);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:.2em;
+}
+.foot a:visited,.about a:visited,.lead a:visited,.doc a:visited,.note a:visited{color:var(--dads-visited)}
+
+/* スキップリンク */
+.dads-skip{
+  position:fixed;left:var(--dads-space-4);top:var(--dads-space-4);z-index:9999;
+  padding:10px 16px;border:2px solid #000;border-radius:var(--dads-radius-s);
+  background:#fff;color:#000;font-weight:700;text-decoration:underline;
+  transform:translateY(-160%);
+}
+.dads-skip:focus{transform:none}
+
+/* コンポーネントの役割と操作面積を揃える */
+.chip{min-height:44px;padding:9px 16px;border-radius:999px;font-size:.875rem}
+.seg{border-radius:var(--dads-radius-s);margin-bottom:var(--dads-space-4)}
+.seg button{min-height:48px;padding:10px 20px;font-size:1rem;border-bottom:3px solid transparent}
+.seg button.on{border-bottom-color:currentColor}
+.ch{min-height:52px;padding:14px 16px;border-radius:var(--dads-radius-s);font-size:1rem}
+.btn{min-height:48px;border-radius:var(--dads-radius-s);font-size:1rem}
+.nav button,.foot .tools button{min-height:44px;padding:10px 16px;border-radius:var(--dads-radius-s);font-size:.875rem}
+.card,.doc,.item,.done{border-radius:var(--dads-radius-m)}
+.qtext{font-size:1.125rem;line-height:1.85}
+.track{height:8px}
+details.note>summary{min-height:44px;display:flex;align-items:center;font-size:1rem}
+.empty{font-size:1rem}
+
+/* トップページのカード：主題・補足・遷移先を一つの塊として読む */
+a.card{border-radius:var(--dads-radius-m);padding:20px 22px;margin-bottom:var(--dads-space-3)}
+a.card .ct{font-size:1.125rem;font-weight:700;text-decoration:underline;text-underline-offset:.2em}
+a.card .cm{font-size:1rem;line-height:1.8}
+a.card:hover .ct,a.card:focus-visible .ct{text-decoration-thickness:2px}
+a.card::after{content:"この学習ツールを開く →";display:block;margin-top:var(--dads-space-3);font-size:.875rem;font-weight:700;color:var(--accent)}
+.about{border-radius:var(--dads-radius-m);font-size:1rem}
+
+/* 正誤は色だけでなく、記号・枠線・文言でも判別できる */
+.verdict{font-size:.875rem;border:1px solid currentColor}
+.ch.correct{border-width:2px}.ch.miss{border-width:2px}
+
+@media(max-width:560px){
+  .wrap{padding:var(--dads-space-6) var(--dads-space-4) 52px}
+  h1{font-size:1.5rem}
+  .lead{font-size:1rem}
+  .card{padding:var(--dads-space-4)}
+  .qtext{font-size:1.0625rem}
+  .ch{font-size:1rem;padding:13px 14px}
+  .seg{display:flex;width:100%}
+  .seg button{flex:1;padding-inline:10px;white-space:normal}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
+</style>
+<!-- DADS-ENHANCEMENT:END -->
+</head><body>
+<div class="wrap">
+<h1>銀行論</h1>
+<p class="lead">金融の基礎から、銀行の業務・機能・リスク管理・規制・経営指標まで。各部のはじめに要点ノートがあり、読んでから4択で確認できます。</p>
+<p class="meta"><b>全8部 ・ 119問</b></p>
+<div class="seg" id="modes"></div>
+<p class="modehint" id="modehint"></p>
+<div class="row" id="chips"></div>
+<div class="hud" id="hud"></div>
+<div class="track" id="track"><i></i></div>
+<div id="note"></div>
+<div id="stage"></div>
+<div class="nav" id="nav"></div>
 <div class="foot">
-<button id="bw">間違えた問題だけ</button>
-<button id="ba" style="display:none">全部表示</button>
-<button id="br">この章をリセット</button>
-<button id="brall">全部リセット</button>
+<div class="tools" id="tools"></div>
+<p>学生が講義の復習用に作成した学習ツールです。出題は一般的な学術概念にもとづき、独自の文章で作成しています。講義資料そのものの複製ではありません。解答の記録はお使いのブラウザにだけ保存されます。</p>
+<p><a href="../">← ほかの科目を見る</a></p>
+<p class="keys" id="keys"><kbd>1</kbd>〜<kbd>9</kbd> 解答　<kbd>→</kbd> つぎへ　<kbd>←</kbd> もどる</p>
 </div>
-<p class="credit">学生が試験対策用に作成した学習ツールです。出題は一般的な学術概念にもとづき、独自の文章で作成しています。講義資料そのものの複製ではありません。誤りを見つけたら Issue でお知らせください。</p>
 </div>
+<script>var DECK={"slug":"ginko","defaultView":"quiz","modes":[{"id":"mc","label":"4択","kind":"quiz","hint":"","sections":[{"label":"第1部","title":"1. 銀行業とは（金融・金融機関・銀行）","note":"\u003cdiv class=\"note\">\u003ch3>この部の骨格\u003c/h3>\u003cb>金融\u003c/b>＝資金を必要とする者に、余裕資金を持つ者が資金を融通すること。\u003cb>黒字主体\u003c/b>（支出＜収入＝貯蓄超過主体、家計）から\u003cb>赤字主体\u003c/b>（支出＞収入＝投資超過主体、企業）へ資金が流れる。その流れ方が3種類：\u003cul>\u003cli>\u003cb>間接金融\u003c/b>：貸手と借手の間に銀行が介入する\u003c/li>\u003cli>\u003cb>直接金融\u003c/b>：資金提供者から資金需要者へ金融市場を通じて直接流れる\u003c/li>\u003cli>\u003cb>市場型間接金融\u003c/b>：投資信託（FUND）を経由する。NISAなど\u003c/li>\u003c/ul>なぜ銀行が必要か＝\u003cb>取引費用\u003c/b>。金融取引を成立させるには貸し手・借り手を探す情報収集、貸出条件（金利・貸出額・期間）の合意といったプロセスが必要で、そこに費用がかかる。専門仲介業者がまとめて担うことでこれを下げられる。\u003c/div>","items":[{"ty":"mc","q":"貸手（家計）と借手（企業）の間に仲介機関が介在して資金の流れを仲立ちする方式を何というか。","ch":[{"t":"直接金融"},{"t":"相対金融"},{"t":"間接金融"},{"t":"市場型間接金融"}],"ans":2,"e":"銀行が間に入る方式。家計が企業に直接資金を提供するのが直接金融、投資信託などを介するのが市場型間接金融。"},{"ty":"mc","q":"投資信託のように、家計→FUND（金融市場）→企業と資金が流れる方式を何というか。","ch":[{"t":"市場型間接金融"},{"t":"間接金融"},{"t":"証券金融"},{"t":"直接金融"}],"ans":0,"e":"仲介はあるが、リスクは最終的に家計が負う点が銀行を介する間接金融と異なる。"},{"ty":"mc","q":"預金取扱金融機関のうち、信用金庫・信用組合・労働金庫・農協・漁協はまとめて何と呼ばれるか。","ch":[{"t":"政府系金融機関"},{"t":"普通銀行"},{"t":"その他の金融機関"},{"t":"協同組織金融機関"}],"ans":3,"e":"普通銀行（都市銀行・地銀・第二地銀・在日外国銀行）と対になる分類。組合員・会員を対象とする。"},{"ty":"mc","q":"証券会社・保険会社・リース会社などが「その他の金融機関」に分類される理由は何か。","ch":[{"t":"預金を扱わないから"},{"t":"規模が小さいから"},{"t":"免許制でないから"},{"t":"営利目的でないから"}],"ans":0,"e":"預金取扱金融機関か否かが、金融機関の第一の分類軸。"},{"ty":"mc","q":"銀行を開業するために必要な資本金はいくらか。","ch":[{"t":"5億円"},{"t":"50億円"},{"t":"10億円"},{"t":"20億円"}],"ans":3,"e":"内閣総理大臣の免許、資本金20億円、業務体制（コンプライアンス等）、システム投資が必要。"},{"ty":"mc","q":"銀行の免許を与えるのは誰か。","ch":[{"t":"日本銀行総裁"},{"t":"財務大臣"},{"t":"金融庁長官"},{"t":"内閣総理大臣"}],"ans":3,"e":"法律上は内閣総理大臣の免許。実務は金融庁が担う。"},{"ty":"mc","q":"銀行法第1条が掲げる目的に含まれないものはどれか。","ch":[{"t":"銀行の利潤の最大化"},{"t":"信用の維持"},{"t":"預金者等の保護の確保"},{"t":"金融の円滑を図ること"}],"ans":0,"e":"銀行法1条は業務の公共性にかんがみ、信用維持・預金者保護・金融の円滑を図り、国民経済の健全な発展に資することを目的とする。利潤最大化は株式会社としての目的であって法の目的ではない。"},{"ty":"mc","q":"日本において「普通銀行」に含まれるのはどれか。","ch":[{"t":"信託銀行"},{"t":"都市銀行・地方銀行・第二地銀"},{"t":"協同組織金融機関"},{"t":"証券会社"}],"ans":1,"e":"商業銀行（commercial bank）＝短期資金の受入、貸付・手形割引を行う銀行。日本ではこれが普通銀行にあたる。"},{"ty":"mc","q":"都市銀行の特徴として正しいものはどれか。","ch":[{"t":"各都道府県に1行ずつ存在する"},{"t":"4行で全銀行の約4割を占める"},{"t":"預金の受入のみを行う"},{"t":"持株会社形態は認められていない"}],"ans":1,"e":"大都市に本店を置き全国規模で営業。国際業務・証券業務・デリバティブまで扱うユニバーサルバンクで、持株会社形態をとる。"},{"ty":"mc","q":"グループ内に銀行・証券会社・保険会社・信託会社などを持つ会社を何というか。","ch":[{"t":"ユニバーサルバンク"},{"t":"金融持株会社"},{"t":"メガバンク"},{"t":"銀行代理業者"}],"ans":1,"e":"みずほ、三井住友、三菱UFJなどがこの形態をとる。"},{"ty":"mc","q":"金融の定義として正しいものはどれか。","ch":[{"t":"中央銀行が金利を決めること"},{"t":"企業が株式を発行すること"},{"t":"資金を必要とする者に対し、余裕資金を持つ者が資金を融通すること"},{"t":"政府が通貨を発行すること"}],"ans":2,"e":"貸手＝黒字主体（支出＜収入＝貯蓄超過主体、典型は家計）、借手＝赤字主体（支出＞収入＝投資超過主体、典型は企業）。"},{"ty":"mc","q":"支出が収入を上回る「赤字主体」は別名何と呼ばれるか。","ch":[{"t":"中立主体"},{"t":"貯蓄超過主体"},{"t":"黒字主体"},{"t":"投資超過主体"}],"ans":3,"e":"黒字主体＝貯蓄超過主体（家計）／赤字主体＝投資超過主体（企業）。この対で覚える。"},{"ty":"mc","q":"銀行業（銀行法上）の定義として正しいものはどれか。","ch":[{"t":"貸付のみを行うこと"},{"t":"預金・貸付・為替のすべてを行うこと"},{"t":"①預金と貸付の両方、または②為替、のいずれかを行うこと"},{"t":"預金のみを行うこと"}],"ans":2,"e":"「①②の両方、またはいずれか」という条件。①は預金 and 貸付でセット、②は為替単独でも銀行業になる。"},{"ty":"mc","q":"銀行以外の者が不特定多数から預り金業務を行うことは、どの法律で原則禁止されているか。","ch":[{"t":"出資法"},{"t":"資金決済法"},{"t":"民法"},{"t":"銀行法"}],"ans":0,"e":"預り金業務は出資法で原則禁止され、銀行法により免許を得た機関に限り預金を扱うことができる。この二段構えが問われやすい。"},{"ty":"mc","q":"信託銀行の業務範囲として正しいものはどれか。","ch":[{"t":"信託業務のみ"},{"t":"銀行業務＋証券業務"},{"t":"銀行業務＋信託業務＋併営業務"},{"t":"銀行業務のみ"}],"ans":2,"e":"根拠法は「金融機関の信託業務の兼営等に関する法律」。併営業務には不動産、証券代行、相続関連がある。"},{"ty":"mc","q":"信託の仕組みとして正しいものはどれか。","ch":[{"t":"受益者が受託者に財産を移転する"},{"t":"委託者が受託者に財産を移転し、受託者は受益者のために管理・処分を行う"},{"t":"受託者が委託者のために財産を購入する"},{"t":"委託者が自ら財産を管理する"}],"ans":1,"e":"委託者＝財産を託す人、受託者＝管理する人（信託銀行）、受益者＝利益を受ける人。委託者と受益者が同一のケースも多い。"},{"ty":"mc","q":"銀行になくて信託会社にあるものはどれか。","ch":[{"t":"預金業務"},{"t":"為替業務"},{"t":"不動産信託"},{"t":"貸出業務"}],"ans":2,"e":"信託銀行の併営業務は不動産・証券代行・相続関連。"},{"ty":"mc","q":"地方銀行の営業のあり方を表す言葉はどれか。","ch":[{"t":"ユニバーサル・バンク"},{"t":"全国展開主義"},{"t":"一行多県主義"},{"t":"一県一行主義"}],"ans":3,"e":"地方都市に本店を置き、主に都道府県を営業範囲とする。指定金融機関として地域財政の資金繰りの安定にも寄与する。"},{"ty":"mc","q":"第二地方銀行協会加盟地方銀行（第二地銀）の成り立ちとして正しいものはどれか。","ch":[{"t":"元は信用金庫で、1989年に転換した"},{"t":"元は外国銀行の支店だった"},{"t":"元は相互銀行で、1989年に普通銀行へ転換した"},{"t":"元は都市銀行が分割されたもの"}],"ans":2,"e":"相互銀行のさらに前身は無尽会社。都銀・地銀・第二地銀が「普通銀行」を構成する。"},{"ty":"mc","q":"ゆうちょ銀行が民営化されたのは何年か。","ch":[{"t":"2005年"},{"t":"2007年"},{"t":"2000年"},{"t":"2010年"}],"ans":1,"e":"元は国営の「郵便貯金」。郵便・貯金・簡易保険の三事業一体から分離された。ジャパンネット銀行の開業（2000年10月）と年号を取り違えやすいので注意。"},{"ty":"mc","q":"ゆうちょ銀行が普通の銀行と異なる点として正しいものはどれか。","ch":[{"t":"貯金の預入に上限があり、企業向け貸出を行わない"},{"t":"預金保険の対象外である"},{"t":"免許が不要である"},{"t":"為替業務ができない"}],"ans":0,"e":"貯金は原則1,300万円まで。拠点数は約2万4千と圧倒的に多い。"},{"ty":"mc","q":"2000年10月に開業した、戦後長く途絶えていた新規銀行設立の例はどれか。","ch":[{"t":"セブン銀行"},{"t":"ジャパンネット銀行（現PayPay銀行）"},{"t":"りそな銀行"},{"t":"ゆうちょ銀行"}],"ans":1,"e":"戦後の長い期間、新規銀行の設立が事実上なかったところに、インターネット銀行として登場した。"},{"ty":"mc","q":"日本国内に外国の銀行が設置した支店を何というか。","ch":[{"t":"現地法人銀行"},{"t":"オフショア銀行"},{"t":"国際銀行"},{"t":"外国銀行支店（在日外銀）"}],"ans":3,"e":"外国に本店のある銀行が日本国内に設置した支店を指す。"}]},{"label":"第2部","title":"2. 銀行の業務内容（資産負債・収益構造）","note":"\u003cdiv class=\"note\">\u003ch3>この部の骨格\u003c/h3>\u003cb>資産\u003c/b>：現金・預け金／コールローン等／有価証券（約3割）／貸出金（約5割）／その他。\u003cbr>\u003cb>負債\u003c/b>：預金・債券（約7割）／借用金／コールマネー等／その他／資本金等。\u003cbr>\u003cb>自己資本比率＝自己資本÷総資産\u003c/b>。銀行の健全性の代表的指標。\u003ch3 style=\"margin-top:10px\">業務の分類\u003c/h3>①固有業務（預金・貸出・為替＝三大業務）②付随業務 ③証券業務 ④その他の法律により営む業務。\u003cbr>\u003cb>他業禁止規定\u003c/b>の理由3つ：①他業のリスクが銀行業に及ぶおそれ ②強力な金融力を背景に他業へ進出すること ③公正な競争が阻害されるおそれ。\u003c/div>","items":[{"ty":"mc","q":"銀行の資産のうち、最も構成比が大きいものはどれか。","ch":[{"t":"貸出金"},{"t":"コールローン"},{"t":"現金・預け金"},{"t":"有価証券"}],"ans":0,"e":"貸出金54.4%、有価証券26.9%、現金・預け金5.4%（国内銀行合計）。"},{"ty":"mc","q":"銀行の負債のうち、最も構成比が大きいものはどれか。","ch":[{"t":"預金・債券"},{"t":"譲渡性預金"},{"t":"借用金"},{"t":"コールマネー"}],"ans":0,"e":"預金・債券が72.8%。地方銀行ほど預金の比率が高く88.0%に達する。"},{"ty":"mc","q":"銀行の経常収益のうち、最も大きな割合を占めるものはどれか。","ch":[{"t":"役務取引等収益"},{"t":"貸出金利息"},{"t":"有価証券関係収益"},{"t":"有価証券利息配当金"}],"ans":1,"e":"貸出金利息が45.9%と約半分。近年は手数料収入（役務取引等収益15.7%）の確保に注力している。"},{"ty":"mc","q":"一般企業の「営業利益」に相当する銀行の利益概念はどれか。","ch":[{"t":"経常利益"},{"t":"業務純益"},{"t":"当期利益"},{"t":"業務粗利益"}],"ans":1,"e":"業務純益＝経常利益から株式関係損益等を控除したもの。経常収益が一般企業の売上高に相当する。"},{"ty":"mc","q":"銀行の固有業務（三大業務）の組み合わせとして正しいものはどれか。","ch":[{"t":"預金・為替・信託"},{"t":"預金・貸出・為替"},{"t":"預金・貸出・証券"},{"t":"貸出・為替・保険"}],"ans":1,"e":"銀行法第10条第1項が定める。①預金等の受入 ②資金の貸付・手形の割引 ③為替取引。"},{"ty":"mc","q":"銀行法が他業を禁止している理由として正しいものはどれか。","ch":[{"t":"国際的な規制に従うため"},{"t":"他業のリスクが本業に及ばないようにするため"},{"t":"中小企業を保護するため"},{"t":"銀行の収益を抑えるため"}],"ans":1,"e":"もう一つの理由は、強大な金融業を背景に公正な競争が阻害されないようにするため。結果として本業に専念させる。"},{"ty":"mc","q":"債務の保証・手形の引受け、保護預り、両替、デリバティブ取引などは何に分類されるか。","ch":[{"t":"証券業務"},{"t":"周辺業務"},{"t":"付随業務"},{"t":"固有業務"}],"ans":2,"e":"固有業務（預金・貸出・為替）に付随して認められる業務。貸金業・リース・クレジットカードなどは周辺業務。"},{"ty":"mc","q":"既存の手形を満期日までの利息を差し引いて銀行が買い取る形で信用を供与する方式はどれか。","ch":[{"t":"証書貸付"},{"t":"手形貸付"},{"t":"当座貸越"},{"t":"手形割引"}],"ans":3,"e":"手形貸付は、借手が銀行を受取人とする手形を借用書のかわりに差し入れて借入れる方式。"},{"ty":"mc","q":"貸付に際して銀行が借手に借用証書の差入を求める方式はどれか。","ch":[{"t":"手形貸付"},{"t":"証書貸付"},{"t":"手形割引"},{"t":"当座貸越"}],"ans":1,"e":"長期・大口の貸出で用いられる。"},{"ty":"mc","q":"当座預金の残高不足を銀行が立て替える仕組みはどれか。","ch":[{"t":"当座貸越"},{"t":"証書貸付"},{"t":"手形貸付"},{"t":"コミットメントライン"}],"ans":0,"e":"残高不足のまま支払うと不渡。2回出すと銀行取引停止となり事実上の倒産。"},{"ty":"mc","q":"銀行法が他業を禁止している理由として、ノートに挙げられていないものはどれか。","ch":[{"t":"銀行の利益率が低下するおそれがあるため"},{"t":"他業のリスクが銀行業に及ぶおそれがあるため"},{"t":"強力な金融力を背景に他業へ進出するおそれがあるため"},{"t":"公正な競争が阻害されるおそれがあるため"}],"ans":0,"e":"他業禁止規定の理由は①リスク波及 ②金融力を背景とした他業進出 ③公正競争の阻害、の3つ。"},{"ty":"mc","q":"銀行の業務を分類したとき、正しい組み合わせはどれか。","ch":[{"t":"固有業務・付随業務・信託業務・保険業務"},{"t":"本業・副業・兼業・関連業務"},{"t":"預金業務・貸出業務・為替業務・証券業務"},{"t":"固有業務・付随業務・証券業務・その他の法律により営む業務"}],"ans":3,"e":"固有業務＝預金・貸出・為替の三大業務。銀行の業務範囲は銀行法で明確に規定されている。"},{"ty":"mc","q":"銀行の負債のうち、預金・債券が占めるおおよその割合はどれくらいか。","ch":[{"t":"約3割"},{"t":"約7割"},{"t":"約9割"},{"t":"約5割"}],"ans":1,"e":"資産側は貸出金が約5割、有価証券が約3割。この数字はセットで覚える。"},{"ty":"mc","q":"銀行の資産のうち、有価証券が占めるおおよその割合はどれくらいか。","ch":[{"t":"約1割"},{"t":"約5割"},{"t":"約3割"},{"t":"約7割"}],"ans":2,"e":"貸出金が約5割、有価証券が約3割。負債側は預金・債券が約7割。"},{"ty":"mc","q":"自己資本比率の計算式として正しいものはどれか。","ch":[{"t":"自己資本 ÷ 総資産"},{"t":"当期純利益 ÷ 自己資本"},{"t":"自己資本 ÷ 負債"},{"t":"総資産 ÷ 自己資本"}],"ans":0,"e":"銀行の健全性を測る代表的な指標。総資産は総資本と同義。なお国際的な規制であるBIS規制では、分母をリスクの大きさで調整したリスクアセットとする。"}]},{"label":"第3部","title":"3. 銀行の機能（資産変換・情報生産）","note":"\u003cdiv class=\"note\">\u003ch3>この部の骨格\u003c/h3>\u003cb>起源\u003c/b>：ルネサンス期の北イタリア。毛織物産業の発達で資金が集中し、他都市との交易で遠隔地の相手と安全に代金決済する仕組みが必要になった → \u003cb>為替手形\u003c/b>（買手・売手・第三者の債権債務関係）。\u003ch3 style=\"margin-top:10px\">資産変換機能\u003c/h3>預金者（最終的貸手）→〔\u003cb>間接証券\u003c/b>を発行〕→ 銀行 →〔\u003cb>本源的証券\u003c/b>を取得・保有〕→ 企業（最終的借手）。\u003cbr>本源的証券（社債・株式・借用証書）は\u003cb>リスク大・リターン大・期間長\u003c/b>、間接証券（預金証書・金融債）は\u003cb>リスク小・リターン小・期間短\u003c/b>。\u003ch3 style=\"margin-top:10px\">なぜ変換できるのか\u003c/h3>貸出先の多様化＝\u003cb>資産分散化\u003c/b>。破綻確率10％の企業に1社1億円貸すと期待損失1千万だが「10年に1度1億円の損失」となり不安定。10社に1千万ずつなら「毎年ほぼ確実に1千万の損失」となり、貸倒引当金で管理可能になる。\u003cb>期待値は同じでもばらつきが違う\u003c/b>のがポイント。\u003c/div>","items":[{"ty":"mc","q":"近代銀行の起源とされるのはどこの、いつの時代か。","ch":[{"t":"大航海時代のスペイン"},{"t":"産業革命期のイギリス"},{"t":"中世のドイツ"},{"t":"ルネサンス期のイタリア"}],"ans":3,"e":"毛織物産業が盛んで資金が集中し、両替商が登場。BANK の語源は BANCO。"},{"ty":"mc","q":"遠隔地との交易における安全な代金決済の必要性から生まれたものはどれか。","ch":[{"t":"為替手形"},{"t":"信用状"},{"t":"小切手"},{"t":"約束手形"}],"ans":0,"e":"両替と為替手形を扱う業者が銀行の原形となった。"},{"ty":"mc","q":"銀行が預金者に対して発行する証券を何というか。","ch":[{"t":"譲渡性証券"},{"t":"間接証券"},{"t":"有価証券"},{"t":"本源的証券"}],"ans":1,"e":"間接証券＝預金証書・金融債。資金需要者から受け入れるのが本源的証券（社債・株式・信用証書）。"},{"ty":"mc","q":"資産変換機能において、本源的証券から間接証券への変換で正しい方向はどれか。","ch":[{"t":"高リスク・高リターン・長期 → 低リスク・低リターン・短期"},{"t":"低リスク → 高リスク"},{"t":"低リターン → 高リターン"},{"t":"短期 → 長期"}],"ans":0,"e":"銀行がリスク・期間・金額を変換して引き受けるのが資産変換機能。"},{"ty":"mc","q":"多数の預金者から少額の預金を集め、大口のまとまりとして貸し出す機能を何の変換というか。","ch":[{"t":"金額の変換"},{"t":"リスクの変換"},{"t":"期間の変換"},{"t":"情報の変換"}],"ans":0,"e":"期間の変換は、短期で預けたい預金者と長期で借りたい借手の間を埋める機能。"},{"ty":"mc","q":"預金者100人が100万円ずつ預けた場合、1人が1億円預けた場合と比べて支払準備が少なくて済む理由はどれか。","ch":[{"t":"預金額の合計が小さいため"},{"t":"大数の法則が働くため"},{"t":"預金保険があるため"},{"t":"金利が低いため"}],"ans":1,"e":"払戻確率10%なら、100人なら毎年10人が100万ずつ＝1,000万円の準備で済む。1人なら1億円必要。"},{"ty":"mc","q":"金融取引に伴う諸問題の根本原因とされるものはどれか。","ch":[{"t":"景気変動"},{"t":"金利の変動"},{"t":"情報の非対称性"},{"t":"規制の不備"}],"ans":2,"e":"取引当事者間で保有する情報の質・量に違いがあること。"},{"ty":"mc","q":"貸出市場で借手の質が不明なとき、リスクの高い者だけが市場に残る現象を何というか。","ch":[{"t":"モラルハザード"},{"t":"システミックリスク"},{"t":"レピュテーションリスク"},{"t":"逆選択"}],"ans":3,"e":"事前的な情報の非対称性による問題。中間の金利にするとgoodが退出しbadが残る。"},{"ty":"mc","q":"資金を貸し出した後、借手が返済努力を怠るなどの問題が生じることを何というか。","ch":[{"t":"流動性リスク"},{"t":"モラルハザード"},{"t":"信用リスク"},{"t":"逆選択"}],"ans":1,"e":"期中の情報の非対称性による問題。逆選択（契約前）と対で覚える。"},{"ty":"mc","q":"銀行がリスクを負担できる理由として、貸出先を多様化することを何というか。","ch":[{"t":"リスク保持"},{"t":"リスク移転"},{"t":"リスク回避"},{"t":"分散化によるリスク管理"}],"ans":3,"e":"1社に1億円貸すより100社に100万ずつ貸す方が損失が平準化される。"},{"ty":"mc","q":"近代銀行制度の起源となったルネサンス期の北イタリアで発達していた産業は何か。","ch":[{"t":"毛織物産業"},{"t":"造船業"},{"t":"銀行業"},{"t":"製鉄業"}],"ans":0,"e":"毛織物産業の発達により資金が集中し、他の諸都市との交易のため遠隔地の相手と安全に代金決済を行う仕組みが必要になった。"},{"ty":"mc","q":"為替手形の仕組みに登場する三者の組み合わせとして正しいものはどれか。","ch":[{"t":"買手・売手・第三者"},{"t":"貸手・借手・仲介者"},{"t":"発行者・引受者・保証人"},{"t":"委託者・受託者・受益者"}],"ans":0,"e":"売手が買手に商品を渡し、買手は第三者に対する為替手形を振り出す。ここに債権債務関係が生じる。"},{"ty":"mc","q":"銀行が発行する債務証書（預金証書・金融債等）を何というか。","ch":[{"t":"間接証券"},{"t":"譲渡性証券"},{"t":"有価証券"},{"t":"本源的証券"}],"ans":0,"e":"企業が資金調達で発行する社債・株式・借用証書などが本源的証券。銀行を経て本源的証券が間接証券へ形態変換されることを資産変換という。"},{"ty":"mc","q":"企業が資金調達のために発行する証券（社債・株式・借用証書等）を何というか。","ch":[{"t":"預金証書"},{"t":"間接証券"},{"t":"本源的証券"},{"t":"金融債"}],"ans":2,"e":"銀行はこれを取得・保有し、代わりに預金者に対して間接証券（預金証書等）を発行する。"},{"ty":"mc","q":"破綻確率が年10％の企業に対し、1社へ1億円貸すのと10社へ1,000万円ずつ貸すのとでは、何が違うか。","ch":[{"t":"損失の期待値そのものが小さくなる"},{"t":"10社に分けると損失が発生しなくなる"},{"t":"損失の期待値は同じだが、10社に分けると毎年ほぼ確実に1,000万円の損失となり銀行として管理可能になる"},{"t":"1社に貸すほうが損失は小さくなる"}],"ans":2,"e":"期待損失はどちらも年1,000万円。違いは損失の「ばらつき」で、分散化により毎年安定して貸倒引当金を積める。"}]},{"label":"第4部","title":"4. 預金・貸出・為替の実務","note":"\u003cdiv class=\"note\">\u003ch3>預金の法的性格（頻出）\u003c/h3>\u003cul>\u003cli>\u003cb>保護預り\u003c/b>＝寄託（当事者の一方が他方のためにある物を保管する）\u003c/li>\u003cli>\u003cb>貸金庫\u003c/b>＝賃貸借（ある物を使用させることに対して賃料を支払う）\u003c/li>\u003cli>\u003cb>預金\u003c/b>＝\u003cb>消費寄託\u003c/b>（銀行は預かった現金の保管のみならず、消費も可能）\u003c/li>\u003c/ul>預金だけが「消費できる」＝銀行がそのお金を運用に回せる、という点が決定的。\u003ch3 style=\"margin-top:10px\">金融商品としての預金の特徴\u003c/h3>①元本保証 ②流動性が高い（流動性預金は支払手段として利用） ③少額での運用が可能。\u003cbr>※「流動性が低い」は誤り。流動性の高さは預金の特徴のひとつ。\u003ch3 style=\"margin-top:10px\">為替の3類型\u003c/h3>\u003cb>振込\u003c/b>＝受取人の口座に入金／\u003cb>送金\u003c/b>＝送金小切手を郵送し受取人が銀行で現金化／\u003cb>代金取立\u003c/b>＝手形・小切手を受け取った者が銀行を通じて隔地間の取立を行う。\u003c/div>","items":[{"ty":"mc","q":"預金の法的性格は民法上どれにあたるか。","ch":[{"t":"賃貸借"},{"t":"委任"},{"t":"寄託"},{"t":"消費寄託"}],"ans":3,"e":"民法666条1項。同種同量を返せばよいので銀行は運用でき、預金者は利息を受け取れる。双方に有利。"},{"ty":"mc","q":"銀行が顧客から現金などを預かる「保護預り」の法的性格はどれか。","ch":[{"t":"賃貸借"},{"t":"売買"},{"t":"寄託"},{"t":"消費寄託"}],"ans":2,"e":"民法657条。寄託されたものそのものを返す点が消費寄託と異なる。"},{"ty":"mc","q":"貸金庫の法的性格はどれか。","ch":[{"t":"賃貸借"},{"t":"消費寄託"},{"t":"寄託"},{"t":"請負"}],"ans":0,"e":"民法601条。金庫という場所を貸すので手数料が発生する。"},{"ty":"mc","q":"預入期間の定めがなく、要求に応じて支払われる預金を何というか。","ch":[{"t":"積立預金"},{"t":"譲渡性預金"},{"t":"定期預金"},{"t":"要求払預金（流動性預金）"}],"ans":3,"e":"普通預金・当座預金が該当。対は定期預金（預入期間の定めあり）。"},{"ty":"mc","q":"譲渡が可能で高金利の預金を何というか。","ch":[{"t":"定期積金"},{"t":"譲渡性預金（CD）"},{"t":"当座預金"},{"t":"普通預金"}],"ans":1,"e":"もともと大蔵省への届出事項だったが1995年から自由化。"},{"ty":"mc","q":"預金の金融商品としての特徴として誤っているものはどれか。","ch":[{"t":"流動性が低い"},{"t":"元本保証がある"},{"t":"現金にすぐ変えられる"},{"t":"少額での資金運用ができる"}],"ans":0,"e":"預金は流動性が高いのが特徴。①元本保証 ②流動性が高い ③少額運用可、の3点。"},{"ty":"mc","q":"最優良企業向けの貸出金利を何というか。","ch":[{"t":"基準割引率"},{"t":"公定歩合"},{"t":"コールレート"},{"t":"プライムレート"}],"ans":3,"e":"1年未満は短期プライムレート（短プラ）、1年以上は長期プライムレート（長プラ）。これを基準に利ざやを上乗せする。"},{"ty":"mc","q":"あらかじめ貸出枠と融資条件を設定し、枠内であればいつでも融資する契約を何というか。","ch":[{"t":"コミットメントライン契約"},{"t":"シンジケートローン"},{"t":"当座貸越"},{"t":"証書貸付"}],"ans":0,"e":"契約に伴い手数料が発生。資本金3億円以上の大企業向け。"},{"ty":"mc","q":"幹事銀行が窓口となり複数の銀行で融資団を組成し、同一条件で協調融資する方式を何というか。","ch":[{"t":"当座貸越"},{"t":"手形割引"},{"t":"コミットメントライン"},{"t":"シンジケートローン"}],"ans":3,"e":"幹事にアレンジメントフィーを支払う。メリットは事務負担の軽減、デメリットは契約に時間がかかること。"},{"ty":"mc","q":"利息制限法における100万円以上の貸出の上限金利は何％か。","ch":[{"t":"15%"},{"t":"10%"},{"t":"18%"},{"t":"20%"}],"ans":0,"e":"0〜10万円＝20%、10〜100万円＝18%、100万円以上＝15%。出資法の上限は20%。"},{"ty":"mc","q":"銀行が隔地間での資金の支払の仲介をする業務を何というか。","ch":[{"t":"証券業務"},{"t":"預金業務"},{"t":"貸出業務"},{"t":"為替業務"}],"ans":3,"e":"振込・送金・代金取立の3つが中心。"},{"ty":"mc","q":"民間の銀行が共同で設立し、全金融機関の口座間振込を可能にしているシステムは何か。","ch":[{"t":"全銀システム"},{"t":"SWIFT"},{"t":"CLS"},{"t":"日銀ネット"}],"ans":0,"e":"国内ほぼ全ての預金取扱金融機関が加盟。24時間365日リアルタイムで入金できる。"},{"ty":"mc","q":"2010年の資金決済法により、銀行でなくても為替業務ができる金額の上限はいくらか。","ch":[{"t":"30万円以下"},{"t":"100万円以下"},{"t":"1,000万円以下"},{"t":"50万円以下"}],"ans":1,"e":"資金移動業者は少額であれば為替を扱える。PayPay・楽天ペイ・PayPalなどが該当する。"},{"ty":"mc","q":"預金の商品設計の原則として正しいものはどれか。","ch":[{"t":"元本保証を前提に、原則として銀行が自由に設計できる"},{"t":"法律で商品の種類が限定列挙されている"},{"t":"金融庁が商品内容を個別に指定する"},{"t":"元本保証は不要で自由に設計できる"}],"ans":0,"e":"変動金利定期預金、金利上乗せ型、懸賞金付き、利息10割変更型など多様な設計が可能。"},{"ty":"mc","q":"デリバティブ取引を組み込み、通常の預金にはない特約が付いた預金を何というか。","ch":[{"t":"定期預金"},{"t":"仕組み預金"},{"t":"通知預金"},{"t":"譲渡性預金"}],"ans":1,"e":"メリットは高金利での運用、デメリットは中途解約不可でリスクがあること。"},{"ty":"mc","q":"仕組み預金の例として正しいものはどれか。","ch":[{"t":"普通預金"},{"t":"当座預金"},{"t":"満期日選択権付き預金（銀行の判断で満期日が変更される）"},{"t":"貯蓄預金"}],"ans":2,"e":"もう一つの例は外貨償還特約付き預金で、満期日の為替レートによっては元本の払い戻しが外貨で行われる。"},{"ty":"mc","q":"要求払預金（流動性預金）に含まれる商品名の組み合わせとして正しいものはどれか。","ch":[{"t":"普通預金・当座預金・貯蓄預金・通知預金"},{"t":"定期預金・普通預金"},{"t":"定期預金・譲渡性預金"},{"t":"譲渡性預金・当座預金"}],"ans":0,"e":"預入期間の定めがなく、預金者の求めに応じて随時支払われる。定期預金は預入期間に定めがあり、譲渡性預金は譲渡可能な預金。"},{"ty":"mc","q":"貸出金利はどのように決定されるか。","ch":[{"t":"すべての借手に一律に適用される"},{"t":"市場での競争入札で決まる"},{"t":"日本銀行が個別に指定する"},{"t":"相手の信用度・資金使途に応じて、個別に相対方式で決定される"}],"ans":3,"e":"銀行と企業の1対1で決めるため「相対（あいたい）方式」。実際にはプライムレートを基準として決定する。"},{"ty":"mc","q":"短期プライムレートと長期プライムレートについて正しいものはどれか。","ch":[{"t":"短期のほうが常に高い"},{"t":"いずれも最優遇金利であり、長期のほうが高い"},{"t":"いずれも最劣後の金利である"},{"t":"両者は常に同じ水準である"}],"ans":1,"e":"最優遇金利＝優良企業向けの金利。上限金利は利息制限法で定められている。"},{"ty":"mc","q":"為替業務の3類型の組み合わせとして正しいものはどれか。","ch":[{"t":"代金取立・保証・引受"},{"t":"振込・送金・代金取立"},{"t":"振込・両替・保護預り"},{"t":"送金・貸出・預金"}],"ans":1,"e":"振込＝受取人の口座に入金、送金＝送金小切手を郵送し受取人が銀行で現金化、代金取立＝手形・小切手を受け取った者が銀行を通じて隔地間の取立を行う。"},{"ty":"mc","q":"「送金」の説明として正しいものはどれか。","ch":[{"t":"手形・小切手の取立を銀行に依頼する"},{"t":"外貨を日本円に交換する"},{"t":"受取人の口座に直接入金する"},{"t":"送金人が受取人に送金小切手を郵送し、受取人がそれを銀行に持参して現金にかえる"}],"ans":3,"e":"受取人の口座に入金するのは「振込」。混同しやすいので定義で区別する。"},{"ty":"mc","q":"外国為替に含まれる取引の組み合わせとして正しいものはどれか。","ch":[{"t":"預金・貸出・為替"},{"t":"振込・送金・代金取立"},{"t":"保護預り・貸金庫・預金"},{"t":"外貨両替・外国送金・外貨預金"}],"ans":3,"e":"外国為替は外貨交換を含む一連の取引。国内で完結するものが内国為替。"},{"ty":"mc","q":"2010年の資金決済法により銀行以外でも為替業務を営めるようになった業種を何というか。","ch":[{"t":"電子決済等代行業"},{"t":"資金移動業"},{"t":"前払式支払手段発行業"},{"t":"貸金業"}],"ans":1,"e":"PayPay、d払い（ドコモ）、楽天ペイ、PayPal などが例。100万円以下の少額に限られる。"},{"ty":"mc","q":"全銀システムの説明として正しいものはどれか。","ch":[{"t":"銀行が共同で設立し、国内のほぼ全ての預金取扱金融機関が加盟する資金移動のためのネットワーク"},{"t":"日本銀行が単独で運営するシステム"},{"t":"国が法律で設置した公的機関"},{"t":"証券会社が設立した決済機構"}],"ans":0,"e":"複数の銀行を結ぶ決済システムであり、これを含めた全体が「金融システム」と呼ばれる。"}]},{"label":"第5部","title":"5. 銀行のリスク管理","note":"\u003cdiv class=\"note\">\u003ch3>リスクの6分類\u003c/h3>①信用リスク ②市場リスク ③流動性リスク ④オペレーショナルリスク ⑤風評リスク ⑥\u003cb>システミックリスク（銀行特有）\u003c/b>\u003cbr>下位分類の対応を間違えやすいので注意：\u003cul>\u003cli>\u003cb>市場\u003c/b>リスク → 価格・金利・為替\u003c/li>\u003cli>\u003cb>オペレーショナル\u003c/b>リスク → 事務・システム・法務・人的\u003c/li>\u003c/ul>\u003ch3 style=\"margin-top:10px\">管理プロセス\u003c/h3>①認識（特定）→②評価（\u003cb>統計的手法で計量化\u003c/b>）→③管理手法の選択→④実行→⑤再評価。\u003cbr>対応するかどうかの判断は\u003cb>「リスク対応の費用 ＜ リスク不対応の費用」\u003c/b>。\u003ch3 style=\"margin-top:10px\">管理手法4つ\u003c/h3>\u003cb>保持\u003c/b>＝リスクを取る／\u003cb>回避\u003c/b>＝リスクを伴う行動を取らない／\u003cb>分散\u003c/b>＝分けて薄める／\u003cb>移転\u003c/b>＝外部へ移す（保険・CDS）。\u003ch3 style=\"margin-top:10px\">自己査定\u003c/h3>債務者区分：正常先／要注意先／破綻懸念先／実質破綻先／破綻先。資産分類：第I〜IV分類。\u003cb>この2つは別物\u003c/b>なので混同しないこと。\u003c/div>","items":[{"ty":"mc","q":"貸した資金が返済されないかもしれないという不確実性を何というか。","ch":[{"t":"市場リスク"},{"t":"流動性リスク"},{"t":"オペレーショナルリスク"},{"t":"信用リスク"}],"ans":3,"e":"債務不履行リスク、貸倒リスクとも呼ばれる。"},{"ty":"mc","q":"価格リスク・金利リスク・為替リスクを含むリスクの分類はどれか。","ch":[{"t":"信用リスク"},{"t":"風評リスク"},{"t":"流動性リスク"},{"t":"市場リスク"}],"ans":3,"e":"市場での価格変動によって保有資産に損失が発生する不確実性。"},{"ty":"mc","q":"保有資産をただちに現金化できない、または希望価格で売却できない不確実性を何というか。","ch":[{"t":"信用リスク"},{"t":"流動性リスク"},{"t":"システミックリスク"},{"t":"市場リスク"}],"ans":1,"e":"1行の破綻が他行に連鎖するシステミックリスクとは区別する（こちらは個別の資産の話）。"},{"ty":"mc","q":"事務処理の誤り、システム障害、法令遵守違反、人事上の問題などをまとめて何というか。","ch":[{"t":"市場リスク"},{"t":"風評リスク"},{"t":"オペレーショナルリスク"},{"t":"信用リスク"}],"ans":2,"e":"事務リスク・システムリスク・法務リスク・人的リスクを含む。"},{"ty":"mc","q":"うわさや評判の流布によって事業が損失を被る問題を何というか。","ch":[{"t":"流動性リスク"},{"t":"風評リスク"},{"t":"オペレーショナルリスク"},{"t":"信用リスク"}],"ans":1,"e":"レピュテーションリスクとも呼ばれる。"},{"ty":"mc","q":"リスク管理のプロセスとして正しい順序はどれか。","ch":[{"t":"選択 → 認識 → 評価 → 実行 → 再評価"},{"t":"認識 → 評価 → 手法の選択 → 実行 → 再評価"},{"t":"評価 → 認識 → 実行 → 選択 → 再評価"},{"t":"認識 → 実行 → 評価 → 選択 → 再評価"}],"ans":1,"e":"まずリスクを特定し、統計的手法等で数量化してから手法を選ぶ。"},{"ty":"mc","q":"リスクをそのままとし、リスクにふさわしい収入を確保する管理手法はどれか。","ch":[{"t":"リスク保持"},{"t":"リスク移転"},{"t":"リスク回避"},{"t":"リスク分散"}],"ans":0,"e":"4手法＝保持・回避（事業を行わない）・分散（多数に分ける）・移転（外部に移す）。"},{"ty":"mc","q":"貸出全体のリスクを統計的に把握し、予測される最大損失を自己資本で補う対応はどれか。","ch":[{"t":"マクロ対応"},{"t":"ミクロ対応"},{"t":"リスク移転"},{"t":"リスク回避"}],"ans":0,"e":"ミクロ対応は貸出先ごと・債権ごとに分担し、残債権を引当・償却する方法。"},{"ty":"mc","q":"銀行に関連するリスクとして、ノートで銀行特有とされているものはどれか。","ch":[{"t":"市場リスク"},{"t":"信用リスク"},{"t":"システミックリスク"},{"t":"流動性リスク"}],"ans":2,"e":"ひとつの金融機関の破綻が決済システムを通じて他の金融機関に連鎖的に波及するリスク。銀行業に固有の問題として位置づけられる。"},{"ty":"mc","q":"市場リスクの下位分類として正しい組み合わせはどれか。","ch":[{"t":"価格リスク・金利リスク・為替リスク"},{"t":"信用リスク・流動性リスク・風評リスク"},{"t":"事務リスク・システムリスク・法務リスク"},{"t":"価格リスク・信用リスク・人的リスク"}],"ans":0,"e":"事務・システム・法務・人的はオペレーショナルリスクの下位分類。この二つの区別が問われやすい。"},{"ty":"mc","q":"オペレーショナルリスクの下位分類として正しい組み合わせはどれか。","ch":[{"t":"風評リスク・システミックリスク"},{"t":"信用リスク・市場リスク・流動性リスク"},{"t":"事務リスク・システムリスク・法務リスク・人的リスク"},{"t":"価格リスク・金利リスク・為替リスク"}],"ans":2,"e":"事務＝事務上の誤りや不正行為、システム＝コンピュータの障害・誤作動、法務＝法令遵守違反に伴う罰則や損害賠償、人的＝人事運営上の問題。"},{"ty":"mc","q":"「法令の遵守違反に伴う罰則適用や、契約違反に伴う損害賠償等になるリスク」はどれか。","ch":[{"t":"人的リスク"},{"t":"システムリスク"},{"t":"事務リスク"},{"t":"法務リスク"}],"ans":3,"e":"いずれもオペレーショナルリスクの下位分類。定義文で区別できるようにしておく。"},{"ty":"mc","q":"リスク対応を行うかどうかの判断基準として正しいものはどれか。","ch":[{"t":"リスクがあれば必ず対応する"},{"t":"リスクの発生確率だけで判断する"},{"t":"リスク対応の費用 ＜ リスク不対応の費用 であれば対応する"},{"t":"対応費用が最小となる方法を必ず選ぶ"}],"ans":2,"e":"費用対効果で判断する。すべてのリスクに対応するわけではない点が重要。"},{"ty":"mc","q":"リスク管理の過程における「リスクの評価」とは何を指すか。","ch":[{"t":"対応結果を再評価すること"},{"t":"統計的手法によりリスクを計量化すること"},{"t":"管理手法を選択すること"},{"t":"リスクを特定すること"}],"ans":1,"e":"認識（特定）→評価（計量化）→手法の選択→実行→再評価の5段階。評価は「計量化」がキーワード。"},{"ty":"mc","q":"リスク移転の具体的な手段として正しい組み合わせはどれか。","ch":[{"t":"自己資本の積み増し"},{"t":"保険・CDS（クレジット・デフォルト・スワップ）"},{"t":"貸出先の多様化・分散投資"},{"t":"貸出の停止"}],"ans":1,"e":"リスクを外部に移転する手法。分散投資はリスク分散、貸出停止はリスク回避にあたる。"},{"ty":"mc","q":"リスク回避の説明として正しいものはどれか。","ch":[{"t":"リスクを伴う行動を取らないこと"},{"t":"複数の対象に分けてリスクを薄めること"},{"t":"リスクを取り、それにふさわしい収入を確保すること"},{"t":"リスクを外部へ移すこと"}],"ans":0,"e":"保持＝リスクを取る、回避＝取らない、分散＝分ける、移転＝外に出す。4つを一言ずつで言えるようにする。"},{"ty":"mc","q":"自己査定における債務者区分の5分類として正しいものはどれか。","ch":[{"t":"A格・B格・C格・D格・E格"},{"t":"第I分類・第II分類・第III分類・第IV分類"},{"t":"優良先・普通先・注意先・危険先・破綻先"},{"t":"正常先・要注意先・破綻懸念先・実質破綻先・破綻先"}],"ans":3,"e":"第I〜IV分類は債務者区分ではなく資産の分類。両者を混同しないこと。"},{"ty":"mc","q":"「法的・形式的な経営破綻の事実は発生していないものの、深刻な経営難の状態にあり、再建の見通しがない状況にある」債務者はどの区分か。","ch":[{"t":"実質破綻先"},{"t":"要注意先"},{"t":"破綻懸念先"},{"t":"破綻先"}],"ans":0,"e":"破綻懸念先は「今後、経営破綻に陥る可能性が大きい」段階。実質破綻先はもう一段深刻で、破綻先は法的・形式的な破綻が現に発生している。"},{"ty":"mc","q":"資産分類における「第IV分類」とはどのような資産か。","ch":[{"t":"回収の危険性や価値の毀損の危険性に問題のない資産"},{"t":"回収について通常の度合いを超える危険を含む資産"},{"t":"損失の可能性は高いが合理的な推計が困難な資産"},{"t":"回収不能または無価値と判定される資産"}],"ans":3,"e":"第I分類＝問題なし、第II分類＝通常を超える危険、第III分類＝損失可能性は高いが推計困難、第IV分類＝回収不能。"}]},{"label":"第6部","title":"6. 銀行と規制（プルーデンス政策）","note":"","items":[{"ty":"mc","q":"健全な銀行であっても信認が失われると預金の引き出しが殺到する可能性を何というか。","ch":[{"t":"流動性リスク"},{"t":"システミックリスク"},{"t":"風評リスク"},{"t":"銀行取付"}],"ans":3,"e":"銀行は預金の全額を現金で保有していない（現金＜預金）ため、構造的に起こりうる。"},{"ty":"mc","q":"ひとつの銀行の破綻が他の銀行に連鎖的に波及する可能性を何というか。","ch":[{"t":"システミックリスク"},{"t":"流動性リスク"},{"t":"信用リスク"},{"t":"オペレーショナルリスク"}],"ans":0,"e":"金融システム本来の不安定性の一つ。個別の資産が換金できない流動性リスクとは異なる。"},{"ty":"mc","q":"プルーデンス政策のうち、事前的措置に含まれないものはどれか。","ch":[{"t":"競争制限的規制"},{"t":"自己資本比率規制"},{"t":"預金保険制度"},{"t":"検査・モニタリング"}],"ans":2,"e":"預金保険とLLRは、破綻が起きた後に波及を防ぐ事後的措置（セーフティネット）。"},{"ty":"mc","q":"自己資本比率規制のように、銀行の資産・負債構成に制約を課す規制を何というか。","ch":[{"t":"業務分野規制"},{"t":"バランスシート規制"},{"t":"金利規制"},{"t":"競争制限的規制"}],"ans":1,"e":"例）自己資本／総資産 ≧ 8%。"},{"ty":"mc","q":"中央銀行が危機時に緊急の資金供給を行う機能を何というか。","ch":[{"t":"LLR（最後の貸し手）"},{"t":"マクロプルーデンス"},{"t":"預金保険"},{"t":"公開市場操作"}],"ans":0,"e":"lender of last resort。事後的措置の代表例。"},{"ty":"mc","q":"預金保険制度で保護される預金の範囲はいくらか。","ch":[{"t":"1人当たり1,000万円と利息"},{"t":"1人当たり500万円と利息"},{"t":"1口座当たり1,000万円"},{"t":"全額"}],"ans":0,"e":"銀行が預金保険機構に保険料を払い、破綻時に預金者へ保険金が支払われる。"},{"ty":"mc","q":"国際的な銀行規制の協調を図る枠組みを何というか。","ch":[{"t":"ペイオフ"},{"t":"BIS規制"},{"t":"プルーデンス政策"},{"t":"全銀システム"}],"ans":1,"e":"銀行法は免許、健全性確保（検査・報告の義務）、規制の透明性確保のガイドライン、国際的な協調（BIS規制）を定める。"},{"ty":"mc","q":"預金金利規制や業務分野規制のように、銀行間の競争を制限することで経営を安定させる規制を何というか。","ch":[{"t":"競争制限的規制"},{"t":"バランスシート規制"},{"t":"プルーデンス規制"},{"t":"検査・モニタリング"}],"ans":0,"e":"事前的措置の一つ。かつての護送船団方式がこれにあたる。"}]},{"label":"第7部","title":"7. 収益性・効率性の指標","note":"\u003cdiv class=\"note\">\u003ch3>収益の構造\u003c/h3>経常収益（＝一般企業の売上高。半分近くが貸出金利益、手数料収入にも注力）－ 経常費用（資金調達費用が中心、営業経費も相応に大きい）＝ \u003cb>経常利益\u003c/b>\u003cbr>\u003cb>当期利益＝経常利益＋特別損益－法人税・住民税\u003c/b>\u003cbr>\u003cb>業務純益\u003c/b>＝経常利益から株式関係損益等を控除したもの（一般企業の営業利益に相当）\u003ch3 style=\"margin-top:10px\">収益性の指標\u003c/h3>資金運用利回り＝資金運用収益÷資金運用勘定平均残高\u003cbr>資金調達原価＝（預金・譲渡性預金・債券の利息＋営業経費）÷それらの平均残高\u003cbr>\u003cb>総資金利ざや＝資金運用利回り－資金調達原価\u003c/b>\u003ch3 style=\"margin-top:10px\">効率性の指標\u003c/h3>経費率＝営業費÷総資産残高\u003cbr>\u003cb>OHR（業務粗利益経費率）＝営業経費÷（業務純益＋営業経費）\u003c/b>\u003cbr>ROA＝当期純益÷総資産／ROE＝当期利益÷純資産\u003cbr>※\u003cb>経費率とOHRは分母が違う\u003c/b>。ここが引っかけどころ。\u003c/div>","items":[{"ty":"mc","q":"総資産に対する当期純利益の比率を何というか。","ch":[{"t":"ROE"},{"t":"ROA"},{"t":"経費率"},{"t":"OHR"}],"ans":1,"e":"ROA＝当期純利益／総資産。銀行は他人資本（負債）を大量に使うレバレッジ型なので、一般企業よりROAは低い。"},{"ty":"mc","q":"純資産に対する当期純利益の比率を何というか。","ch":[{"t":"OHR"},{"t":"ROA"},{"t":"ROE"},{"t":"資金運用利回り"}],"ans":2,"e":"ROE＝当期純利益／純資産。"},{"ty":"mc","q":"業務粗利益経費率（OHR）の計算式として正しいものはどれか。","ch":[{"t":"当期純利益 ／ 総資産"},{"t":"営業経費 ／ 純資産"},{"t":"資金運用収益 ／ 平均残高"},{"t":"営業経費 ／（業務純益＋営業経費）"}],"ans":3,"e":"効率性の指標。低いほど効率的。"},{"ty":"mc","q":"銀行が一般企業と比べて大きいものはどれか。","ch":[{"t":"自己資本比率"},{"t":"純資産比率"},{"t":"ROA"},{"t":"負債（他人資本）の比率"}],"ans":3,"e":"預金という他人資本で運用するレバレッジ型のビジネスモデル。だからROAは低くなる。"},{"ty":"mc","q":"銀行の健全性を測る代表的な指標はどれか。","ch":[{"t":"総資金利ざや"},{"t":"OHR"},{"t":"自己資本比率"},{"t":"ROA"}],"ans":2,"e":"BIS規制では8%以上が求められる。"},{"ty":"mc","q":"銀行の「経常収益」は一般企業の何に相当するか。","ch":[{"t":"総資産"},{"t":"売上高"},{"t":"当期純利益"},{"t":"営業利益"}],"ans":1,"e":"経常利益＝経常収益－経常費用。当期利益＝経常利益＋特別損益－法人税・住民税。"},{"ty":"mc","q":"当期利益の計算式として正しいものはどれか。","ch":[{"t":"経常収益 － 経常費用"},{"t":"経常利益 － 特別損益"},{"t":"経常利益 ＋ 特別損益 － 法人税・住民税"},{"t":"業務純益 － 営業経費"}],"ans":2,"e":"経常利益＝経常収益－経常費用、というもう一段前の式とセットで覚える。"},{"ty":"mc","q":"「資金運用利回り」の計算式として正しいものはどれか。","ch":[{"t":"資金運用収益 ÷ 資金運用勘定平均残高"},{"t":"資金調達費用 ÷ 資金運用収益"},{"t":"資金運用収益 ÷ 総資産"},{"t":"資金運用収益 ÷ 自己資本"}],"ans":0,"e":"総資金利ざや＝資金運用利回り－資金調達原価。この3つはセットで問われる。"},{"ty":"mc","q":"総資金利ざやの計算式として正しいものはどれか。","ch":[{"t":"貸出金利息 － 預金利息"},{"t":"資金運用利回り － 資金調達原価"},{"t":"資金運用収益 － 資金調達費用"},{"t":"経常収益 － 経常費用"}],"ans":1,"e":"「利回り」と「原価」という率どうしの差である点に注意。"},{"ty":"mc","q":"経費率の計算式として正しいものはどれか。","ch":[{"t":"営業費 ÷ 総資産残高"},{"t":"営業経費 ÷（業務純益＋営業経費）"},{"t":"営業費 ÷ 経常収益"},{"t":"当期純益 ÷ 総資産"}],"ans":0,"e":"営業経費÷（業務純益＋営業経費）は業務粗利益経費率（OHR）。両者を混同しないこと。"},{"ty":"mc","q":"銀行の経営費用の中心を占めるものはどれか。","ch":[{"t":"法人税等"},{"t":"資金調達の費用"},{"t":"営業経費"},{"t":"貸倒引当金繰入"}],"ans":1,"e":"経常収益は半分近くが貸出金利益で、近年は手数料収入にも注力。営業経費の割合も相応に大きい。"}]},{"label":"記述","title":"8. 記述問題への答案設計","note":"\u003cdiv class=\"note\">\u003ch3>記述問題の例\u003c/h3>\u003cp>銀行の三大業務があるが、それぞれ現在1円単位で送金できたり（MRFの存在もあり）、クラウドファンディング制度ができたりと、銀行の必要性が低くなっているように思われるが、将来的に銀行は不要になっていくのか？ ポイントをおさえて簡潔に書きなさい。（10行程度）\u003c/p>\u003c/div>\n\u003cdiv class=\"note\">\u003ch3>答案の設計図（この型で書く）\u003c/h3>\n\u003cp style=\"font-size:13px;color:var(--sub)\">結論を先に出し、機能ごとに分けて論じ、最後に条件つきの見通しで締める。これが一番点が伸びます。\u003c/p>\n\u003cul>\n\u003cli>\u003cb>①結論を先に\u003c/b>：三大業務のうち\u003cb>為替（決済）機能は他業態に代替されつつあるが、資産変換機能と情報生産機能は代替が難しい\u003c/b>。よって銀行は不要にはならないが、収益源と役割は変質する。\u003c/li>\n\u003cli>\u003cb>②為替：代替が進んでいる\u003c/b>。2010年の\u003cb>資金決済法\u003c/b>により\u003cb>資金移動業\u003c/b>が認められ、PayPay・楽天ペイ・PayPalなどが100万円以下の少額送金を担うようになった。全銀システムの独占が崩れつつある。\u003c/li>\n\u003cli>\u003cb>③貸出：一部代替されるが本体は残る\u003c/b>。クラウドファンディングやソーシャルレンディングは直接金融に近く、貸手が自らリスクを負う。しかし多くの家計は\u003cb>元本保証・高流動性・少額運用可\u003c/b>という預金の性質を求めており、リスクを取らない資金の受け皿としての銀行は残る。\u003c/li>\n\u003cli>\u003cb>④代替されにくい核＝銀行の二つの機能\u003c/b>\u003cul>\u003cli>\u003cb>資産変換機能\u003c/b>：小口・短期・低リスクの預金を、大口・長期・高リスクの貸出に変換する。これは貸出先の\u003cb>分散化\u003c/b>と\u003cb>大数の法則\u003c/b>によって成り立っており、個人投資家には真似できない。\u003c/li>\u003cli>\u003cb>情報生産機能\u003c/b>：\u003cb>情報の非対称性\u003c/b>から生じる\u003cb>逆選択\u003c/b>（事前の審査）と\u003cb>モラルハザード\u003c/b>（事後のモニタリング）に対処する。クラウドファンディングはこの審査コストを貸手側に押し付けているだけで、問題を解決したわけではない。\u003c/li>\u003c/ul>\u003c/li>\n\u003cli>\u003cb>⑤制度面の理由\u003c/b>：\u003cb>預金保険（1人1,000万円と利息）\u003c/b>、\u003cb>LLR（最後の貸し手）\u003c/b>、\u003cb>自己資本比率規制／BIS規制\u003c/b>といったプルーデンス政策の枠組みは銀行を前提に組まれている。\u003cb>システミックリスク\u003c/b>を管理する主体として、銀行という制度的な受け皿は依然必要である。\u003c/li>\n\u003cli>\u003cb>⑥締め（条件つきの見通し）\u003c/b>：したがって銀行は不要にはならないが、決済手数料に依存した収益構造は縮小し、\u003cb>信用リスクの評価という情報生産機能に特化していく\u003c/b>方向で変質する。「不要になるか」ではなく「何が残り何が失われるか」で答えるのがこの問いの筋である。\u003c/li>\n\u003c/ul>\u003c/div>\n\u003cdiv class=\"note\">\u003ch3>記述で必ず使いたい語（これを入れると点になる）\u003c/h3>\u003cp class=\"kwlist\">資産変換機能／情報生産機能／情報の非対称性／逆選択／モラルハザード／分散化・大数の法則／資金移動業・資金決済法（2010）／全銀システム／預金保険（1,000万円）／LLR／システミックリスク／自己資本比率・BIS規制／間接金融・直接金融・市場型間接金融\u003c/p>\u003c/div>\n\u003cdiv class=\"note\">\u003ch3>別パターンの記述が出たときの型\u003c/h3>\u003cul>\u003cli>\u003cb>「銀行の機能を説明せよ」\u003c/b>→ 資産変換（金額・期間・リスクの変換）＋情報生産（逆選択・モラルハザードへの対処）の2本柱。数値例（1社1億 vs 10社1千万）を入れる。\u003c/li>\u003cli>\u003cb>「なぜ銀行に規制が必要か」\u003c/b>→ 銀行取付 → システミックリスク → 決済システムの停止という波及経路を示し、事前的措置（自己資本比率規制・BIS規制・競争制限的規制）と事後的措置（LLR・預金保険）に分けて書く。\u003c/li>\u003cli>\u003cb>「他業禁止規定はなぜあるか」\u003c/b>→ ①他業のリスクが銀行業に及ぶおそれ ②強力な金融力を背景とした他業進出 ③公正な競争の阻害、の3点。\u003c/li>\u003c/ul>\u003c/div>","items":[{"ty":"mc","q":"記述問題で「銀行は将来不要になるか」と問われたとき、代替が最も進んでいる業務はどれか。","ch":[{"t":"情報生産機能"},{"t":"預金業務"},{"t":"貸出業務"},{"t":"為替（決済）業務"}],"ans":3,"e":"2010年の資金決済法により資金移動業が認められ、100万円以下の少額送金は銀行以外でも担えるようになった。"},{"ty":"mc","q":"クラウドファンディングが銀行の貸出を完全には代替できない理由として最も重要なものはどれか。","ch":[{"t":"法律で禁止されているから"},{"t":"手数料が高いから"},{"t":"金額が小さすぎるから"},{"t":"貸手自身が信用リスクを負い、審査コストも負担しなければならないから"}],"ans":3,"e":"銀行の情報生産機能（逆選択への事前審査、モラルハザードへの事後モニタリング）は、クラウドファンディングでは貸手側に押し付けられているだけで解決されていない。"},{"ty":"mc","q":"銀行が小口・短期・低リスクの預金を、大口・長期・高リスクの貸出に変換できる根拠はどれか。","ch":[{"t":"預金金利の規制"},{"t":"中央銀行からの無制限の資金供給"},{"t":"政府による損失補填"},{"t":"貸出先の分散化と大数の法則"}],"ans":3,"e":"期待損失は同じでも、分散すれば損失のばらつきが小さくなり、貸倒引当金で安定的に管理できるようになる。"},{"ty":"mc","q":"プルーデンス政策のうち、事後的措置にあたる組み合わせはどれか。","ch":[{"t":"競争制限的規制とバランスシート規制"},{"t":"自己資本比率規制とBIS規制"},{"t":"免許制と業務範囲規制"},{"t":"LLR（最後の貸し手）と預金保険制度"}],"ans":3,"e":"事前的措置＝危機を起こさないための規制、事後的措置＝起きたときの処理。記述ではこの二分法で書くと整理された答案になる。"}]}]}]};</script>
 <script>
-const LEC=[{"k":"1","title":"1. 銀行業とは（金融・金融機関・銀行）","qs":[{"q":"貸手（家計）と借手（企業）の間に仲介機関が介在して資金の流れを仲立ちする方式を何というか。","a":"間接金融","d":["直接金融","市場型間接金融","相対金融"],"e":"銀行が間に入る方式。家計が企業に直接資金を提供するのが直接金融、投資信託などを介するのが市場型間接金融。"},{"q":"投資信託のように、家計→FUND（金融市場）→企業と資金が流れる方式を何というか。","a":"市場型間接金融","d":["間接金融","直接金融","証券金融"],"e":"仲介はあるが、リスクは最終的に家計が負う点が銀行を介する間接金融と異なる。"},{"q":"預金取扱金融機関のうち、信用金庫・信用組合・労働金庫・農協・漁協はまとめて何と呼ばれるか。","a":"協同組織金融機関","d":["普通銀行","その他の金融機関","政府系金融機関"],"e":"普通銀行（都市銀行・地銀・第二地銀・在日外国銀行）と対になる分類。組合員・会員を対象とする。"},{"q":"証券会社・保険会社・リース会社などが「その他の金融機関」に分類される理由は何か。","a":"預金を扱わないから","d":["営利目的でないから","規模が小さいから","免許制でないから"],"e":"預金取扱金融機関か否かが、金融機関の第一の分類軸。"},{"q":"銀行を開業するために必要な資本金はいくらか。","a":"20億円","d":["10億円","5億円","50億円"],"e":"内閣総理大臣の免許、資本金20億円、業務体制（コンプライアンス等）、システム投資が必要。"},{"q":"銀行の免許を与えるのは誰か。","a":"内閣総理大臣","d":["金融庁長官","日本銀行総裁","財務大臣"],"e":"法律上は内閣総理大臣の免許。実務は金融庁が担う。"},{"q":"銀行法第1条が掲げる目的に含まれないものはどれか。","a":"銀行の利潤の最大化","d":["信用の維持","預金者等の保護の確保","金融の円滑を図ること"],"e":"銀行法1条は業務の公共性にかんがみ、信用維持・預金者保護・金融の円滑を図り、国民経済の健全な発展に資することを目的とする。利潤最大化は株式会社としての目的であって法の目的ではない。"},{"q":"日本において「普通銀行」に含まれるのはどれか。","a":"都市銀行・地方銀行・第二地銀","d":["信託銀行","協同組織金融機関","証券会社"],"e":"商業銀行（commercial bank）＝短期資金の受入、貸付・手形割引を行う銀行。日本ではこれが普通銀行にあたる。"},{"q":"都市銀行の特徴として正しいものはどれか。","a":"4行で全銀行の約4割を占める","d":["各都道府県に1行ずつ存在する","預金の受入のみを行う","持株会社形態は認められていない"],"e":"大都市に本店を置き全国規模で営業。国際業務・証券業務・デリバティブまで扱うユニバーサルバンクで、持株会社形態をとる。"},{"q":"グループ内に銀行・証券会社・保険会社・信託会社などを持つ会社を何というか。","a":"金融持株会社","d":["ユニバーサルバンク","メガバンク","銀行代理業者"],"e":"みずほ、三井住友、三菱UFJなどがこの形態をとる。"},{"q":"金融の定義として正しいものはどれか。","a":"資金を必要とする者に対し、余裕資金を持つ者が資金を融通すること","d":["政府が通貨を発行すること","企業が株式を発行すること","中央銀行が金利を決めること"],"e":"貸手＝黒字主体（支出＜収入＝貯蓄超過主体、典型は家計）、借手＝赤字主体（支出＞収入＝投資超過主体、典型は企業）。"},{"q":"支出が収入を上回る「赤字主体」は別名何と呼ばれるか。","a":"投資超過主体","d":["貯蓄超過主体","黒字主体","中立主体"],"e":"黒字主体＝貯蓄超過主体（家計）／赤字主体＝投資超過主体（企業）。この対で覚える。"},{"q":"銀行業（銀行法上）の定義として正しいものはどれか。","a":"①預金と貸付の両方、または②為替、のいずれかを行うこと","d":["預金・貸付・為替のすべてを行うこと","預金のみを行うこと","貸付のみを行うこと"],"e":"「①②の両方、またはいずれか」という条件。①は預金 and 貸付でセット、②は為替単独でも銀行業になる。"},{"q":"銀行以外の者が不特定多数から預り金業務を行うことは、どの法律で原則禁止されているか。","a":"出資法","d":["銀行法","民法","資金決済法"],"e":"預り金業務は出資法で原則禁止され、銀行法により免許を得た機関に限り預金を扱うことができる。この二段構えが問われやすい。"},{"q":"信託銀行の業務範囲として正しいものはどれか。","a":"銀行業務＋信託業務＋併営業務","d":["信託業務のみ","銀行業務＋証券業務","銀行業務のみ"],"e":"根拠法は「金融機関の信託業務の兼営等に関する法律」。併営業務には不動産、証券代行、相続関連がある。"},{"q":"信託の仕組みとして正しいものはどれか。","a":"委託者が受託者に財産を移転し、受託者は受益者のために管理・処分を行う","d":["受益者が受託者に財産を移転する","委託者が自ら財産を管理する","受託者が委託者のために財産を購入する"],"e":"委託者＝財産を託す人、受託者＝管理する人（信託銀行）、受益者＝利益を受ける人。委託者と受益者が同一のケースも多い。"},{"q":"過去問で問われた「銀行になくて信託会社にあるもの」はどれか。","a":"不動産信託","d":["預金業務","為替業務","貸出業務"],"e":"信託銀行の併営業務は不動産・証券代行・相続関連。2021年度の過去問で実際に出題された。"},{"q":"地方銀行の営業のあり方を表す言葉はどれか。","a":"一県一行主義","d":["全国展開主義","ユニバーサル・バンク","一行多県主義"],"e":"地方都市に本店を置き、主に都道府県を営業範囲とする。指定金融機関として地域財政の資金繰りの安定にも寄与する。"},{"q":"第二地方銀行協会加盟地方銀行（第二地銀）の成り立ちとして正しいものはどれか。","a":"元は相互銀行で、1989年に普通銀行へ転換した","d":["元は信用金庫で、1989年に転換した","元は都市銀行が分割されたもの","元は外国銀行の支店だった"],"e":"相互銀行のさらに前身は無尽会社。都銀・地銀・第二地銀が「普通銀行」を構成する。"},{"q":"ゆうちょ銀行が民営化されたのは何年か。","a":"2007年","d":["2000年","2005年","2010年"],"e":"元は国営の「郵便貯金」。郵便・貯金・簡易保険の三事業一体から分離された。ジャパンネット銀行の開業（2000年10月）と年号を取り違えやすいので注意。"},{"q":"ゆうちょ銀行が普通の銀行と異なる点として正しいものはどれか。","a":"貯金の預入に上限があり、企業向け貸出を行わない","d":["為替業務ができない","預金保険の対象外である","免許が不要である"],"e":"貯金は原則1,300万円まで。拠点数は約2万4千と圧倒的に多い。"},{"q":"2000年10月に開業した、戦後長く途絶えていた新規銀行設立の例はどれか。","a":"ジャパンネット銀行（現PayPay銀行）","d":["ゆうちょ銀行","りそな銀行","セブン銀行"],"e":"戦後の長い期間、新規銀行の設立が事実上なかったところに、インターネット銀行として登場した。"},{"q":"日本国内に外国の銀行が設置した支店を何というか。","a":"外国銀行支店（在日外銀）","d":["現地法人銀行","オフショア銀行","国際銀行"],"e":"外国に本店のある銀行が日本国内に設置した支店を指す。"}],"note":"<div class=\"note\"><h3>この部の骨格</h3><b>金融</b>＝資金を必要とする者に、余裕資金を持つ者が資金を融通すること。<b>黒字主体</b>（支出＜収入＝貯蓄超過主体、家計）から<b>赤字主体</b>（支出＞収入＝投資超過主体、企業）へ資金が流れる。その流れ方が3種類：<ul><li><b>間接金融</b>：貸手と借手の間に銀行が介入する</li><li><b>直接金融</b>：資金提供者から資金需要者へ金融市場を通じて直接流れる</li><li><b>市場型間接金融</b>：投資信託（FUND）を経由する。NISAなど</li></ul>なぜ銀行が必要か＝<b>取引費用</b>。金融取引を成立させるには貸し手・借り手を探す情報収集、貸出条件（金利・貸出額・期間）の合意といったプロセスが必要で、そこに費用がかかる。専門仲介業者がまとめて担うことでこれを下げられる。</div>"},{"k":"2","title":"2. 銀行の業務内容（資産負債・収益構造）","qs":[{"q":"銀行の資産のうち、最も構成比が大きいものはどれか。","a":"貸出金","d":["有価証券","現金・預け金","コールローン"],"e":"貸出金54.4%、有価証券26.9%、現金・預け金5.4%（国内銀行合計）。"},{"q":"銀行の負債のうち、最も構成比が大きいものはどれか。","a":"預金・債券","d":["譲渡性預金","コールマネー","借用金"],"e":"預金・債券が72.8%。地方銀行ほど預金の比率が高く88.0%に達する。"},{"q":"銀行の経常収益のうち、最も大きな割合を占めるものはどれか。","a":"貸出金利息","d":["役務取引等収益","有価証券利息配当金","有価証券関係収益"],"e":"貸出金利息が45.9%と約半分。近年は手数料収入（役務取引等収益15.7%）の確保に注力している。"},{"q":"一般企業の「営業利益」に相当する銀行の利益概念はどれか。","a":"業務純益","d":["経常利益","当期利益","業務粗利益"],"e":"業務純益＝経常利益から株式関係損益等を控除したもの。経常収益が一般企業の売上高に相当する。"},{"q":"銀行の固有業務（三大業務）の組み合わせとして正しいものはどれか。","a":"預金・貸出・為替","d":["預金・貸出・証券","貸出・為替・保険","預金・為替・信託"],"e":"銀行法第10条第1項が定める。①預金等の受入 ②資金の貸付・手形の割引 ③為替取引。"},{"q":"銀行法が他業を禁止している理由として正しいものはどれか。","a":"他業のリスクが本業に及ばないようにするため","d":["銀行の収益を抑えるため","中小企業を保護するため","国際的な規制に従うため"],"e":"もう一つの理由は、強大な金融業を背景に公正な競争が阻害されないようにするため。結果として本業に専念させる。"},{"q":"債務の保証・手形の引受け、保護預り、両替、デリバティブ取引などは何に分類されるか。","a":"付随業務","d":["固有業務","証券業務","周辺業務"],"e":"固有業務（預金・貸出・為替）に付随して認められる業務。貸金業・リース・クレジットカードなどは周辺業務。"},{"q":"既存の手形を満期日までの利息を差し引いて銀行が買い取る形で信用を供与する方式はどれか。","a":"手形割引","d":["手形貸付","証書貸付","当座貸越"],"e":"手形貸付は、借手が銀行を受取人とする手形を借用書のかわりに差し入れて借入れる方式。"},{"q":"貸付に際して銀行が借手に借用証書の差入を求める方式はどれか。","a":"証書貸付","d":["手形貸付","手形割引","当座貸越"],"e":"長期・大口の貸出で用いられる。"},{"q":"当座預金の残高不足を銀行が立て替える仕組みはどれか。","a":"当座貸越","d":["手形貸付","証書貸付","コミットメントライン"],"e":"残高不足のまま支払うと不渡。2回出すと銀行取引停止となり事実上の倒産。"},{"q":"銀行法が他業を禁止している理由として、ノートに挙げられていないものはどれか。","a":"銀行の利益率が低下するおそれがあるため","d":["他業のリスクが銀行業に及ぶおそれがあるため","強力な金融力を背景に他業へ進出するおそれがあるため","公正な競争が阻害されるおそれがあるため"],"e":"他業禁止規定の理由は①リスク波及 ②金融力を背景とした他業進出 ③公正競争の阻害、の3つ。"},{"q":"銀行の業務を分類したとき、正しい組み合わせはどれか。","a":"固有業務・付随業務・証券業務・その他の法律により営む業務","d":["固有業務・付随業務・信託業務・保険業務","預金業務・貸出業務・為替業務・証券業務","本業・副業・兼業・関連業務"],"e":"固有業務＝預金・貸出・為替の三大業務。銀行の業務範囲は銀行法で明確に規定されている。"},{"q":"銀行の負債のうち、預金・債券が占めるおおよその割合はどれくらいか。","a":"約7割","d":["約3割","約5割","約9割"],"e":"資産側は貸出金が約5割、有価証券が約3割。この数字はセットで覚える。"},{"q":"銀行の資産のうち、有価証券が占めるおおよその割合はどれくらいか。","a":"約3割","d":["約1割","約5割","約7割"],"e":"貸出金が約5割、有価証券が約3割。負債側は預金・債券が約7割。"},{"q":"自己資本比率の計算式として正しいものはどれか。","a":"自己資本 ÷ 総資産","d":["総資産 ÷ 自己資本","自己資本 ÷ 負債","当期純利益 ÷ 自己資本"],"e":"銀行の健全性を測る代表的な指標。総資産は総資本と同義。なお国際的な規制であるBIS規制では、分母をリスクの大きさで調整したリスクアセットとする。過去問でも「銀行の健全性は何でみるか」として出題された。"}],"note":"<div class=\"note\"><h3>この部の骨格</h3><b>資産</b>：現金・預け金／コールローン等／有価証券（約3割）／貸出金（約5割）／その他。<br><b>負債</b>：預金・債券（約7割）／借用金／コールマネー等／その他／資本金等。<br><b>自己資本比率＝自己資本÷総資産</b>。銀行の健全性の代表的指標。<h3 style=\"margin-top:10px\">業務の分類</h3>①固有業務（預金・貸出・為替＝三大業務）②付随業務 ③証券業務 ④その他の法律により営む業務。<br><b>他業禁止規定</b>の理由3つ：①他業のリスクが銀行業に及ぶおそれ ②強力な金融力を背景に他業へ進出すること ③公正な競争が阻害されるおそれ。</div>"},{"k":"3","title":"3. 銀行の機能（資産変換・情報生産）","qs":[{"q":"近代銀行の起源とされるのはどこの、いつの時代か。","a":"ルネサンス期のイタリア","d":["産業革命期のイギリス","中世のドイツ","大航海時代のスペイン"],"e":"毛織物産業が盛んで資金が集中し、両替商が登場。BANK の語源は BANCO。"},{"q":"遠隔地との交易における安全な代金決済の必要性から生まれたものはどれか。","a":"為替手形","d":["約束手形","小切手","信用状"],"e":"両替と為替手形を扱う業者が銀行の原形となった。"},{"q":"銀行が預金者に対して発行する証券を何というか。","a":"間接証券","d":["本源的証券","有価証券","譲渡性証券"],"e":"間接証券＝預金証書・金融債。資金需要者から受け入れるのが本源的証券（社債・株式・信用証書）。"},{"q":"資産変換機能において、本源的証券から間接証券への変換で正しい方向はどれか。","a":"高リスク・高リターン・長期 → 低リスク・低リターン・短期","d":["低リスク → 高リスク","短期 → 長期","低リターン → 高リターン"],"e":"銀行がリスク・期間・金額を変換して引き受けるのが資産変換機能。"},{"q":"多数の預金者から少額の預金を集め、大口のまとまりとして貸し出す機能を何の変換というか。","a":"金額の変換","d":["期間の変換","リスクの変換","情報の変換"],"e":"期間の変換は、短期で預けたい預金者と長期で借りたい借手の間を埋める機能。"},{"q":"預金者100人が100万円ずつ預けた場合、1人が1億円預けた場合と比べて支払準備が少なくて済む理由はどれか。","a":"大数の法則が働くため","d":["預金額の合計が小さいため","金利が低いため","預金保険があるため"],"e":"払戻確率10%なら、100人なら毎年10人が100万ずつ＝1,000万円の準備で済む。1人なら1億円必要。"},{"q":"金融取引に伴う諸問題の根本原因とされるものはどれか。","a":"情報の非対称性","d":["金利の変動","規制の不備","景気変動"],"e":"取引当事者間で保有する情報の質・量に違いがあること。"},{"q":"貸出市場で借手の質が不明なとき、リスクの高い者だけが市場に残る現象を何というか。","a":"逆選択","d":["モラルハザード","レピュテーションリスク","システミックリスク"],"e":"事前的な情報の非対称性による問題。中間の金利にするとgoodが退出しbadが残る。"},{"q":"資金を貸し出した後、借手が返済努力を怠るなどの問題が生じることを何というか。","a":"モラルハザード","d":["逆選択","信用リスク","流動性リスク"],"e":"期中の情報の非対称性による問題。逆選択（契約前）と対で覚える。"},{"q":"銀行がリスクを負担できる理由として、貸出先を多様化することを何というか。","a":"分散化によるリスク管理","d":["リスク移転","リスク回避","リスク保持"],"e":"1社に1億円貸すより100社に100万ずつ貸す方が損失が平準化される。"},{"q":"近代銀行制度の起源となったルネサンス期の北イタリアで発達していた産業は何か。","a":"毛織物産業","d":["造船業","製鉄業","銀行業"],"e":"毛織物産業の発達により資金が集中し、他の諸都市との交易のため遠隔地の相手と安全に代金決済を行う仕組みが必要になった。"},{"q":"為替手形の仕組みに登場する三者の組み合わせとして正しいものはどれか。","a":"買手・売手・第三者","d":["委託者・受託者・受益者","貸手・借手・仲介者","発行者・引受者・保証人"],"e":"売手が買手に商品を渡し、買手は第三者に対する為替手形を振り出す。ここに債権債務関係が生じる。"},{"q":"銀行が発行する債務証書（預金証書・金融債等）を何というか。","a":"間接証券","d":["本源的証券","有価証券","譲渡性証券"],"e":"企業が資金調達で発行する社債・株式・借用証書などが本源的証券。銀行を経て本源的証券が間接証券へ形態変換されることを資産変換という。"},{"q":"企業が資金調達のために発行する証券（社債・株式・借用証書等）を何というか。","a":"本源的証券","d":["間接証券","預金証書","金融債"],"e":"銀行はこれを取得・保有し、代わりに預金者に対して間接証券（預金証書等）を発行する。"},{"q":"破綻確率が年10％の企業に対し、1社へ1億円貸すのと10社へ1,000万円ずつ貸すのとでは、何が違うか。","a":"損失の期待値は同じだが、10社に分けると毎年ほぼ確実に1,000万円の損失となり銀行として管理可能になる","d":["損失の期待値そのものが小さくなる","10社に分けると損失が発生しなくなる","1社に貸すほうが損失は小さくなる"],"e":"期待損失はどちらも年1,000万円。違いは損失の「ばらつき」で、分散化により毎年安定して貸倒引当金を積める。"}],"note":"<div class=\"note\"><h3>この部の骨格</h3><b>起源</b>：ルネサンス期の北イタリア。毛織物産業の発達で資金が集中し、他都市との交易で遠隔地の相手と安全に代金決済する仕組みが必要になった → <b>為替手形</b>（買手・売手・第三者の債権債務関係）。<h3 style=\"margin-top:10px\">資産変換機能</h3>預金者（最終的貸手）→〔<b>間接証券</b>を発行〕→ 銀行 →〔<b>本源的証券</b>を取得・保有〕→ 企業（最終的借手）。<br>本源的証券（社債・株式・借用証書）は<b>リスク大・リターン大・期間長</b>、間接証券（預金証書・金融債）は<b>リスク小・リターン小・期間短</b>。<h3 style=\"margin-top:10px\">なぜ変換できるのか</h3>貸出先の多様化＝<b>資産分散化</b>。破綻確率10％の企業に1社1億円貸すと期待損失1千万だが「10年に1度1億円の損失」となり不安定。10社に1千万ずつなら「毎年ほぼ確実に1千万の損失」となり、貸倒引当金で管理可能になる。<b>期待値は同じでもばらつきが違う</b>のがポイント。</div>"},{"k":"4","title":"4. 預金・貸出・為替の実務","qs":[{"q":"預金の法的性格は民法上どれにあたるか。","a":"消費寄託","d":["寄託","賃貸借","委任"],"e":"民法666条1項。同種同量を返せばよいので銀行は運用でき、預金者は利息を受け取れる。双方に有利。"},{"q":"銀行が顧客から現金などを預かる「保護預り」の法的性格はどれか。","a":"寄託","d":["消費寄託","賃貸借","売買"],"e":"民法657条。寄託されたものそのものを返す点が消費寄託と異なる。"},{"q":"貸金庫の法的性格はどれか。","a":"賃貸借","d":["寄託","消費寄託","請負"],"e":"民法601条。金庫という場所を貸すので手数料が発生する。"},{"q":"預入期間の定めがなく、要求に応じて支払われる預金を何というか。","a":"要求払預金（流動性預金）","d":["定期預金","譲渡性預金","積立預金"],"e":"普通預金・当座預金が該当。対は定期預金（預入期間の定めあり）。"},{"q":"譲渡が可能で高金利の預金を何というか。","a":"譲渡性預金（CD）","d":["当座預金","定期積金","普通預金"],"e":"もともと大蔵省への届出事項だったが1995年から自由化。"},{"q":"預金の金融商品としての特徴として誤っているものはどれか。","a":"流動性が低い","d":["元本保証がある","少額での資金運用ができる","現金にすぐ変えられる"],"e":"預金は流動性が高いのが特徴。①元本保証 ②流動性が高い ③少額運用可、の3点。"},{"q":"最優良企業向けの貸出金利を何というか。","a":"プライムレート","d":["コールレート","公定歩合","基準割引率"],"e":"1年未満は短期プライムレート（短プラ）、1年以上は長期プライムレート（長プラ）。これを基準に利ざやを上乗せする。"},{"q":"あらかじめ貸出枠と融資条件を設定し、枠内であればいつでも融資する契約を何というか。","a":"コミットメントライン契約","d":["シンジケートローン","当座貸越","証書貸付"],"e":"契約に伴い手数料が発生。資本金3億円以上の大企業向け。"},{"q":"幹事銀行が窓口となり複数の銀行で融資団を組成し、同一条件で協調融資する方式を何というか。","a":"シンジケートローン","d":["コミットメントライン","手形割引","当座貸越"],"e":"幹事にアレンジメントフィーを支払う。メリットは事務負担の軽減、デメリットは契約に時間がかかること。"},{"q":"利息制限法における100万円以上の貸出の上限金利は何％か。","a":"15%","d":["20%","18%","10%"],"e":"0〜10万円＝20%、10〜100万円＝18%、100万円以上＝15%。出資法の上限は20%。"},{"q":"銀行が隔地間での資金の支払の仲介をする業務を何というか。","a":"為替業務","d":["預金業務","貸出業務","証券業務"],"e":"振込・送金・代金取立の3つが中心。"},{"q":"民間の銀行が共同で設立し、全金融機関の口座間振込を可能にしているシステムは何か。","a":"全銀システム","d":["日銀ネット","CLS","SWIFT"],"e":"国内ほぼ全ての預金取扱金融機関が加盟。24時間365日リアルタイムで入金できる。"},{"q":"2010年の資金決済法により、銀行でなくても為替業務ができる金額の上限はいくらか。","a":"100万円以下","d":["50万円以下","30万円以下","1,000万円以下"],"e":"資金移動業者は少額であれば為替を扱える。PayPay・楽天ペイ・PayPalなどが該当する。"},{"q":"預金の商品設計の原則として正しいものはどれか。","a":"元本保証を前提に、原則として銀行が自由に設計できる","d":["金融庁が商品内容を個別に指定する","元本保証は不要で自由に設計できる","法律で商品の種類が限定列挙されている"],"e":"変動金利定期預金、金利上乗せ型、懸賞金付き、利息10割変更型など多様な設計が可能。"},{"q":"デリバティブ取引を組み込み、通常の預金にはない特約が付いた預金を何というか。","a":"仕組み預金","d":["譲渡性預金","定期預金","通知預金"],"e":"メリットは高金利での運用、デメリットは中途解約不可でリスクがあること。"},{"q":"仕組み預金の例として正しいものはどれか。","a":"満期日選択権付き預金（銀行の判断で満期日が変更される）","d":["普通預金","当座預金","貯蓄預金"],"e":"もう一つの例は外貨償還特約付き預金で、満期日の為替レートによっては元本の払い戻しが外貨で行われる。"},{"q":"要求払預金（流動性預金）に含まれる商品名の組み合わせとして正しいものはどれか。","a":"普通預金・当座預金・貯蓄預金・通知預金","d":["定期預金・譲渡性預金","定期預金・普通預金","譲渡性預金・当座預金"],"e":"預入期間の定めがなく、預金者の求めに応じて随時支払われる。定期預金は預入期間に定めがあり、譲渡性預金は譲渡可能な預金。"},{"q":"貸出金利はどのように決定されるか。","a":"相手の信用度・資金使途に応じて、個別に相対方式で決定される","d":["すべての借手に一律に適用される","日本銀行が個別に指定する","市場での競争入札で決まる"],"e":"銀行と企業の1対1で決めるため「相対（あいたい）方式」。実際にはプライムレートを基準として決定する。"},{"q":"短期プライムレートと長期プライムレートについて正しいものはどれか。","a":"いずれも最優遇金利であり、長期のほうが高い","d":["いずれも最劣後の金利である","短期のほうが常に高い","両者は常に同じ水準である"],"e":"最優遇金利＝優良企業向けの金利。上限金利は利息制限法で定められている。"},{"q":"為替業務の3類型の組み合わせとして正しいものはどれか。","a":"振込・送金・代金取立","d":["振込・両替・保護預り","送金・貸出・預金","代金取立・保証・引受"],"e":"振込＝受取人の口座に入金、送金＝送金小切手を郵送し受取人が銀行で現金化、代金取立＝手形・小切手を受け取った者が銀行を通じて隔地間の取立を行う。"},{"q":"「送金」の説明として正しいものはどれか。","a":"送金人が受取人に送金小切手を郵送し、受取人がそれを銀行に持参して現金にかえる","d":["受取人の口座に直接入金する","手形・小切手の取立を銀行に依頼する","外貨を日本円に交換する"],"e":"受取人の口座に入金するのは「振込」。混同しやすいので定義で区別する。"},{"q":"外国為替に含まれる取引の組み合わせとして正しいものはどれか。","a":"外貨両替・外国送金・外貨預金","d":["振込・送金・代金取立","預金・貸出・為替","保護預り・貸金庫・預金"],"e":"外国為替は外貨交換を含む一連の取引。国内で完結するものが内国為替。"},{"q":"2010年の資金決済法により銀行以外でも為替業務を営めるようになった業種を何というか。","a":"資金移動業","d":["電子決済等代行業","前払式支払手段発行業","貸金業"],"e":"PayPay、d払い（ドコモ）、楽天ペイ、PayPal などが例。100万円以下の少額に限られる。"},{"q":"全銀システムの説明として正しいものはどれか。","a":"銀行が共同で設立し、国内のほぼ全ての預金取扱金融機関が加盟する資金移動のためのネットワーク","d":["日本銀行が単独で運営するシステム","国が法律で設置した公的機関","証券会社が設立した決済機構"],"e":"複数の銀行を結ぶ決済システムであり、これを含めた全体が「金融システム」と呼ばれる。"}],"note":"<div class=\"note\"><h3>預金の法的性格（頻出）</h3><ul><li><b>保護預り</b>＝寄託（当事者の一方が他方のためにある物を保管する）</li><li><b>貸金庫</b>＝賃貸借（ある物を使用させることに対して賃料を支払う）</li><li><b>預金</b>＝<b>消費寄託</b>（銀行は預かった現金の保管のみならず、消費も可能）</li></ul>預金だけが「消費できる」＝銀行がそのお金を運用に回せる、という点が決定的。<h3 style=\"margin-top:10px\">金融商品としての預金の特徴</h3>①元本保証 ②流動性が高い（流動性預金は支払手段として利用） ③少額での運用が可能。<br>※過去問では「特徴として<b>間違っている</b>ものは？→ 流動性が低い」という形で出題された。<h3 style=\"margin-top:10px\">為替の3類型</h3><b>振込</b>＝受取人の口座に入金／<b>送金</b>＝送金小切手を郵送し受取人が銀行で現金化／<b>代金取立</b>＝手形・小切手を受け取った者が銀行を通じて隔地間の取立を行う。</div>"},{"k":"5","title":"5. 銀行のリスク管理","qs":[{"q":"貸した資金が返済されないかもしれないという不確実性を何というか。","a":"信用リスク","d":["市場リスク","流動性リスク","オペレーショナルリスク"],"e":"債務不履行リスク、貸倒リスクとも呼ばれる。"},{"q":"価格リスク・金利リスク・為替リスクを含むリスクの分類はどれか。","a":"市場リスク","d":["信用リスク","流動性リスク","風評リスク"],"e":"市場での価格変動によって保有資産に損失が発生する不確実性。"},{"q":"保有資産をただちに現金化できない、または希望価格で売却できない不確実性を何というか。","a":"流動性リスク","d":["市場リスク","信用リスク","システミックリスク"],"e":"1行の破綻が他行に連鎖するシステミックリスクとは区別する（こちらは個別の資産の話）。"},{"q":"事務処理の誤り、システム障害、法令遵守違反、人事上の問題などをまとめて何というか。","a":"オペレーショナルリスク","d":["信用リスク","風評リスク","市場リスク"],"e":"事務リスク・システムリスク・法務リスク・人的リスクを含む。"},{"q":"うわさや評判の流布によって事業が損失を被る問題を何というか。","a":"風評リスク","d":["オペレーショナルリスク","信用リスク","流動性リスク"],"e":"レピュテーションリスクとも呼ばれる。"},{"q":"リスク管理のプロセスとして正しい順序はどれか。","a":"認識 → 評価 → 手法の選択 → 実行 → 再評価","d":["評価 → 認識 → 実行 → 選択 → 再評価","認識 → 実行 → 評価 → 選択 → 再評価","選択 → 認識 → 評価 → 実行 → 再評価"],"e":"まずリスクを特定し、統計的手法等で数量化してから手法を選ぶ。"},{"q":"リスクをそのままとし、リスクにふさわしい収入を確保する管理手法はどれか。","a":"リスク保持","d":["リスク回避","リスク分散","リスク移転"],"e":"4手法＝保持・回避（事業を行わない）・分散（多数に分ける）・移転（外部に移す）。"},{"q":"貸出全体のリスクを統計的に把握し、予測される最大損失を自己資本で補う対応はどれか。","a":"マクロ対応","d":["ミクロ対応","リスク回避","リスク移転"],"e":"ミクロ対応は貸出先ごと・債権ごとに分担し、残債権を引当・償却する方法。"},{"q":"銀行に関連するリスクとして、ノートで銀行特有とされているものはどれか。","a":"システミックリスク","d":["信用リスク","市場リスク","流動性リスク"],"e":"ひとつの金融機関の破綻が決済システムを通じて他の金融機関に連鎖的に波及するリスク。銀行業に固有の問題として位置づけられる。"},{"q":"市場リスクの下位分類として正しい組み合わせはどれか。","a":"価格リスク・金利リスク・為替リスク","d":["事務リスク・システムリスク・法務リスク","信用リスク・流動性リスク・風評リスク","価格リスク・信用リスク・人的リスク"],"e":"事務・システム・法務・人的はオペレーショナルリスクの下位分類。この二つの区別が問われやすい。"},{"q":"オペレーショナルリスクの下位分類として正しい組み合わせはどれか。","a":"事務リスク・システムリスク・法務リスク・人的リスク","d":["価格リスク・金利リスク・為替リスク","信用リスク・市場リスク・流動性リスク","風評リスク・システミックリスク"],"e":"事務＝事務上の誤りや不正行為、システム＝コンピュータの障害・誤作動、法務＝法令遵守違反に伴う罰則や損害賠償、人的＝人事運営上の問題。"},{"q":"「法令の遵守違反に伴う罰則適用や、契約違反に伴う損害賠償等になるリスク」はどれか。","a":"法務リスク","d":["事務リスク","システムリスク","人的リスク"],"e":"いずれもオペレーショナルリスクの下位分類。定義文で区別できるようにしておく。"},{"q":"リスク対応を行うかどうかの判断基準として正しいものはどれか。","a":"リスク対応の費用 ＜ リスク不対応の費用 であれば対応する","d":["リスクがあれば必ず対応する","対応費用が最小となる方法を必ず選ぶ","リスクの発生確率だけで判断する"],"e":"費用対効果で判断する。すべてのリスクに対応するわけではない点が重要。"},{"q":"リスク管理の過程における「リスクの評価」とは何を指すか。","a":"統計的手法によりリスクを計量化すること","d":["リスクを特定すること","管理手法を選択すること","対応結果を再評価すること"],"e":"認識（特定）→評価（計量化）→手法の選択→実行→再評価の5段階。評価は「計量化」がキーワード。"},{"q":"リスク移転の具体的な手段として正しい組み合わせはどれか。","a":"保険・CDS（クレジット・デフォルト・スワップ）","d":["貸出先の多様化・分散投資","自己資本の積み増し","貸出の停止"],"e":"リスクを外部に移転する手法。分散投資はリスク分散、貸出停止はリスク回避にあたる。"},{"q":"リスク回避の説明として正しいものはどれか。","a":"リスクを伴う行動を取らないこと","d":["リスクを取り、それにふさわしい収入を確保すること","リスクを外部へ移すこと","複数の対象に分けてリスクを薄めること"],"e":"保持＝リスクを取る、回避＝取らない、分散＝分ける、移転＝外に出す。4つを一言ずつで言えるようにする。"},{"q":"自己査定における債務者区分の5分類として正しいものはどれか。","a":"正常先・要注意先・破綻懸念先・実質破綻先・破綻先","d":["優良先・普通先・注意先・危険先・破綻先","A格・B格・C格・D格・E格","第I分類・第II分類・第III分類・第IV分類"],"e":"第I〜IV分類は債務者区分ではなく資産の分類。両者を混同しないこと。"},{"q":"「法的・形式的な経営破綻の事実は発生していないものの、深刻な経営難の状態にあり、再建の見通しがない状況にある」債務者はどの区分か。","a":"実質破綻先","d":["破綻懸念先","要注意先","破綻先"],"e":"破綻懸念先は「今後、経営破綻に陥る可能性が大きい」段階。実質破綻先はもう一段深刻で、破綻先は法的・形式的な破綻が現に発生している。"},{"q":"資産分類における「第IV分類」とはどのような資産か。","a":"回収不能または無価値と判定される資産","d":["回収の危険性や価値の毀損の危険性に問題のない資産","回収について通常の度合いを超える危険を含む資産","損失の可能性は高いが合理的な推計が困難な資産"],"e":"第I分類＝問題なし、第II分類＝通常を超える危険、第III分類＝損失可能性は高いが推計困難、第IV分類＝回収不能。"}],"note":"<div class=\"note\"><h3>リスクの6分類</h3>①信用リスク ②市場リスク ③流動性リスク ④オペレーショナルリスク ⑤風評リスク ⑥<b>システミックリスク（銀行特有）</b><br>下位分類の対応を間違えやすいので注意：<ul><li><b>市場</b>リスク → 価格・金利・為替</li><li><b>オペレーショナル</b>リスク → 事務・システム・法務・人的</li></ul><h3 style=\"margin-top:10px\">管理プロセス</h3>①認識（特定）→②評価（<b>統計的手法で計量化</b>）→③管理手法の選択→④実行→⑤再評価。<br>対応するかどうかの判断は<b>「リスク対応の費用 ＜ リスク不対応の費用」</b>。<h3 style=\"margin-top:10px\">管理手法4つ</h3><b>保持</b>＝リスクを取る／<b>回避</b>＝リスクを伴う行動を取らない／<b>分散</b>＝分けて薄める／<b>移転</b>＝外部へ移す（保険・CDS）。<h3 style=\"margin-top:10px\">自己査定</h3>債務者区分：正常先／要注意先／破綻懸念先／実質破綻先／破綻先。資産分類：第I〜IV分類。<b>この2つは別物</b>なので混同しないこと。</div>"},{"k":"6","title":"6. 銀行と規制（プルーデンス政策）","qs":[{"q":"健全な銀行であっても信認が失われると預金の引き出しが殺到する可能性を何というか。","a":"銀行取付","d":["システミックリスク","流動性リスク","風評リスク"],"e":"銀行は預金の全額を現金で保有していない（現金＜預金）ため、構造的に起こりうる。"},{"q":"ひとつの銀行の破綻が他の銀行に連鎖的に波及する可能性を何というか。","a":"システミックリスク","d":["流動性リスク","信用リスク","オペレーショナルリスク"],"e":"金融システム本来の不安定性の一つ。個別の資産が換金できない流動性リスクとは異なる。"},{"q":"プルーデンス政策のうち、事前的措置に含まれないものはどれか。","a":"預金保険制度","d":["競争制限的規制","自己資本比率規制","検査・モニタリング"],"e":"預金保険とLLRは、破綻が起きた後に波及を防ぐ事後的措置（セーフティネット）。"},{"q":"自己資本比率規制のように、銀行の資産・負債構成に制約を課す規制を何というか。","a":"バランスシート規制","d":["競争制限的規制","業務分野規制","金利規制"],"e":"例）自己資本／総資産 ≧ 8%。"},{"q":"中央銀行が危機時に緊急の資金供給を行う機能を何というか。","a":"LLR（最後の貸し手）","d":["公開市場操作","預金保険","マクロプルーデンス"],"e":"lender of last resort。事後的措置の代表例。"},{"q":"預金保険制度で保護される預金の範囲はいくらか。","a":"1人当たり1,000万円と利息","d":["1人当たり500万円と利息","1口座当たり1,000万円","全額"],"e":"銀行が預金保険機構に保険料を払い、破綻時に預金者へ保険金が支払われる。"},{"q":"国際的な銀行規制の協調を図る枠組みを何というか。","a":"BIS規制","d":["ペイオフ","プルーデンス政策","全銀システム"],"e":"銀行法は免許、健全性確保（検査・報告の義務）、規制の透明性確保のガイドライン、国際的な協調（BIS規制）を定める。"},{"q":"預金金利規制や業務分野規制のように、銀行間の競争を制限することで経営を安定させる規制を何というか。","a":"競争制限的規制","d":["バランスシート規制","検査・モニタリング","プルーデンス規制"],"e":"事前的措置の一つ。かつての護送船団方式がこれにあたる。"}]},{"k":"7","title":"7. 収益性・効率性の指標","qs":[{"q":"総資産に対する当期純利益の比率を何というか。","a":"ROA","d":["ROE","OHR","経費率"],"e":"ROA＝当期純利益／総資産。銀行は他人資本（負債）を大量に使うレバレッジ型なので、一般企業よりROAは低い。"},{"q":"純資産に対する当期純利益の比率を何というか。","a":"ROE","d":["ROA","OHR","資金運用利回り"],"e":"ROE＝当期純利益／純資産。"},{"q":"業務粗利益経費率（OHR）の計算式として正しいものはどれか。","a":"営業経費 ／（業務純益＋営業経費）","d":["営業経費 ／ 純資産","当期純利益 ／ 総資産","資金運用収益 ／ 平均残高"],"e":"効率性の指標。低いほど効率的。"},{"q":"銀行が一般企業と比べて大きいものはどれか。","a":"負債（他人資本）の比率","d":["自己資本比率","ROA","純資産比率"],"e":"預金という他人資本で運用するレバレッジ型のビジネスモデル。だからROAは低くなる。"},{"q":"銀行の健全性を測る代表的な指標はどれか。","a":"自己資本比率","d":["ROA","OHR","総資金利ざや"],"e":"BIS規制では8%以上が求められる。"},{"q":"銀行の「経常収益」は一般企業の何に相当するか。","a":"売上高","d":["営業利益","当期純利益","総資産"],"e":"経常利益＝経常収益－経常費用。当期利益＝経常利益＋特別損益－法人税・住民税。"},{"q":"当期利益の計算式として正しいものはどれか。","a":"経常利益 ＋ 特別損益 － 法人税・住民税","d":["経常収益 － 経常費用","業務純益 － 営業経費","経常利益 － 特別損益"],"e":"経常利益＝経常収益－経常費用、というもう一段前の式とセットで覚える。"},{"q":"「資金運用利回り」の計算式として正しいものはどれか。","a":"資金運用収益 ÷ 資金運用勘定平均残高","d":["資金運用収益 ÷ 総資産","資金運用収益 ÷ 自己資本","資金調達費用 ÷ 資金運用収益"],"e":"総資金利ざや＝資金運用利回り－資金調達原価。この3つはセットで問われる。"},{"q":"総資金利ざやの計算式として正しいものはどれか。","a":"資金運用利回り － 資金調達原価","d":["資金運用収益 － 資金調達費用","経常収益 － 経常費用","貸出金利息 － 預金利息"],"e":"「利回り」と「原価」という率どうしの差である点に注意。"},{"q":"経費率の計算式として正しいものはどれか。","a":"営業費 ÷ 総資産残高","d":["営業経費 ÷（業務純益＋営業経費）","当期純益 ÷ 総資産","営業費 ÷ 経常収益"],"e":"営業経費÷（業務純益＋営業経費）は業務粗利益経費率（OHR）。両者を混同しないこと。"},{"q":"銀行の経営費用の中心を占めるものはどれか。","a":"資金調達の費用","d":["営業経費","法人税等","貸倒引当金繰入"],"e":"経常収益は半分近くが貸出金利益で、近年は手数料収入にも注力。営業経費の割合も相応に大きい。"}],"note":"<div class=\"note\"><h3>収益の構造</h3>経常収益（＝一般企業の売上高。半分近くが貸出金利益、手数料収入にも注力）－ 経常費用（資金調達費用が中心、営業経費も相応に大きい）＝ <b>経常利益</b><br><b>当期利益＝経常利益＋特別損益－法人税・住民税</b><br><b>業務純益</b>＝経常利益から株式関係損益等を控除したもの（一般企業の営業利益に相当）<h3 style=\"margin-top:10px\">収益性の指標</h3>資金運用利回り＝資金運用収益÷資金運用勘定平均残高<br>資金調達原価＝（預金・譲渡性預金・債券の利息＋営業経費）÷それらの平均残高<br><b>総資金利ざや＝資金運用利回り－資金調達原価</b><h3 style=\"margin-top:10px\">効率性の指標</h3>経費率＝営業費÷総資産残高<br><b>OHR（業務粗利益経費率）＝営業経費÷（業務純益＋営業経費）</b><br>ROA＝当期純益÷総資産／ROE＝当期利益÷純資産<br>※<b>経費率とOHRは分母が違う</b>。ここが引っかけどころ。</div>"},{"k":"記述","title":"8. 記述問題の対策（過去問ベース）","note":"<div class=\"note\" style=\"border-left-color:var(--ng)\"><h3>試験形式</h3>4択10問＋<b>記述1題</b>／60分／持ち込み不可。テスト90％＋レポート10％。<br>4択で確実に取ったうえで、記述で差がつきます。<b>10行程度</b>が目安です。</div>\n<div class=\"note\"><h3>2021年度に実際に出た記述問題</h3><p>銀行の三大業務があるが、それぞれ現在1円単位で送金できたり（MRFの存在もあり）、クラウドファンディング制度ができたりと、銀行の必要性が低くなっているように思われるが、将来的に銀行は不要になっていくのか？ ポイントをおさえて簡潔に書きなさい。（10行程度）</p></div>\n<div class=\"note\"><h3>答案の設計図（この型で書く）</h3>\n<p style=\"font-size:13px;color:var(--sub)\">結論を先に出し、機能ごとに分けて論じ、最後に条件つきの見通しで締める。これが一番点が伸びます。</p>\n<ul>\n<li><b>①結論を先に</b>：三大業務のうち<b>為替（決済）機能は他業態に代替されつつあるが、資産変換機能と情報生産機能は代替が難しい</b>。よって銀行は不要にはならないが、収益源と役割は変質する。</li>\n<li><b>②為替：代替が進んでいる</b>。2010年の<b>資金決済法</b>により<b>資金移動業</b>が認められ、PayPay・楽天ペイ・PayPalなどが100万円以下の少額送金を担うようになった。全銀システムの独占が崩れつつある。</li>\n<li><b>③貸出：一部代替されるが本体は残る</b>。クラウドファンディングやソーシャルレンディングは直接金融に近く、貸手が自らリスクを負う。しかし多くの家計は<b>元本保証・高流動性・少額運用可</b>という預金の性質を求めており、リスクを取らない資金の受け皿としての銀行は残る。</li>\n<li><b>④代替されにくい核＝銀行の二つの機能</b><ul><li><b>資産変換機能</b>：小口・短期・低リスクの預金を、大口・長期・高リスクの貸出に変換する。これは貸出先の<b>分散化</b>と<b>大数の法則</b>によって成り立っており、個人投資家には真似できない。</li><li><b>情報生産機能</b>：<b>情報の非対称性</b>から生じる<b>逆選択</b>（事前の審査）と<b>モラルハザード</b>（事後のモニタリング）に対処する。クラウドファンディングはこの審査コストを貸手側に押し付けているだけで、問題を解決したわけではない。</li></ul></li>\n<li><b>⑤制度面の理由</b>：<b>預金保険（1人1,000万円と利息）</b>、<b>LLR（最後の貸し手）</b>、<b>自己資本比率規制／BIS規制</b>といったプルーデンス政策の枠組みは銀行を前提に組まれている。<b>システミックリスク</b>を管理する主体として、銀行という制度的な受け皿は依然必要である。</li>\n<li><b>⑥締め（条件つきの見通し）</b>：したがって銀行は不要にはならないが、決済手数料に依存した収益構造は縮小し、<b>信用リスクの評価という情報生産機能に特化していく</b>方向で変質する。「不要になるか」ではなく「何が残り何が失われるか」で答えるのがこの問いの筋である。</li>\n</ul></div>\n<div class=\"note\"><h3>記述で必ず使いたい語（これを入れると点になる）</h3><p class=\"kwlist\">資産変換機能／情報生産機能／情報の非対称性／逆選択／モラルハザード／分散化・大数の法則／資金移動業・資金決済法（2010）／全銀システム／預金保険（1,000万円）／LLR／システミックリスク／自己資本比率・BIS規制／間接金融・直接金融・市場型間接金融</p></div>\n<div class=\"note\"><h3>別パターンの記述が出たときの型</h3><ul><li><b>「銀行の機能を説明せよ」</b>→ 資産変換（金額・期間・リスクの変換）＋情報生産（逆選択・モラルハザードへの対処）の2本柱。数値例（1社1億 vs 10社1千万）を入れる。</li><li><b>「なぜ銀行に規制が必要か」</b>→ 銀行取付 → システミックリスク → 決済システムの停止という波及経路を示し、事前的措置（自己資本比率規制・BIS規制・競争制限的規制）と事後的措置（LLR・預金保険）に分けて書く。</li><li><b>「他業禁止規定はなぜあるか」</b>→ ①他業のリスクが銀行業に及ぶおそれ ②強力な金融力を背景とした他業進出 ③公正な競争の阻害、の3点。</li></ul></div>","qs":[{"q":"記述問題で「銀行は将来不要になるか」と問われたとき、代替が最も進んでいる業務はどれか。","a":"為替（決済）業務","d":["預金業務","貸出業務","情報生産機能"],"e":"2010年の資金決済法により資金移動業が認められ、100万円以下の少額送金は銀行以外でも担えるようになった。"},{"q":"クラウドファンディングが銀行の貸出を完全には代替できない理由として最も重要なものはどれか。","a":"貸手自身が信用リスクを負い、審査コストも負担しなければならないから","d":["法律で禁止されているから","金額が小さすぎるから","手数料が高いから"],"e":"銀行の情報生産機能（逆選択への事前審査、モラルハザードへの事後モニタリング）は、クラウドファンディングでは貸手側に押し付けられているだけで解決されていない。"},{"q":"銀行が小口・短期・低リスクの預金を、大口・長期・高リスクの貸出に変換できる根拠はどれか。","a":"貸出先の分散化と大数の法則","d":["政府による損失補填","預金金利の規制","中央銀行からの無制限の資金供給"],"e":"期待損失は同じでも、分散すれば損失のばらつきが小さくなり、貸倒引当金で安定的に管理できるようになる。"},{"q":"プルーデンス政策のうち、事後的措置にあたる組み合わせはどれか。","a":"LLR（最後の貸し手）と預金保険制度","d":["自己資本比率規制とBIS規制","競争制限的規制とバランスシート規制","免許制と業務範囲規制"],"e":"事前的措置＝危機を起こさないための規制、事後的措置＝起きたときの処理。記述ではこの二分法で書くと整理された答案になる。"}]}];
+/* 試験対策クイズ集 共通エンジン ------------------------------------------
+   QUIZ(deck) で起動する。外部依存なし。
+   1科目1ページの版でも、全科目を1ファイルにまとめた版でも同じものを使う。 */
+var QUIZ = (function () {
+  'use strict';
 
-const S={};let cur=0,wrongOnly=false;
-const ORD={},PICK={};
-const TOTAL=LEC.reduce((a,l)=>a+l.qs.length,0);
-const SK='gkq';
-function shuf(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function order(li,qi){
-  const k=li+'_'+qi;
-  if(!ORD[k]){const q=LEC[li].qs[qi];ORD[k]=shuf([{t:q.a,ok:1}].concat(q.d.map(t=>({t,ok:0}))));}
-  return ORD[k];
-}
-function tabs(){
-  const el=document.getElementById('tabs');el.innerHTML='';
-  LEC.forEach((l,i)=>{
-    const b=document.createElement('button');
-    b.className='tab'+(i===cur?' on':'');
-    let done=0;for(let q=0;q<l.qs.length;q++)if(S[i+'_'+q])done++;
-    if(done===l.qs.length)b.className+=' done';
-    b.innerHTML=esc(l.k)+'<small>'+done+'/'+l.qs.length+'</small>';
-    b.onclick=()=>{cur=i;wrongOnly=false;rb();render();window.scrollTo(0,0);};
-    el.appendChild(b);
+  var active = null;
+  document.addEventListener('keydown', function (e) {
+    if (active && active.onKey) active.onKey(e);
   });
-}
-function rb(){document.getElementById('ba').style.display='none';document.getElementById('bw').style.display='';}
-function render(){
-  tabs();
-  const l=LEC[cur],m=document.getElementById('main');
-  let h='<h2>'+esc(l.title)+'</h2>';
-  if(l.note&&!wrongOnly)h+=l.note;
-  let shown=0;
-  l.qs.forEach((q,qi)=>{
-    const k=cur+'_'+qi,st=S[k];
-    if(wrongOnly&&(!st||st.ok))return;
-    shown++;
-    h+='<div class="q'+(st?(st.ok?' ok':' ng'):'')+'"><div class="qh"><span class="qn">Q'+(qi+1)+'</span><span class="qt">'+esc(q.q)+'</span></div><div class="opts">';
-    order(cur,qi).forEach((it,i)=>{
-      let cls='o';
-      if(st){if(it.ok)cls+=' c';else if(st.sel===i)cls+=' x';}
-      const mk=st?(it.ok?'✓':(st.sel===i?'✕':(i+1))):(i+1);
-      h+='<div class="'+cls+'" data-q="'+qi+'" data-i="'+i+'"><i>'+mk+'</i><span>'+esc(it.t)+'</span></div>';
+
+  return function mount(DECK) {
+
+  var $ = function (id) { return document.getElementById(id); };
+  function E(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ---------------- 状態 ---------------- */
+  var KEY = 'kq-' + DECK.slug;
+  var S = {};          // 解答記録  "mode|sec|q" -> 1(正解) / 0(不正解)
+  var mi = 0;          // 選択中のモード
+  var sec = -1;        // 選択中の範囲（-1 = ぜんぶ）
+  var view = DECK.defaultView || 'quiz';
+  var only = false;    // ✕だけ
+  var ix = 0;          // 出題リスト内の位置
+  var list = [];       // [[secIndex, qIndex], ...]
+  var st = null;       // 解答中の一時状態
+
+  function mode() { return DECK.modes[mi]; }
+  function sections() { return mode().sections; }
+  function qkey(si, qi) { return mode().id + '|' + si + '|' + qi; }
+
+  function save() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify({ S: S, m: mi, v: view }));
+    } catch (e) {}
+  }
+  function load() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (!raw) return;
+      var o = JSON.parse(raw);
+      if (o.S) S = o.S;
+      if (typeof o.m === 'number' && DECK.modes[o.m]) mi = o.m;
+      if (o.v === 'quiz' || o.v === 'list') view = o.v;
+    } catch (e) {}
+  }
+
+  /* ---------------- 出題リスト ---------------- */
+  function build() {
+    var out = [];
+    sections().forEach(function (sc, si) {
+      if (sec >= 0 && si !== sec) return;
+      sc.items.forEach(function (it, qi) {
+        if (only && S[qkey(si, qi)] !== 0) return;
+        out.push([si, qi]);
+      });
     });
-    h+='</div>';
-    if(!st)h+='<div class="act"><button data-check="'+qi+'">答え合わせ</button><span class="hint" data-cnt="'+qi+'"></span></div>';
-    else h+='<div class="exp"><b class="'+(st.ok?'ok':'ng')+'">'+(st.ok?'正解':'不正解')+'</b>　'+esc(q.e)+'</div>';
-    h+='</div>';
-  });
-  if(!shown)h+='<div class="msg">この章に間違えた問題はありません。</div>';
-  m.innerHTML=h;bind();stats();
-}
-function bind(){
-  document.querySelectorAll('.o').forEach(el=>{
-    const qi=+el.dataset.q,i=+el.dataset.i,k=cur+'_'+qi;
-    if(S[k])return;
-    el.onclick=()=>{PICK[k]=i;el.parentNode.querySelectorAll('.o').forEach(x=>x.classList.remove('sel'));el.classList.add('sel');
-      const c=document.querySelector('[data-cnt="'+qi+'"]');if(c)c.textContent='';};
-  });
-  document.querySelectorAll('[data-check]').forEach(b=>{
-    const qi=+b.dataset.check,k=cur+'_'+qi;
-    b.onclick=()=>{
-      if(PICK[k]===undefined){const c=document.querySelector('[data-cnt="'+qi+'"]');if(c)c.textContent='選択肢を選んでください';return;}
-      S[k]={sel:PICK[k],ok:!!order(cur,qi)[PICK[k]].ok};save();render();
-    };
-  });
-}
-function stats(){
-  const l=LEC[cur];let d=0,o=0;
-  l.qs.forEach((q,qi)=>{const st=S[cur+'_'+qi];if(st){d++;if(st.ok)o++;}});
-  document.getElementById('s1').textContent=d+' / '+l.qs.length;
-  document.getElementById('s2').textContent=o;
-  document.getElementById('s3').textContent=d-o;
-  document.getElementById('s4').textContent=d?Math.round(o/d*100)+'%':'—';
-  let ad=0,ao=0;
-  LEC.forEach((L,li)=>L.qs.forEach((q,qi)=>{const st=S[li+'_'+qi];if(st){ad++;if(st.ok)ao++;}}));
-  document.getElementById('pbar').style.width=Math.round(ad/TOTAL*100)+'%';
-  document.getElementById('plab').textContent='全体の進捗 '+ad+' / '+TOTAL+' 問';
-  document.getElementById('prate').textContent=ad?('正答率 '+Math.round(ao/ad*100)+'%'):'';
-}
-function save(){try{localStorage.setItem(SK,JSON.stringify(S));}catch(e){}}
-function load(){try{const v=localStorage.getItem(SK);if(v)Object.assign(S,JSON.parse(v));}catch(e){}}
-document.getElementById('bw').onclick=function(){wrongOnly=true;this.style.display='none';document.getElementById('ba').style.display='';render();};
-document.getElementById('ba').onclick=function(){wrongOnly=false;this.style.display='none';document.getElementById('bw').style.display='';render();};
-document.getElementById('br').onclick=function(){LEC[cur].qs.forEach((q,qi)=>{delete S[cur+'_'+qi];delete PICK[cur+'_'+qi];delete ORD[cur+'_'+qi];});wrongOnly=false;rb();save();render();};
-document.getElementById('brall').onclick=function(){
-  if(!confirm('全ての解答記録を消します。よろしいですか？'))return;
-  Object.keys(S).forEach(k=>delete S[k]);Object.keys(ORD).forEach(k=>delete ORD[k]);Object.keys(PICK).forEach(k=>delete PICK[k]);
-  wrongOnly=false;rb();save();render();};
-load();render();
+    return out;
+  }
+  function wrongCount() {
+    var n = 0;
+    sections().forEach(function (sc, si) {
+      sc.items.forEach(function (it, qi) { if (S[qkey(si, qi)] === 0) n++; });
+    });
+    return n;
+  }
+  function tally() {
+    var done = 0, ok = 0;
+    list.forEach(function (p) {
+      var v = S[qkey(p[0], p[1])];
+      if (v === 0 || v === 1) { done++; if (v === 1) ok++; }
+    });
+    return { done: done, ok: ok, total: list.length };
+  }
 
-</script></body></html>
+  /* ---------------- 描画：ヘッダ周り ---------------- */
+  function drawModes() {
+    var el = $('modes'), hint = $('modehint');
+    if (DECK.modes.length < 2) { el.style.display = 'none'; hint.style.display = 'none'; return; }
+    el.innerHTML = DECK.modes.map(function (m, i) {
+      return '<button data-m="' + i + '"' + (i === mi ? ' class="on"' : '') + '>' + E(m.label) + '</button>';
+    }).join('');
+    el.querySelectorAll('[data-m]').forEach(function (b) {
+      b.onclick = function () { mi = +b.dataset.m; sec = -1; only = false; ix = 0; st = null; save(); draw(); window.scrollTo(0, 0); };
+    });
+    hint.textContent = mode().hint || '';
+    hint.style.display = mode().hint ? '' : 'none';
+  }
+
+  function drawChips() {
+    var el = $('chips');
+    var scs = sections();
+    if (scs.length < 2) { el.style.display = 'none'; el.innerHTML = ''; return; }
+    el.style.display = '';
+    var h = '<button class="chip' + (sec < 0 ? ' on' : '') + '" data-s="-1">ぜんぶ</button>';
+    scs.forEach(function (sc, si) {
+      h += '<button class="chip' + (si === sec ? ' on' : '') + '" data-s="' + si + '">' +
+        E(sc.label || sc.title) + '<small>' + sc.items.length + '</small></button>';
+    });
+    el.innerHTML = h;
+    el.querySelectorAll('[data-s]').forEach(function (b) {
+      b.onclick = function () { sec = +b.dataset.s; ix = 0; st = null; draw(); window.scrollTo(0, 0); };
+    });
+  }
+
+  function drawHud() {
+    var t = tally();
+    var hud = $('hud'), track = $('track');
+    if (view === 'list' || mode().kind === 'read') { hud.style.display = 'none'; track.style.display = 'none'; return; }
+    hud.style.display = ''; track.style.display = '';
+    var pos = Math.min(ix + 1, t.total);
+    hud.innerHTML = t.total
+      ? '<span class="n">' + pos + ' / ' + t.total + ' 問</span><span class="sp"></span>' +
+        '<span class="ok">○ ' + t.ok + '</span><span class="ng">✕ ' + (t.done - t.ok) + '</span>'
+      : '';
+    track.querySelector('i').style.width = (t.total ? Math.round(t.done / t.total * 100) : 0) + '%';
+  }
+
+  // 出題ビューでは「いま解いている範囲」のノートを出す（「ぜんぶ」でも問題に合わせて切り替わる）
+  var noteAt = -1;
+  function drawNote(si) {
+    var el = $('note');
+    var scs = sections();
+    var at = (si === undefined || si < 0) ? sec : si;
+    var note = (at >= 0 && scs[at] && scs[at].note) ? scs[at].note : '';
+    if (!note || view === 'list') { el.innerHTML = ''; noteAt = -1; return; }
+    if (noteAt === at) return; // 同じ範囲を解いている間は開閉状態を保つ
+    noteAt = at;
+    el.innerHTML = '<details class="note"><summary>要点ノート（' +
+      E(scs[at].label || '') + '）</summary><div class="body">' + note + '</div></details>';
+  }
+
+  /* ---------------- 描画：本文 ---------------- */
+  function draw() {
+    if (sec >= sections().length) sec = -1;
+    noteAt = -1;
+    drawModes(); drawChips(); drawNote();
+    list = build();
+    if (ix >= list.length) ix = Math.max(list.length - 1, 0);
+    document.body.classList.toggle('hide', false);
+    if (view === 'list' || mode().kind === 'read') drawList(); else drawQuiz();
+    drawHud(); drawFoot();
+  }
+
+  /* --- 出題ビュー --- */
+  function drawQuiz() {
+    var stage = $('stage'), nav = $('nav');
+    if (!list.length) {
+      stage.innerHTML = '<div class="empty">' +
+        (only ? '間違えた問題はありません。' : 'この範囲に問題がありません。') + '</div>';
+      nav.innerHTML = '';
+      return;
+    }
+    if (ix >= list.length) return drawDone();
+
+    var si = list[ix][0], qi = list[ix][1];
+    var sc = sections()[si], it = sc.items[qi];
+    drawNote(si);
+    var rec = S[qkey(si, qi)];
+    var mine = st && st.si === si && st.qi === qi ? st : null;
+    var answered = (mine && mine.done) ? mine
+      : (rec === 0 || rec === 1 ? { si: si, qi: qi, ok: rec === 1, pick: null, done: true } : null);
+    var pending = (mine && !mine.done && mine.picks) ? mine.picks : [];
+    var revealed = !!(mine && mine.reveal);
+
+    var h = '<div class="card"><p class="src">' + E(sc.title) + '</p>';
+
+    if (it.ty === 'wrong') {
+      h += '<p class="qtext">' + sentence(it, !!answered) + '</p>';
+      h += '<p class="ask">誤っているのはどれ？</p>' + choices(it, answered, pending);
+    } else if (it.ty === 'mc') {
+      h += '<p class="qtext">' + blanked(it.q, answered ? it.ch[it.ans].t : null) + '</p>' + choices(it, answered, pending);
+    } else if (it.ty === 'ms') {
+      h += '<p class="qtext">' + E(it.q) + '</p>';
+      h += '<p class="ask">正しいものを2つ選んでください</p>' + choices(it, answered, pending);
+    } else if (it.ty === 'recall') {
+      h += '<p class="qtext">' + blanked(it.q, (answered || revealed) ? it.a : null) + '</p>';
+      if (!answered && !revealed) {
+        h += '<div class="btns"><button class="btn pri" data-act="reveal">答えを見る</button></div>' +
+          '<p class="ask" style="margin:10px 0 0">まず頭のなかで答えてから押してください。</p>';
+      } else {
+        h += '<div class="fix' + (it.a.length > 40 ? ' long' : '') + '"><span class="lbl">答え</span><b>' + E(it.a) + '</b></div>';
+        if (!answered) {
+          h += '<div class="btns"><button class="btn y" data-mark="1">○ 言えた</button>' +
+            '<button class="btn n" data-mark="0">✕ 言えなかった</button></div>';
+        }
+      }
+    }
+
+    if (answered) h += result(it, answered);
+    h += '</div>';
+    stage.innerHTML = h;
+
+    nav.innerHTML = '<button data-go="-1"' + (ix === 0 ? ' disabled' : '') + '>← もどる</button>' +
+      '<span class="sp"></span>' +
+      '<button data-go="1" class="' + (answered ? 'pri' : '') + '">' +
+      (ix === list.length - 1 ? '結果を見る' : 'つぎへ →') + '</button>';
+
+    bindQuiz(it, si, qi, !!answered);
+  }
+
+  function sentence(it, reveal) {
+    if (!reveal || it.badFrom < 0) return E(it.segs.join(''));
+    // 誤り箇所は連続しているので、まとめて1つの <u> で囲む
+    return E(it.segs.slice(0, it.badFrom).join('')) +
+      '<u class="bad">' + E(it.segs.slice(it.badFrom, it.badTo + 1).join('')) + '</u>' +
+      E(it.segs.slice(it.badTo + 1).join(''));
+  }
+  function blanked(q, fill) {
+    var parts = String(q).split('（　）');
+    if (parts.length < 2) return E(q);
+    var b = fill === null || fill === undefined
+      ? '<span class="blank">　　</span>'
+      : '<span class="blank on">' + E(fill) + '</span>';
+    return E(parts[0]) + b + E(parts.slice(1).join('（　）'));
+  }
+
+  function choices(it, answered, pending) {
+    var multi = it.ty === 'ms';
+    var picks = pending || [];
+    var h = '<div class="choices">';
+    it.ch.forEach(function (c, i) {
+      var cls = 'ch' + (c.none ? ' none' : '');
+      var mark = i + 1;
+      if (answered) {
+        var isAns = multi ? it.ans.indexOf(i) >= 0 : i === it.ans;
+        var wasPicked = answered.picks ? answered.picks.indexOf(i) >= 0 : answered.pick === i;
+        if (isAns) { cls += ' correct'; mark = '✓'; }
+        else if (wasPicked) { cls += ' miss'; mark = '✕'; }
+      } else if (picks.indexOf(i) >= 0) {
+        cls += ' pick';
+      }
+      h += '<button class="' + cls + '" data-i="' + i + '"' + (answered ? ' disabled' : '') + '>' +
+        '<i>' + mark + '</i><span>' + E(c.t) + '</span></button>';
+    });
+    h += '</div>';
+    if (multi && !answered) {
+      h += '<div class="btns"><button class="btn pri" data-act="grade"' +
+        (picks.length === 2 ? '' : ' disabled') + '>答え合わせ</button></div>';
+    }
+    return h;
+  }
+
+  function result(it, a) {
+    var h = '<div class="verdict ' + (a.ok ? 'y' : 'n') + '">' + (a.ok ? '正解' : '不正解') + '</div>';
+    if (it.ty === 'wrong') {
+      h += it.fix
+        ? '<div class="fix"><span class="lbl">正しくは</span><b>' + E(it.fix) + '</b></div>'
+        : '<div class="fix"><b>この文に誤りはありません。</b></div>';
+    }
+    if (it.e) h += '<div class="exp">' + E(it.e) + '</div>';
+    return h;
+  }
+
+  function bindQuiz(it, si, qi, answered) {
+    var stage = $('stage');
+    stage.querySelectorAll('.ch').forEach(function (b) {
+      if (answered) return;
+      b.onclick = function () {
+        var i = +b.dataset.i;
+        if (it.ty === 'ms') {
+          var picks = (st && st.si === si && st.qi === qi && !st.done && st.picks) ? st.picks.slice() : [];
+          var at = picks.indexOf(i);
+          if (at >= 0) picks.splice(at, 1);
+          else if (picks.length < 2) picks.push(i);
+          st = { si: si, qi: qi, picks: picks };
+          drawQuiz();
+        } else {
+          grade(it, si, qi, [i]);
+        }
+      };
+    });
+    var act = stage.querySelector('[data-act="grade"]');
+    if (act) act.onclick = function () { grade(it, si, qi, st.picks); };
+    var rev = stage.querySelector('[data-act="reveal"]');
+    if (rev) rev.onclick = function () { st = { si: si, qi: qi, reveal: true }; drawQuiz(); };
+    stage.querySelectorAll('[data-mark]').forEach(function (b) {
+      b.onclick = function () { grade(it, si, qi, null, +b.dataset.mark === 1); };
+    });
+    $('nav').querySelectorAll('[data-go]').forEach(function (b) {
+      b.onclick = function () { step(+b.dataset.go); };
+    });
+  }
+
+  function grade(it, si, qi, picks, selfOk) {
+    var ok;
+    if (it.ty === 'ms') {
+      ok = picks.length === 2 && picks.every(function (p) { return it.ans.indexOf(p) >= 0; });
+    } else if (it.ty === 'recall') {
+      ok = !!selfOk;
+    } else {
+      ok = picks[0] === it.ans;
+    }
+    S[qkey(si, qi)] = ok ? 1 : 0;
+    st = { si: si, qi: qi, ok: ok, pick: picks ? picks[0] : null, picks: picks || [], done: true };
+    save();
+    drawQuiz(); drawHud(); drawFoot();
+  }
+
+  function step(d) {
+    var n = ix + d;
+    if (n < 0) return;
+    ix = n; st = null;
+    if (ix >= list.length) { drawDone(); drawHud(); }
+    else drawQuiz();
+    drawHud();
+    window.scrollTo(0, 0);
+  }
+
+  function drawDone() {
+    $('note').innerHTML = ''; noteAt = -1;
+    var t = tally();
+    var rate = t.done ? Math.round(t.ok / t.done * 100) : 0;
+    var wrong = wrongCount();
+    var h = '<div class="done"><p class="big">' + t.ok + ' / ' + t.done + '</p>' +
+      '<p class="rate">正答率 ' + rate + '％</p><div class="btns">';
+    if (wrong) h += '<button class="btn pri" data-act="review">✕だった' + wrong + '問を復習</button>';
+    h += '<button class="btn" data-act="restart">はじめから</button></div></div>';
+    $('stage').innerHTML = h;
+    $('nav').innerHTML = '<button data-go="-1">← もどる</button>';
+    $('stage').querySelectorAll('[data-act]').forEach(function (b) {
+      b.onclick = function () {
+        if (b.dataset.act === 'review') { only = true; sec = -1; }
+        ix = 0; st = null; draw(); window.scrollTo(0, 0);
+      };
+    });
+    $('nav').querySelectorAll('[data-go]').forEach(function (b) {
+      b.onclick = function () { step(-1); };
+    });
+  }
+
+  /* --- 一覧ビュー --- */
+  function drawList() {
+    var h = '';
+    sections().forEach(function (sc, si) {
+      if (sec >= 0 && si !== sec) return;
+      h += '<div class="lsec"><h2>' + E(sc.title) + '</h2>';
+      if (sc.note) h += '<details class="note" open><summary>要点ノート</summary><div class="body">' + sc.note + '</div></details>';
+      sc.items.forEach(function (it) {
+        if (it.ty === 'read') {
+          h += '<div class="doc"><h3>' + E(it.h) + '</h3>' +
+            (it.sub ? '<p class="why">' + E(it.sub) + '</p>' : '') +
+            '<pre>' + E(it.body) + '</pre>' +
+            (it.kw && it.kw.length ? '<div class="kw">' + it.kw.map(function (k) { return '<span>' + E(k) + '</span>'; }).join('') + '</div>' : '') +
+            '</div>';
+          return;
+        }
+        if (it.ty === 'wrong') {
+          h += '<div class="item ' + (it.fix ? 'err' : 'clean') + '"><p class="s">' + sentence(it, true) + '</p>' +
+            (it.fix
+              ? '<p class="a"><span class="lbl">正しくは</span><b>' + E(it.fix) + '</b></p>'
+              : '<p class="note-ok">✓ この文に誤りはありません</p>') +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        } else if (it.ty === 'recall') {
+          h += '<div class="item"><p class="s">' + blanked(it.q, it.a) + '</p>' +
+            (it.q.indexOf('（　）') < 0 ? '<p class="a' + (it.a.length > 40 ? ' long' : '') + '"><span class="lbl">答え</span><b>' + E(it.a) + '</b></p>' : '') +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        } else if (it.ty === 'ms') {
+          h += '<div class="item"><p class="s">' + E(it.q) + '</p><p class="a"><span class="lbl">正しいもの</span><b>' +
+            it.ans.map(function (i) { return E(it.ch[i].t); }).join('</b>／<b>') + '</b></p>' +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        } else {
+          h += '<div class="item"><p class="s">' + blanked(it.q, it.ch[it.ans].t) + '</p>' +
+            (it.q.indexOf('（　）') < 0 ? '<p class="a"><span class="lbl">答え</span><b>' + E(it.ch[it.ans].t) + '</b></p>' : '') +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        }
+      });
+      h += '</div>';
+    });
+    $('stage').innerHTML = h || '<div class="empty">表示できる項目がありません。</div>';
+    $('nav').innerHTML = '';
+  }
+
+  /* ---------------- フッタの操作 ---------------- */
+  function drawFoot() {
+    var el = $('tools');
+    var readOnly = mode().kind === 'read';
+    var h = '';
+    if (!readOnly) {
+      h += '<button data-v="quiz" class="' + (view === 'quiz' ? 'on' : '') + '">1問ずつ解く</button>';
+      h += '<button data-v="list" class="' + (view === 'list' ? 'on' : '') + '">一覧で読む</button>';
+    }
+    if (!readOnly && view === 'list') h += '<button data-act="hide">答えを隠す</button>';
+    if (!readOnly && view === 'quiz') {
+      var w = wrongCount();
+      h += '<button data-act="only" class="' + (only ? 'on' : '') + '"' + (w || only ? '' : ' disabled') +
+        '>✕だけ復習' + (w ? '（' + w + '）' : '') + '</button>';
+      h += '<button data-act="reset">記録を消す</button>';
+    }
+    el.innerHTML = h;
+    el.querySelectorAll('[data-v]').forEach(function (b) {
+      b.onclick = function () { view = b.dataset.v; only = false; ix = 0; st = null; save(); draw(); window.scrollTo(0, 0); };
+    });
+    el.querySelectorAll('[data-act]').forEach(function (b) {
+      b.onclick = function () {
+        var a = b.dataset.act;
+        if (a === 'only') { only = !only; if (only) sec = -1; ix = 0; st = null; draw(); window.scrollTo(0, 0); }
+        else if (a === 'hide') {
+          var on = document.body.classList.toggle('hide');
+          b.textContent = on ? '答えを表示' : '答えを隠す';
+          b.classList.toggle('on', on);
+        } else if (a === 'reset') {
+          if (!confirm('この' + mode().label + 'の解答記録を消します。よろしいですか？')) return;
+          Object.keys(S).forEach(function (k) { if (k.indexOf(mode().id + '|') === 0) delete S[k]; });
+          only = false; ix = 0; st = null; save(); draw();
+        }
+      };
+    });
+    $('keys').style.display = (view === 'quiz' && !readOnly) ? '' : 'none';
+  }
+
+  /* ---------------- キーボード ---------------- */
+  function onKey(e) {
+    if (view !== 'quiz' || mode().kind === 'read') return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea') return;
+    var k = e.key;
+    if (k === 'ArrowRight' || k === 'Enter') { e.preventDefault(); step(1); return; }
+    if (k === 'ArrowLeft') { e.preventDefault(); step(-1); return; }
+    if (/^[1-9]$/.test(k)) {
+      var btns = $('stage').querySelectorAll('.ch:not([disabled])');
+      var i = +k - 1;
+      if (btns[i]) { e.preventDefault(); btns[i].click(); }
+      return;
+    }
+    if (k === ' ') {
+      var b = $('stage').querySelector('[data-act="reveal"],[data-act="grade"]');
+      if (b && !b.disabled) { e.preventDefault(); b.click(); }
+    }
+  }
+
+  /* ---------------- 起動 ---------------- */
+  load();
+  draw();
+  active = { onKey: onKey };
+  return active;
+
+  };
+})();
+
+QUIZ(DECK);
+</script>
+<!-- DADS-A11Y:START -->
+<script id="dads-a11y">
+(function(){
+  'use strict';
+  function all(sel,root){return Array.prototype.slice.call((root||document).querySelectorAll(sel));}
+  function setButtonTypes(root){all('button',root).forEach(function(b){if(!b.hasAttribute('type'))b.type='button';});}
+  function enhance(){
+    var main=document.querySelector('.wrap')||document.body;
+    if(!main.id)main.id='main-content';
+    main.setAttribute('role','main');
+    if(!document.querySelector('.dads-skip')){
+      var skip=document.createElement('a');skip.className='dads-skip';skip.href='#'+main.id;skip.textContent='本文へ移動';
+      document.body.insertBefore(skip,document.body.firstChild);
+    }
+    var h1=document.querySelector('h1');
+    if(h1){if(!h1.id)h1.id='page-title';main.setAttribute('aria-labelledby',h1.id);}
+
+    var modes=document.getElementById('modes');
+    if(modes){
+      modes.setAttribute('role','tablist');modes.setAttribute('aria-label','学習モード');
+      all('button',modes).forEach(function(b,i){
+        b.setAttribute('role','tab');b.setAttribute('aria-controls','stage');
+        var on=b.classList.contains('on');b.setAttribute('aria-selected',on?'true':'false');b.tabIndex=on?0:-1;
+      });
+    }
+    var chips=document.getElementById('chips');
+    if(chips){chips.setAttribute('role','group');chips.setAttribute('aria-label','出題範囲');
+      all('button',chips).forEach(function(b){b.setAttribute('aria-pressed',b.classList.contains('on')?'true':'false');});}
+    var tools=document.getElementById('tools');
+    if(tools){tools.setAttribute('role','group');tools.setAttribute('aria-label','表示と復習の設定');
+      all('button.on',tools).forEach(function(b){b.setAttribute('aria-pressed','true');});}
+    var hud=document.getElementById('hud');if(hud){hud.setAttribute('role','status');hud.setAttribute('aria-live','polite');}
+    var stage=document.getElementById('stage');if(stage){stage.setAttribute('role','region');stage.setAttribute('aria-label','問題と解答');}
+    var nav=document.getElementById('nav');if(nav){nav.setAttribute('aria-label','問題の移動');}
+    var track=document.getElementById('track');
+    if(track){
+      var bar=track.querySelector('i'),pct=bar?parseFloat(bar.style.width)||0:0;
+      track.setAttribute('role','progressbar');track.setAttribute('aria-label','学習の進捗');
+      track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax','100');track.setAttribute('aria-valuenow',String(Math.round(pct)));
+    }
+    all('.choices').forEach(function(c){c.setAttribute('role','group');c.setAttribute('aria-label','解答の選択肢');});
+    all('.ch').forEach(function(b){
+      b.setAttribute('aria-pressed',b.classList.contains('pick')?'true':'false');
+      if(b.classList.contains('correct'))b.setAttribute('aria-label','正解: '+b.textContent.trim());
+      if(b.classList.contains('miss'))b.setAttribute('aria-label','選択した不正解: '+b.textContent.trim());
+    });
+    all('details.note').forEach(function(d){var s=d.querySelector('summary');if(s)s.setAttribute('aria-label',(s.textContent||'要点ノート')+'を開閉');});
+    setButtonTypes(document);
+  }
+  var queued=false;
+  function schedule(){if(queued)return;queued=true;requestAnimationFrame(function(){queued=false;enhance();});}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){enhance();new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class','style','open']});});
+  else{enhance();new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class','style','open']});}
+})();
+</script>
+<!-- DADS-A11Y:END -->
+</body></html>

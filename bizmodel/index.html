@@ -1,629 +1,812 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ビジネスモデル論 試験対策</title>
-<meta name="description" content="ビジネスモデル論の用語説明・4択・論述骨格をまとめた試験対策ツール。手書きノート（全18ページ）から作成。">
+<title>ビジネスモデル論 | 試験対策クイズ</title>
+<meta name="description" content="ビジネスモデルの基礎概念から9セル、ジョブ理論、利益の設計、デジタル時代の用語まで。用語を3行で説明する練習・4択・論述と事例の3モードがあります。">
 <style>
-:root{--bg:#fbfaf8;--card:#fff;--line:#e3e0d8;--txt:#23221f;--sub:#6d6a63;--accent:#2f6f5e;--accentbg:#e6f1ed;--ok:#1d7a4f;--okbg:#e6f4ec;--ng:#b3312e;--ngbg:#fbeaea;--warn:#8a6d1f;--warnbg:#f9f0d8}
-@media(prefers-color-scheme:dark){:root{--bg:#1b1a18;--card:#252422;--line:#3a3833;--txt:#eceae4;--sub:#a5a29a;--accent:#7fc0aa;--accentbg:#1f3730;--ok:#6cc79a;--okbg:#1e3a2c;--ng:#e88a88;--ngbg:#3c2322;--warn:#d9bd6a;--warnbg:#3a3220}}
+:root{
+ --bg:#fbfaf8;--card:#fff;--line:#e5e2da;--txt:#22211e;--sub:#6d6a63;--soft:#f4f2ed;
+ --ok:#1d7a4f;--okbg:#e7f4ec;--ng:#b3312e;--ngbg:#fbeaea;
+ --accent:#7a3f5d;--accentbg:#f5eaf0;--on:#fff;
+}
+@media(prefers-color-scheme:dark){:root{
+ --bg:#1a1917;--card:#242320;--line:#3a3833;--txt:#ecebe5;--sub:#a6a39b;--soft:#2c2b27;
+ --ok:#6cc79a;--okbg:#1e3a2c;--ng:#e88a88;--ngbg:#3c2322;
+ --accent:#d493b3;--accentbg:#33212b;--on:#161513;
+}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.9;-webkit-text-size-adjust:100%}
-.wrap{max-width:820px;margin:0 auto;padding:22px 16px 100px}
-h1{font-size:20px;font-weight:600;margin:0 0 4px}
-.lead{color:var(--sub);font-size:13px;margin:0 0 16px;line-height:1.8}
-.bar{height:7px;background:var(--card);border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-bottom:6px}
-.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .35s}
-.barlab{font-size:12px;color:var(--sub);margin-bottom:16px;display:flex;justify-content:space-between}
-.mode{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;width:fit-content;margin-bottom:14px;flex-wrap:wrap}
-.mode button{border:none;border-radius:0;background:var(--card);padding:9px 18px;font-size:13px;cursor:pointer;color:var(--txt);font-family:inherit}
-.mode button.on{background:var(--accent);color:#fff}
-.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-.tab{padding:6px 13px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:99px;cursor:pointer;font-size:12.5px;font-family:inherit;line-height:1.5}
-.tab:hover{border-color:var(--accent)}
-.tab.on{background:var(--accent);color:#fff;border-color:var(--accent)}
-.tab small{font-size:10px;opacity:.7;margin-left:4px}
-.tab.done::after{content:"✓";margin-left:4px;color:var(--ok);font-weight:600}
-.tab.on.done::after{color:#fff}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 11px}
-.stat b{display:block;font-size:20px;font-weight:600;line-height:1.35}
-.stat span{font-size:11px;color:var(--sub)}
-h2{font-size:15px;font-weight:600;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid var(--accent)}
-.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:11px}
-.q.ok{border-color:var(--ok)}.q.ng{border-color:var(--ng)}
-.qn{font-size:11px;color:var(--sub);display:block;margin-bottom:4px}
-.term{font-size:19px;font-weight:600;line-height:1.6}
-.qt{font-size:15.5px;line-height:1.85}
-.ans{margin:12px 0 0;padding:12px 14px;background:var(--okbg);border-radius:9px;font-size:15.5px;line-height:1.95}
-.memo{margin:9px 0 0;padding-top:9px;border-top:1px solid var(--line);font-size:13px;color:var(--sub);line-height:1.8}
-.act{margin-top:11px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-button{font-family:inherit;font-size:13px;padding:8px 15px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:8px;cursor:pointer;line-height:1.5}
-button:hover{border-color:var(--accent)}
-button.p{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600}
-button.mk{border-color:var(--ok);color:var(--ok);font-weight:600}
-button.mx{border-color:var(--ng);color:var(--ng);font-weight:600}
-.o{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid transparent;background:var(--bg);border-radius:8px;cursor:pointer;font-size:14.5px;line-height:1.7;margin-bottom:6px}
-.o:hover{border-color:var(--accent)}
-.o.c{background:var(--okbg);border-color:var(--ok)}
-.o.x{background:var(--ngbg);border-color:var(--ng)}
-.o i{min-width:20px;height:20px;border-radius:5px;background:var(--card);color:var(--sub);font-style:normal;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:4px}
-.o.c i{background:var(--ok);color:#fff}.o.x i{background:var(--ng);color:#fff}
-.exp{margin:10px 0 0;padding-top:9px;border-top:1px solid var(--line);font-size:13px;color:var(--sub);line-height:1.8}
-.exp b.ok{color:var(--ok)}.exp b.ng{color:var(--ng)}
-.foot{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-.msg{background:var(--accentbg);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.8}
-.es{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
-.es h3{font-size:16px;margin:0 0 4px;line-height:1.55}
-.es .qq{font-size:13px;color:var(--sub);margin:0 0 12px;line-height:1.8}
-.es pre{background:var(--bg);border-radius:9px;padding:12px 14px;font-size:13.5px;line-height:1.95;white-space:pre-wrap;font-family:inherit;margin:0 0 10px;overflow-x:auto}
-.kw{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
-.kw span{font-size:12px;padding:3px 9px;background:var(--accentbg);color:var(--accent);border-radius:99px;line-height:1.6}
-.note{background:var(--warnbg);border-radius:9px;padding:11px 14px;font-size:13px;line-height:1.85;margin-top:10px}
-.credit{margin-top:32px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--sub);line-height:1.85}
-.kbd{position:fixed;left:0;right:0;bottom:0;padding:8px 16px;background:var(--card);border-top:1px solid var(--line);font-size:11.5px;color:var(--sub);text-align:center}
-.kbd kbd{display:inline-block;padding:1px 6px;border:1px solid var(--line);border-radius:4px;background:var(--bg);font-family:inherit;font-size:11px;margin:0 1px}
-@media(max-width:520px){.stats{grid-template-columns:repeat(2,1fr)}.kbd{display:none}.wrap{padding-bottom:40px}.term{font-size:17px}}
-</style></head><body><div class="wrap">
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.85;
+ font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+ font-feature-settings:"palt"}
+.wrap{max-width:720px;margin:0 auto;padding:26px 18px 60px}
 
-<h1>ビジネスモデル論 試験対策</h1>
-<p class="lead">8/10（3限）。手書きノート全18ページ（「ビジネスモデル論1〜4」＋5/11〜7/27の講義ノート）から作成しています。<br><b>用語を3行で説明する練習</b>・<b>4択</b>・<b>論述の骨格</b>・<b>事例</b>の4つのモードがあります。解答記録はこのブラウザに自動保存され、リロードしても消えません。</p>
+/* ---- header ---- */
+h1{font-size:22px;font-weight:600;margin:0 0 6px;line-height:1.45;letter-spacing:.01em}
+.lead{color:var(--sub);font-size:13.5px;line-height:1.8;margin:0 0 4px}
+.meta{font-size:12px;color:var(--sub);margin:6px 0 22px}
+.meta b{color:var(--accent);font-weight:600}
 
-<div class="bar"><i id="pbar"></i></div>
-<div class="barlab"><span id="plab"></span><span id="prate"></span></div>
+/* ---- 共通パーツ ---- */
+.row{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.chip{font-family:inherit;font-size:13px;line-height:1.5;padding:7px 14px;border-radius:99px;
+ border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer;transition:border-color .12s}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--accent);color:var(--on);border-color:var(--accent)}
+.chip small{font-size:10.5px;opacity:.62;margin-left:5px;font-weight:400}
+.chip.on small{opacity:.8}
 
-<div class="mode">
-<button id="m1" class="on">用語を3行で</button>
-<button id="m2">4択</button>
-<button id="m3">論述の骨格</button>
-<button id="m4">事例</button>
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--card);flex-wrap:wrap}
+.seg button{font-family:inherit;font-size:13.5px;padding:9px 18px;border:none;background:transparent;
+ color:var(--sub);cursor:pointer;line-height:1.5;white-space:nowrap}
+.seg button.on{background:var(--accent);color:var(--on);font-weight:600}
+.modehint{font-size:12.5px;color:var(--sub);margin:-6px 0 16px;line-height:1.75}
+
+/* ---- 進捗 ---- */
+.hud{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:20px 0 6px;font-size:12.5px;color:var(--sub)}
+.hud .n{font-variant-numeric:tabular-nums}
+.hud .ok{color:var(--ok);font-weight:600}
+.hud .ng{color:var(--ng);font-weight:600}
+.hud .sp{flex:1}
+.track{height:5px;border-radius:99px;background:var(--soft);overflow:hidden;margin-bottom:20px}
+.track i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s ease}
+
+/* ---- 要点ノート ---- */
+details.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);
+ border-radius:0 11px 11px 0;margin-bottom:16px;font-size:14px;line-height:1.85}
+details.note>summary{cursor:pointer;padding:11px 15px;font-size:13.5px;font-weight:600;color:var(--accent);list-style:none}
+details.note>summary::-webkit-details-marker{display:none}
+details.note>summary::before{content:"▸ ";font-size:11px}
+details.note[open]>summary::before{content:"▾ "}
+.note .body{padding:0 15px 14px}
+.note h3{margin:12px 0 5px;font-size:14px;font-weight:600}
+.note h3:first-child{margin-top:0}
+.note p{margin:5px 0}
+.note ul{margin:5px 0;padding-left:20px}
+.note li{margin-bottom:3px}
+.note .kwlist{font-size:13px;color:var(--sub);background:var(--soft);border-radius:8px;padding:9px 12px;line-height:2}
+
+/* ---- 問題カード ---- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;margin-bottom:14px}
+.src{font-size:11.5px;color:var(--sub);margin:0 0 12px;letter-spacing:.02em}
+.qtext{font-size:18px;line-height:1.95;margin:0 0 18px;font-weight:400}
+.qtext .blank{display:inline-block;min-width:78px;border-bottom:2px solid var(--accent);
+ background:var(--accentbg);border-radius:3px;padding:0 8px;text-align:center;color:transparent}
+.qtext .blank.on{color:var(--ok);font-weight:600;background:var(--okbg);border-bottom-color:var(--ok);min-width:0}
+u.bad{text-decoration:none;background:var(--ngbg);color:var(--ng);font-weight:600;
+ border-bottom:2px solid var(--ng);border-radius:3px;padding:0 3px;
+ -webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ask{font-size:13px;color:var(--sub);margin:0 0 11px}
+
+.choices{display:flex;flex-direction:column;gap:8px}
+.ch{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;
+ font-family:inherit;font-size:15.5px;line-height:1.7;padding:13px 15px;
+ border:1px solid var(--line);border-radius:11px;background:var(--bg);color:var(--txt);cursor:pointer;transition:border-color .12s,background .12s}
+.ch:hover{border-color:var(--accent)}
+.ch i{flex-shrink:0;width:23px;height:23px;margin-top:2px;border-radius:7px;background:var(--soft);
+ color:var(--sub);font-style:normal;font-size:12px;font-weight:600;
+ display:flex;align-items:center;justify-content:center}
+.ch.pick{border-color:var(--accent);background:var(--accentbg)}
+.ch.pick i{background:var(--accent);color:var(--on)}
+.ch.correct{border-color:var(--ok);background:var(--okbg)}
+.ch.correct i{background:var(--ok);color:var(--on)}
+.ch.miss{border-color:var(--ng);background:var(--ngbg)}
+.ch.miss i{background:var(--ng);color:var(--on)}
+.ch.none{color:var(--sub)}
+.ch.none.correct,.ch.none.miss{color:var(--txt)}
+.ch[disabled]{cursor:default}
+
+/* ---- 判定・解説 ---- */
+.verdict{display:inline-block;font-size:12.5px;font-weight:600;padding:3px 13px;border-radius:99px;margin:18px 0 0}
+.verdict.y{background:var(--okbg);color:var(--ok)}
+.verdict.n{background:var(--ngbg);color:var(--ng)}
+.fix{margin-top:11px;padding:12px 15px;background:var(--okbg);border-radius:10px;font-size:15.5px;line-height:1.8}
+.fix b{color:var(--ok)}
+.fix .lbl{font-size:12px;color:var(--sub);display:block;margin-bottom:1px}
+.fix.long{font-size:14.5px;background:var(--soft)}
+.fix.long b{color:var(--txt);font-weight:400}
+.item .a.long b{color:var(--txt);font-weight:400}
+.exp{margin-top:13px;padding-top:13px;border-top:1px solid var(--line);font-size:13.5px;color:var(--sub);line-height:1.9}
+
+/* ---- 操作ボタン ---- */
+.btns{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.btn{flex:1;min-width:120px;font-family:inherit;font-size:14.5px;padding:12px 16px;border-radius:11px;
+ border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer;line-height:1.5}
+.btn:hover{border-color:var(--accent)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--on);font-weight:600}
+.btn.pri:hover{opacity:.9}
+.btn.y{border-color:var(--ok);color:var(--ok);font-weight:600}
+.btn.n{border-color:var(--ng);color:var(--ng);font-weight:600}
+.btn[disabled]{opacity:.38;cursor:default}
+.btn[disabled]:hover{border-color:var(--line)}
+
+.nav{display:flex;gap:9px;align-items:center;margin-top:4px}
+.nav button{font-family:inherit;font-size:13.5px;padding:10px 18px;border-radius:10px;
+ border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer}
+.nav button:hover{border-color:var(--accent)}
+.nav button[disabled]{opacity:.35;cursor:default}
+.nav button[disabled]:hover{border-color:var(--line)}
+.nav .sp{flex:1}
+
+/* ---- 一覧ビュー ---- */
+.lsec{margin:0 0 30px}
+.lsec:first-child{margin-top:16px}
+.lsec h2{font-size:15px;font-weight:600;margin:0 0 13px;padding-bottom:8px;border-bottom:2px solid var(--accent);line-height:1.55}
+.item{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 16px;margin-bottom:10px}
+.item.err{border-left:3px solid var(--ng)}
+.item.clean{border-left:3px solid var(--ok)}
+.item .s{font-size:15.5px;margin:0;line-height:1.9}
+.item .a{margin:9px 0 0;font-size:15px;background:var(--okbg);border-radius:8px;padding:8px 12px;line-height:1.8}
+.item .a b{color:var(--ok)}
+.item .a .lbl{font-size:11.5px;color:var(--sub);margin-right:8px}
+.item .note-ok{margin:8px 0 0;font-size:13px;color:var(--ok)}
+.item .ex{margin:9px 0 0;padding-top:9px;border-top:1px solid var(--line);font-size:13px;color:var(--sub);line-height:1.9}
+body.hide .item .a,body.hide .item .ex,body.hide .item .note-ok{display:none}
+body.hide .item .s u.bad{background:transparent;color:inherit;font-weight:400;border-bottom:none;padding:0}
+body.hide .item .s .blank.on{color:transparent;background:var(--accentbg);border-bottom-color:var(--accent);min-width:78px}
+
+/* ---- 読み物 ---- */
+.doc{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:15px}
+.doc h3{font-size:16.5px;margin:0 0 5px;line-height:1.6;font-weight:600}
+.doc .why{font-size:13px;color:var(--sub);margin:0 0 13px;line-height:1.85}
+.doc pre{background:var(--soft);border-radius:10px;padding:14px 15px;margin:0;
+ font-size:13.5px;line-height:2;white-space:pre-wrap;font-family:inherit;overflow-x:auto}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.kw span{font-size:12px;padding:3px 10px;background:var(--accentbg);color:var(--accent);border-radius:99px;line-height:1.7}
+
+/* ---- 結果 ---- */
+.done{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 22px;text-align:center}
+.done .big{font-size:38px;font-weight:600;line-height:1.3;margin:0;font-variant-numeric:tabular-nums}
+.done .rate{font-size:14px;color:var(--sub);margin:4px 0 0}
+.done .btns{margin-top:22px}
+
+.empty{background:var(--soft);border-radius:11px;padding:16px 18px;font-size:14px;color:var(--sub);line-height:1.8}
+
+/* ---- footer ---- */
+.foot{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+ font-size:12px;color:var(--sub);line-height:1.9}
+.foot .tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.foot .tools button{font-family:inherit;font-size:12.5px;padding:7px 14px;border-radius:99px;
+ border:1px solid var(--line);background:var(--card);color:var(--sub);cursor:pointer;line-height:1.5}
+.foot .tools button:hover{border-color:var(--accent);color:var(--accent)}
+.foot .tools button.on{background:var(--accent);border-color:var(--accent);color:var(--on)}
+.foot a{color:var(--accent)}
+.keys{margin-top:10px;font-size:11.5px}
+.keys kbd{display:inline-block;padding:1px 6px;margin:0 1px;border:1px solid var(--line);
+ border-radius:4px;background:var(--card);font-family:inherit;font-size:11px}
+
+@media(max-width:560px){
+ .wrap{padding:20px 14px 50px}
+ h1{font-size:19.5px}
+ .card{padding:16px 15px 15px}
+ .qtext{font-size:16.5px}
+ .ch{font-size:15px;padding:12px 13px}
+ .keys{display:none}
+}
+</style><!-- DADS-ENHANCEMENT:START -->
+<style id="dads-enhancement">
+/* Digital Agency Design System v2.18.0 を参照した共通スタイル */
+:root{
+  --dads-link:#0017c1;
+  --dads-visited:#551a8b;
+  --dads-focus:#ffd43b;
+  --dads-neutral-900:#1a1a1a;
+  --dads-neutral-700:#4d4d4d;
+  --dads-radius-s:8px;
+  --dads-radius-m:12px;
+  --dads-space-1:4px;
+  --dads-space-2:8px;
+  --dads-space-3:12px;
+  --dads-space-4:16px;
+  --dads-space-6:24px;
+  --dads-space-8:32px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --dads-link:#9db7ff;
+  --dads-visited:#d9b7ff;
+  --dads-neutral-900:#f5f5f5;
+  --dads-neutral-700:#c7c7c7;
+}}
+html{scroll-behavior:smooth}
+body{font-size:16px;line-height:1.75;font-feature-settings:normal}
+.wrap{max-width:48rem;padding:var(--dads-space-8) var(--dads-space-6) 64px}
+h1{font-size:clamp(1.5rem,1.25rem + 1vw,2rem);font-weight:700;line-height:1.4;margin-bottom:var(--dads-space-3)}
+.lead{font-size:1rem;line-height:1.8;margin-bottom:var(--dads-space-2)}
+.meta{font-size:.875rem;line-height:1.6;margin-bottom:var(--dads-space-8)}
+.modehint,.hud,.ask,.src,.foot,.item .ex,.doc .why{font-size:.875rem}
+
+/* キーボード利用者の現在位置を、DADS準拠の黄＋黒の二重線で示す */
+:where(a,button,summary,[tabindex]):focus-visible{
+  outline:2px solid #000!important;
+  outline-offset:2px!important;
+  box-shadow:0 0 0 5px var(--dads-focus)!important;
+  position:relative;
+  z-index:10;
+}
+:where(button,[role="button"]){min-height:44px}
+button{touch-action:manipulation}
+button:disabled{cursor:not-allowed}
+
+/* リンクは色だけに依存させない */
+.foot a,.about a,.lead a,.doc a,.note a{
+  color:var(--dads-link);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:.2em;
+}
+.foot a:visited,.about a:visited,.lead a:visited,.doc a:visited,.note a:visited{color:var(--dads-visited)}
+
+/* スキップリンク */
+.dads-skip{
+  position:fixed;left:var(--dads-space-4);top:var(--dads-space-4);z-index:9999;
+  padding:10px 16px;border:2px solid #000;border-radius:var(--dads-radius-s);
+  background:#fff;color:#000;font-weight:700;text-decoration:underline;
+  transform:translateY(-160%);
+}
+.dads-skip:focus{transform:none}
+
+/* コンポーネントの役割と操作面積を揃える */
+.chip{min-height:44px;padding:9px 16px;border-radius:999px;font-size:.875rem}
+.seg{border-radius:var(--dads-radius-s);margin-bottom:var(--dads-space-4)}
+.seg button{min-height:48px;padding:10px 20px;font-size:1rem;border-bottom:3px solid transparent}
+.seg button.on{border-bottom-color:currentColor}
+.ch{min-height:52px;padding:14px 16px;border-radius:var(--dads-radius-s);font-size:1rem}
+.btn{min-height:48px;border-radius:var(--dads-radius-s);font-size:1rem}
+.nav button,.foot .tools button{min-height:44px;padding:10px 16px;border-radius:var(--dads-radius-s);font-size:.875rem}
+.card,.doc,.item,.done{border-radius:var(--dads-radius-m)}
+.qtext{font-size:1.125rem;line-height:1.85}
+.track{height:8px}
+details.note>summary{min-height:44px;display:flex;align-items:center;font-size:1rem}
+.empty{font-size:1rem}
+
+/* トップページのカード：主題・補足・遷移先を一つの塊として読む */
+a.card{border-radius:var(--dads-radius-m);padding:20px 22px;margin-bottom:var(--dads-space-3)}
+a.card .ct{font-size:1.125rem;font-weight:700;text-decoration:underline;text-underline-offset:.2em}
+a.card .cm{font-size:1rem;line-height:1.8}
+a.card:hover .ct,a.card:focus-visible .ct{text-decoration-thickness:2px}
+a.card::after{content:"この学習ツールを開く →";display:block;margin-top:var(--dads-space-3);font-size:.875rem;font-weight:700;color:var(--accent)}
+.about{border-radius:var(--dads-radius-m);font-size:1rem}
+
+/* 正誤は色だけでなく、記号・枠線・文言でも判別できる */
+.verdict{font-size:.875rem;border:1px solid currentColor}
+.ch.correct{border-width:2px}.ch.miss{border-width:2px}
+
+@media(max-width:560px){
+  .wrap{padding:var(--dads-space-6) var(--dads-space-4) 52px}
+  h1{font-size:1.5rem}
+  .lead{font-size:1rem}
+  .card{padding:var(--dads-space-4)}
+  .qtext{font-size:1.0625rem}
+  .ch{font-size:1rem;padding:13px 14px}
+  .seg{display:flex;width:100%}
+  .seg button{flex:1;padding-inline:10px;white-space:normal}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
+</style>
+<!-- DADS-ENHANCEMENT:END -->
+</head><body>
+<div class="wrap">
+<h1>ビジネスモデル論</h1>
+<p class="lead">ビジネスモデルの基礎概念から9セル、ジョブ理論、利益の設計、デジタル時代の用語まで。用語を3行で説明する練習・4択・論述と事例の3モードがあります。</p>
+<p class="meta"><b>用語63 ・ 4択50 ・ 論述7 ・ 事例7</b></p>
+<div class="seg" id="modes"></div>
+<p class="modehint" id="modehint"></p>
+<div class="row" id="chips"></div>
+<div class="hud" id="hud"></div>
+<div class="track" id="track"><i></i></div>
+<div id="note"></div>
+<div id="stage"></div>
+<div class="nav" id="nav"></div>
+<div class="foot">
+<div class="tools" id="tools"></div>
+<p>学生が講義の復習用に作成した学習ツールです。出題は一般的な学術概念にもとづき、独自の文章で作成しています。講義資料そのものの複製ではありません。解答の記録はお使いのブラウザにだけ保存されます。</p>
+<p><a href="../">← ほかの科目を見る</a></p>
+<p class="keys" id="keys"><kbd>1</kbd>〜<kbd>9</kbd> 解答　<kbd>→</kbd> つぎへ　<kbd>←</kbd> もどる</p>
 </div>
-
-<div id="tabsbox">
-<div class="tabs" id="tabs"></div>
-<div class="stats">
-<div class="stat"><b id="s1">0</b><span>この範囲の解答数</span></div>
-<div class="stat"><b id="s2" style="color:var(--ok)">0</b><span>○</span></div>
-<div class="stat"><b id="s3" style="color:var(--ng)">0</b><span>✕</span></div>
-<div class="stat"><b id="s4">—</b><span>正答率</span></div>
 </div>
-</div>
-
-<div id="main"></div>
-
-<div class="foot" id="foot">
-<button id="bw">✕だけ（全範囲）</button>
-<button id="ba" style="display:none">全部表示</button>
-<button id="bs">シャッフル</button>
-<button id="br">この範囲をリセット</button>
-</div>
-
-<p class="credit">学生が試験対策用に作成した学習ツールです。出典は自分の手書き講義ノート。読み取りに自信のない箇所には〔？〕を付けています。詳細な文字起こしは <code>00_手書きノート_文字起こし.md</code> にあります。</p>
-</div>
-<div class="kbd"><kbd>Space</kbd> 答えを見る　<kbd>1</kbd> ○ / <kbd>2</kbd> ✕　4択は <kbd>1</kbd>〜<kbd>4</kbd>　<kbd>Enter</kbd> つぎへ</div>
-
+<script>var DECK={"slug":"bizmodel","defaultView":"quiz","modes":[{"id":"term","label":"用語を3行で","kind":"quiz","hint":"用語を見て説明を組み立て、「答えを見る」で模範解答と見比べて自己採点します。","sections":[{"label":"基礎","title":"1. ビジネスモデルの基礎概念","note":"","items":[{"ty":"recall","q":"「ビジネスモデル」を3行程度で説明しなさい。","a":"企業が一定の顧客に価値を提供し、同時に利益を得る仕組みのこと。顧客にも企業にも価値をもたらす「儲ける仕組み」であり、利害関係者に価値をもたらすストーリーでもある。ネットベンチャー最盛期を経て1997年頃から学術界でも使われるようになった語である。","e":"目的としての顧客価値／成果としての利益。「現時点で将来のビジネスをデザインする脳」とも表現される。"},{"ty":"recall","q":"「ビジネスモデルのゴール」を3行程度で説明しなさい。","a":"「顧客価値」と「利益」を同時に獲得することである。顧客を喜ばせるだけでは赤字になり事業が続かず、利益だけを追えば顧客が離れる。両方を同時に成り立たせる設計こそがビジネスモデルの目的である。","e":"顧客を喜ばせる→利益を上げる→事業が続く→会社を守る。赤字→事業は続かない→倒産。"},{"ty":"recall","q":"「支払意欲（WTP）」を3行程度で説明しなさい。","a":"顧客がその商品に対して払ってもよいと考える金額の上限のこと。WTPと価格の差が顧客の取り分（顧客価値）、価格とコストの差が企業の取り分（企業価値）となる。WTPを上げると双方の取り分が大きくなり win-win が成立する。","e":"価格がWTPを超えると売れない。価格がコストを下回るとダメ。WTPを上げること＝「熱狂させる」こと。"},{"ty":"recall","q":"「生み出された価値」を3行程度で説明しなさい。","a":"支払意欲（WTP）とコストの差のこと。この幅を価格が分割し、WTPと価格の間が顧客の取り分、価格とコストの間が企業の取り分になる。ビジネスモデルはこの幅そのものを広げることを目指す。","e":"WTP ─ 価格 ─ コスト の3点で図示できる。試験で図を描くならこれ。"},{"ty":"recall","q":"「熱狂」を3行程度で説明しなさい。","a":"支払意欲と機能が本来は正の相関にあるところ、その相関から大きく上方に乖離している状態のこと。機能から予想される以上にWTPが高い状態であり、良いビジネスモデルの証拠とされる。","e":"「支払意欲と機能は基本的には相関（正）。乖離しているものが熱狂的なもの＝良い方」"},{"ty":"recall","q":"「顧客価値提案（CVP）」を3行程度で説明しなさい。","a":"どんな顧客のどんな用事を、どのように解決するのかという提案のこと。「世界を変える」部分にあたり、ビジネスモデルの出発点となる。ここから利益創出（期待以上の利益）、プロセス構築（実現の手順）へとつながる。","e":"CVP ← 利益創出 ← プロセス構築、という順に設計する。"},{"ty":"recall","q":"「カスタマーサクセス」を3行程度で説明しなさい。","a":"顧客を成功させることで企業が利益を得るという考え方。ビジネスモデルの言い換えの一つであり、事業利益とは顧客の成功のことだと捉える。物やサービスを経て顧客に何かしらの喜びを与えることが利益の源泉になる。","e":"ビジネスモデルの5つの言い換えの③。試験でビジネスモデルを定義するときに使える。"},{"ty":"recall","q":"「ビジネスモデルの構成要素」を3行程度で説明しなさい。","a":"顧客価値・利益・プロセスの3つである。顧客価値提案が何を提供するかを、利益がどう儲けるかを、プロセスがどう実現するかを担う。この3つの関係を整理したものが9セル（3×3のフレーム）である。","e":"利益 ─ 顧客価値 の間にプロセスが入る三角の図でノートに描かれている。"},{"ty":"recall","q":"「理念から利益までの順番」を3行程度で説明しなさい。","a":"経営理念→経営戦略→ビジネスモデル→顧客価値→事業利益、の順に並ぶ。理想から現実へと具体化していく流れであり、ビジネスモデルはその中間で理想と現実をつなぐブースターの役割を果たす。","e":"「経営理念から利益までの距離は遠い」「定義どおりにパス運びをしないとビジネスはどこかで止まる」"}]},{"label":"9セル","title":"2. 9セルと分析フレーム","note":"","items":[{"ty":"recall","q":"「9セル（ビジネスモデル・キャンバス）」を3行程度で説明しなさい。","a":"顧客価値・利益・プロセスの3要素を、それぞれ Who・What・How の3つの問いで分解した3×3のフレームのこと。9つのセルを埋めることで、不足していることが分かり、要素間の一貫性をチェックできる。","e":"タテのつながりも見ることが重要。「裏にはセオリーが走っている（すでに知っていることとの親和性）」"},{"ty":"recall","q":"「顧客価値の行（9セルの①②③）」を3行程度で説明しなさい。","a":"①顧客は誰か（どんな性質をもつ人か）、②解決策として何を提供するか、③代替とはどのように違っているか、の3つ。①にはSTP、②③には4Cや3C分析といったマーケティングのセオリーが対応する。","e":"③の「代替との違い」がビジネスモデルの差別化の要になる。"},{"ty":"recall","q":"「利益の行（9セルの④⑤⑥）」を3行程度で説明しなさい。","a":"④誰が儲けるか、⑤何で儲けるか、⑥どのように回収するか、の3つ。⑥には利益パターン（フリーミアム等）が対応する。課金する相手・課金する対象・回収の時間軸をずらすことで多様な利益モデルが生まれる。","e":"売上と利益は別物。「課金したからといって利益があるわけではない」"},{"ty":"recall","q":"「プロセスの行（9セルの⑦⑧⑨）」を3行程度で説明しなさい。","a":"⑦誰が補完するか（誰と組んでいるか）、⑧強みは何か、⑨どのように提供するか、の3つ。⑧にはSWOT分析、⑨にはバリューチェーンやコストの検討が対応する。すべてを自社でやらない発想がここに入る。","e":"アウトソーシング・オープンイノベーションはこの行の話。"},{"ty":"recall","q":"「3C分析」を3行程度で説明しなさい。","a":"Company（自社）・Consumer（消費者＝使いたい人）・Competitor（競合）の3つの視点から事業環境を分析する枠組み。9セルでは顧客価値の行、特に「代替とはどう違うか」を検討する場面で用いられる。","e":"ノートでは Customer ではなく Consumer と書かれている。"},{"ty":"recall","q":"「マーケティングとビジネスモデルの違い」を3行程度で説明しなさい。","a":"「全体」をみるかみないかである。マーケティングは顧客への提供の部分を扱うのに対し、ビジネスモデルは顧客価値・利益・プロセスの全体のつながりを設計する。だから9セルではタテのつながりまで見る。","e":"日本企業はプロセス重視のためマーケティングが流行った、という文脈と結びつく。"}]},{"label":"ジョブ","title":"3. 顧客価値提案とジョブ理論","note":"","items":[{"ty":"recall","q":"「ジョブ理論（job to be done）」を3行程度で説明しなさい。","a":"ビジネスは顧客の「用事（ジョブ）」を解決するためにあるという考え方。人はモノを欲しがっているわけではなく、ある状況の中で用事の解決を望んでいる。商品やサービスはその解決のために「雇われる」存在にすぎない。","e":"そして必ず「未解決」がある。ここに新しいビジネスの余地が残る。"},{"ty":"recall","q":"「ターゲティングは「人」ではなく「状況」」を3行程度で説明しなさい。","a":"Whoを考えるときのコツ。属性で人を切るのではなく、どんな状況にある人がどんな進歩を望んでいるのかで切る。同じ人でも状況が変われば求めるものが変わるため、状況こそが顧客を規定する。","e":"ジョブ＝ニーズの「原因」、ニーズ＝その「結果」。原因のほうに着目する。"},{"ty":"recall","q":"「プログレス（進歩）」を3行程度で説明しなさい。","a":"顧客が特定の状況の中で目標や願望に向かって進もうとしている状態のこと。欲しいのはプロダクトではなくプログレスであり、私たちはみな「差分」を買っている。効率的に差分を生みだしてくれるかで企業は評価される。","e":"「プログレスがあれば、プロダクトなんていらない」"},{"ty":"recall","q":"「「ドリルより穴」」を3行程度で説明しなさい。","a":"顧客が欲しいのはドリルではなく穴であるという、ジョブ理論を象徴する例。ドリルを改良するのではなく「穴をどう開けるか」を考えれば、穴を開ける素材だけを開ける機械や、はじめから穴の開いたものを売るという発想が出てくる。","e":"顧客価値提案の革新的方法として、ジョブ・アップデート・ニーズ・「ドリルより穴」の4語をセットで使う。"},{"ty":"recall","q":"「ジョブとニーズの対応例」を3行程度で説明しなさい。","a":"「工事中に簡単かつ正確に穴を開けたい」に対してドリル、「授業参観で子供に自慢されたい」に対して美容室でのヘアセット、「職場の仲間との良好な関係を構築したい」に対して居酒屋、というように、ニーズの背後には必ず状況としてのジョブがある。","e":"他に、コラーゲン←美しくして若返りたい／運転免許←仲間との旅行の幅を広げる／サッカーボール←仲間よりうまくなりたい。"}]},{"label":"利益","title":"4. 利益の設計","note":"","items":[{"ty":"recall","q":"「売上と利益の違い」を3行程度で説明しなさい。","a":"売上はあっても利益がなければビジネスモデルとしてはアウトである。課金したからといって利益があるわけではなく、企業に求められるのは利益獲得である。見るべきはトップライン（売上）ではなくボトムライン（利益）である。","e":"9セルの利益の行が「誰から・何で・どのように」利益を得るのかを問うのはこのため。"},{"ty":"recall","q":"「営業利益」を3行程度で説明しなさい。","a":"売上からコストを差し引いたもの。分解すると、価格×数量から変動費と固定費を引いた額になる。9セルの⑥「どのように回収するか」を数値で表したものであり、ビジネスモデルの成否はここに表れる。","e":"〔売上〕－〔コスト〕＝〔営業利益〕／〔価格〕×〔数量〕－〔変動費〕－〔固定費〕＝〔営業利益〕"},{"ty":"recall","q":"「利益化の道筋（2³通りのロジック）」を3行程度で説明しなさい。","a":"誰から（プレイヤー）・何で（タイミング）・どう届けるか の3つの軸それぞれに、素直な選択（0＝保守）とズラした選択（1＝革新）があり、組み合わせると2の3乗＝8通りの利益パターンが成り立つという整理。","e":"0は素直に（保守）／1はズラしたスコープ（革新）。「誰から何でどう届けるかをズラしたらいける」"},{"ty":"recall","q":"「レーザーブレイド（利益パターン18）」を3行程度で説明しなさい。","a":"主要製品の利益の低さを、その製品専用の付属品で回収する利益モデル。本体を安く売り、消耗品や付属品で継続的に稼ぐ。専用品でなければ使えないというロックインが成立していることが前提となる。","e":"髭剃り本体と替刃の関係が語源。プリンタとインクも同型。"},{"ty":"recall","q":"「マッチメイキング（利益パターン26）」を3行程度で説明しなさい。","a":"売り手と買い手を引き合わせること自体を価値とし、そこから手数料などで利益を得るモデル。自ら商品を持たず、両者をつなぐ場を提供することで儲ける点に特徴がある。","e":"利益パターンの26番。自ら在庫を持たず場を提供することで儲ける、プラットフォーム型の基本形にあたる。"},{"ty":"recall","q":"「サブスクリプション」を3行程度で説明しなさい。","a":"定額課金によって継続的な収益（リカーリングレベニュー）を得るモデル。一度に回収せず投資回収を長期化させ、顧客との関係そのものを長期化させることを狙う。SaaSと組み合わせて用いられることが多い。","e":"リカーリングレベニュー（継続的な収益）と、長期的な顧客関係が対になる考え方。"},{"ty":"recall","q":"「ロックイン」を3行程度で説明しなさい。","a":"顧客が他の選択肢に乗り換えにくい状態をつくること。専用の付属品や独自規格、蓄積したデータなどによって成立する。レーザーブレイド型の利益モデルはこのロックインを前提として初めて機能する。","e":"レーザーブレイド型（本体を安く売り消耗品で稼ぐ）は、このロックインを前提として初めて成立する。"}]},{"label":"資源","title":"5. プロセス・資源・強み","note":"","items":[{"ty":"recall","q":"「強みと弱み（ビジネスモデル論での定義）」を3行程度で説明しなさい。","a":"顧客価値提案から必要な全体の活動を洗い出したうえで、その活動の中で機能する資源が強み、至らない資源が弱みである。一般的な長所短所ではなく、必要な活動を基準に定義される点に特徴がある。","e":"最重要項目なのに資源が足りないならば構築する。弱みは誰かに補ってもらう。"},{"ty":"recall","q":"「VRIO分析」を3行程度で説明しなさい。","a":"「違い」をもたらす資源を評価する4つの基準。Value（顧客に価値があるか）、Rarity（価値の源泉が希少か）、Inimitability（ライバルが模倣困難か）、Organization（VRIに適う資源を有効に活用できているか）の頭文字である。","e":"V・R・Iで資源そのものを評価し、Oでそれを使いこなせているかを評価する構造。"},{"ty":"recall","q":"「VRIOのR（希少性）のリサーチ」を3行程度で説明しなさい。","a":"他にどれだけの数の会社がその資源をもっているかを調べること。重要なのは業界内外を問わず調べること、そしてその資源を実際に顧客価値提案に活かしているかまで確認することである。","e":"持っているだけでは希少性は価値にならない。"},{"ty":"recall","q":"「VRIOのI（模倣困難性）のリサーチ」を3行程度で説明しなさい。","a":"いまから同じものを構築しようとしたらどれくらい時間がかかるかで判定する。最低2年以上かかるものでなければ強みにならない。また新技術（AI等）によって駆逐されないかも併せて検討する必要がある。","e":"「最低2年」という数字はノートに明記されている。試験で書ける具体的な基準。"},{"ty":"recall","q":"「違いと強みの関係」を3行程度で説明しなさい。","a":"違いは相手（ユーザー）が認識しているもの、強みは一度体験するとわかるもの。両者はリンクしているが、違いは外から分かるのに対して強みは認識されにくい。だから違いと強みの関係を明確にする必要がある。","e":"ビジネスモデルの見方の第3法則。「認知できる違い／違いを生み出す力」"},{"ty":"recall","q":"「垂直統合」を3行程度で説明しなさい。","a":"すべてを自分でやろうとすること。ビジネスモデル論ではこれと対照的に、すべてを自分でやらず、いかに自社の強みを活かすかが重視される。弱みの部分は補完してくれる相手に任せるという発想をとる。","e":"株主・銀行は「お金」で、消費者は「ハート」でつながる。"},{"ty":"recall","q":"「経済性・有効性・効率性」を3行程度で説明しなさい。","a":"誰にまかせるかを判断する3つの尺度。経済性はインプット、有効性はアウトプット、効率性はアウトプットをインプットで割った比率を見る。外部に任せるかどうかをこの3つで評価する。","e":"経済性＝input／有効性＝output／効率性＝o÷i。"},{"ty":"recall","q":"「資産構築編（組む相手の選び方）」を3行程度で説明しなさい。","a":"誰と組むかを考えるときの候補。理念を共有する相手、先行力・知識や知恵を持つ相手、研究者的な相手、メンターなどが挙げられる。自社に足りない資源を、関係によって補うという考え方である。","e":"ストレングスファインダーの言及もノートにある。"}]},{"label":"計画","title":"6. 事業計画との違い・ピボット","note":"","items":[{"ty":"recall","q":"「事業計画（の式）」を3行程度で説明しなさい。","a":"「顧客価値＋プロセス＝利益」という足し算で表される。顧客価値は企画、プロセスは実行体制、利益は採算評価にあたる。計画通りにビジネスを進めるための最適形であり、計画前提の考え方である。","e":"★試験の頻出。ビジネスモデルの式と必ずセットで覚える。"},{"ty":"recall","q":"「ビジネスモデル（の式）」を3行程度で説明しなさい。","a":"「（顧客価値×利益）×プロセス」という掛け算で表される。顧客価値は提案、利益は必要利益、プロセスは実行体制にあたる。新たなビジネスを生み出す思考法であり、変革前提の考え方である。","e":"掛け算だから、1つの構成要素を変えると全体の値が大きく変わる。だから多くの試行が大切になる。"},{"ty":"recall","q":"「事業計画とビジネスモデルの違い」を3行程度で説明しなさい。","a":"事業計画は足し算で計画前提、ビジネスモデルは掛け算で変革前提である。前者は計画通りに進める最適形を求めるのに対し、後者は何ができるか分からない中で何度も試行し、限りなく良い解答を見つけようとする。","e":"ビジネスモデルでは先に最低条件を決定し、それを満たす範囲でより良いものを決める。"},{"ty":"recall","q":"「ビジネスモデルは「仮説」である」を3行程度で説明しなさい。","a":"ビジネスモデルはビジネスの設計方針であり仮説にすぎない。したがってビジネスモデルに終わりはなく、検証後に裏付けをもとに拡大するか、プランBに移行するかを検討する。動きながら修正し最適な形を見つけていく。","e":"「当初のプラン通りに利益を得られることは少ない」"},{"ty":"recall","q":"「ピボット」を3行程度で説明しなさい。","a":"強みを残しながら方向転換して試行すること。当初の仮説が検証で否定されたとき、別の選択肢に移りながらも蓄積した強みは手放さない。リーンスタートアップの中で用いられる概念である。","e":"ピボット例＝Google。大学生の研究者向け検索サイト→無課金で一般開放→ライセンス課金→広告課金へ。"},{"ty":"recall","q":"「リーンスタートアップ」を3行程度で説明しなさい。","a":"小さく作って市場で検証し、その結果をもとに方向転換（ピボット）しながら事業を育てていく方法。当初の計画通りに利益が出ることは少ないという前提に立ち、失敗を許容して学習につなげる思考法をとる。","e":"デジタルの時代はスピードが大切なので、ある程度の出来でβ版（最新）を出すことで補う。"},{"ty":"recall","q":"「新しいビジネスが生まれにくい理由」を3行程度で説明しなさい。","a":"思考が硬直しているからである。ユーザーを喜ばせられなくなった以上に利益がついてこなくなるため、柔軟な発想と、失敗を許容して学習へとつなげる思考法が必要になる。批判されることは常識の範囲外であり、そこにイノベーションが生まれる余地がある。","e":"「完成しないビジネス」という言い方もノートにある。"},{"ty":"recall","q":"「プロセス重視の日本企業」を3行程度で説明しなさい。","a":"日本企業はプロセスを重視してきたため、マーケティングが流行したという指摘。とにかく真似がうまかったが、情報伝達の時間差がなくなると真似では生き残れなくなり、供給過多の中で選ばれるためにマーケティングが必要になった。","e":"まず顧客への価値提案を企画し、利益はあとからついてくるという発想。タイムマシン経営もこの文脈で語られる。"}]},{"label":"用語","title":"7. デジタル時代のビジネスモデル用語","note":"","items":[{"ty":"recall","q":"「デジタル時代のビジネスモデル用語群」を3行程度で説明しなさい。","a":"DX、サプライチェーン、クロスドッキング、ダイレクトモデル、JIT、SaaS、MaaS、ネットワークオーケストレーション、DtoCといった一連の用語群を指す。これらはすべてプロセス（どのように提供するか）の話である。","e":"いずれもプロセス（どのように提供するか）に関わる用語である点が共通している。"},{"ty":"recall","q":"「DX（デジタルトランスフォーメーション）」を3行程度で説明しなさい。","a":"プロセスをデジタル化することで、価値提供のあり方を劇的に変革すること。単なるIT化ではなく、ローコスト・ハイパフォーマンス・高収益を同時に実現する点に本質がある。","e":"9セルではプロセスの行に位置づく。"},{"ty":"recall","q":"「SaaS」を3行程度で説明しなさい。","a":"提供方法をデジタルに変えることで、継続的なアップデートを可能にするモデル。売り切りではなく提供し続ける形になるため、サブスクリプションによる課金と組み合わせて用いられることが多い。","e":"Software as a Service。ノートでは「提供方法をデジタル化に変え、アップデートを可能にし…」"},{"ty":"recall","q":"「MaaS」を3行程度で説明しなさい。","a":"移動サービスを統合的に提供する考え方。Loopの事例とともに「街を最適化する」ものとして語られる。個別の交通手段ではなく移動全体を一つのサービスとして設計する点に特徴がある。","e":"個別最適（交通手段ごと）から全体最適（移動そのもの）への転換。"},{"ty":"recall","q":"「JIT（ジャストインタイム／カンバン方式）」を3行程度で説明しなさい。","a":"必要なものを必要なときに必要なだけ供給する生産方式。在庫を持たないことでコストを下げる。サプライチェーンやクロスドッキングと並ぶ、プロセス側の代表的な仕組みである。","e":"トヨタ生産方式。ノートでは「JIT（カンバン方式）」と併記。"},{"ty":"recall","q":"「クロスドッキング」を3行程度で説明しなさい。","a":"入荷した商品を在庫として保管せず、そのまま仕分けて出荷する物流の仕組み。在庫を持たないことで保管コストと時間を圧縮する、プロセス側の効率化手法である。","e":"サプライチェーン、JITと同じ文脈で並べられている。"},{"ty":"recall","q":"「ダイレクトモデル」を3行程度で説明しなさい。","a":"中間流通を介さず、企業が顧客に直接届けるモデル。流通コストを削減できるうえ、顧客との接点を自社で持てるため顧客情報を蓄積できる。DtoCと同じ発想に立つ。","e":"DtoC＝direct to consumer。"},{"ty":"recall","q":"「ネットワークオーケストレーション」を3行程度で説明しなさい。","a":"自社ですべてを保有せず、外部の資源をネットワークとしてつなぎ、その全体を指揮することで価値を生むモデル。「すべてを自分でやらず、いかに強みを活かすか」というプロセス設計の考え方に対応する。","e":"垂直統合の対極にある発想。"},{"ty":"recall","q":"「破壊的イノベーション」を3行程度で説明しなさい。","a":"既存の製品の支払意欲を急激に低下させてしまう技術革新のこと。デジタルカメラがスマートフォンの登場によって支払意欲を大きく落としたのが典型例である。顧客価値提案だけでは不足であり、利益の創出まで考えなければならないことを示す。","e":"disrupt によってコスト・WTP・価格が同時に下がり、損失と顧客価値の双方に影響する。"}]},{"label":"理念","title":"8. 経営理念とピッチ","note":"","items":[{"ty":"recall","q":"「ミッション（Mission）」を3行程度で説明しなさい。","a":"企業が追い続ける社会への使命のこと。経営理念の中で最上位に置かれ、その企業が何のために存在するのかを示す。ビジョン・バリューとあわせて経営理念（MVV）を構成する。","e":"「経営は理念が最上位」"},{"ty":"recall","q":"「ビジョン（Vision）」を3行程度で説明しなさい。","a":"ミッションを達成するために企業が目指すべき姿のこと。同時に事業ドメインをも規定し、どこまでやるか・やらないかを決める働きをもつ。","e":"事業ドメインを規定する、という点が試験で問われうる。"},{"ty":"recall","q":"「バリュー（Value）」を3行程度で説明しなさい。","a":"企業が社会に約束する行動指針のこと。ミッション・ビジョンを日々の行動に落とし込む役割を担う。","e":"MVVの3つ目。"},{"ty":"recall","q":"「エレベーターピッチ」を3行程度で説明しなさい。","a":"短時間で事業を説明する3点セット。①どんな用事がある人を顧客にしたいか（ジョブ＝問題としていること）、②あなたの仕事はその何を解決するか（アップデート）、③他の解決策とどう違い、なぜ気にかける必要があるか（ライバルの設定）。","e":"VRIOのV（顧客価値）は、このピッチで確認できるとされている。"},{"ty":"recall","q":"「売り込みの3点」を3行程度で説明しなさい。","a":"①誰に（何を求めている人がいるのか）、②どのように解決するか（ソリューション）、③代替との違い、の3つ。相手の状況を把握し、何を求めていたかを掴み、どうやって解決するかを示す順で組み立てる。","e":"9セルの顧客価値の行（Who・What・How）と対応している。"}]},{"label":"見方","title":"9. ビジネスモデルの見方（5つの法則）","note":"","items":[{"ty":"recall","q":"「第1法則：いつ時点のビジネスか」を3行程度で説明しなさい。","a":"ビジネスモデルを見るときは、それがいつの時点のものかを確認せよという法則。同じ企業でも時期によってビジネスモデルは変わっているため、時点を固定しないと分析が成り立たない。","e":"When? に対応。"},{"ty":"recall","q":"「第2法則：ビジネスの単位を見極めよ」を3行程度で説明しなさい。","a":"プロダクトか、事業か、グループかを見極めよという法則。「顧客を喜ばせて利益をとる」までを一単位と考える。Google Map単体ではなく、そこから得た情報をGoogleの広告で儲けるところまでが一単位になる。","e":"Where? に対応。"},{"ty":"recall","q":"「事業単位」を3行程度で説明しなさい。","a":"顧客を喜ばせ、事業利益をだすことのできる組織単位のこと。必ずしも事業部とは一致せず、また必ずしも1社で完結するとは限らない。デジタル時代にはむしろほぼ一致しない。","e":"宿・交通を1括で予約するようなコラボでは、複数の事業部でひとつのビジネスモデルを形成する。プロダクトの垣根がない。"},{"ty":"recall","q":"「第3法則：違いと強みの関係を明確にせよ」を3行程度で説明しなさい。","a":"認知できる違いと、違いを生み出す力（強み）を区別し、その関係を明確にせよという法則。違いは顧客から見えるが強みは見えにくいため、両者を切り分けて考える必要がある。","e":"VRIO分析はこの第3法則を具体化する道具。"},{"ty":"recall","q":"「第4法則：全体のつながり」を3行程度で説明しなさい。","a":"9セルを個別に埋めるのではなく、要素間のつながり、とくにタテのつながりを見よという法則。顧客価値・利益・プロセスが一貫していなければビジネスモデルは機能しない。","e":"「マーケとビジネスモデルの違いは全体をみるかみないか」につながる。"},{"ty":"recall","q":"「第5法則：課金と利益は別」を3行程度で説明しなさい。","a":"課金（売上）が発生していることと、利益が出ていることは別だという法則。売上はあって利益なしはビジネスモデルとしてはアウトであり、見るべきはボトムラインである。","e":"9セルの利益の行を独立させている理由がこれ。"}]}]},{"id":"mc","label":"4択","kind":"quiz","hint":"","sections":[{"label":"4択","title":"4択50問（全範囲）","note":"","items":[{"ty":"mc","q":"ビジネスモデルという語が学術界でも使用されるようになったのは、およそ何年からか。","ch":[{"t":"1997年ごろ"},{"t":"1985年ごろ"},{"t":"2013年ごろ"},{"t":"2005年ごろ"}],"ans":0,"e":"ネットベンチャー最盛を経て1997年〜学術界でも使用されるようになった語。"},{"ty":"mc","q":"ビジネスモデルのゴールとして正しいものはどれか。","ch":[{"t":"コストの最小化"},{"t":"「顧客価値」と「利益」の同時獲得"},{"t":"売上の最大化"},{"t":"市場シェアの獲得"}],"ans":1,"e":"顧客を喜ばせるだけでは赤字、利益だけでは顧客が離れる。両立が目的。"},{"ty":"mc","q":"支払意欲(WTP)と価格の差にあたるのはどれか。","ch":[{"t":"企業の取り分（企業価値）"},{"t":"生み出された価値の総量"},{"t":"顧客の取り分（顧客価値）"},{"t":"変動費"}],"ans":2,"e":"WTP─価格＝顧客の取り分／価格─コスト＝企業の取り分。"},{"ty":"mc","q":"「熱狂的なもの」とはノートではどう説明されているか。","ch":[{"t":"価格が最も安いもの"},{"t":"支払意欲と機能の相関から乖離しているもの"},{"t":"機能が業界最高水準のもの"},{"t":"広告費を最も多く使ったもの"}],"ans":1,"e":"支払意欲と機能は基本的に正の相関。そこから上に乖離しているのが熱狂＝良い方。"},{"ty":"mc","q":"ビジネスモデルの構成要素3つの組み合わせとして正しいものはどれか。","ch":[{"t":"理念・戦略・戦術"},{"t":"ヒト・モノ・カネ"},{"t":"顧客価値・利益・プロセス"},{"t":"市場・製品・技術"}],"ans":2,"e":"この3つが9セルのタテ軸になる。"},{"ty":"mc","q":"9セルのヨコ軸（3つの問い）として正しいものはどれか。","ch":[{"t":"Plan・Do・See"},{"t":"Who・What・How"},{"t":"When・Where・Why"},{"t":"強み・弱み・機会"}],"ans":1,"e":"タテが顧客価値・利益・プロセス、ヨコが Who・What・How。"},{"ty":"mc","q":"9セルの「顧客は誰か」のセルに対応するセオリーはどれか。","ch":[{"t":"フリーミアム"},{"t":"STP"},{"t":"バリューチェーン"},{"t":"SWOT分析"}],"ans":1,"e":"顧客価値の行：①STP ②③4C・3C分析。"},{"ty":"mc","q":"9セルの「強みは何か」のセルに対応するセオリーはどれか。","ch":[{"t":"4C"},{"t":"利益パターン"},{"t":"SWOT分析"},{"t":"STP"}],"ans":2,"e":"プロセスの行の⑧にあたる。"},{"ty":"mc","q":"9セルを使う利点として、ノートに挙げられていないものはどれか。","ch":[{"t":"競合他社の財務数値を推定できる"},{"t":"裏にはセオリーが走っている"},{"t":"不足していることが分かる"},{"t":"一貫性をチェックできる"}],"ans":0,"e":"挙げられているのは3つ。競合の財務推定は書かれていない。"},{"ty":"mc","q":"ノートにある3Cの3つ目として正しいものはどれか。","ch":[{"t":"Culture（文化）"},{"t":"Channel（流通）"},{"t":"Competitor（競合）"},{"t":"Cost（費用）"}],"ans":2,"e":"Company・Consumer・Competitor。ノートではCustomerでなくConsumer。"},{"ty":"mc","q":"マーケティングとビジネスモデルの違いは何か。","ch":[{"t":"短期か長期か"},{"t":"定量か定性か"},{"t":"「全体」をみるかみないか"},{"t":"BtoCかBtoBか"}],"ans":2,"e":"ビジネスモデルは3要素のつながり全体を設計する。"},{"ty":"mc","q":"ジョブ理論の中心的な主張はどれか。","ch":[{"t":"人は常に価格の安いものを選ぶ"},{"t":"人はモノを欲しがっているのではなく、ある状況で用事の解決を望んでいる"},{"t":"人は他人の持ち物を模倣する"},{"t":"人は機能が多いほど満足する"}],"ans":1,"e":"job to be done。商品は用事の解決のために「雇われる」。"},{"ty":"mc","q":"Whoを考えるときのコツとして正しいものはどれか。","ch":[{"t":"ターゲティングは所得階層で行う"},{"t":"ターゲティングは年齢と性別で行う"},{"t":"ターゲティングは購買履歴のみで行う"},{"t":"ターゲティングは「人」ではなく「状況」"}],"ans":3,"e":"同じ人でも状況が変われば求めるものが変わる。"},{"ty":"mc","q":"ジョブとニーズの関係として正しいものはどれか。","ch":[{"t":"両者は同じ意味"},{"t":"ジョブは企業側、ニーズは顧客側の言葉"},{"t":"ニーズが原因、ジョブが結果"},{"t":"ジョブが原因、ニーズが結果"}],"ans":3,"e":"ニーズの「原因」であるジョブに着目する。"},{"ty":"mc","q":"「欲しいのはプロダクトよりも◯◯」。◯◯に入るのはどれか。","ch":[{"t":"コストパフォーマンス"},{"t":"ブランド"},{"t":"ステータス"},{"t":"プログレス"}],"ans":3,"e":"私たちはみな「差分」を買っている。プログレスがあればプロダクトはいらない。"},{"ty":"mc","q":"「ドリルより穴」の発想から導かれる例として、ノートに挙げられていないものはどれか。","ch":[{"t":"穴の開いたものを売る"},{"t":"穴を開ける素材のみを開ける機械"},{"t":"ドリルを改良する"},{"t":"ドリルのレンタルサービスを始める"}],"ans":3,"e":"ノートにあるのは、素材のみを開ける機械／穴の開いたものを売る／ドリルの改良の3つ。"},{"ty":"mc","q":"顧客価値提案の革新的方法として使う4語に含まれないものはどれか。","ch":[{"t":"アップデート"},{"t":"ジョブ"},{"t":"ロックイン"},{"t":"ニーズ"}],"ans":2,"e":"ジョブ・アップデート・ニーズ・「ドリルより穴」の4語。ロックインは利益パターン側の語。"},{"ty":"mc","q":"営業利益の式として正しいものはどれか。","ch":[{"t":"〔売上〕－〔変動費〕"},{"t":"〔売上〕－〔人件費〕"},{"t":"〔価格〕×〔数量〕－〔変動費〕－〔固定費〕"},{"t":"〔価格〕×〔数量〕－〔原価〕＋〔営業外収益〕"}],"ans":2,"e":"〔売上〕－〔コスト〕＝〔営業利益〕を分解した形。"},{"ty":"mc","q":"「売上はあって利益なし」の状態は、ビジネスモデルとしてどう評価されるか。","ch":[{"t":"課金できている点で合格"},{"t":"成長段階なので問題ない"},{"t":"アウト（成立していない）"},{"t":"シェア獲得として評価される"}],"ans":2,"e":"見るべきはトップラインではなくボトムライン。"},{"ty":"mc","q":"利益化の道筋は何通りのロジックで成り立つとされているか。","ch":[{"t":"9通り"},{"t":"2の3乗＝8通り"},{"t":"3の3乗＝27通り"},{"t":"2の2乗＝4通り"}],"ans":1,"e":"3つの軸それぞれに0（保守）と1（革新）がある。"},{"ty":"mc","q":"利益化の道筋で「1」が意味するのはどれか。","ch":[{"t":"短期回収"},{"t":"ズラしたスコープ（革新）"},{"t":"素直に（保守）"},{"t":"高価格帯"}],"ans":1,"e":"0は素直に（保守）／1はズラしたスコープ（革新）。"},{"ty":"mc","q":"レーザーブレイド型の利益モデルが成立する前提はどれか。","ch":[{"t":"ロックイン"},{"t":"ネットワーク外部性"},{"t":"先行者利益"},{"t":"規模の経済"}],"ans":0,"e":"専用の付属品でなければ使えない状態が必要。"},{"ty":"mc","q":"サブスクリプションの狙いとしてノートに書かれているものはどれか。","ch":[{"t":"投資回収を長期化させ、顧客関係を長期化する"},{"t":"単価を引き上げて短期に回収する"},{"t":"初期費用を高くして参入障壁をつくる"},{"t":"広告費を削減する"}],"ans":0,"e":"リカーリングレベニューを得るモデル。"},{"ty":"mc","q":"ビジネスモデル論における「強み」の定義はどれか。","ch":[{"t":"社員のスキルの高さ"},{"t":"活動の中で機能する資源"},{"t":"業界平均を上回る能力"},{"t":"競合が持たない特許"}],"ans":1,"e":"顧客価値提案から必要な活動を洗い出したうえで定義される。"},{"ty":"mc","q":"VRIOのIが表すものはどれか。","ch":[{"t":"Integration（統合）"},{"t":"Inimitability（模倣困難性）"},{"t":"Investment（投資）"},{"t":"Innovation（革新性）"}],"ans":1,"e":"Value・Rarity・Inimitability・Organization。"},{"ty":"mc","q":"VRIOのIのリサーチで、強みと認められる目安はどれくらいか。","ch":[{"t":"期間は問わない"},{"t":"構築に最低半年以上かかること"},{"t":"構築に最低2年以上かかること"},{"t":"構築に最低5年以上かかること"}],"ans":2,"e":"ノートに「最低2年」と明記。新技術で駆逐されないかも見る。"},{"ty":"mc","q":"VRIOのOが問うているのはどれか。","ch":[{"t":"組織構造が階層的か"},{"t":"VRIに適う資源を有効活用できているか"},{"t":"組織文化が革新的か"},{"t":"組織の規模が十分か"}],"ans":1,"e":"資源を持っていても使いこなせていなければ意味がない。"},{"ty":"mc","q":"「違い」と「強み」の関係として正しいものはどれか。","ch":[{"t":"両者は同一である"},{"t":"違いは社内、強みは社外の概念"},{"t":"強みは分かるが、違いは認識されにくい"},{"t":"違いは分かるが、強みは認識されにくい"}],"ans":3,"e":"違い＝相手が認識しているもの／強み＝一度体験するとわかるもの。"},{"ty":"mc","q":"「すべてを自分でやろうとすること」を何というか。","ch":[{"t":"ネットワークオーケストレーション"},{"t":"垂直統合"},{"t":"水平分業"},{"t":"アウトソーシング"}],"ans":1,"e":"ビジネスモデル論ではこれと逆に、強みを活かして弱みは補ってもらう。"},{"ty":"mc","q":"事業計画を式で表すとどうなるか。","ch":[{"t":"顧客価値－コスト＝利益"},{"t":"顧客価値×プロセス＝利益"},{"t":"（顧客価値×利益）×プロセス"},{"t":"顧客価値＋プロセス＝利益"}],"ans":3,"e":"足し算で計画前提。企画＋実行体制＝採算評価。"},{"ty":"mc","q":"ビジネスモデルを式で表すとどうなるか。","ch":[{"t":"顧客価値＋利益＋プロセス"},{"t":"利益÷プロセス＝顧客価値"},{"t":"（顧客価値×利益）×プロセス"},{"t":"顧客価値＋プロセス＝利益"}],"ans":2,"e":"掛け算で変革前提。提案×必要利益×実行体制。"},{"ty":"mc","q":"ビジネスモデルが掛け算であることの帰結はどれか。","ch":[{"t":"要素は独立に最適化できる"},{"t":"計画通りに進めやすい"},{"t":"1つの構成要素を変えると全体の値が大きく変わるため、多くの試行が大切"},{"t":"どの要素も同じ重みで足し合わせればよい"}],"ans":2,"e":"だから先に最低条件を決め、それを満たす範囲でより良いものを決める。"},{"ty":"mc","q":"ビジネスモデルの性格を表す語として正しいものはどれか。","ch":[{"t":"確定した実行計画"},{"t":"会計上の見積り"},{"t":"法的な契約"},{"t":"設計方針であり「仮説」"}],"ans":3,"e":"だからビジネスモデルに終わりはない。"},{"ty":"mc","q":"「強みを残しながら方向転換して試行すること」を何というか。","ch":[{"t":"ベンチマーキング"},{"t":"ロールアウト"},{"t":"ピポットではなくスケール"},{"t":"ピボット"}],"ans":3,"e":"リーンスタートアップの中で用いられる。"},{"ty":"mc","q":"ノートに挙げられているピボットの例はどれか。","ch":[{"t":"Amazon（書店→クラウド）"},{"t":"Google（研究者向け検索→無課金→ライセンス課金→広告課金）"},{"t":"Apple（PC→スマホ）"},{"t":"Netflix（郵送→配信）"}],"ans":1,"e":"ピボット例としてノートに明記されているのはGoogle。"},{"ty":"mc","q":"デジタル時代への対応としてノートに書かれている方法はどれか。","ch":[{"t":"完成度を高めてから一度に出す"},{"t":"ある程度の出来で納品し、β版（最新）を作成することで補う"},{"t":"価格を下げて数を売る"},{"t":"特許を先に取得する"}],"ans":1,"e":"スピードが大切、という文脈。"},{"ty":"mc","q":"「批判されること」はノートでどう位置づけられているか。","ch":[{"t":"事業の失敗の兆候である"},{"t":"常識の範囲外であり、イノベーションが生まれるかもしれない"},{"t":"市場調査が不足している証拠である"},{"t":"撤退を検討すべきサインである"}],"ans":1,"e":"新しいビジネスが生まれにくいのは思考が硬直しているから、という文脈。"},{"ty":"mc","q":"日本企業でマーケティングが流行った理由としてノートに書かれているものはどれか。","ch":[{"t":"顧客価値提案が得意だったから"},{"t":"プロセス重視で、供給過多の中で選ばれる必要があったから"},{"t":"利益率が高かったから"},{"t":"海外展開が進んでいたから"}],"ans":1,"e":"真似がうまかったが、情報伝達の時間差がなくなり真似では生き残れなくなった。"},{"ty":"mc","q":"「ビジネスモデルのしんがり」に挙げられている用語群は、9セルのどの行の話か。","ch":[{"t":"すべての行にまたがる"},{"t":"プロセス"},{"t":"利益"},{"t":"顧客価値"}],"ans":1,"e":"DX・サプライチェーン・クロスドッキング・ダイレクトモデル・JIT・SaaS・ネットワークオーケストレーション。"},{"ty":"mc","q":"DXの説明として正しいものはどれか。","ch":[{"t":"プロセスをデジタル化し、価値提供を劇的に変革すること"},{"t":"データを分析して意思決定すること"},{"t":"社内にITシステムを導入すること"},{"t":"紙の書類を電子化すること"}],"ans":0,"e":"ローコスト・ハイパフォーマンス・高収益の実現がセット。"},{"ty":"mc","q":"SaaSの本質としてノートに書かれているものはどれか。","ch":[{"t":"ソフトウェアを安く売ること"},{"t":"クラウドにデータを保存すること"},{"t":"無料で提供して広告で稼ぐこと"},{"t":"提供方法をデジタル化に変え、アップデートを可能にすること"}],"ans":3,"e":"売り切りではなく提供し続ける形になる。"},{"ty":"mc","q":"JITの別名はどれか。","ch":[{"t":"オーケストレーション"},{"t":"ダイレクトモデル"},{"t":"クロスドッキング"},{"t":"カンバン方式"}],"ans":3,"e":"Just in time。必要なものを必要なときに必要なだけ。"},{"ty":"mc","q":"破壊的イノベーションの例としてノートに挙げられているものはどれか。","ch":[{"t":"自動車が馬車を置き換えた"},{"t":"LEDが白熱電球を置き換えた"},{"t":"電子書籍が紙の本を置き換えた"},{"t":"デジカメがスマートフォンの登場で支払意欲を急激に低下させた"}],"ans":3,"e":"顧客価値提案だけでは不足、利益の創出を考えなければならない、という結論に接続する。"},{"ty":"mc","q":"MVVのうち、事業ドメインをも規定するのはどれか。","ch":[{"t":"バリュー"},{"t":"ビジョン"},{"t":"すべて同じ"},{"t":"ミッション"}],"ans":1,"e":"どこまでやるか、やらないかを決める。"},{"ty":"mc","q":"ミッションの定義として正しいものはどれか。","ch":[{"t":"企業が追い続ける社会への使命"},{"t":"企業が目指すべき姿"},{"t":"企業の中期経営計画"},{"t":"企業が社会に約束する行動指針"}],"ans":0,"e":"Mission＝使命／Vision＝目指す姿／Value＝行動指針。"},{"ty":"mc","q":"エレベーターピッチの3点目はどれか。","ch":[{"t":"他の解決策とはどう違うのか、なぜ気にかける必要があるのか"},{"t":"誰が作っているのか"},{"t":"いつ市場に出すのか"},{"t":"いくらで提供するのか"}],"ans":0,"e":"①ジョブ ②アップデート ③ライバルの設定。"},{"ty":"mc","q":"ビジネスモデルの見方の第2法則「ビジネスの単位を見極めよ」で、一単位とみなす範囲はどこまでか。","ch":[{"t":"1つの事業部まで"},{"t":"顧客を喜ばせて利益をとる、まで"},{"t":"1つの企業グループまで"},{"t":"1つのプロダクトまで"}],"ans":1,"e":"Google Mapだけでなく、そこから得た情報を広告で儲けるところまでが一単位。"},{"ty":"mc","q":"事業単位について、ノートの記述として正しいものはどれか。","ch":[{"t":"必ず1社で完結する"},{"t":"法人格ごとに区切られる"},{"t":"必ず事業部と一致する"},{"t":"必ずしも事業部とは一致せず、1社で完結するとも限らない"}],"ans":3,"e":"デジタル時代にはむしろほぼ一致しない。"},{"ty":"mc","q":"チョコザップの事例が示しているのはどれか。","ch":[{"t":"フランチャイズで拡大する設計"},{"t":"会員の解約を防ぐロックインの設計"},{"t":"低価格で数を売って利益を出す設計"},{"t":"チョコザップでは儲けず、ライザップにつなげる設計"}],"ans":3,"e":"圧倒的な低価格・普段着のままOK。主役はライザップ。会員に本格的な運動を提案する。"},{"ty":"mc","q":"Appleの事例としてノートに書かれているのはどれか。","ch":[{"t":"直営店で高価格を維持している"},{"t":"PCが開かない構造にして、Appleでしか修理できないようにしている"},{"t":"OSを無償で提供している"},{"t":"部品を内製化している"}],"ans":1,"e":"ロックインの一例として読める。"}]}]},{"id":"doc","label":"論述と事例","kind":"read","hint":"論述の骨格と、講義で扱った事例です。読みものなので採点はありません。","sections":[{"label":"論述の骨格","title":"論述の骨格（7テーマ）","note":"","items":[{"ty":"read","h":"1. 事業計画とビジネスモデルの違いを説明しなさい","sub":"最頻出。式を2本書けば骨格が立つ。ノートに最も丁寧に書かれているテーマ。","body":"【序】いずれも顧客価値・プロセス・利益という同じ要素を使うが、\n　　　組み立て方と前提が異なる。\n\n【1】事業計画＝足し算・計画前提\n　　　顧客価値 ＋ プロセス ＝ 利益\n　　　（企画）　（実行体制）（採算評価）\n　　　→ 計画通りにビジネスを進める最適形を求める思考\n\n【2】ビジネスモデル＝掛け算・変革前提\n　　　（顧客価値 × 利益）× プロセス ＝ ？\n　　　（提案）　（必要利益）（実行体制）\n　　　→ 新たなビジネスを生み出す思考法\n\n【3】掛け算であることの帰結\n　　　1つの構成要素を変えると全体の値が大きく変わる\n　　　→ 何ができるか分からない。何度も試行し、限りなく良い解答を探す\n　　　→ 先に最低条件を決定し、それを満たす内でより良いものを決める\n\n【結】ビジネスモデルは設計方針であり「仮説」。ゆえに終わりがない。\n　　　検証後にプランBへ移行するか検討し、動きながら最適な形を見つける。","kw":["計画前提","変革前提","企画","実行体制","採算評価","必要利益","仮説","ピボット","リーンスタートアップ","最低条件"]},{"ty":"read","h":"2. 顧客価値提案の革新的方法について論じなさい","sub":"ノートに「論述」と明記されているテーマ。指定の4語を必ず使う。","body":"【序】人はモノを欲しがっているわけではない。\n　　　ある「状況」で「用事（ジョブ）」の解決を望んでいる。\n\n【1】ジョブ … job to be done\n　　　ニーズは結果、ジョブはその原因。原因のほうに着目する\n　　　ターゲティングは「人」ではなく「状況」\n　　　ex) 授業参観で子供に自慢されたい ← 美容室でのヘアセット\n\n【2】ニーズ … 具体的なプロダクトや機能として現れたもの\n　　　ジョブ（問いとした状況）→ ニーズ（具体的な機能）の向きを押さえる\n\n【3】「ドリルより穴」\n　　　ドリルを改良するのではなく「穴をどう開けるか」を考える\n　　　→ 穴を開ける素材のみを開ける機械／はじめから穴の開いたものを売る\n\n【4】アップデート … 欲しいのはプロダクトよりプログレス\n　　　わたしたちはみな「差分」を買っている\n　　　いかに効率的に差分を生みだしてくれるかで企業を評価する\n　　　プログレスがあれば、プロダクトなんていらない\n\n【結】顧客価値提案の革新とは、プロダクトの改良ではなく\n　　　ジョブの捉え直しによって解決の形そのものを変えることである。","kw":["ジョブ","job to be done","ニーズ","ドリルより穴","アップデート","プログレス","差分","状況","未解決","雇われる"]},{"ty":"read","h":"3. ビジネスモデルの見方（5つの法則）について述べなさい","sub":"ノートに2回登場する。番号を振って書けば分量が稼げる。","body":"【1】いつ時点のビジネスか（When?）\n　　　同じ企業でも時期でビジネスモデルは変わる。時点を固定する\n\n【2】ビジネスの単位を見極めよ（Where?）\n　　　プロダクト？ 事業？ グループ？\n　　　→「顧客を喜ばせて利益をとる」までを一単位\n　　　ex) Google Map単体ではなく、得た情報を広告で儲けるまでが一単位\n　　　事業単位＝顧客を喜ばせ事業利益を出せる組織単位\n　　　　(1)必ずしも事業部と一致しない (2)必ずしも1社で完結しない\n　　　　→ デジタル時代にはむしろほぼ一致しない\n\n【3】違いと強みの関係を明確にせよ\n　　　違い＝認知できるもの／強み＝違いを生み出す力\n　　　違いは分かるが、強みは認識されにくい\n\n【4】全体のつながり\n　　　9セルのタテのつながりも見る\n　　　マーケとビジネスモデルの違いは「全体」をみるかみないか\n\n【5】課金と利益は別\n　　　売上はあって利益なしはビジネスモデルとしてアウト\n　　　見るべきはトップラインではなくボトムライン","kw":["時点","事業単位","事業部","1社で完結しない","認知できる違い","違いを生み出す力","タテのつながり","課金","売上","ボトムライン"]},{"ty":"read","h":"4. 9セルを用いてビジネスモデルを分析する意義を論じなさい","sub":"講義の背骨。表を描いてから論じると速い。","body":"【序】9セル＝顧客価値・利益・プロセス × Who・What・How の3×3。\n\n【1】各セルの中身\n　　　顧客価値：①顧客は誰か(STP) ②何を提供するか ③代替との違い(3C・4C)\n　　　利益　　：④誰が儲けるか ⑤何で儲けるか ⑥どう回収するか(利益パターン)\n　　　プロセス：⑦誰が補完するか ⑧強みは何か(SWOT) ⑨どう提供するか(バリューチェーン)\n\n【2】意義その1：不足していることが分かる\n　　　埋まらないセルが、そのまま構築すべき資源や組むべき相手を示す\n\n【3】意義その2：一貫性をチェックできる\n　　　タテのつながりを見ることで、顧客価値・利益・プロセスの整合を確認できる\n\n【4】意義その3：裏にはセオリーが走っている\n　　　各セルに既存のフレーム（STP・3C・SWOT・バリューチェーン）が対応し、\n　　　すでに知っていることとの親和性が高い\n\n【結】マーケティングとの違いは「全体」をみるかみないか。\n　　　9セルは全体のつながりを可視化するための道具である。","kw":["Who","What","How","STP","3C分析","4C","SWOT分析","バリューチェーン","利益パターン","一貫性","タテのつながり"]},{"ty":"read","h":"5. VRIO分析について説明し、強みの評価について論じなさい","sub":"「最低2年」という数値基準が書けると強い。","body":"【序】VRIO＝「違い」をもたらす資源の評価基準。\n\n【1】V：Value 顧客に価値があるか\n　　　顧客価値提案はなにか（ピッチで確認できる）\n　　　顧客価値の Who-What-How で確認する\n\n【2】R：Rarity 価値の源泉は希少か\n　　　他にどれだけの数の会社がその資源をもっているか\n　　　業界内外を問わず調べる\n　　　それを顧客価値提案に活かしているか\n\n【3】I：Inimitability 模倣困難か\n　　　いまから構築しようとしたらどれくらい時間がかかるか\n　　　→ 最低2年以上かかるものでないと強みにならない\n　　　→ 新技術（AI等）で駆逐されないか\n\n【4】O：Organization VRIに適う資源を有効活用できているか\n\n【5】強みと弱みの定義\n　　　顧客価値提案から必要な全体の活動を明確にしたうえで、\n　　　その中で機能する資源が強み、至らない資源が弱み\n　　　→ 最重要項目なのに資源が足りないなら構築する\n　　　→ 弱みは誰かに補ってもらう\n\n【結】すべてを自分でやらず（＝垂直統合を避け）、\n　　　いかに強みを活かすかがプロセス設計の要になる。","kw":["Value","Rarity","Inimitability","Organization","最低2年","業界内外","顧客価値提案","強み","弱み","垂直統合","構築","補完"]},{"ty":"read","h":"6. 利益の作り方について、Who・What・Howの観点から論じなさい","sub":"営業利益の式と2³通りのロジックを両方入れる。","body":"【序】売上はあって利益なしは、ビジネスモデルとしてアウト。\n　　　課金したからといって利益があるわけではない。見るべきは利益。\n\n【1】利益の3つの問い\n　　　④誰が儲けるか（Who） ⑤何で儲けるか（What） ⑥どう回収するか（How）\n\n【2】営業利益の構造\n　　　〔売上〕－〔コスト〕＝〔営業利益〕\n　　　〔価格〕×〔数量〕－〔変動費〕－〔固定費〕＝〔営業利益〕\n\n【3】利益化の道筋＝2の3乗通りのロジック\n　　　プレイヤー／タイミング／届け方 の3軸それぞれに\n　　　0＝素直に（保守）／1＝ズラしたスコープ（革新）\n　　　→ 組み合わせで8通りの利益パターンが成り立つ\n\n【4】具体的なパターン\n　　　レーザーブレイド：主要製品の利益の低さを専用付属品でカバー（ロックイン前提）\n　　　マッチメイキング：売り手と買い手をつなぐこと自体で儲ける\n　　　サブスク：リカーリングレベニューで投資回収と顧客関係を長期化\n\n【結】利益を生み出すパターンは Who・What・How で全て説明できる。\n　　　誰から・何で・どう届けるかをズラすことが利益設計の本質である。","kw":["トップライン","ボトムライン","営業利益","変動費","固定費","2の3乗","保守","革新","レーザーブレイド","ロックイン","マッチメイキング","リカーリングレベニュー"]},{"ty":"read","h":"7. 破壊的イノベーションがビジネスモデルに与える影響を論じなさい","sub":"デジカメの例＋熱狂の図を組み合わせる。図を1つ描くと速い。","body":"【序】ビジネスモデルは WTP─価格─コスト の幅の上に成り立つ。\n\n【1】破壊的イノベーションが起きると何が下がるか\n　　　既存製品の支払意欲(WTP)が急激に低下する\n　　　ex) デジタルカメラはスマートフォンの登場によりWTPが急激に低下\n\n【2】何が起きるか\n　　　WTPが下がる → 顧客の取り分も企業の取り分も縮む\n　　　価格を維持すれば売れず、価格を下げればコストを下回り損失になる\n\n【3】結論\n　　　顧客価値提案だけでは不足である\n　　　利益の創出まで併せて考えなければならない\n\n【4】対応の方向\n　　　ビジネスモデルは「仮説」である以上、終わりはない\n　　　強みを残しながらピボットし、動きながら最適な形を見つける\n　　　ex) Google：研究者向け検索→無課金→ライセンス課金→広告課金\n\n【結】破壊的イノベーションは、顧客価値と利益を同時に設計し続けることの\n　　　必要性を示している。","kw":["支払意欲","WTP","disrupt","デジカメ","スマートフォン","顧客価値提案","利益の創出","仮説","ピボット","Google"]}]},{"label":"事例","title":"事例（7件）","note":"","items":[{"ty":"read","h":"チョコザップ ／ ライザップ","sub":"利益の設計（誰が儲けるかをズラす）／9セルの利益の行","body":"・圧倒的な低価格、普段着のままOK\n・なぜ変な顧客価値提案なのか → 主役はライザップ\n・チョコザップ会員に本格的な運動を提案する\n・チョコザップでは儲けない → ライザップにつなげる","kw":[]},{"ty":"read","h":"デジタルカメラ ／ スマートフォン","sub":"破壊的イノベーション／熱狂の図","body":"・デジカメはスマートフォンの登場により支払意欲が急激に低下\n・disrupt によりコスト・WTP・価格が下がる → 損失と顧客価値の双方に影響\n・⇒ 顧客価値提案だけでは不足。利益の創出を考えなければならない","kw":[]},{"ty":"read","h":"Google","sub":"ピボット／ビジネスの単位を見極めよ（第2法則）","body":"・大学生が研究者向けにつくった検索サイト\n・→ 無課金状態で一般開放\n・→ ライセンス課金（利益⑤）\n・→ 広告課金方法へ\n・また Google Map 単体ではなく、そこから得た情報を広告で儲けるまでが一単位","kw":[]},{"ty":"read","h":"Netflix","sub":"ジョブ理論（未解決のジョブ）／ピボット","body":"・レンタルビデオ店の「借りたいのに延滞料をとられる」という不満\n・2000年代、郵送レンタルの「借り放題」\n・そして必ず未解決がある\n・ケーブルで送れるようになる","kw":[]},{"ty":"read","h":"Apple","sub":"ロックイン／プロセスの設計","body":"・PCが開かない（ドライバー等では開けられない）\n・→ Apple でしか修理できない\n・→ 開けるとサインが残る","kw":[]},{"ty":"read","h":"兵庫県の匠工芸","sub":"ピボット／強みの活かし方／ジョブの発見","body":"・匠工芸 → プラスチック加工、看板、舞台美術\n・生活が満たされる、やりたいこととは何か\n・看板屋を軸にピボットする\n・武器は真似されるが、クオリティで差がつく\n・オリジナルも製作\n・コロナ下：魔法陣のパーテーション → 生活を少し楽しく → 一般人向けにも\n・無理な野望の持ち主。武器を聞く → プラスチック製 → コスプレイヤー向けのもの\n・「やりたいことを買いて食っていくには」儲け方を考える","kw":[]},{"ty":"read","h":"Loop ／ MaaS（7/27）","sub":"プロセス（しんがり）／サブスクの利益設計　★この回のノートに「事例がテストに書けるかもよ」とある","body":"・街を最適化する\n・DX：プロセスをデジタル化し、価値提供を劇的に変革\n　　　ローコスト・ハイパフォーマンス・高収益の実現\n・SaaS：提供方法をデジタルに変え、アップデートを可能にする\n・サブスク＝定額：リカーリングレベニュー／投資回収を長期化／顧客関係を長期化","kw":[]}]}]}]};</script>
 <script>
-/* ============ 用語（3行で説明） ============ */
-const TERM=[
-{k:"基礎",title:"1. ビジネスモデルの基礎概念",qs:[
-{t:"ビジネスモデル",a:"企業が一定の顧客に価値を提供し、同時に利益を得る仕組みのこと。顧客にも企業にも価値をもたらす「儲ける仕組み」であり、利害関係者に価値をもたらすストーリーでもある。ネットベンチャー最盛期を経て1997年頃から学術界でも使われるようになった語である。",m:"目的としての顧客価値／成果としての利益。「現時点で将来のビジネスをデザインする脳」とも表現される。"},
-{t:"ビジネスモデルのゴール",a:"「顧客価値」と「利益」を同時に獲得することである。顧客を喜ばせるだけでは赤字になり事業が続かず、利益だけを追えば顧客が離れる。両方を同時に成り立たせる設計こそがビジネスモデルの目的である。",m:"顧客を喜ばせる→利益を上げる→事業が続く→会社を守る。赤字→事業は続かない→倒産。"},
-{t:"支払意欲（WTP）",a:"顧客がその商品に対して払ってもよいと考える金額の上限のこと。WTPと価格の差が顧客の取り分（顧客価値）、価格とコストの差が企業の取り分（企業価値）となる。WTPを上げると双方の取り分が大きくなり win-win が成立する。",m:"価格がWTPを超えると売れない。価格がコストを下回るとダメ。WTPを上げること＝「熱狂させる」こと。"},
-{t:"生み出された価値",a:"支払意欲（WTP）とコストの差のこと。この幅を価格が分割し、WTPと価格の間が顧客の取り分、価格とコストの間が企業の取り分になる。ビジネスモデルはこの幅そのものを広げることを目指す。",m:"WTP ─ 価格 ─ コスト の3点で図示できる。試験で図を描くならこれ。"},
-{t:"熱狂",a:"支払意欲と機能が本来は正の相関にあるところ、その相関から大きく上方に乖離している状態のこと。機能から予想される以上にWTPが高い状態であり、良いビジネスモデルの証拠とされる。",m:"「支払意欲と機能は基本的には相関（正）。乖離しているものが熱狂的なもの＝良い方」"},
-{t:"顧客価値提案（CVP）",a:"どんな顧客のどんな用事を、どのように解決するのかという提案のこと。「世界を変える」部分にあたり、ビジネスモデルの出発点となる。ここから利益創出（期待以上の利益）、プロセス構築（実現の手順）へとつながる。",m:"CVP ← 利益創出 ← プロセス構築、という順に設計する。"},
-{t:"カスタマーサクセス",a:"顧客を成功させることで企業が利益を得るという考え方。ビジネスモデルの言い換えの一つであり、事業利益とは顧客の成功のことだと捉える。物やサービスを経て顧客に何かしらの喜びを与えることが利益の源泉になる。",m:"ビジネスモデルの5つの言い換えの③。試験でビジネスモデルを定義するときに使える。"},
-{t:"ビジネスモデルの構成要素",a:"顧客価値・利益・プロセスの3つである。顧客価値提案が何を提供するかを、利益がどう儲けるかを、プロセスがどう実現するかを担う。この3つの関係を整理したものが9セル（3×3のフレーム）である。",m:"利益 ─ 顧客価値 の間にプロセスが入る三角の図でノートに描かれている。"},
-{t:"理念から利益までの順番",a:"経営理念→経営戦略→ビジネスモデル→顧客価値→事業利益、の順に並ぶ。理想から現実へと具体化していく流れであり、ビジネスモデルはその中間で理想と現実をつなぐブースターの役割を果たす。",m:"「経営理念から利益までの距離は遠い」「定義どおりにパス運びをしないとビジネスはどこかで止まる」"},
-]},
-{k:"9セル",title:"2. 9セルと分析フレーム",qs:[
-{t:"9セル（ビジネスモデル・キャンバス）",a:"顧客価値・利益・プロセスの3要素を、それぞれ Who・What・How の3つの問いで分解した3×3のフレームのこと。9つのセルを埋めることで、不足していることが分かり、要素間の一貫性をチェックできる。",m:"タテのつながりも見ることが重要。「裏にはセオリーが走っている（すでに知っていることとの親和性）」"},
-{t:"顧客価値の行（9セルの①②③）",a:"①顧客は誰か（どんな性質をもつ人か）、②解決策として何を提供するか、③代替とはどのように違っているか、の3つ。①にはSTP、②③には4Cや3C分析といったマーケティングのセオリーが対応する。",m:"③の「代替との違い」がビジネスモデルの差別化の要になる。"},
-{t:"利益の行（9セルの④⑤⑥）",a:"④誰が儲けるか、⑤何で儲けるか、⑥どのように回収するか、の3つ。⑥には利益パターン（フリーミアム等）が対応する。課金する相手・課金する対象・回収の時間軸をずらすことで多様な利益モデルが生まれる。",m:"売上と利益は別物。「課金したからといって利益があるわけではない」"},
-{t:"プロセスの行（9セルの⑦⑧⑨）",a:"⑦誰が補完するか（誰と組んでいるか）、⑧強みは何か、⑨どのように提供するか、の3つ。⑧にはSWOT分析、⑨にはバリューチェーンやコストの検討が対応する。すべてを自社でやらない発想がここに入る。",m:"アウトソーシング・オープンイノベーションはこの行の話。"},
-{t:"3C分析",a:"Company（自社）・Consumer（消費者＝使いたい人）・Competitor（競合）の3つの視点から事業環境を分析する枠組み。9セルでは顧客価値の行、特に「代替とはどう違うか」を検討する場面で用いられる。",m:"ノートでは Customer ではなく Consumer と書かれている。"},
-{t:"マーケティングとビジネスモデルの違い",a:"「全体」をみるかみないかである。マーケティングは顧客への提供の部分を扱うのに対し、ビジネスモデルは顧客価値・利益・プロセスの全体のつながりを設計する。だから9セルではタテのつながりまで見る。",m:"日本企業はプロセス重視のためマーケティングが流行った、という文脈と結びつく。"},
-]},
-{k:"ジョブ",title:"3. 顧客価値提案とジョブ理論",qs:[
-{t:"ジョブ理論（job to be done）",a:"ビジネスは顧客の「用事（ジョブ）」を解決するためにあるという考え方。人はモノを欲しがっているわけではなく、ある状況の中で用事の解決を望んでいる。商品やサービスはその解決のために「雇われる」存在にすぎない。",m:"そして必ず「未解決」がある。ここに新しいビジネスの余地が残る。"},
-{t:"ターゲティングは「人」ではなく「状況」",a:"Whoを考えるときのコツ。属性で人を切るのではなく、どんな状況にある人がどんな進歩を望んでいるのかで切る。同じ人でも状況が変われば求めるものが変わるため、状況こそが顧客を規定する。",m:"ジョブ＝ニーズの「原因」、ニーズ＝その「結果」。原因のほうに着目する。"},
-{t:"プログレス（進歩）",a:"顧客が特定の状況の中で目標や願望に向かって進もうとしている状態のこと。欲しいのはプロダクトではなくプログレスであり、私たちはみな「差分」を買っている。効率的に差分を生みだしてくれるかで企業は評価される。",m:"「プログレスがあれば、プロダクトなんていらない」"},
-{t:"「ドリルより穴」",a:"顧客が欲しいのはドリルではなく穴であるという、ジョブ理論を象徴する例。ドリルを改良するのではなく「穴をどう開けるか」を考えれば、穴を開ける素材だけを開ける機械や、はじめから穴の開いたものを売るという発想が出てくる。",m:"顧客価値提案の革新的方法として、ジョブ・アップデート・ニーズ・「ドリルより穴」の4語をセットで使う。"},
-{t:"ジョブとニーズの対応例",a:"「工事中に簡単かつ正確に穴を開けたい」に対してドリル、「授業参観で子供に自慢されたい」に対して美容室でのヘアセット、「職場の仲間との良好な関係を構築したい」に対して居酒屋、というように、ニーズの背後には必ず状況としてのジョブがある。",m:"他に、コラーゲン←美しくして若返りたい／運転免許←仲間との旅行の幅を広げる／サッカーボール←仲間よりうまくなりたい。"},
-]},
-{k:"利益",title:"4. 利益の設計",qs:[
-{t:"売上と利益の違い",a:"売上はあっても利益がなければビジネスモデルとしてはアウトである。課金したからといって利益があるわけではなく、企業に求められるのは利益獲得である。見るべきはトップライン（売上）ではなくボトムライン（利益）である。",m:"9セルの利益の行が「誰から・何で・どのように」利益を得るのかを問うのはこのため。"},
-{t:"営業利益",a:"売上からコストを差し引いたもの。分解すると、価格×数量から変動費と固定費を引いた額になる。9セルの⑥「どのように回収するか」を数値で表したものであり、ビジネスモデルの成否はここに表れる。",m:"〔売上〕－〔コスト〕＝〔営業利益〕／〔価格〕×〔数量〕－〔変動費〕－〔固定費〕＝〔営業利益〕"},
-{t:"利益化の道筋（2³通りのロジック）",a:"誰から（プレイヤー）・何で（タイミング）・どう届けるか の3つの軸それぞれに、素直な選択（0＝保守）とズラした選択（1＝革新）があり、組み合わせると2の3乗＝8通りの利益パターンが成り立つという整理。",m:"0は素直に（保守）／1はズラしたスコープ（革新）。「誰から何でどう届けるかをズラしたらいける」"},
-{t:"レーザーブレイド（利益パターン18）",a:"主要製品の利益の低さを、その製品専用の付属品で回収する利益モデル。本体を安く売り、消耗品や付属品で継続的に稼ぐ。専用品でなければ使えないというロックインが成立していることが前提となる。",m:"髭剃り本体と替刃の関係が語源。プリンタとインクも同型。"},
-{t:"マッチメイキング（利益パターン26）",a:"売り手と買い手を引き合わせること自体を価値とし、そこから手数料などで利益を得るモデル。自ら商品を持たず、両者をつなぐ場を提供することで儲ける点に特徴がある。",m:"ノートには番号（26）と名称のみ。詳細は自分のノート・レジュメで補うこと。"},
-{t:"サブスクリプション",a:"定額課金によって継続的な収益（リカーリングレベニュー）を得るモデル。一度に回収せず投資回収を長期化させ、顧客との関係そのものを長期化させることを狙う。SaaSと組み合わせて用いられることが多い。",m:"「リカーリングレベニュー」と「ロングタームコネクション〔？〕」の2語がノートにある。"},
-{t:"ロックイン",a:"顧客が他の選択肢に乗り換えにくい状態をつくること。専用の付属品や独自規格、蓄積したデータなどによって成立する。レーザーブレイド型の利益モデルはこのロックインを前提として初めて機能する。",m:"ノートには「※ロックイン前提」と注記されている。"},
-]},
-{k:"資源",title:"5. プロセス・資源・強み",qs:[
-{t:"強みと弱み（ビジネスモデル論での定義）",a:"顧客価値提案から必要な全体の活動を洗い出したうえで、その活動の中で機能する資源が強み、至らない資源が弱みである。一般的な長所短所ではなく、必要な活動を基準に定義される点に特徴がある。",m:"最重要項目なのに資源が足りないならば構築する。弱みは誰かに補ってもらう。"},
-{t:"VRIO分析",a:"「違い」をもたらす資源を評価する4つの基準。Value（顧客に価値があるか）、Rarity（価値の源泉が希少か）、Inimitability（ライバルが模倣困難か）、Organization（VRIに適う資源を有効に活用できているか）の頭文字である。",m:"V・R・Iで資源そのものを評価し、Oでそれを使いこなせているかを評価する構造。"},
-{t:"VRIOのR（希少性）のリサーチ",a:"他にどれだけの数の会社がその資源をもっているかを調べること。重要なのは業界内外を問わず調べること、そしてその資源を実際に顧客価値提案に活かしているかまで確認することである。",m:"持っているだけでは希少性は価値にならない。"},
-{t:"VRIOのI（模倣困難性）のリサーチ",a:"いまから同じものを構築しようとしたらどれくらい時間がかかるかで判定する。最低2年以上かかるものでなければ強みにならない。また新技術（AI等）によって駆逐されないかも併せて検討する必要がある。",m:"「最低2年」という数字はノートに明記されている。試験で書ける具体的な基準。"},
-{t:"違いと強みの関係",a:"違いは相手（ユーザー）が認識しているもの、強みは一度体験するとわかるもの。両者はリンクしているが、違いは外から分かるのに対して強みは認識されにくい。だから違いと強みの関係を明確にする必要がある。",m:"ビジネスモデルの見方の第3法則。「認知できる違い／違いを生み出す力」"},
-{t:"垂直統合",a:"すべてを自分でやろうとすること。ビジネスモデル論ではこれと対照的に、すべてを自分でやらず、いかに自社の強みを活かすかが重視される。弱みの部分は補完してくれる相手に任せるという発想をとる。",m:"株主・銀行は「お金」で、消費者は「ハート」でつながる。"},
-{t:"経済性・有効性・効率性",a:"誰にまかせるかを判断する3つの尺度。経済性はインプット、有効性はアウトプット、効率性はアウトプットをインプットで割った比率を見る。外部に任せるかどうかをこの3つで評価する。",m:"経済性＝input／有効性＝output／効率性＝o÷i。"},
-{t:"資産構築編（組む相手の選び方）",a:"誰と組むかを考えるときの候補。理念を共有する相手、先行力・知識や知恵を持つ相手、研究者的な相手、メンターなどが挙げられる。自社に足りない資源を、関係によって補うという考え方である。",m:"ストレングスファインダーの言及もノートにある。"},
-]},
-{k:"計画",title:"6. 事業計画との違い・ピボット",qs:[
-{t:"事業計画（の式）",a:"「顧客価値＋プロセス＝利益」という足し算で表される。顧客価値は企画、プロセスは実行体制、利益は採算評価にあたる。計画通りにビジネスを進めるための最適形であり、計画前提の考え方である。",m:"★試験の頻出。ビジネスモデルの式と必ずセットで覚える。"},
-{t:"ビジネスモデル（の式）",a:"「（顧客価値×利益）×プロセス」という掛け算で表される。顧客価値は提案、利益は必要利益、プロセスは実行体制にあたる。新たなビジネスを生み出す思考法であり、変革前提の考え方である。",m:"掛け算だから、1つの構成要素を変えると全体の値が大きく変わる。だから多くの試行が大切になる。"},
-{t:"事業計画とビジネスモデルの違い",a:"事業計画は足し算で計画前提、ビジネスモデルは掛け算で変革前提である。前者は計画通りに進める最適形を求めるのに対し、後者は何ができるか分からない中で何度も試行し、限りなく良い解答を見つけようとする。",m:"ビジネスモデルでは先に最低条件を決定し、それを満たす範囲でより良いものを決める。"},
-{t:"ビジネスモデルは「仮説」である",a:"ビジネスモデルはビジネスの設計方針であり仮説にすぎない。したがってビジネスモデルに終わりはなく、検証後に裏付けをもとに拡大するか、プランBに移行するかを検討する。動きながら修正し最適な形を見つけていく。",m:"「当初のプラン通りに利益を得られることは少ない」"},
-{t:"ピボット",a:"強みを残しながら方向転換して試行すること。当初の仮説が検証で否定されたとき、別の選択肢に移りながらも蓄積した強みは手放さない。リーンスタートアップの中で用いられる概念である。",m:"ピボット例＝Google。大学生の研究者向け検索サイト→無課金で一般開放→ライセンス課金→広告課金へ。"},
-{t:"リーンスタートアップ",a:"小さく作って市場で検証し、その結果をもとに方向転換（ピボット）しながら事業を育てていく方法。当初の計画通りに利益が出ることは少ないという前提に立ち、失敗を許容して学習につなげる思考法をとる。",m:"デジタルの時代はスピードが大切なので、ある程度の出来でβ版（最新）を出すことで補う。"},
-{t:"新しいビジネスが生まれにくい理由",a:"思考が硬直しているからである。ユーザーを喜ばせられなくなった以上に利益がついてこなくなるため、柔軟な発想と、失敗を許容して学習へとつなげる思考法が必要になる。批判されることは常識の範囲外であり、そこにイノベーションが生まれる余地がある。",m:"「完成しないビジネス」という言い方もノートにある。"},
-{t:"プロセス重視の日本企業",a:"日本企業はプロセスを重視してきたため、マーケティングが流行したという指摘。とにかく真似がうまかったが、情報伝達の時間差がなくなると真似では生き残れなくなり、供給過多の中で選ばれるためにマーケティングが必要になった。",m:"「顧客の価値提案は？ とにかく企画」「利益はあとからついてくる」タイムマシン〔経営〕の語も。"},
-]},
-{k:"用語",title:"7. デジタル時代のビジネスモデル用語",qs:[
-{t:"ビジネスモデルの「しんがり」〔？〕",a:"DX、サプライチェーン、クロスドッキング、ダイレクトモデル、JIT、SaaS、MaaS、ネットワークオーケストレーション、DtoCといった一連の用語群を指す。これらはすべてプロセス（どのように提供するか）の話である。",m:"〔読み取り注意〕字は「しんがり」に見えるが、文脈的には「はしり（先駆け）」の可能性。自分のノートで要確認。"},
-{t:"DX（デジタルトランスフォーメーション）",a:"プロセスをデジタル化することで、価値提供のあり方を劇的に変革すること。単なるIT化ではなく、ローコスト・ハイパフォーマンス・高収益を同時に実現する点に本質がある。",m:"9セルではプロセスの行に位置づく。"},
-{t:"SaaS",a:"提供方法をデジタルに変えることで、継続的なアップデートを可能にするモデル。売り切りではなく提供し続ける形になるため、サブスクリプションによる課金と組み合わせて用いられることが多い。",m:"Software as a Service。ノートでは「提供方法をデジタル化に変え、アップデートを可能にし…」"},
-{t:"MaaS",a:"移動サービスを統合的に提供する考え方。Loopの事例とともに「街を最適化する」ものとしてノートに記されている。個別の交通手段ではなく移動全体を一つのサービスとして設計する点に特徴がある。",m:"7/27の講義。ここで先生が「事例がテストに書けるかもよ」と発言している。"},
-{t:"JIT（ジャストインタイム／カンバン方式）",a:"必要なものを必要なときに必要なだけ供給する生産方式。在庫を持たないことでコストを下げる。サプライチェーンやクロスドッキングと並ぶ、プロセス側の代表的な仕組みである。",m:"トヨタ生産方式。ノートでは「JIT（カンバン方式）」と併記。"},
-{t:"クロスドッキング",a:"入荷した商品を在庫として保管せず、そのまま仕分けて出荷する物流の仕組み。在庫を持たないことで保管コストと時間を圧縮する、プロセス側の効率化手法である。",m:"サプライチェーン、JITと同じ文脈で並べられている。"},
-{t:"ダイレクトモデル",a:"中間流通を介さず、企業が顧客に直接届けるモデル。流通コストを削減できるうえ、顧客との接点を自社で持てるため顧客情報を蓄積できる。DtoCと同じ発想に立つ。",m:"DtoC＝direct to consumer。"},
-{t:"ネットワークオーケストレーション",a:"自社ですべてを保有せず、外部の資源をネットワークとしてつなぎ、その全体を指揮することで価値を生むモデル。「すべてを自分でやらず、いかに強みを活かすか」というプロセス設計の考え方に対応する。",m:"垂直統合の対極にある発想。"},
-{t:"破壊的イノベーション",a:"既存の製品の支払意欲を急激に低下させてしまう技術革新のこと。デジタルカメラがスマートフォンの登場によって支払意欲を大きく落としたのが典型例である。顧客価値提案だけでは不足であり、利益の創出まで考えなければならないことを示す。",m:"disrupt によってコスト・WTP・価格が同時に下がり、損失と顧客価値の双方に影響する。"},
-]},
-{k:"理念",title:"8. 経営理念とピッチ",qs:[
-{t:"ミッション（Mission）",a:"企業が追い続ける社会への使命のこと。経営理念の中で最上位に置かれ、その企業が何のために存在するのかを示す。ビジョン・バリューとあわせて経営理念（MVV）を構成する。",m:"「経営は理念が最上位」"},
-{t:"ビジョン（Vision）",a:"ミッションを達成するために企業が目指すべき姿のこと。同時に事業ドメインをも規定し、どこまでやるか・やらないかを決める働きをもつ。",m:"事業ドメインを規定する、という点が試験で問われうる。"},
-{t:"バリュー（Value）",a:"企業が社会に約束する行動指針のこと。ミッション・ビジョンを日々の行動に落とし込む役割を担う。",m:"MVVの3つ目。"},
-{t:"エレベーターピッチ",a:"短時間で事業を説明する3点セット。①どんな用事がある人を顧客にしたいか（ジョブ＝問題としていること）、②あなたの仕事はその何を解決するか（アップデート）、③他の解決策とどう違い、なぜ気にかける必要があるか（ライバルの設定）。",m:"VRIOのV（顧客価値）は、このピッチで確認できるとされている。"},
-{t:"売り込みの3点",a:"①誰に（何を求めている人がいるのか）、②どのように解決するか（ソリューション）、③代替との違い、の3つ。相手の状況を把握し、何を求めていたかを掴み、どうやって解決するかを示す順で組み立てる。",m:"9セルの顧客価値の行（Who・What・How）と対応している。"},
-]},
-{k:"見方",title:"9. ビジネスモデルの見方（5つの法則）",qs:[
-{t:"第1法則：いつ時点のビジネスか",a:"ビジネスモデルを見るときは、それがいつの時点のものかを確認せよという法則。同じ企業でも時期によってビジネスモデルは変わっているため、時点を固定しないと分析が成り立たない。",m:"When? に対応。"},
-{t:"第2法則：ビジネスの単位を見極めよ",a:"プロダクトか、事業か、グループかを見極めよという法則。「顧客を喜ばせて利益をとる」までを一単位と考える。Google Map単体ではなく、そこから得た情報をGoogleの広告で儲けるところまでが一単位になる。",m:"Where? に対応。"},
-{t:"事業単位",a:"顧客を喜ばせ、事業利益をだすことのできる組織単位のこと。必ずしも事業部とは一致せず、また必ずしも1社で完結するとは限らない。デジタル時代にはむしろほぼ一致しない。",m:"宿・交通を1括で予約するようなコラボでは、複数の事業部でひとつのビジネスモデルを形成する。プロダクトの垣根がない。"},
-{t:"第3法則：違いと強みの関係を明確にせよ",a:"認知できる違いと、違いを生み出す力（強み）を区別し、その関係を明確にせよという法則。違いは顧客から見えるが強みは見えにくいため、両者を切り分けて考える必要がある。",m:"VRIO分析はこの第3法則を具体化する道具。"},
-{t:"第4法則：全体のつながり",a:"9セルを個別に埋めるのではなく、要素間のつながり、とくにタテのつながりを見よという法則。顧客価値・利益・プロセスが一貫していなければビジネスモデルは機能しない。",m:"「マーケとビジネスモデルの違いは全体をみるかみないか」につながる。"},
-{t:"第5法則：課金と利益は別",a:"課金（売上）が発生していることと、利益が出ていることは別だという法則。売上はあって利益なしはビジネスモデルとしてはアウトであり、見るべきはボトムラインである。",m:"9セルの利益の行を独立させている理由がこれ。"},
-]}];
+/* 試験対策クイズ集 共通エンジン ------------------------------------------
+   QUIZ(deck) で起動する。外部依存なし。
+   1科目1ページの版でも、全科目を1ファイルにまとめた版でも同じものを使う。 */
+var QUIZ = (function () {
+  'use strict';
 
-/* ============ 4択 ============ */
-const MC=[
-{q:"ビジネスモデルという語が学術界でも使用されるようになったのは、およそ何年からか。",a:"1997年ごろ",d:["1985年ごろ","2005年ごろ","2013年ごろ"],e:"ネットベンチャー最盛を経て1997年〜学術界でも使用されるようになった語。"},
-{q:"ビジネスモデルのゴールとして正しいものはどれか。",a:"「顧客価値」と「利益」の同時獲得",d:["売上の最大化","市場シェアの獲得","コストの最小化"],e:"顧客を喜ばせるだけでは赤字、利益だけでは顧客が離れる。両立が目的。"},
-{q:"支払意欲(WTP)と価格の差にあたるのはどれか。",a:"顧客の取り分（顧客価値）",d:["企業の取り分（企業価値）","生み出された価値の総量","変動費"],e:"WTP─価格＝顧客の取り分／価格─コスト＝企業の取り分。"},
-{q:"「熱狂的なもの」とはノートではどう説明されているか。",a:"支払意欲と機能の相関から乖離しているもの",d:["機能が業界最高水準のもの","価格が最も安いもの","広告費を最も多く使ったもの"],e:"支払意欲と機能は基本的に正の相関。そこから上に乖離しているのが熱狂＝良い方。"},
-{q:"ビジネスモデルの構成要素3つの組み合わせとして正しいものはどれか。",a:"顧客価値・利益・プロセス",d:["ヒト・モノ・カネ","理念・戦略・戦術","市場・製品・技術"],e:"この3つが9セルのタテ軸になる。"},
-{q:"9セルのヨコ軸（3つの問い）として正しいものはどれか。",a:"Who・What・How",d:["When・Where・Why","Plan・Do・See","強み・弱み・機会"],e:"タテが顧客価値・利益・プロセス、ヨコが Who・What・How。"},
-{q:"9セルの「顧客は誰か」のセルに対応するセオリーはどれか。",a:"STP",d:["SWOT分析","バリューチェーン","フリーミアム"],e:"顧客価値の行：①STP ②③4C・3C分析。"},
-{q:"9セルの「強みは何か」のセルに対応するセオリーはどれか。",a:"SWOT分析",d:["STP","4C","利益パターン"],e:"プロセスの行の⑧にあたる。"},
-{q:"9セルを使う利点として、ノートに挙げられていないものはどれか。",a:"競合他社の財務数値を推定できる",d:["不足していることが分かる","一貫性をチェックできる","裏にはセオリーが走っている"],e:"挙げられているのは3つ。競合の財務推定は書かれていない。"},
-{q:"ノートにある3Cの3つ目として正しいものはどれか。",a:"Competitor（競合）",d:["Channel（流通）","Cost（費用）","Culture（文化）"],e:"Company・Consumer・Competitor。ノートではCustomerでなくConsumer。"},
-{q:"マーケティングとビジネスモデルの違いは何か。",a:"「全体」をみるかみないか",d:["定量か定性か","短期か長期か","BtoCかBtoBか"],e:"ビジネスモデルは3要素のつながり全体を設計する。"},
-{q:"ジョブ理論の中心的な主張はどれか。",a:"人はモノを欲しがっているのではなく、ある状況で用事の解決を望んでいる",d:["人は常に価格の安いものを選ぶ","人は他人の持ち物を模倣する","人は機能が多いほど満足する"],e:"job to be done。商品は用事の解決のために「雇われる」。"},
-{q:"Whoを考えるときのコツとして正しいものはどれか。",a:"ターゲティングは「人」ではなく「状況」",d:["ターゲティングは年齢と性別で行う","ターゲティングは所得階層で行う","ターゲティングは購買履歴のみで行う"],e:"同じ人でも状況が変われば求めるものが変わる。"},
-{q:"ジョブとニーズの関係として正しいものはどれか。",a:"ジョブが原因、ニーズが結果",d:["ニーズが原因、ジョブが結果","両者は同じ意味","ジョブは企業側、ニーズは顧客側の言葉"],e:"ニーズの「原因」であるジョブに着目する。"},
-{q:"「欲しいのはプロダクトよりも◯◯」。◯◯に入るのはどれか。",a:"プログレス",d:["ブランド","ステータス","コストパフォーマンス"],e:"私たちはみな「差分」を買っている。プログレスがあればプロダクトはいらない。"},
-{q:"「ドリルより穴」の発想から導かれる例として、ノートに挙げられていないものはどれか。",a:"ドリルのレンタルサービスを始める",d:["穴を開ける素材のみを開ける機械","穴の開いたものを売る","ドリルを改良する"],e:"ノートにあるのは、素材のみを開ける機械／穴の開いたものを売る／ドリルの改良の3つ。"},
-{q:"顧客価値提案の革新的方法として使う4語に含まれないものはどれか。",a:"ロックイン",d:["ジョブ","アップデート","ニーズ"],e:"ジョブ・アップデート・ニーズ・「ドリルより穴」の4語。ロックインは利益パターン側の語。"},
-{q:"営業利益の式として正しいものはどれか。",a:"〔価格〕×〔数量〕－〔変動費〕－〔固定費〕",d:["〔売上〕－〔変動費〕","〔売上〕－〔人件費〕","〔価格〕×〔数量〕－〔原価〕＋〔営業外収益〕"],e:"〔売上〕－〔コスト〕＝〔営業利益〕を分解した形。"},
-{q:"「売上はあって利益なし」の状態は、ビジネスモデルとしてどう評価されるか。",a:"アウト（成立していない）",d:["成長段階なので問題ない","シェア獲得として評価される","課金できている点で合格"],e:"見るべきはトップラインではなくボトムライン。"},
-{q:"利益化の道筋は何通りのロジックで成り立つとされているか。",a:"2の3乗＝8通り",d:["3の3乗＝27通り","2の2乗＝4通り","9通り"],e:"3つの軸それぞれに0（保守）と1（革新）がある。"},
-{q:"利益化の道筋で「1」が意味するのはどれか。",a:"ズラしたスコープ（革新）",d:["素直に（保守）","高価格帯","短期回収"],e:"0は素直に（保守）／1はズラしたスコープ（革新）。"},
-{q:"レーザーブレイド型の利益モデルが成立する前提はどれか。",a:"ロックイン",d:["規模の経済","ネットワーク外部性","先行者利益"],e:"専用の付属品でなければ使えない状態が必要。"},
-{q:"サブスクリプションの狙いとしてノートに書かれているものはどれか。",a:"投資回収を長期化させ、顧客関係を長期化する",d:["単価を引き上げて短期に回収する","初期費用を高くして参入障壁をつくる","広告費を削減する"],e:"リカーリングレベニューを得るモデル。"},
-{q:"ビジネスモデル論における「強み」の定義はどれか。",a:"活動の中で機能する資源",d:["業界平均を上回る能力","競合が持たない特許","社員のスキルの高さ"],e:"顧客価値提案から必要な活動を洗い出したうえで定義される。"},
-{q:"VRIOのIが表すものはどれか。",a:"Inimitability（模倣困難性）",d:["Innovation（革新性）","Integration（統合）","Investment（投資）"],e:"Value・Rarity・Inimitability・Organization。"},
-{q:"VRIOのIのリサーチで、強みと認められる目安はどれくらいか。",a:"構築に最低2年以上かかること",d:["構築に最低半年以上かかること","構築に最低5年以上かかること","期間は問わない"],e:"ノートに「最低2年」と明記。新技術で駆逐されないかも見る。"},
-{q:"VRIOのOが問うているのはどれか。",a:"VRIに適う資源を有効活用できているか",d:["組織の規模が十分か","組織構造が階層的か","組織文化が革新的か"],e:"資源を持っていても使いこなせていなければ意味がない。"},
-{q:"「違い」と「強み」の関係として正しいものはどれか。",a:"違いは分かるが、強みは認識されにくい",d:["強みは分かるが、違いは認識されにくい","両者は同一である","違いは社内、強みは社外の概念"],e:"違い＝相手が認識しているもの／強み＝一度体験するとわかるもの。"},
-{q:"「すべてを自分でやろうとすること」を何というか。",a:"垂直統合",d:["水平分業","ネットワークオーケストレーション","アウトソーシング"],e:"ビジネスモデル論ではこれと逆に、強みを活かして弱みは補ってもらう。"},
-{q:"事業計画を式で表すとどうなるか。",a:"顧客価値＋プロセス＝利益",d:["（顧客価値×利益）×プロセス","顧客価値×プロセス＝利益","顧客価値－コスト＝利益"],e:"足し算で計画前提。企画＋実行体制＝採算評価。"},
-{q:"ビジネスモデルを式で表すとどうなるか。",a:"（顧客価値×利益）×プロセス",d:["顧客価値＋プロセス＝利益","顧客価値＋利益＋プロセス","利益÷プロセス＝顧客価値"],e:"掛け算で変革前提。提案×必要利益×実行体制。"},
-{q:"ビジネスモデルが掛け算であることの帰結はどれか。",a:"1つの構成要素を変えると全体の値が大きく変わるため、多くの試行が大切",d:["どの要素も同じ重みで足し合わせればよい","要素は独立に最適化できる","計画通りに進めやすい"],e:"だから先に最低条件を決め、それを満たす範囲でより良いものを決める。"},
-{q:"ビジネスモデルの性格を表す語として正しいものはどれか。",a:"設計方針であり「仮説」",d:["確定した実行計画","法的な契約","会計上の見積り"],e:"だからビジネスモデルに終わりはない。"},
-{q:"「強みを残しながら方向転換して試行すること」を何というか。",a:"ピボット",d:["ピポットではなくスケール","ロールアウト","ベンチマーキング"],e:"リーンスタートアップの中で用いられる。"},
-{q:"ノートに挙げられているピボットの例はどれか。",a:"Google（研究者向け検索→無課金→ライセンス課金→広告課金）",d:["Amazon（書店→クラウド）","Netflix（郵送→配信）","Apple（PC→スマホ）"],e:"ピボット例としてノートに明記されているのはGoogle。"},
-{q:"デジタル時代への対応としてノートに書かれている方法はどれか。",a:"ある程度の出来で納品し、β版（最新）を作成することで補う",d:["完成度を高めてから一度に出す","特許を先に取得する","価格を下げて数を売る"],e:"スピードが大切、という文脈。"},
-{q:"「批判されること」はノートでどう位置づけられているか。",a:"常識の範囲外であり、イノベーションが生まれるかもしれない",d:["事業の失敗の兆候である","市場調査が不足している証拠である","撤退を検討すべきサインである"],e:"新しいビジネスが生まれにくいのは思考が硬直しているから、という文脈。"},
-{q:"日本企業でマーケティングが流行った理由としてノートに書かれているものはどれか。",a:"プロセス重視で、供給過多の中で選ばれる必要があったから",d:["顧客価値提案が得意だったから","利益率が高かったから","海外展開が進んでいたから"],e:"真似がうまかったが、情報伝達の時間差がなくなり真似では生き残れなくなった。"},
-{q:"「ビジネスモデルのしんがり」に挙げられている用語群は、9セルのどの行の話か。",a:"プロセス",d:["顧客価値","利益","すべての行にまたがる"],e:"DX・サプライチェーン・クロスドッキング・ダイレクトモデル・JIT・SaaS・ネットワークオーケストレーション。"},
-{q:"DXの説明として正しいものはどれか。",a:"プロセスをデジタル化し、価値提供を劇的に変革すること",d:["紙の書類を電子化すること","社内にITシステムを導入すること","データを分析して意思決定すること"],e:"ローコスト・ハイパフォーマンス・高収益の実現がセット。"},
-{q:"SaaSの本質としてノートに書かれているものはどれか。",a:"提供方法をデジタル化に変え、アップデートを可能にすること",d:["ソフトウェアを安く売ること","クラウドにデータを保存すること","無料で提供して広告で稼ぐこと"],e:"売り切りではなく提供し続ける形になる。"},
-{q:"JITの別名はどれか。",a:"カンバン方式",d:["クロスドッキング","ダイレクトモデル","オーケストレーション"],e:"Just in time。必要なものを必要なときに必要なだけ。"},
-{q:"破壊的イノベーションの例としてノートに挙げられているものはどれか。",a:"デジカメがスマートフォンの登場で支払意欲を急激に低下させた",d:["自動車が馬車を置き換えた","LEDが白熱電球を置き換えた","電子書籍が紙の本を置き換えた"],e:"顧客価値提案だけでは不足、利益の創出を考えなければならない、という結論に接続する。"},
-{q:"MVVのうち、事業ドメインをも規定するのはどれか。",a:"ビジョン",d:["ミッション","バリュー","すべて同じ"],e:"どこまでやるか、やらないかを決める。"},
-{q:"ミッションの定義として正しいものはどれか。",a:"企業が追い続ける社会への使命",d:["企業が目指すべき姿","企業が社会に約束する行動指針","企業の中期経営計画"],e:"Mission＝使命／Vision＝目指す姿／Value＝行動指針。"},
-{q:"エレベーターピッチの3点目はどれか。",a:"他の解決策とはどう違うのか、なぜ気にかける必要があるのか",d:["いくらで提供するのか","誰が作っているのか","いつ市場に出すのか"],e:"①ジョブ ②アップデート ③ライバルの設定。"},
-{q:"ビジネスモデルの見方の第2法則「ビジネスの単位を見極めよ」で、一単位とみなす範囲はどこまでか。",a:"顧客を喜ばせて利益をとる、まで",d:["1つのプロダクトまで","1つの事業部まで","1つの企業グループまで"],e:"Google Mapだけでなく、そこから得た情報を広告で儲けるところまでが一単位。"},
-{q:"事業単位について、ノートの記述として正しいものはどれか。",a:"必ずしも事業部とは一致せず、1社で完結するとも限らない",d:["必ず事業部と一致する","必ず1社で完結する","法人格ごとに区切られる"],e:"デジタル時代にはむしろほぼ一致しない。"},
-{q:"チョコザップの事例が示しているのはどれか。",a:"チョコザップでは儲けず、ライザップにつなげる設計",d:["低価格で数を売って利益を出す設計","会員の解約を防ぐロックインの設計","フランチャイズで拡大する設計"],e:"圧倒的な低価格・普段着のままOK。主役はライザップ。会員に本格的な運動を提案する。"},
-{q:"Appleの事例としてノートに書かれているのはどれか。",a:"PCが開かない構造にして、Appleでしか修理できないようにしている",d:["直営店で高価格を維持している","OSを無償で提供している","部品を内製化している"],e:"ロックインの一例として読める。"},
-];
-
-/* ============ 論述 ============ */
-const ES=[
-{h:"1. 事業計画とビジネスモデルの違いを説明しなさい",q:"最頻出。式を2本書けば骨格が立つ。ノートに最も丁寧に書かれているテーマ。",
-b:`【序】いずれも顧客価値・プロセス・利益という同じ要素を使うが、
-　　　組み立て方と前提が異なる。
-
-【1】事業計画＝足し算・計画前提
-　　　顧客価値 ＋ プロセス ＝ 利益
-　　　（企画）　（実行体制）（採算評価）
-　　　→ 計画通りにビジネスを進める最適形を求める思考
-
-【2】ビジネスモデル＝掛け算・変革前提
-　　　（顧客価値 × 利益）× プロセス ＝ ？
-　　　（提案）　（必要利益）（実行体制）
-　　　→ 新たなビジネスを生み出す思考法
-
-【3】掛け算であることの帰結
-　　　1つの構成要素を変えると全体の値が大きく変わる
-　　　→ 何ができるか分からない。何度も試行し、限りなく良い解答を探す
-　　　→ 先に最低条件を決定し、それを満たす内でより良いものを決める
-
-【結】ビジネスモデルは設計方針であり「仮説」。ゆえに終わりがない。
-　　　検証後にプランBへ移行するか検討し、動きながら最適な形を見つける。`,
-k:["計画前提","変革前提","企画","実行体制","採算評価","必要利益","仮説","ピボット","リーンスタートアップ","最低条件"]},
-
-{h:"2. 顧客価値提案の革新的方法について論じなさい",q:"ノートに「論述」と明記されているテーマ。指定の4語を必ず使う。",
-b:`【序】人はモノを欲しがっているわけではない。
-　　　ある「状況」で「用事（ジョブ）」の解決を望んでいる。
-
-【1】ジョブ … job to be done
-　　　ニーズは結果、ジョブはその原因。原因のほうに着目する
-　　　ターゲティングは「人」ではなく「状況」
-　　　ex) 授業参観で子供に自慢されたい ← 美容室でのヘアセット
-
-【2】ニーズ … 具体的なプロダクトや機能として現れたもの
-　　　ジョブ（問いとした状況）→ ニーズ（具体的な機能）の向きを押さえる
-
-【3】「ドリルより穴」
-　　　ドリルを改良するのではなく「穴をどう開けるか」を考える
-　　　→ 穴を開ける素材のみを開ける機械／はじめから穴の開いたものを売る
-
-【4】アップデート … 欲しいのはプロダクトよりプログレス
-　　　わたしたちはみな「差分」を買っている
-　　　いかに効率的に差分を生みだしてくれるかで企業を評価する
-　　　プログレスがあれば、プロダクトなんていらない
-
-【結】顧客価値提案の革新とは、プロダクトの改良ではなく
-　　　ジョブの捉え直しによって解決の形そのものを変えることである。`,
-k:["ジョブ","job to be done","ニーズ","ドリルより穴","アップデート","プログレス","差分","状況","未解決","雇われる"]},
-
-{h:"3. ビジネスモデルの見方（5つの法則）について述べなさい",q:"ノートに2回登場する。番号を振って書けば分量が稼げる。",
-b:`【1】いつ時点のビジネスか（When?）
-　　　同じ企業でも時期でビジネスモデルは変わる。時点を固定する
-
-【2】ビジネスの単位を見極めよ（Where?）
-　　　プロダクト？ 事業？ グループ？
-　　　→「顧客を喜ばせて利益をとる」までを一単位
-　　　ex) Google Map単体ではなく、得た情報を広告で儲けるまでが一単位
-　　　事業単位＝顧客を喜ばせ事業利益を出せる組織単位
-　　　　(1)必ずしも事業部と一致しない (2)必ずしも1社で完結しない
-　　　　→ デジタル時代にはむしろほぼ一致しない
-
-【3】違いと強みの関係を明確にせよ
-　　　違い＝認知できるもの／強み＝違いを生み出す力
-　　　違いは分かるが、強みは認識されにくい
-
-【4】全体のつながり
-　　　9セルのタテのつながりも見る
-　　　マーケとビジネスモデルの違いは「全体」をみるかみないか
-
-【5】課金と利益は別
-　　　売上はあって利益なしはビジネスモデルとしてアウト
-　　　見るべきはトップラインではなくボトムライン`,
-k:["時点","事業単位","事業部","1社で完結しない","認知できる違い","違いを生み出す力","タテのつながり","課金","売上","ボトムライン"]},
-
-{h:"4. 9セルを用いてビジネスモデルを分析する意義を論じなさい",q:"講義の背骨。表を描いてから論じると速い。",
-b:`【序】9セル＝顧客価値・利益・プロセス × Who・What・How の3×3。
-
-【1】各セルの中身
-　　　顧客価値：①顧客は誰か(STP) ②何を提供するか ③代替との違い(3C・4C)
-　　　利益　　：④誰が儲けるか ⑤何で儲けるか ⑥どう回収するか(利益パターン)
-　　　プロセス：⑦誰が補完するか ⑧強みは何か(SWOT) ⑨どう提供するか(バリューチェーン)
-
-【2】意義その1：不足していることが分かる
-　　　埋まらないセルが、そのまま構築すべき資源や組むべき相手を示す
-
-【3】意義その2：一貫性をチェックできる
-　　　タテのつながりを見ることで、顧客価値・利益・プロセスの整合を確認できる
-
-【4】意義その3：裏にはセオリーが走っている
-　　　各セルに既存のフレーム（STP・3C・SWOT・バリューチェーン）が対応し、
-　　　すでに知っていることとの親和性が高い
-
-【結】マーケティングとの違いは「全体」をみるかみないか。
-　　　9セルは全体のつながりを可視化するための道具である。`,
-k:["Who","What","How","STP","3C分析","4C","SWOT分析","バリューチェーン","利益パターン","一貫性","タテのつながり"]},
-
-{h:"5. VRIO分析について説明し、強みの評価について論じなさい",q:"「最低2年」という数値基準が書けると強い。",
-b:`【序】VRIO＝「違い」をもたらす資源の評価基準。
-
-【1】V：Value 顧客に価値があるか
-　　　顧客価値提案はなにか（ピッチで確認できる）
-　　　顧客価値の Who-What-How で確認する
-
-【2】R：Rarity 価値の源泉は希少か
-　　　他にどれだけの数の会社がその資源をもっているか
-　　　業界内外を問わず調べる
-　　　それを顧客価値提案に活かしているか
-
-【3】I：Inimitability 模倣困難か
-　　　いまから構築しようとしたらどれくらい時間がかかるか
-　　　→ 最低2年以上かかるものでないと強みにならない
-　　　→ 新技術（AI等）で駆逐されないか
-
-【4】O：Organization VRIに適う資源を有効活用できているか
-
-【5】強みと弱みの定義
-　　　顧客価値提案から必要な全体の活動を明確にしたうえで、
-　　　その中で機能する資源が強み、至らない資源が弱み
-　　　→ 最重要項目なのに資源が足りないなら構築する
-　　　→ 弱みは誰かに補ってもらう
-
-【結】すべてを自分でやらず（＝垂直統合を避け）、
-　　　いかに強みを活かすかがプロセス設計の要になる。`,
-k:["Value","Rarity","Inimitability","Organization","最低2年","業界内外","顧客価値提案","強み","弱み","垂直統合","構築","補完"]},
-
-{h:"6. 利益の作り方について、Who・What・Howの観点から論じなさい",q:"営業利益の式と2³通りのロジックを両方入れる。",
-b:`【序】売上はあって利益なしは、ビジネスモデルとしてアウト。
-　　　課金したからといって利益があるわけではない。見るべきは利益。
-
-【1】利益の3つの問い
-　　　④誰が儲けるか（Who） ⑤何で儲けるか（What） ⑥どう回収するか（How）
-
-【2】営業利益の構造
-　　　〔売上〕－〔コスト〕＝〔営業利益〕
-　　　〔価格〕×〔数量〕－〔変動費〕－〔固定費〕＝〔営業利益〕
-
-【3】利益化の道筋＝2の3乗通りのロジック
-　　　プレイヤー／タイミング／届け方 の3軸それぞれに
-　　　0＝素直に（保守）／1＝ズラしたスコープ（革新）
-　　　→ 組み合わせで8通りの利益パターンが成り立つ
-
-【4】具体的なパターン
-　　　レーザーブレイド：主要製品の利益の低さを専用付属品でカバー（ロックイン前提）
-　　　マッチメイキング：売り手と買い手をつなぐこと自体で儲ける
-　　　サブスク：リカーリングレベニューで投資回収と顧客関係を長期化
-
-【結】利益を生み出すパターンは Who・What・How で全て説明できる。
-　　　誰から・何で・どう届けるかをズラすことが利益設計の本質である。`,
-k:["トップライン","ボトムライン","営業利益","変動費","固定費","2の3乗","保守","革新","レーザーブレイド","ロックイン","マッチメイキング","リカーリングレベニュー"]},
-
-{h:"7. 破壊的イノベーションがビジネスモデルに与える影響を論じなさい",q:"デジカメの例＋熱狂の図を組み合わせる。図を1つ描くと速い。",
-b:`【序】ビジネスモデルは WTP─価格─コスト の幅の上に成り立つ。
-
-【1】破壊的イノベーションが起きると何が下がるか
-　　　既存製品の支払意欲(WTP)が急激に低下する
-　　　ex) デジタルカメラはスマートフォンの登場によりWTPが急激に低下
-
-【2】何が起きるか
-　　　WTPが下がる → 顧客の取り分も企業の取り分も縮む
-　　　価格を維持すれば売れず、価格を下げればコストを下回り損失になる
-
-【3】結論
-　　　顧客価値提案だけでは不足である
-　　　利益の創出まで併せて考えなければならない
-
-【4】対応の方向
-　　　ビジネスモデルは「仮説」である以上、終わりはない
-　　　強みを残しながらピボットし、動きながら最適な形を見つける
-　　　ex) Google：研究者向け検索→無課金→ライセンス課金→広告課金
-
-【結】破壊的イノベーションは、顧客価値と利益を同時に設計し続けることの
-　　　必要性を示している。`,
-k:["支払意欲","WTP","disrupt","デジカメ","スマートフォン","顧客価値提案","利益の創出","仮説","ピボット","Google"]},
-];
-
-/* ============ 事例 ============ */
-const CASE=[
-{h:"チョコザップ ／ ライザップ",b:`・圧倒的な低価格、普段着のままOK
-・なぜ変な顧客価値提案なのか → 主役はライザップ
-・チョコザップ会員に本格的な運動を提案する
-・チョコザップでは儲けない → ライザップにつなげる`,p:"利益の設計（誰が儲けるかをズラす）／9セルの利益の行"},
-{h:"デジタルカメラ ／ スマートフォン",b:`・デジカメはスマートフォンの登場により支払意欲が急激に低下
-・disrupt によりコスト・WTP・価格が下がる → 損失と顧客価値の双方に影響
-・⇒ 顧客価値提案だけでは不足。利益の創出を考えなければならない`,p:"破壊的イノベーション／熱狂の図"},
-{h:"Google",b:`・大学生が研究者向けにつくった検索サイト
-・→ 無課金状態で一般開放
-・→ ライセンス課金（利益⑤）
-・→ 広告課金方法へ
-・また Google Map 単体ではなく、そこから得た情報を広告で儲けるまでが一単位`,p:"ピボット／ビジネスの単位を見極めよ（第2法則）"},
-{h:"Netflix",b:`・ツタヤで「借りたいのに延滞料をとられる」〔？〕
-・2000年代、郵送レンタルの「借り放題」
-・そして必ず未解決がある
-・ケーブルで送れるようになる`,p:"ジョブ理論（未解決）／ピボット　※ノートの記述が断片的。自分のノートで補うこと"},
-{h:"Apple",b:`・PCが開かない（ドライバー等では開けられない）
-・→ Apple でしか修理できない
-・→ 開けるとサインが残る`,p:"ロックイン／プロセスの設計"},
-{h:"兵庫県の匠工芸〔？〕",b:`・匠工芸 → プラスチック加工、看板、舞台美術
-・生活が満たされる、やりたいこととは何か
-・看板屋を軸にピボットする
-・武器は真似されるが、クオリティで差がつく
-・オリジナルも製作
-・コロナ下：魔法陣のパーテーション → 生活を少し楽しく → 一般人向けにも
-・無理な野望の持ち主。武器を聞く → プラスチック製 → コスプレイヤー向けのもの
-・「やりたいことを買いて食っていくには」儲け方を考える`,p:"ピボット／強みの活かし方／ジョブの発見　※ゲスト講義のケースと思われる"},
-{h:"Loop ／ MaaS（7/27）",b:`・街を最適化する
-・DX：プロセスをデジタル化し、価値提供を劇的に変革
-　　　ローコスト・ハイパフォーマンス・高収益の実現
-・SaaS：提供方法をデジタルに変え、アップデートを可能にする
-・サブスク＝定額：リカーリングレベニュー／投資回収を長期化／顧客関係を長期化`,p:"プロセス（しんがり）／サブスクの利益設計　★この回のノートに「事例がテストに書けるかもよ」とある"},
-];
-
-/* ============ エンジン ============ */
-const KEY='bmq1';
-let S={},MODE='term',cur=0,wrongOnly=false,SHUF=false,ORD={},SHOWN={},PICK={};
-try{const v=localStorage.getItem(KEY);if(v)S=JSON.parse(v)||{};}catch(e){S={};}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
-function E(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function shuf(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-const TERMTOTAL=TERM.reduce((a,g)=>a+g.qs.length,0);
-function tk(g,i){return 't_'+g+'_'+i;}
-function mk(i){return 'm_'+i;}
-function optOrder(i){if(!ORD[i]){const q=MC[i];ORD[i]=shuf([{t:q.a,ok:1}].concat(q.d.map(t=>({t,ok:0}))));}return ORD[i];}
-
-function setMode(m){
-  MODE=m;cur=0;wrongOnly=false;
-  ['m1','m2','m3','m4'].forEach((id,ix)=>{
-    document.getElementById(id).classList.toggle('on',['term','mc','es','case'][ix]===m);});
-  const show=(m==='term'||m==='mc');
-  document.getElementById('tabsbox').style.display=(m==='term')?'':'none';
-  document.getElementById('foot').style.display=show?'':'none';
-  document.querySelector('.stats').style.display=show?'':'none';
-  if(m==='mc')document.getElementById('tabsbox').style.display='';
-  render();
-}
-document.getElementById('m1').onclick=()=>setMode('term');
-document.getElementById('m2').onclick=()=>setMode('mc');
-document.getElementById('m3').onclick=()=>setMode('es');
-document.getElementById('m4').onclick=()=>setMode('case');
-
-function tabs(){
-  const el=document.getElementById('tabs');el.innerHTML='';
-  if(MODE!=='term'){el.innerHTML='';return;}
-  TERM.forEach((g,i)=>{
-    const b=document.createElement('button');
-    b.className='tab'+(i===cur?' on':'');
-    let d=0;for(let q=0;q<g.qs.length;q++)if(S[tk(i,q)])d++;
-    if(d===g.qs.length)b.className+=' done';
-    b.innerHTML=E(g.title.replace(/^\d+\.\s*/,''))+'<small>'+d+'/'+g.qs.length+'</small>';
-    b.onclick=()=>{cur=i;wrongOnly=false;rb();render();window.scrollTo(0,0);};
-    el.appendChild(b);
+  var active = null;
+  document.addEventListener('keydown', function (e) {
+    if (active && active.onKey) active.onKey(e);
   });
-}
-function rb(){document.getElementById('ba').style.display='none';document.getElementById('bw').style.display='';}
 
-function render(){
-  tabs();
-  const m=document.getElementById('main');
-  if(MODE==='term')return renderTerm(m);
-  if(MODE==='mc')return renderMC(m);
-  if(MODE==='es')return renderES(m);
-  return renderCase(m);
-}
+  return function mount(DECK) {
 
-function renderTerm(m){
-  let h='',shown=0,list=[];
-  if(wrongOnly){TERM.forEach((g,gi)=>g.qs.forEach((q,qi)=>{const st=S[tk(gi,qi)];if(st&&!st.ok)list.push([gi,qi]);}));
-    h+='<h2>✕だけ（全範囲）</h2>';}
-  else{TERM[cur].qs.forEach((q,qi)=>list.push([cur,qi]));h+='<h2>'+E(TERM[cur].title)+'</h2>';}
-  if(SHUF)list=shuf(list.slice());
-  list.forEach(p=>{
-    const gi=p[0],qi=p[1],q=TERM[gi].qs[qi],k=tk(gi,qi),st=S[k];shown++;
-    h+='<div class="q'+(st?(st.ok?' ok':' ng'):'')+'">';
-    h+='<span class="qn">'+E(TERM[gi].title)+'</span>';
-    h+='<div class="term">'+E(q.t)+'</div>';
-    if(!st&&!SHOWN[k]){
-      h+='<div class="act"><button class="p" data-show="'+gi+'_'+qi+'">答えを見る　(Space)</button><span class="qn" style="margin:0">まず頭のなかで3行を組み立てる</span></div>';
-    }else{
-      h+='<div class="ans">'+E(q.a)+'</div>';
-      if(q.m)h+='<div class="memo">'+E(q.m)+'</div>';
-      if(!st)h+='<div class="act"><button class="mk" data-mark="'+gi+'_'+qi+'" data-v="1">○ 言えた　(1)</button><button class="mx" data-mark="'+gi+'_'+qi+'" data-v="0">✕ 言えなかった　(2)</button></div>';
-      else h+='<div class="exp"><b class="'+(st.ok?'ok':'ng')+'">'+(st.ok?'○ 言えた':'✕ 言えなかった')+'</b></div>';
-    }
-    h+='</div>';
-  });
-  if(!shown)h+='<div class="msg">'+(wrongOnly?'✕になった用語はありません。':'この範囲は空です。')+'</div>';
-  m.innerHTML=h;bindTerm();stats();
-}
-function bindTerm(){
-  document.querySelectorAll('[data-show]').forEach(b=>{
-    b.onclick=()=>{const p=b.dataset.show.split('_');SHOWN[tk(p[0],p[1])]=1;render();};});
-  document.querySelectorAll('[data-mark]').forEach(b=>{
-    const p=b.dataset.mark.split('_'),v=+b.dataset.v;
-    b.onclick=()=>{S[tk(p[0],p[1])]={ok:!!v};save();render();};});
-}
-function renderMC(m){
-  let h='<h2>4択（全'+MC.length+'問）</h2>',shown=0,list=[];
-  MC.forEach((q,i)=>{const st=S[mk(i)];if(wrongOnly&&(!st||st.ok))return;list.push(i);});
-  if(SHUF)list=shuf(list.slice());
-  list.forEach(i=>{
-    const q=MC[i],k=mk(i),st=S[k];shown++;
-    h+='<div class="q'+(st?(st.ok?' ok':' ng'):'')+'"><span class="qn">Q'+(i+1)+'</span><div class="qt">'+E(q.q)+'</div><div style="margin-top:10px">';
-    optOrder(i).forEach((it,oi)=>{
-      let cls='o';if(st){if(it.ok)cls+=' c';else if(st.sel===oi)cls+=' x';}
-      const mkr=st?(it.ok?'✓':(st.sel===oi?'✕':(oi+1))):(oi+1);
-      h+='<div class="'+cls+'" data-mq="'+i+'" data-oi="'+oi+'"><i>'+mkr+'</i><span>'+E(it.t)+'</span></div>';
+  var $ = function (id) { return document.getElementById(id); };
+  function E(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ---------------- 状態 ---------------- */
+  var KEY = 'kq-' + DECK.slug;
+  var S = {};          // 解答記録  "mode|sec|q" -> 1(正解) / 0(不正解)
+  var mi = 0;          // 選択中のモード
+  var sec = -1;        // 選択中の範囲（-1 = ぜんぶ）
+  var view = DECK.defaultView || 'quiz';
+  var only = false;    // ✕だけ
+  var ix = 0;          // 出題リスト内の位置
+  var list = [];       // [[secIndex, qIndex], ...]
+  var st = null;       // 解答中の一時状態
+
+  function mode() { return DECK.modes[mi]; }
+  function sections() { return mode().sections; }
+  function qkey(si, qi) { return mode().id + '|' + si + '|' + qi; }
+
+  function save() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify({ S: S, m: mi, v: view }));
+    } catch (e) {}
+  }
+  function load() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (!raw) return;
+      var o = JSON.parse(raw);
+      if (o.S) S = o.S;
+      if (typeof o.m === 'number' && DECK.modes[o.m]) mi = o.m;
+      if (o.v === 'quiz' || o.v === 'list') view = o.v;
+    } catch (e) {}
+  }
+
+  /* ---------------- 出題リスト ---------------- */
+  function build() {
+    var out = [];
+    sections().forEach(function (sc, si) {
+      if (sec >= 0 && si !== sec) return;
+      sc.items.forEach(function (it, qi) {
+        if (only && S[qkey(si, qi)] !== 0) return;
+        out.push([si, qi]);
+      });
     });
-    h+='</div>';
-    if(st)h+='<div class="exp"><b class="'+(st.ok?'ok':'ng')+'">'+(st.ok?'正解':'不正解')+'</b>　'+E(q.e)+'</div>';
-    h+='</div>';
-  });
-  if(!shown)h+='<div class="msg">'+(wrongOnly?'✕になった問題はありません。':'問題がありません。')+'</div>';
-  m.innerHTML=h;
-  document.querySelectorAll('[data-mq]').forEach(el=>{
-    const i=+el.dataset.mq,oi=+el.dataset.oi;
-    if(S[mk(i)])return;
-    el.onclick=()=>{S[mk(i)]={sel:oi,ok:!!optOrder(i)[oi].ok};save();render();};
-  });
-  stats();
-}
-function renderES(m){
-  let h='<h2>論述の骨格（'+ES.length+'題）</h2>';
-  h+='<div class="note"><b>使い方</b>：見出しを見て、まず自分で骨格を口に出してみる。詰まったところだけ読む。本番は【序】【1】【2】…の番号をそのまま答案に書けば、読み手が構成を追えるので点が安定します。</div>';
-  ES.forEach(e=>{
-    h+='<div class="es"><h3>'+E(e.h)+'</h3><p class="qq">'+E(e.q)+'</p><pre>'+E(e.b)+'</pre>';
-    h+='<div class="kw">'+e.k.map(x=>'<span>'+E(x)+'</span>').join('')+'</div></div>';
-  });
-  m.innerHTML=h;
-}
-function renderCase(m){
-  let h='<h2>事例</h2>';
-  h+='<div class="note">7/27の講義ノートに<b>「事例がテストにかけるかもよ」</b>という先生の発言メモがあります。論述で具体例を1つ入れられると強いので、<b>チョコザップ・デジカメ・Google の3つ</b>だけは説明できるようにしておくと安全です。</div>';
-  CASE.forEach(c=>{
-    h+='<div class="es"><h3>'+E(c.h)+'</h3><pre>'+E(c.b)+'</pre><div class="kw"><span>'+E(c.p)+'</span></div></div>';
-  });
-  m.innerHTML=h;
-}
-function stats(){
-  let d=0,o=0,tot=0;
-  if(MODE==='term'){
-    if(wrongOnly){TERM.forEach((g,gi)=>g.qs.forEach((q,qi)=>{const st=S[tk(gi,qi)];if(st&&!st.ok){tot++;d++;}}));}
-    else{const g=TERM[cur];tot=g.qs.length;g.qs.forEach((q,qi)=>{const st=S[tk(cur,qi)];if(st){d++;if(st.ok)o++;}});}
-  }else if(MODE==='mc'){
-    tot=MC.length;MC.forEach((q,i)=>{const st=S[mk(i)];if(st){d++;if(st.ok)o++;}});
+    return out;
   }
-  document.getElementById('s1').textContent=d+' / '+tot;
-  document.getElementById('s2').textContent=o;
-  document.getElementById('s3').textContent=d-o;
-  document.getElementById('s4').textContent=d?Math.round(o/d*100)+'%':'—';
-  let ad=0,ao=0;
-  TERM.forEach((g,gi)=>g.qs.forEach((q,qi)=>{const st=S[tk(gi,qi)];if(st){ad++;if(st.ok)ao++;}}));
-  MC.forEach((q,i)=>{const st=S[mk(i)];if(st){ad++;if(st.ok)ao++;}});
-  const ALL=TERMTOTAL+MC.length;
-  document.getElementById('pbar').style.width=Math.round(ad/ALL*100)+'%';
-  document.getElementById('plab').textContent='全体の進捗 '+ad+' / '+ALL+' 問（用語'+TERMTOTAL+'＋4択'+MC.length+'）';
-  document.getElementById('prate').textContent=ad?('正答率 '+Math.round(ao/ad*100)+'%'):'';
-}
-document.getElementById('bw').onclick=function(){wrongOnly=true;this.style.display='none';document.getElementById('ba').style.display='';render();};
-document.getElementById('ba').onclick=function(){wrongOnly=false;this.style.display='none';document.getElementById('bw').style.display='';render();};
-document.getElementById('bs').onclick=function(){SHUF=!SHUF;this.textContent=SHUF?'シャッフル中':'シャッフル';render();};
-document.getElementById('br').onclick=function(){
-  if(MODE==='term'){TERM[cur].qs.forEach((q,qi)=>{delete S[tk(cur,qi)];delete SHOWN[tk(cur,qi)];});}
-  else if(MODE==='mc'){MC.forEach((q,i)=>{delete S[mk(i)];delete ORD[i];});}
-  wrongOnly=false;rb();save();render();
-};
-document.addEventListener('keydown',function(e){
-  if(e.target&&/INPUT|TEXTAREA/.test(e.target.tagName))return;
-  const k=e.key;
-  if(MODE==='term'){
-    const b=document.querySelector('[data-show]');
-    if((k===' '||k==='Enter')&&b){e.preventDefault();b.click();return;}
-    const mkb=document.querySelector('[data-mark]');
-    if(mkb){
-      if(k==='1'||k==='o'){e.preventDefault();document.querySelector('[data-mark][data-v="1"]').click();}
-      else if(k==='2'||k==='x'){e.preventDefault();document.querySelector('[data-mark][data-v="0"]').click();}
+  function wrongCount() {
+    var n = 0;
+    sections().forEach(function (sc, si) {
+      sc.items.forEach(function (it, qi) { if (S[qkey(si, qi)] === 0) n++; });
+    });
+    return n;
+  }
+  function tally() {
+    var done = 0, ok = 0;
+    list.forEach(function (p) {
+      var v = S[qkey(p[0], p[1])];
+      if (v === 0 || v === 1) { done++; if (v === 1) ok++; }
+    });
+    return { done: done, ok: ok, total: list.length };
+  }
+
+  /* ---------------- 描画：ヘッダ周り ---------------- */
+  function drawModes() {
+    var el = $('modes'), hint = $('modehint');
+    if (DECK.modes.length < 2) { el.style.display = 'none'; hint.style.display = 'none'; return; }
+    el.innerHTML = DECK.modes.map(function (m, i) {
+      return '<button data-m="' + i + '"' + (i === mi ? ' class="on"' : '') + '>' + E(m.label) + '</button>';
+    }).join('');
+    el.querySelectorAll('[data-m]').forEach(function (b) {
+      b.onclick = function () { mi = +b.dataset.m; sec = -1; only = false; ix = 0; st = null; save(); draw(); window.scrollTo(0, 0); };
+    });
+    hint.textContent = mode().hint || '';
+    hint.style.display = mode().hint ? '' : 'none';
+  }
+
+  function drawChips() {
+    var el = $('chips');
+    var scs = sections();
+    if (scs.length < 2) { el.style.display = 'none'; el.innerHTML = ''; return; }
+    el.style.display = '';
+    var h = '<button class="chip' + (sec < 0 ? ' on' : '') + '" data-s="-1">ぜんぶ</button>';
+    scs.forEach(function (sc, si) {
+      h += '<button class="chip' + (si === sec ? ' on' : '') + '" data-s="' + si + '">' +
+        E(sc.label || sc.title) + '<small>' + sc.items.length + '</small></button>';
+    });
+    el.innerHTML = h;
+    el.querySelectorAll('[data-s]').forEach(function (b) {
+      b.onclick = function () { sec = +b.dataset.s; ix = 0; st = null; draw(); window.scrollTo(0, 0); };
+    });
+  }
+
+  function drawHud() {
+    var t = tally();
+    var hud = $('hud'), track = $('track');
+    if (view === 'list' || mode().kind === 'read') { hud.style.display = 'none'; track.style.display = 'none'; return; }
+    hud.style.display = ''; track.style.display = '';
+    var pos = Math.min(ix + 1, t.total);
+    hud.innerHTML = t.total
+      ? '<span class="n">' + pos + ' / ' + t.total + ' 問</span><span class="sp"></span>' +
+        '<span class="ok">○ ' + t.ok + '</span><span class="ng">✕ ' + (t.done - t.ok) + '</span>'
+      : '';
+    track.querySelector('i').style.width = (t.total ? Math.round(t.done / t.total * 100) : 0) + '%';
+  }
+
+  // 出題ビューでは「いま解いている範囲」のノートを出す（「ぜんぶ」でも問題に合わせて切り替わる）
+  var noteAt = -1;
+  function drawNote(si) {
+    var el = $('note');
+    var scs = sections();
+    var at = (si === undefined || si < 0) ? sec : si;
+    var note = (at >= 0 && scs[at] && scs[at].note) ? scs[at].note : '';
+    if (!note || view === 'list') { el.innerHTML = ''; noteAt = -1; return; }
+    if (noteAt === at) return; // 同じ範囲を解いている間は開閉状態を保つ
+    noteAt = at;
+    el.innerHTML = '<details class="note"><summary>要点ノート（' +
+      E(scs[at].label || '') + '）</summary><div class="body">' + note + '</div></details>';
+  }
+
+  /* ---------------- 描画：本文 ---------------- */
+  function draw() {
+    if (sec >= sections().length) sec = -1;
+    noteAt = -1;
+    drawModes(); drawChips(); drawNote();
+    list = build();
+    if (ix >= list.length) ix = Math.max(list.length - 1, 0);
+    document.body.classList.toggle('hide', false);
+    if (view === 'list' || mode().kind === 'read') drawList(); else drawQuiz();
+    drawHud(); drawFoot();
+  }
+
+  /* --- 出題ビュー --- */
+  function drawQuiz() {
+    var stage = $('stage'), nav = $('nav');
+    if (!list.length) {
+      stage.innerHTML = '<div class="empty">' +
+        (only ? '間違えた問題はありません。' : 'この範囲に問題がありません。') + '</div>';
+      nav.innerHTML = '';
+      return;
     }
-  }else if(MODE==='mc'){
-    if(/^[1-4]$/.test(k)){
-      const first=document.querySelector('.q:not(.ok):not(.ng) [data-mq]');
-      if(first){e.preventDefault();
-        const i=first.dataset.mq;
-        const el=document.querySelector('[data-mq="'+i+'"][data-oi="'+(+k-1)+'"]');
-        if(el)el.click();}
+    if (ix >= list.length) return drawDone();
+
+    var si = list[ix][0], qi = list[ix][1];
+    var sc = sections()[si], it = sc.items[qi];
+    drawNote(si);
+    var rec = S[qkey(si, qi)];
+    var mine = st && st.si === si && st.qi === qi ? st : null;
+    var answered = (mine && mine.done) ? mine
+      : (rec === 0 || rec === 1 ? { si: si, qi: qi, ok: rec === 1, pick: null, done: true } : null);
+    var pending = (mine && !mine.done && mine.picks) ? mine.picks : [];
+    var revealed = !!(mine && mine.reveal);
+
+    var h = '<div class="card"><p class="src">' + E(sc.title) + '</p>';
+
+    if (it.ty === 'wrong') {
+      h += '<p class="qtext">' + sentence(it, !!answered) + '</p>';
+      h += '<p class="ask">誤っているのはどれ？</p>' + choices(it, answered, pending);
+    } else if (it.ty === 'mc') {
+      h += '<p class="qtext">' + blanked(it.q, answered ? it.ch[it.ans].t : null) + '</p>' + choices(it, answered, pending);
+    } else if (it.ty === 'ms') {
+      h += '<p class="qtext">' + E(it.q) + '</p>';
+      h += '<p class="ask">正しいものを2つ選んでください</p>' + choices(it, answered, pending);
+    } else if (it.ty === 'recall') {
+      h += '<p class="qtext">' + blanked(it.q, (answered || revealed) ? it.a : null) + '</p>';
+      if (!answered && !revealed) {
+        h += '<div class="btns"><button class="btn pri" data-act="reveal">答えを見る</button></div>' +
+          '<p class="ask" style="margin:10px 0 0">まず頭のなかで答えてから押してください。</p>';
+      } else {
+        h += '<div class="fix' + (it.a.length > 40 ? ' long' : '') + '"><span class="lbl">答え</span><b>' + E(it.a) + '</b></div>';
+        if (!answered) {
+          h += '<div class="btns"><button class="btn y" data-mark="1">○ 言えた</button>' +
+            '<button class="btn n" data-mark="0">✕ 言えなかった</button></div>';
+        }
+      }
+    }
+
+    if (answered) h += result(it, answered);
+    h += '</div>';
+    stage.innerHTML = h;
+
+    nav.innerHTML = '<button data-go="-1"' + (ix === 0 ? ' disabled' : '') + '>← もどる</button>' +
+      '<span class="sp"></span>' +
+      '<button data-go="1" class="' + (answered ? 'pri' : '') + '">' +
+      (ix === list.length - 1 ? '結果を見る' : 'つぎへ →') + '</button>';
+
+    bindQuiz(it, si, qi, !!answered);
+  }
+
+  function sentence(it, reveal) {
+    if (!reveal || it.badFrom < 0) return E(it.segs.join(''));
+    // 誤り箇所は連続しているので、まとめて1つの <u> で囲む
+    return E(it.segs.slice(0, it.badFrom).join('')) +
+      '<u class="bad">' + E(it.segs.slice(it.badFrom, it.badTo + 1).join('')) + '</u>' +
+      E(it.segs.slice(it.badTo + 1).join(''));
+  }
+  function blanked(q, fill) {
+    var parts = String(q).split('（　）');
+    if (parts.length < 2) return E(q);
+    var b = fill === null || fill === undefined
+      ? '<span class="blank">　　</span>'
+      : '<span class="blank on">' + E(fill) + '</span>';
+    return E(parts[0]) + b + E(parts.slice(1).join('（　）'));
+  }
+
+  function choices(it, answered, pending) {
+    var multi = it.ty === 'ms';
+    var picks = pending || [];
+    var h = '<div class="choices">';
+    it.ch.forEach(function (c, i) {
+      var cls = 'ch' + (c.none ? ' none' : '');
+      var mark = i + 1;
+      if (answered) {
+        var isAns = multi ? it.ans.indexOf(i) >= 0 : i === it.ans;
+        var wasPicked = answered.picks ? answered.picks.indexOf(i) >= 0 : answered.pick === i;
+        if (isAns) { cls += ' correct'; mark = '✓'; }
+        else if (wasPicked) { cls += ' miss'; mark = '✕'; }
+      } else if (picks.indexOf(i) >= 0) {
+        cls += ' pick';
+      }
+      h += '<button class="' + cls + '" data-i="' + i + '"' + (answered ? ' disabled' : '') + '>' +
+        '<i>' + mark + '</i><span>' + E(c.t) + '</span></button>';
+    });
+    h += '</div>';
+    if (multi && !answered) {
+      h += '<div class="btns"><button class="btn pri" data-act="grade"' +
+        (picks.length === 2 ? '' : ' disabled') + '>答え合わせ</button></div>';
+    }
+    return h;
+  }
+
+  function result(it, a) {
+    var h = '<div class="verdict ' + (a.ok ? 'y' : 'n') + '">' + (a.ok ? '正解' : '不正解') + '</div>';
+    if (it.ty === 'wrong') {
+      h += it.fix
+        ? '<div class="fix"><span class="lbl">正しくは</span><b>' + E(it.fix) + '</b></div>'
+        : '<div class="fix"><b>この文に誤りはありません。</b></div>';
+    }
+    if (it.e) h += '<div class="exp">' + E(it.e) + '</div>';
+    return h;
+  }
+
+  function bindQuiz(it, si, qi, answered) {
+    var stage = $('stage');
+    stage.querySelectorAll('.ch').forEach(function (b) {
+      if (answered) return;
+      b.onclick = function () {
+        var i = +b.dataset.i;
+        if (it.ty === 'ms') {
+          var picks = (st && st.si === si && st.qi === qi && !st.done && st.picks) ? st.picks.slice() : [];
+          var at = picks.indexOf(i);
+          if (at >= 0) picks.splice(at, 1);
+          else if (picks.length < 2) picks.push(i);
+          st = { si: si, qi: qi, picks: picks };
+          drawQuiz();
+        } else {
+          grade(it, si, qi, [i]);
+        }
+      };
+    });
+    var act = stage.querySelector('[data-act="grade"]');
+    if (act) act.onclick = function () { grade(it, si, qi, st.picks); };
+    var rev = stage.querySelector('[data-act="reveal"]');
+    if (rev) rev.onclick = function () { st = { si: si, qi: qi, reveal: true }; drawQuiz(); };
+    stage.querySelectorAll('[data-mark]').forEach(function (b) {
+      b.onclick = function () { grade(it, si, qi, null, +b.dataset.mark === 1); };
+    });
+    $('nav').querySelectorAll('[data-go]').forEach(function (b) {
+      b.onclick = function () { step(+b.dataset.go); };
+    });
+  }
+
+  function grade(it, si, qi, picks, selfOk) {
+    var ok;
+    if (it.ty === 'ms') {
+      ok = picks.length === 2 && picks.every(function (p) { return it.ans.indexOf(p) >= 0; });
+    } else if (it.ty === 'recall') {
+      ok = !!selfOk;
+    } else {
+      ok = picks[0] === it.ans;
+    }
+    S[qkey(si, qi)] = ok ? 1 : 0;
+    st = { si: si, qi: qi, ok: ok, pick: picks ? picks[0] : null, picks: picks || [], done: true };
+    save();
+    drawQuiz(); drawHud(); drawFoot();
+  }
+
+  function step(d) {
+    var n = ix + d;
+    if (n < 0) return;
+    ix = n; st = null;
+    if (ix >= list.length) { drawDone(); drawHud(); }
+    else drawQuiz();
+    drawHud();
+    window.scrollTo(0, 0);
+  }
+
+  function drawDone() {
+    $('note').innerHTML = ''; noteAt = -1;
+    var t = tally();
+    var rate = t.done ? Math.round(t.ok / t.done * 100) : 0;
+    var wrong = wrongCount();
+    var h = '<div class="done"><p class="big">' + t.ok + ' / ' + t.done + '</p>' +
+      '<p class="rate">正答率 ' + rate + '％</p><div class="btns">';
+    if (wrong) h += '<button class="btn pri" data-act="review">✕だった' + wrong + '問を復習</button>';
+    h += '<button class="btn" data-act="restart">はじめから</button></div></div>';
+    $('stage').innerHTML = h;
+    $('nav').innerHTML = '<button data-go="-1">← もどる</button>';
+    $('stage').querySelectorAll('[data-act]').forEach(function (b) {
+      b.onclick = function () {
+        if (b.dataset.act === 'review') { only = true; sec = -1; }
+        ix = 0; st = null; draw(); window.scrollTo(0, 0);
+      };
+    });
+    $('nav').querySelectorAll('[data-go]').forEach(function (b) {
+      b.onclick = function () { step(-1); };
+    });
+  }
+
+  /* --- 一覧ビュー --- */
+  function drawList() {
+    var h = '';
+    sections().forEach(function (sc, si) {
+      if (sec >= 0 && si !== sec) return;
+      h += '<div class="lsec"><h2>' + E(sc.title) + '</h2>';
+      if (sc.note) h += '<details class="note" open><summary>要点ノート</summary><div class="body">' + sc.note + '</div></details>';
+      sc.items.forEach(function (it) {
+        if (it.ty === 'read') {
+          h += '<div class="doc"><h3>' + E(it.h) + '</h3>' +
+            (it.sub ? '<p class="why">' + E(it.sub) + '</p>' : '') +
+            '<pre>' + E(it.body) + '</pre>' +
+            (it.kw && it.kw.length ? '<div class="kw">' + it.kw.map(function (k) { return '<span>' + E(k) + '</span>'; }).join('') + '</div>' : '') +
+            '</div>';
+          return;
+        }
+        if (it.ty === 'wrong') {
+          h += '<div class="item ' + (it.fix ? 'err' : 'clean') + '"><p class="s">' + sentence(it, true) + '</p>' +
+            (it.fix
+              ? '<p class="a"><span class="lbl">正しくは</span><b>' + E(it.fix) + '</b></p>'
+              : '<p class="note-ok">✓ この文に誤りはありません</p>') +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        } else if (it.ty === 'recall') {
+          h += '<div class="item"><p class="s">' + blanked(it.q, it.a) + '</p>' +
+            (it.q.indexOf('（　）') < 0 ? '<p class="a' + (it.a.length > 40 ? ' long' : '') + '"><span class="lbl">答え</span><b>' + E(it.a) + '</b></p>' : '') +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        } else if (it.ty === 'ms') {
+          h += '<div class="item"><p class="s">' + E(it.q) + '</p><p class="a"><span class="lbl">正しいもの</span><b>' +
+            it.ans.map(function (i) { return E(it.ch[i].t); }).join('</b>／<b>') + '</b></p>' +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        } else {
+          h += '<div class="item"><p class="s">' + blanked(it.q, it.ch[it.ans].t) + '</p>' +
+            (it.q.indexOf('（　）') < 0 ? '<p class="a"><span class="lbl">答え</span><b>' + E(it.ch[it.ans].t) + '</b></p>' : '') +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        }
+      });
+      h += '</div>';
+    });
+    $('stage').innerHTML = h || '<div class="empty">表示できる項目がありません。</div>';
+    $('nav').innerHTML = '';
+  }
+
+  /* ---------------- フッタの操作 ---------------- */
+  function drawFoot() {
+    var el = $('tools');
+    var readOnly = mode().kind === 'read';
+    var h = '';
+    if (!readOnly) {
+      h += '<button data-v="quiz" class="' + (view === 'quiz' ? 'on' : '') + '">1問ずつ解く</button>';
+      h += '<button data-v="list" class="' + (view === 'list' ? 'on' : '') + '">一覧で読む</button>';
+    }
+    if (!readOnly && view === 'list') h += '<button data-act="hide">答えを隠す</button>';
+    if (!readOnly && view === 'quiz') {
+      var w = wrongCount();
+      h += '<button data-act="only" class="' + (only ? 'on' : '') + '"' + (w || only ? '' : ' disabled') +
+        '>✕だけ復習' + (w ? '（' + w + '）' : '') + '</button>';
+      h += '<button data-act="reset">記録を消す</button>';
+    }
+    el.innerHTML = h;
+    el.querySelectorAll('[data-v]').forEach(function (b) {
+      b.onclick = function () { view = b.dataset.v; only = false; ix = 0; st = null; save(); draw(); window.scrollTo(0, 0); };
+    });
+    el.querySelectorAll('[data-act]').forEach(function (b) {
+      b.onclick = function () {
+        var a = b.dataset.act;
+        if (a === 'only') { only = !only; if (only) sec = -1; ix = 0; st = null; draw(); window.scrollTo(0, 0); }
+        else if (a === 'hide') {
+          var on = document.body.classList.toggle('hide');
+          b.textContent = on ? '答えを表示' : '答えを隠す';
+          b.classList.toggle('on', on);
+        } else if (a === 'reset') {
+          if (!confirm('この' + mode().label + 'の解答記録を消します。よろしいですか？')) return;
+          Object.keys(S).forEach(function (k) { if (k.indexOf(mode().id + '|') === 0) delete S[k]; });
+          only = false; ix = 0; st = null; save(); draw();
+        }
+      };
+    });
+    $('keys').style.display = (view === 'quiz' && !readOnly) ? '' : 'none';
+  }
+
+  /* ---------------- キーボード ---------------- */
+  function onKey(e) {
+    if (view !== 'quiz' || mode().kind === 'read') return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea') return;
+    var k = e.key;
+    if (k === 'ArrowRight' || k === 'Enter') { e.preventDefault(); step(1); return; }
+    if (k === 'ArrowLeft') { e.preventDefault(); step(-1); return; }
+    if (/^[1-9]$/.test(k)) {
+      var btns = $('stage').querySelectorAll('.ch:not([disabled])');
+      var i = +k - 1;
+      if (btns[i]) { e.preventDefault(); btns[i].click(); }
+      return;
+    }
+    if (k === ' ') {
+      var b = $('stage').querySelector('[data-act="reveal"],[data-act="grade"]');
+      if (b && !b.disabled) { e.preventDefault(); b.click(); }
     }
   }
-});
-setMode('term');
-</script></body></html>
+
+  /* ---------------- 起動 ---------------- */
+  load();
+  draw();
+  active = { onKey: onKey };
+  return active;
+
+  };
+})();
+
+QUIZ(DECK);
+</script>
+<!-- DADS-A11Y:START -->
+<script id="dads-a11y">
+(function(){
+  'use strict';
+  function all(sel,root){return Array.prototype.slice.call((root||document).querySelectorAll(sel));}
+  function setButtonTypes(root){all('button',root).forEach(function(b){if(!b.hasAttribute('type'))b.type='button';});}
+  function enhance(){
+    var main=document.querySelector('.wrap')||document.body;
+    if(!main.id)main.id='main-content';
+    main.setAttribute('role','main');
+    if(!document.querySelector('.dads-skip')){
+      var skip=document.createElement('a');skip.className='dads-skip';skip.href='#'+main.id;skip.textContent='本文へ移動';
+      document.body.insertBefore(skip,document.body.firstChild);
+    }
+    var h1=document.querySelector('h1');
+    if(h1){if(!h1.id)h1.id='page-title';main.setAttribute('aria-labelledby',h1.id);}
+
+    var modes=document.getElementById('modes');
+    if(modes){
+      modes.setAttribute('role','tablist');modes.setAttribute('aria-label','学習モード');
+      all('button',modes).forEach(function(b,i){
+        b.setAttribute('role','tab');b.setAttribute('aria-controls','stage');
+        var on=b.classList.contains('on');b.setAttribute('aria-selected',on?'true':'false');b.tabIndex=on?0:-1;
+      });
+    }
+    var chips=document.getElementById('chips');
+    if(chips){chips.setAttribute('role','group');chips.setAttribute('aria-label','出題範囲');
+      all('button',chips).forEach(function(b){b.setAttribute('aria-pressed',b.classList.contains('on')?'true':'false');});}
+    var tools=document.getElementById('tools');
+    if(tools){tools.setAttribute('role','group');tools.setAttribute('aria-label','表示と復習の設定');
+      all('button.on',tools).forEach(function(b){b.setAttribute('aria-pressed','true');});}
+    var hud=document.getElementById('hud');if(hud){hud.setAttribute('role','status');hud.setAttribute('aria-live','polite');}
+    var stage=document.getElementById('stage');if(stage){stage.setAttribute('role','region');stage.setAttribute('aria-label','問題と解答');}
+    var nav=document.getElementById('nav');if(nav){nav.setAttribute('aria-label','問題の移動');}
+    var track=document.getElementById('track');
+    if(track){
+      var bar=track.querySelector('i'),pct=bar?parseFloat(bar.style.width)||0:0;
+      track.setAttribute('role','progressbar');track.setAttribute('aria-label','学習の進捗');
+      track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax','100');track.setAttribute('aria-valuenow',String(Math.round(pct)));
+    }
+    all('.choices').forEach(function(c){c.setAttribute('role','group');c.setAttribute('aria-label','解答の選択肢');});
+    all('.ch').forEach(function(b){
+      b.setAttribute('aria-pressed',b.classList.contains('pick')?'true':'false');
+      if(b.classList.contains('correct'))b.setAttribute('aria-label','正解: '+b.textContent.trim());
+      if(b.classList.contains('miss'))b.setAttribute('aria-label','選択した不正解: '+b.textContent.trim());
+    });
+    all('details.note').forEach(function(d){var s=d.querySelector('summary');if(s)s.setAttribute('aria-label',(s.textContent||'要点ノート')+'を開閉');});
+    setButtonTypes(document);
+  }
+  var queued=false;
+  function schedule(){if(queued)return;queued=true;requestAnimationFrame(function(){queued=false;enhance();});}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){enhance();new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class','style','open']});});
+  else{enhance();new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class','style','open']});}
+})();
+</script>
+<!-- DADS-A11Y:END -->
+</body></html>

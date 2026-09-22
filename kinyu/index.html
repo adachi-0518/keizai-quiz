@@ -1,224 +1,812 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>金融政策論 論述対策チェック（33問）</title>
+<title>金融政策論 | 試験対策クイズ</title>
+<meta name="description" content="非伝統的金融政策の経緯・手段・出口を体系的に確認します。まず「全体の4択」で流れをつかみ、「第11章くわしく」で用語・数値・仕組みを詰め、「論述の骨格」で答案を組み立てられるか確認する、という3段構えです。">
 <style>
-:root{--bg:#fbfaf8;--card:#fff;--line:#e3e0d8;--txt:#23221f;--sub:#6d6a63;--accent:#4a3b6b;--accentbg:#eeebf5;--ok:#1d7a4f;--okbg:#e6f4ec;--ng:#b3312e;--ngbg:#fbeaea}
-@media(prefers-color-scheme:dark){:root{--bg:#1b1a18;--card:#252422;--line:#3a3833;--txt:#eceae4;--sub:#a5a29a;--accent:#a99cd4;--accentbg:#2a2438;--ok:#6cc79a;--okbg:#1e3a2c;--ng:#e88a88;--ngbg:#3c2322}}
+:root{
+ --bg:#fbfaf8;--card:#fff;--line:#e5e2da;--txt:#22211e;--sub:#6d6a63;--soft:#f4f2ed;
+ --ok:#1d7a4f;--okbg:#e7f4ec;--ng:#b3312e;--ngbg:#fbeaea;
+ --accent:#3d4a7a;--accentbg:#eaecf6;--on:#fff;
+}
+@media(prefers-color-scheme:dark){:root{
+ --bg:#1a1917;--card:#242320;--line:#3a3833;--txt:#ecebe5;--sub:#a6a39b;--soft:#2c2b27;
+ --ok:#6cc79a;--okbg:#1e3a2c;--ng:#e88a88;--ngbg:#3c2322;
+ --accent:#9aa6dd;--accentbg:#242a3d;--on:#161513;
+}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.8;-webkit-text-size-adjust:100%}
-.wrap{max-width:800px;margin:0 auto;padding:22px 16px 90px}
-h1{font-size:20px;font-weight:600;margin:0 0 3px;line-height:1.45}
-.lead{color:var(--sub);font-size:13px;margin:0 0 18px;line-height:1.7}
-.bar{height:7px;background:var(--card);border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-bottom:6px}
-.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .35s}
-.barlab{font-size:12px;color:var(--sub);margin-bottom:16px;display:flex;justify-content:space-between}
-.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
-.tab{padding:6px 13px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:99px;cursor:pointer;font-size:13px;font-family:inherit;line-height:1.5}
-.tab:hover{border-color:var(--accent)}
-.tab.on{background:var(--accent);color:#fff;border-color:var(--accent)}
-.tab small{font-size:10px;opacity:.7;margin-left:3px}
-.tab.done::after{content:"✓";margin-left:4px;color:var(--ok);font-weight:600}
-.tab.on.done::after{color:#fff}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 11px}
-.stat b{display:block;font-size:21px;font-weight:600;line-height:1.35}
-.stat span{font-size:11px;color:var(--sub)}
-h2{font-size:16px;font-weight:600;margin:0 0 13px;padding-bottom:8px;border-bottom:2px solid var(--accent);line-height:1.5}
-.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 15px;margin-bottom:11px}
-.q.ok{border-color:var(--ok)}.q.ng{border-color:var(--ng)}
-.qh{display:flex;gap:8px;margin-bottom:9px}
-.qn{font-size:12px;color:var(--sub);min-width:28px;flex-shrink:0;padding-top:2px}
-.qt{font-size:15px;flex:1;line-height:1.85}
-.opts{display:flex;flex-direction:column;gap:6px;margin-left:36px}
-.o{display:flex;gap:9px;align-items:flex-start;padding:9px 11px;border:1px solid transparent;background:var(--bg);border-radius:8px;cursor:pointer;font-size:14px;line-height:1.6}
-.o:hover{border-color:var(--accent)}
-.o.sel{background:var(--accentbg);border-color:var(--accent)}
-.o.c{background:var(--okbg);border-color:var(--ok)}
-.o.x{background:var(--ngbg);border-color:var(--ng)}
-.o i{min-width:17px;color:var(--sub);font-style:normal;flex-shrink:0}
-.o.c i{color:var(--ok)}.o.x i{color:var(--ng)}
-.act{margin:10px 0 0 36px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-button{font-family:inherit;font-size:13px;padding:7px 15px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:8px;cursor:pointer;line-height:1.5}
-button:hover{border-color:var(--accent)}
-.exp{margin:10px 0 0 36px;padding-top:9px;border-top:1px solid var(--line);font-size:13px;color:var(--sub);line-height:1.75}
-.exp b.ok{color:var(--ok)}.exp b.ng{color:var(--ng)}
-.hint{font-size:12px;color:var(--sub)}
-.foot{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
-.msg{background:var(--accentbg);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.7}
-.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:13px 15px;margin-bottom:14px;font-size:14px;line-height:1.8}
-.note h3{margin:0 0 6px;font-size:14px;font-weight:600}
-.note ul{margin:4px 0;padding-left:20px}.note li{margin-bottom:3px}
-.credit{margin-top:34px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--sub);line-height:1.8}
-@media(max-width:520px){.stats{grid-template-columns:repeat(2,1fr)}.opts,.act,.exp{margin-left:0}}
-</style></head><body><div class="wrap">
-<h1>金融政策論 論述対策チェック</h1>
-<p class="lead">論述試験用。各章の冒頭にある「骨格ノート」で論の組み立てを覚え、4択で年号・用語を固めてください。非伝統的金融政策（経緯・手段・出口）が中心です。</p>
-<div class="bar"><i id="pbar"></i></div>
-<div class="barlab"><span id="plab"></span><span id="prate"></span></div>
-<div class="tabs" id="tabs"></div>
-<div class="stats">
-<div class="stat"><b id="s1">0</b><span>この章の解答数</span></div>
-<div class="stat"><b id="s2" style="color:var(--ok)">0</b><span>正解</span></div>
-<div class="stat"><b id="s3" style="color:var(--ng)">0</b><span>不正解</span></div>
-<div class="stat"><b id="s4">—</b><span>正答率</span></div>
-</div>
-<div id="main"></div>
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--txt);line-height:1.85;
+ font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+ font-feature-settings:"palt"}
+.wrap{max-width:720px;margin:0 auto;padding:26px 18px 60px}
+
+/* ---- header ---- */
+h1{font-size:22px;font-weight:600;margin:0 0 6px;line-height:1.45;letter-spacing:.01em}
+.lead{color:var(--sub);font-size:13.5px;line-height:1.8;margin:0 0 4px}
+.meta{font-size:12px;color:var(--sub);margin:6px 0 22px}
+.meta b{color:var(--accent);font-weight:600}
+
+/* ---- 共通パーツ ---- */
+.row{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.chip{font-family:inherit;font-size:13px;line-height:1.5;padding:7px 14px;border-radius:99px;
+ border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer;transition:border-color .12s}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--accent);color:var(--on);border-color:var(--accent)}
+.chip small{font-size:10.5px;opacity:.62;margin-left:5px;font-weight:400}
+.chip.on small{opacity:.8}
+
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:14px;background:var(--card);flex-wrap:wrap}
+.seg button{font-family:inherit;font-size:13.5px;padding:9px 18px;border:none;background:transparent;
+ color:var(--sub);cursor:pointer;line-height:1.5;white-space:nowrap}
+.seg button.on{background:var(--accent);color:var(--on);font-weight:600}
+.modehint{font-size:12.5px;color:var(--sub);margin:-6px 0 16px;line-height:1.75}
+
+/* ---- 進捗 ---- */
+.hud{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:20px 0 6px;font-size:12.5px;color:var(--sub)}
+.hud .n{font-variant-numeric:tabular-nums}
+.hud .ok{color:var(--ok);font-weight:600}
+.hud .ng{color:var(--ng);font-weight:600}
+.hud .sp{flex:1}
+.track{height:5px;border-radius:99px;background:var(--soft);overflow:hidden;margin-bottom:20px}
+.track i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s ease}
+
+/* ---- 要点ノート ---- */
+details.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);
+ border-radius:0 11px 11px 0;margin-bottom:16px;font-size:14px;line-height:1.85}
+details.note>summary{cursor:pointer;padding:11px 15px;font-size:13.5px;font-weight:600;color:var(--accent);list-style:none}
+details.note>summary::-webkit-details-marker{display:none}
+details.note>summary::before{content:"▸ ";font-size:11px}
+details.note[open]>summary::before{content:"▾ "}
+.note .body{padding:0 15px 14px}
+.note h3{margin:12px 0 5px;font-size:14px;font-weight:600}
+.note h3:first-child{margin-top:0}
+.note p{margin:5px 0}
+.note ul{margin:5px 0;padding-left:20px}
+.note li{margin-bottom:3px}
+.note .kwlist{font-size:13px;color:var(--sub);background:var(--soft);border-radius:8px;padding:9px 12px;line-height:2}
+
+/* ---- 問題カード ---- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 20px 18px;margin-bottom:14px}
+.src{font-size:11.5px;color:var(--sub);margin:0 0 12px;letter-spacing:.02em}
+.qtext{font-size:18px;line-height:1.95;margin:0 0 18px;font-weight:400}
+.qtext .blank{display:inline-block;min-width:78px;border-bottom:2px solid var(--accent);
+ background:var(--accentbg);border-radius:3px;padding:0 8px;text-align:center;color:transparent}
+.qtext .blank.on{color:var(--ok);font-weight:600;background:var(--okbg);border-bottom-color:var(--ok);min-width:0}
+u.bad{text-decoration:none;background:var(--ngbg);color:var(--ng);font-weight:600;
+ border-bottom:2px solid var(--ng);border-radius:3px;padding:0 3px;
+ -webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ask{font-size:13px;color:var(--sub);margin:0 0 11px}
+
+.choices{display:flex;flex-direction:column;gap:8px}
+.ch{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;
+ font-family:inherit;font-size:15.5px;line-height:1.7;padding:13px 15px;
+ border:1px solid var(--line);border-radius:11px;background:var(--bg);color:var(--txt);cursor:pointer;transition:border-color .12s,background .12s}
+.ch:hover{border-color:var(--accent)}
+.ch i{flex-shrink:0;width:23px;height:23px;margin-top:2px;border-radius:7px;background:var(--soft);
+ color:var(--sub);font-style:normal;font-size:12px;font-weight:600;
+ display:flex;align-items:center;justify-content:center}
+.ch.pick{border-color:var(--accent);background:var(--accentbg)}
+.ch.pick i{background:var(--accent);color:var(--on)}
+.ch.correct{border-color:var(--ok);background:var(--okbg)}
+.ch.correct i{background:var(--ok);color:var(--on)}
+.ch.miss{border-color:var(--ng);background:var(--ngbg)}
+.ch.miss i{background:var(--ng);color:var(--on)}
+.ch.none{color:var(--sub)}
+.ch.none.correct,.ch.none.miss{color:var(--txt)}
+.ch[disabled]{cursor:default}
+
+/* ---- 判定・解説 ---- */
+.verdict{display:inline-block;font-size:12.5px;font-weight:600;padding:3px 13px;border-radius:99px;margin:18px 0 0}
+.verdict.y{background:var(--okbg);color:var(--ok)}
+.verdict.n{background:var(--ngbg);color:var(--ng)}
+.fix{margin-top:11px;padding:12px 15px;background:var(--okbg);border-radius:10px;font-size:15.5px;line-height:1.8}
+.fix b{color:var(--ok)}
+.fix .lbl{font-size:12px;color:var(--sub);display:block;margin-bottom:1px}
+.fix.long{font-size:14.5px;background:var(--soft)}
+.fix.long b{color:var(--txt);font-weight:400}
+.item .a.long b{color:var(--txt);font-weight:400}
+.exp{margin-top:13px;padding-top:13px;border-top:1px solid var(--line);font-size:13.5px;color:var(--sub);line-height:1.9}
+
+/* ---- 操作ボタン ---- */
+.btns{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.btn{flex:1;min-width:120px;font-family:inherit;font-size:14.5px;padding:12px 16px;border-radius:11px;
+ border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer;line-height:1.5}
+.btn:hover{border-color:var(--accent)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--on);font-weight:600}
+.btn.pri:hover{opacity:.9}
+.btn.y{border-color:var(--ok);color:var(--ok);font-weight:600}
+.btn.n{border-color:var(--ng);color:var(--ng);font-weight:600}
+.btn[disabled]{opacity:.38;cursor:default}
+.btn[disabled]:hover{border-color:var(--line)}
+
+.nav{display:flex;gap:9px;align-items:center;margin-top:4px}
+.nav button{font-family:inherit;font-size:13.5px;padding:10px 18px;border-radius:10px;
+ border:1px solid var(--line);background:var(--card);color:var(--txt);cursor:pointer}
+.nav button:hover{border-color:var(--accent)}
+.nav button[disabled]{opacity:.35;cursor:default}
+.nav button[disabled]:hover{border-color:var(--line)}
+.nav .sp{flex:1}
+
+/* ---- 一覧ビュー ---- */
+.lsec{margin:0 0 30px}
+.lsec:first-child{margin-top:16px}
+.lsec h2{font-size:15px;font-weight:600;margin:0 0 13px;padding-bottom:8px;border-bottom:2px solid var(--accent);line-height:1.55}
+.item{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:14px 16px;margin-bottom:10px}
+.item.err{border-left:3px solid var(--ng)}
+.item.clean{border-left:3px solid var(--ok)}
+.item .s{font-size:15.5px;margin:0;line-height:1.9}
+.item .a{margin:9px 0 0;font-size:15px;background:var(--okbg);border-radius:8px;padding:8px 12px;line-height:1.8}
+.item .a b{color:var(--ok)}
+.item .a .lbl{font-size:11.5px;color:var(--sub);margin-right:8px}
+.item .note-ok{margin:8px 0 0;font-size:13px;color:var(--ok)}
+.item .ex{margin:9px 0 0;padding-top:9px;border-top:1px solid var(--line);font-size:13px;color:var(--sub);line-height:1.9}
+body.hide .item .a,body.hide .item .ex,body.hide .item .note-ok{display:none}
+body.hide .item .s u.bad{background:transparent;color:inherit;font-weight:400;border-bottom:none;padding:0}
+body.hide .item .s .blank.on{color:transparent;background:var(--accentbg);border-bottom-color:var(--accent);min-width:78px}
+
+/* ---- 読み物 ---- */
+.doc{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:15px}
+.doc h3{font-size:16.5px;margin:0 0 5px;line-height:1.6;font-weight:600}
+.doc .why{font-size:13px;color:var(--sub);margin:0 0 13px;line-height:1.85}
+.doc pre{background:var(--soft);border-radius:10px;padding:14px 15px;margin:0;
+ font-size:13.5px;line-height:2;white-space:pre-wrap;font-family:inherit;overflow-x:auto}
+.kw{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.kw span{font-size:12px;padding:3px 10px;background:var(--accentbg);color:var(--accent);border-radius:99px;line-height:1.7}
+
+/* ---- 結果 ---- */
+.done{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 22px;text-align:center}
+.done .big{font-size:38px;font-weight:600;line-height:1.3;margin:0;font-variant-numeric:tabular-nums}
+.done .rate{font-size:14px;color:var(--sub);margin:4px 0 0}
+.done .btns{margin-top:22px}
+
+.empty{background:var(--soft);border-radius:11px;padding:16px 18px;font-size:14px;color:var(--sub);line-height:1.8}
+
+/* ---- footer ---- */
+.foot{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+ font-size:12px;color:var(--sub);line-height:1.9}
+.foot .tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.foot .tools button{font-family:inherit;font-size:12.5px;padding:7px 14px;border-radius:99px;
+ border:1px solid var(--line);background:var(--card);color:var(--sub);cursor:pointer;line-height:1.5}
+.foot .tools button:hover{border-color:var(--accent);color:var(--accent)}
+.foot .tools button.on{background:var(--accent);border-color:var(--accent);color:var(--on)}
+.foot a{color:var(--accent)}
+.keys{margin-top:10px;font-size:11.5px}
+.keys kbd{display:inline-block;padding:1px 6px;margin:0 1px;border:1px solid var(--line);
+ border-radius:4px;background:var(--card);font-family:inherit;font-size:11px}
+
+@media(max-width:560px){
+ .wrap{padding:20px 14px 50px}
+ h1{font-size:19.5px}
+ .card{padding:16px 15px 15px}
+ .qtext{font-size:16.5px}
+ .ch{font-size:15px;padding:12px 13px}
+ .keys{display:none}
+}
+</style><!-- DADS-ENHANCEMENT:START -->
+<style id="dads-enhancement">
+/* Digital Agency Design System v2.18.0 を参照した共通スタイル */
+:root{
+  --dads-link:#0017c1;
+  --dads-visited:#551a8b;
+  --dads-focus:#ffd43b;
+  --dads-neutral-900:#1a1a1a;
+  --dads-neutral-700:#4d4d4d;
+  --dads-radius-s:8px;
+  --dads-radius-m:12px;
+  --dads-space-1:4px;
+  --dads-space-2:8px;
+  --dads-space-3:12px;
+  --dads-space-4:16px;
+  --dads-space-6:24px;
+  --dads-space-8:32px;
+}
+@media(prefers-color-scheme:dark){:root{
+  --dads-link:#9db7ff;
+  --dads-visited:#d9b7ff;
+  --dads-neutral-900:#f5f5f5;
+  --dads-neutral-700:#c7c7c7;
+}}
+html{scroll-behavior:smooth}
+body{font-size:16px;line-height:1.75;font-feature-settings:normal}
+.wrap{max-width:48rem;padding:var(--dads-space-8) var(--dads-space-6) 64px}
+h1{font-size:clamp(1.5rem,1.25rem + 1vw,2rem);font-weight:700;line-height:1.4;margin-bottom:var(--dads-space-3)}
+.lead{font-size:1rem;line-height:1.8;margin-bottom:var(--dads-space-2)}
+.meta{font-size:.875rem;line-height:1.6;margin-bottom:var(--dads-space-8)}
+.modehint,.hud,.ask,.src,.foot,.item .ex,.doc .why{font-size:.875rem}
+
+/* キーボード利用者の現在位置を、DADS準拠の黄＋黒の二重線で示す */
+:where(a,button,summary,[tabindex]):focus-visible{
+  outline:2px solid #000!important;
+  outline-offset:2px!important;
+  box-shadow:0 0 0 5px var(--dads-focus)!important;
+  position:relative;
+  z-index:10;
+}
+:where(button,[role="button"]){min-height:44px}
+button{touch-action:manipulation}
+button:disabled{cursor:not-allowed}
+
+/* リンクは色だけに依存させない */
+.foot a,.about a,.lead a,.doc a,.note a{
+  color:var(--dads-link);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:.2em;
+}
+.foot a:visited,.about a:visited,.lead a:visited,.doc a:visited,.note a:visited{color:var(--dads-visited)}
+
+/* スキップリンク */
+.dads-skip{
+  position:fixed;left:var(--dads-space-4);top:var(--dads-space-4);z-index:9999;
+  padding:10px 16px;border:2px solid #000;border-radius:var(--dads-radius-s);
+  background:#fff;color:#000;font-weight:700;text-decoration:underline;
+  transform:translateY(-160%);
+}
+.dads-skip:focus{transform:none}
+
+/* コンポーネントの役割と操作面積を揃える */
+.chip{min-height:44px;padding:9px 16px;border-radius:999px;font-size:.875rem}
+.seg{border-radius:var(--dads-radius-s);margin-bottom:var(--dads-space-4)}
+.seg button{min-height:48px;padding:10px 20px;font-size:1rem;border-bottom:3px solid transparent}
+.seg button.on{border-bottom-color:currentColor}
+.ch{min-height:52px;padding:14px 16px;border-radius:var(--dads-radius-s);font-size:1rem}
+.btn{min-height:48px;border-radius:var(--dads-radius-s);font-size:1rem}
+.nav button,.foot .tools button{min-height:44px;padding:10px 16px;border-radius:var(--dads-radius-s);font-size:.875rem}
+.card,.doc,.item,.done{border-radius:var(--dads-radius-m)}
+.qtext{font-size:1.125rem;line-height:1.85}
+.track{height:8px}
+details.note>summary{min-height:44px;display:flex;align-items:center;font-size:1rem}
+.empty{font-size:1rem}
+
+/* トップページのカード：主題・補足・遷移先を一つの塊として読む */
+a.card{border-radius:var(--dads-radius-m);padding:20px 22px;margin-bottom:var(--dads-space-3)}
+a.card .ct{font-size:1.125rem;font-weight:700;text-decoration:underline;text-underline-offset:.2em}
+a.card .cm{font-size:1rem;line-height:1.8}
+a.card:hover .ct,a.card:focus-visible .ct{text-decoration-thickness:2px}
+a.card::after{content:"この学習ツールを開く →";display:block;margin-top:var(--dads-space-3);font-size:.875rem;font-weight:700;color:var(--accent)}
+.about{border-radius:var(--dads-radius-m);font-size:1rem}
+
+/* 正誤は色だけでなく、記号・枠線・文言でも判別できる */
+.verdict{font-size:.875rem;border:1px solid currentColor}
+.ch.correct{border-width:2px}.ch.miss{border-width:2px}
+
+@media(max-width:560px){
+  .wrap{padding:var(--dads-space-6) var(--dads-space-4) 52px}
+  h1{font-size:1.5rem}
+  .lead{font-size:1rem}
+  .card{padding:var(--dads-space-4)}
+  .qtext{font-size:1.0625rem}
+  .ch{font-size:1rem;padding:13px 14px}
+  .seg{display:flex;width:100%}
+  .seg button{flex:1;padding-inline:10px;white-space:normal}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+}
+</style>
+<!-- DADS-ENHANCEMENT:END -->
+</head><body>
+<div class="wrap">
+<h1>金融政策論</h1>
+<p class="lead">非伝統的金融政策の経緯・手段・出口を体系的に確認します。まず「全体の4択」で流れをつかみ、「第11章くわしく」で用語・数値・仕組みを詰め、「論述の骨格」で答案を組み立てられるか確認する、という3段構えです。</p>
+<p class="meta"><b>4択81問 ・ 論述6題</b></p>
+<div class="seg" id="modes"></div>
+<p class="modehint" id="modehint"></p>
+<div class="row" id="chips"></div>
+<div class="hud" id="hud"></div>
+<div class="track" id="track"><i></i></div>
+<div id="note"></div>
+<div id="stage"></div>
+<div class="nav" id="nav"></div>
 <div class="foot">
-<button id="bw">間違えた問題だけ</button>
-<button id="ba" style="display:none">全部表示</button>
-<button id="br">この章をリセット</button>
-<button id="brall">全部リセット</button>
+<div class="tools" id="tools"></div>
+<p>学生が講義の復習用に作成した学習ツールです。出題は一般的な学術概念にもとづき、独自の文章で作成しています。講義資料そのものの複製ではありません。解答の記録はお使いのブラウザにだけ保存されます。</p>
+<p><a href="../">← ほかの科目を見る</a></p>
+<p class="keys" id="keys"><kbd>1</kbd>〜<kbd>9</kbd> 解答　<kbd>→</kbd> つぎへ　<kbd>←</kbd> もどる</p>
 </div>
-<p class="credit">学生が試験対策用に作成した学習ツールです。出題は一般的な学術概念にもとづき、独自の文章で作成しています。講義資料そのものの複製ではありません。誤りを見つけたら Issue でお知らせください。</p>
 </div>
+<script>var DECK={"slug":"kinyu","defaultView":"quiz","modes":[{"id":"mc","label":"全体の4択","kind":"quiz","hint":"非伝統的金融政策の流れを、章ごとの要点ノートと4択で押さえます。","sections":[{"label":"導入","title":"非伝統的金融政策とは（導入の経緯）","note":"\u003cdiv class=\"note\">\u003ch3>問1の論述骨格（暗記する）\u003c/h3>\u003cul>\u003cli>\u003cb>経緯\u003c/b>：伝統的金融政策＝政策金利の操作。しかし名目金利の\u003cb>実効下限（ELB）\u003c/b>に達すると機能しなくなり、その状態が常態化 → 非伝統的金融政策へ\u003c/li>\u003cli>\u003cb>手段\u003c/b>：①金利政策の拡張（フォワードガイダンス・マイナス金利・YCC）②量的緩和（資産買入によるバランスシート拡大）\u003c/li>\u003cli>\u003cb>出口\u003c/b>：①中銀バランスシート規模の縮小（テーパリング）→ 超過準備の解消 ②超過準備への付利（IOR）→ 政策金利の引き上げ\u003c/li>\u003cli>\u003cb>締め\u003c/b>：日銀のバランスシートが経済規模比で突出して巨額 → 出口には逆ざやのリスク。第13章の論点（低体温症経済・政府債務）に接続できると加点\u003c/li>\u003c/ul>\u003c/div>","items":[{"ty":"mc","q":"伝統的金融政策が機能しなくなる原因となる、名目金利の下限を何というか。","ch":[{"t":"自然利子率"},{"t":"実効下限（ELB）"},{"t":"流動性の罠"},{"t":"ゼロ金利制約のみ"}],"ans":1,"e":"ELB＝effective lower bound。政策金利の調整で経済変動と物価を安定させる伝統的金融政策が機能しない状態が常態化した。"},{"ty":"mc","q":"日本の政策金利にあたるものはどれか。","ch":[{"t":"10年国債利回り"},{"t":"オーバーナイト物無担保コールレート"},{"t":"公定歩合"},{"t":"長期プライムレート"}],"ans":1,"e":"この誘導目標を操作するのが伝統的金融政策。"},{"ty":"mc","q":"日本でゼロ金利政策が実施された時期はいつか。","ch":[{"t":"2001年3月〜2006年3月"},{"t":"1999年2月〜2000年8月"},{"t":"2013年4月〜"},{"t":"2010年10月〜2013年3月"}],"ans":1,"e":"①アジア金融危機(1997-98)→②ゼロ金利(1999-2000)→③量的緩和(2001-2006)→④グローバル金融危機(2008-09)→⑤包括的緩和(2010-2013)→⑥QQE(2013-)の流れ。"},{"ty":"mc","q":"量的緩和政策が実施された時期はいつか。","ch":[{"t":"2001年3月〜2006年3月"},{"t":"2013年4月〜"},{"t":"1999年2月〜2000年8月"},{"t":"2010年10月〜2013年3月"}],"ans":0,"e":"ゼロ金利政策の次の段階。"},{"ty":"mc","q":"量的・質的金融緩和（QQE）が開始されたのはいつか。","ch":[{"t":"2010年10月"},{"t":"2016年1月"},{"t":"2013年4月"},{"t":"2008年4月"}],"ans":2,"e":"黒田総裁の就任（2013年3月20日）直後から。"},{"ty":"mc","q":"包括的な金融緩和政策が実施された時期はいつか。","ch":[{"t":"2001年3月〜2006年3月"},{"t":"1999年2月〜2000年8月"},{"t":"2010年10月〜2013年3月"},{"t":"2013年4月〜"}],"ans":2,"e":"グローバル金融危機(2008-09)を受けた白川総裁時代の政策。"},{"ty":"mc","q":"2013年3月から2023年4月まで日銀総裁を務めたのは誰か。","ch":[{"t":"白川方明"},{"t":"福井俊彦"},{"t":"植田和男"},{"t":"黒田東彦"}],"ans":3,"e":"第31代。第30代が白川方明（2008-2013）、第32代が植田和男（2023-）。"},{"ty":"mc","q":"現在（2023年4月〜）の日銀総裁は誰か。","ch":[{"t":"雨宮正佳"},{"t":"白川方明"},{"t":"黒田東彦"},{"t":"植田和男"}],"ans":3,"e":"第32代総裁。"}]},{"label":"類型","title":"非伝統的金融政策の類型化","note":"\u003cdiv class=\"note\">\u003ch3>2つの経路（答案の柱になる）\u003c/h3>\u003cul>\u003cli>\u003cb>フォワードガイダンスの経路\u003c/b>：将来の政策金利の予想に働きかける\u003c/li>\u003cli>\u003cb>量的緩和の経路\u003c/b>：さまざまな金融資産を購入し、資産価格やそこに含まれるプレミアムに働きかける\u003c/li>\u003c/ul>\u003c/div>","items":[{"ty":"mc","q":"将来の政策金利の予想に働きかける経路を何というか。","ch":[{"t":"量的緩和の経路"},{"t":"信用緩和の経路"},{"t":"フォワードガイダンスの経路"},{"t":"ポートフォリオ・リバランス経路"}],"ans":2,"e":"もう一つが、金融資産を購入して資産価格やプレミアムに働きかける量的緩和の経路。"},{"ty":"mc","q":"金融危機の際、中央銀行が担う金融システム安定化の機能を何というか。","ch":[{"t":"フォワードガイダンス"},{"t":"マクロプルーデンス"},{"t":"最後の貸し手（LLR）"},{"t":"量的緩和"}],"ans":2,"e":"lender of last resort。金融市場の安定確保・企業金融の円滑化のために働く。"},{"ty":"mc","q":"非伝統的金融政策が働きかける対象として挙げられている2つは何か。","ch":[{"t":"銀行収益の改善と株価の維持"},{"t":"金融システムの安定化と、落ち込んだ経済活動水準の押上げ"},{"t":"財政再建と成長戦略"},{"t":"物価の安定と為替の安定"}],"ans":1,"e":"金融危機への対応と、景気の押し上げの2面がある。"}]},{"label":"手段1","title":"手段（1）金利政策の拡張","note":"","items":[{"ty":"mc","q":"中央銀行が先行きの政策運営方針を示し、一定の条件を満たすまで続けると約束する政策を何というか。","ch":[{"t":"マイナス金利政策"},{"t":"イールドカーブ・コントロール"},{"t":"量的緩和"},{"t":"フォワードガイダンス"}],"ans":3,"e":"将来も低金利が継続するという期待形成を通じて長期金利を低下させ、追加的な金融緩和効果を生む。"},{"ty":"mc","q":"フォワードガイダンスの理論的説明として正しいものはどれか。","ch":[{"t":"為替介入によって円安に誘導する"},{"t":"通常より長期に低金利を継続することで、将来の金融緩和効果を前借りする"},{"t":"中央銀行が国債を大量に買い入れる"},{"t":"現在の政策金利をマイナスにする"}],"ans":1,"e":"ELB制約で現在の金利低下幅が不足する分を、期間の長さで補う考え方。"},{"ty":"mc","q":"フォワードガイダンスが有効に機能したとき、イールドカーブはどうなるか。","ch":[{"t":"短期から中期のゾーンにかけて水平になる"},{"t":"長期ゾーンだけが低下する"},{"t":"逆イールドになる"},{"t":"全体が右上がりに急になる"}],"ans":0,"e":"将来も低金利が続くという期待が、その期間の金利を押し下げるため。"},{"ty":"mc","q":"フォワードガイダンスの限界として挙げられているものはどれか。","ch":[{"t":"為替が不安定になる"},{"t":"長期金利の水準が低ければ効果がなく、前借りの余地がない"},{"t":"中央銀行の信認が高すぎると効かない"},{"t":"財政赤字を拡大させる"}],"ans":1,"e":"すでに長期金利が十分低い状況では、これ以上前借りできない。"},{"ty":"mc","q":"マイナス金利政策とは、どこにマイナスの金利を課す政策か。","ch":[{"t":"中央銀行当座預金"},{"t":"普通預金"},{"t":"国債"},{"t":"貸出金"}],"ans":0,"e":"若干でも名目金利の実効下限（ELB）制約を押し下げることが目的。"},{"ty":"mc","q":"マイナス金利導入以前、名目金利の下限がゼロであった理由はどれか。","ch":[{"t":"物価が下がるため"},{"t":"法律で禁止されていたため"},{"t":"現金と準備預金が完全代替になるため"},{"t":"銀行が反対したため"}],"ans":2,"e":"金利がマイナスなら現金で持てばよいので、準備預金の需要曲線がゼロで屈折して水平になる。"}]},{"label":"手段2","title":"手段（2）量的緩和政策","note":"","items":[{"ty":"mc","q":"中央銀行が大規模な資産買入を行うことで拡大するものはどれか。","ch":[{"t":"預金準備率"},{"t":"政策金利"},{"t":"財政支出"},{"t":"中央銀行のバランスシート"}],"ans":3,"e":"日銀のバランスシートは経済規模と比べて突出して巨額になっている。"},{"ty":"mc","q":"量的緩和の経路が働きかける対象はどれか。","ch":[{"t":"銀行の貸出態度"},{"t":"資産価格やそこに含まれるプレミアム"},{"t":"家計の貯蓄率"},{"t":"将来の政策金利の予想"}],"ans":1,"e":"フォワードガイダンスが「予想」に働きかけるのに対し、量的緩和は「資産価格」に働きかける。"}]},{"label":"出口","title":"出口戦略（正常化）","note":"\u003cdiv class=\"note\">\u003ch3>出口の順序（sequencing）\u003c/h3>\u003cul>\u003cli>\u003cb>グローバル金融危機以前\u003c/b>：1) バランスシート縮小 → 超過準備の解消 → 2) 政策金利の引き上げ\u003c/li>\u003cli>\u003cb>コロナ禍以降\u003c/b>（バランスシートが大規模化）：1) 大規模な資産買入オペの規模を徐々に縮小（\u003cb>テーパリング\u003c/b>）→ 2) 超過準備に\u003cb>付利\u003c/b>して政策金利を引き上げ\u003c/li>\u003cli>\u003cb>リスク\u003c/b>：中銀の金利支払いが急速に拡大 → \u003cb>逆ざや\u003c/b>のリスク\u003c/li>\u003c/ul>\u003c/div>","items":[{"ty":"mc","q":"出口戦略における政策の順序付けを何というか。","ch":[{"t":"sequencing（シークエンシング）"},{"t":"ノーマライゼーション"},{"t":"リバランス"},{"t":"テーパリング"}],"ans":0,"e":"①中銀バランスシート規模の縮小 ②政策金利のゼロ以上への引き上げ、という順序。"},{"ty":"mc","q":"大規模な資産買入オペの規模を徐々に縮小することを何というか。","ch":[{"t":"シークエンシング"},{"t":"オペレーション・ツイスト"},{"t":"テーパリング"},{"t":"リバースレポ"}],"ans":2,"e":"コロナ禍以降のバランスシート大規模化を受けた出口の第一段階。"},{"ty":"mc","q":"中央銀行が民間銀行から預かっている準備預金に対して支払う金利を何というか。","ch":[{"t":"公定歩合"},{"t":"コールレート"},{"t":"ON RRP金利"},{"t":"IOR金利"}],"ans":3,"e":"Interest on Reserves。超過準備に付利することで政策金利を引き上げる手段になる。"},{"ty":"mc","q":"米国FRBが金融機関やMMFから米国債を担保に一晩だけ資金を借り入れる際に支払う金利を何というか。","ch":[{"t":"フェデラルファンド金利"},{"t":"プライムレート"},{"t":"ON RRP金利"},{"t":"IOR金利"}],"ans":2,"e":"オーバーナイト・リバースレポ金利。"},{"ty":"mc","q":"出口戦略で懸念される「逆ざや」とは何が原因で生じるか。","ch":[{"t":"為替が円高になること"},{"t":"資産価格が上昇すること"},{"t":"中銀の金利支払いが急速に拡大すること"},{"t":"財政赤字が縮小すること"}],"ans":2,"e":"付利によって支払う金利が、保有資産から得られる収益を上回る状態。"}]},{"label":"AD-AS","title":"効果：総需要＝総供給分析の拡張","note":"","items":[{"ty":"mc","q":"ELB制約に抵触していない通常の状態では、インフレ率の低下は実質利子率にどう作用するか。","ch":[{"t":"実質利子率は変化しない"},{"t":"AD曲線が垂直になる"},{"t":"実質利子率が低下し、AD曲線は右下がりになる"},{"t":"実質利子率が上昇し、AD曲線は右上がりになる"}],"ans":2,"e":"政策金利＝実質利子率＋インフレ率。通常は政策金利を下げられるので実質利子率も下がる。"},{"ty":"mc","q":"ELB制約に抵触した状態でインフレ率が低下すると、何が起きるか。","ch":[{"t":"実質利子率が上昇し、AD曲線が右上がりになる"},{"t":"AS曲線が左シフトする"},{"t":"実質利子率が低下する"},{"t":"AD曲線が右下がりのままになる"}],"ans":0,"e":"政策金利をこれ以上下げられないため、インフレ率の低下分だけ実質利子率が上がってしまう。"},{"ty":"mc","q":"大規模な負のADショックが起きた場合、小規模な場合と何が異なるか。","ch":[{"t":"財政政策が不要になる"},{"t":"インフレ率がELB以下に低下し、政策金利を引き下げられなくなる"},{"t":"AS曲線が右シフトする"},{"t":"物価が上昇する"}],"ans":1,"e":"ELB制約に抵触することで、通常の金融政策による調整が効かなくなる。"}]},{"label":"将来展望","title":"金融政策の将来展望（第13章）","note":"\u003cdiv class=\"note\">\u003ch3>締めで使える論点\u003c/h3>\u003cul>\u003cli>\u003cb>二つの境界線の消滅\u003c/b>：①循環と趨勢（成長トレンドの低下）②貨幣と短期債（ゼロ金利で完全代替 → 金融政策と財政政策の一体化）\u003c/li>\u003cli>\u003cb>低体温症経済\u003c/b>：低成長・低インフレ・低名目金利の三つの「低」\u003c/li>\u003cli>\u003cb>処方箋\u003c/b>：金融政策による対症療法ではなく、構造的な対応が必要。金融政策は構造政策を代替できない\u003c/li>\u003c/ul>\u003c/div>","items":[{"ty":"mc","q":"「二つの境界線の消滅」として挙げられているものはどれか。","ch":[{"t":"官と民の境界線／新旧の境界線"},{"t":"短期と長期の境界線／実物と金融の境界線"},{"t":"財政と金融の境界線／内外の境界線"},{"t":"循環と趨勢の境界線／貨幣と短期債の境界線"}],"ans":3,"e":"①成長トレンドの低下により循環と趨勢の区別が曖昧に ②ゼロ金利で貨幣と短期証券がほぼ完全代替に。"},{"ty":"mc","q":"貨幣と短期債の境界線が消滅すると、何が起きるか。","ch":[{"t":"為替の変動が拡大する"},{"t":"インフレが加速する"},{"t":"銀行が不要になる"},{"t":"金融政策と財政政策の一体化"}],"ans":3,"e":"ゼロ金利下では貨幣と短期証券がほぼ完全代替になるため。"},{"ty":"mc","q":"「低体温症経済」を特徴づける三つの「低」とは何か。","ch":[{"t":"低金利・低株価・低為替"},{"t":"低成長・低インフレ・低名目金利"},{"t":"低賃金・低雇用・低消費"},{"t":"低出生率・低生産性・低投資"}],"ans":1,"e":"インフレ率が経済活動の体温計、お金が血液。大量に供給されても血の巡りが悪い状態。"},{"ty":"mc","q":"2000〜2019年の日本の平均成長率はおよそ何％か。","ch":[{"t":"7.2%"},{"t":"2.1%"},{"t":"3.0%"},{"t":"0.9%"}],"ans":3,"e":"1960-79：7.2%、1980-99：3.0%、2000-19：0.9%と低下してきた。"},{"ty":"mc","q":"低体温症経済に対する処方箋として正しいものはどれか。","ch":[{"t":"体質改善を図る構造的な対応"},{"t":"財政支出の一律削減"},{"t":"為替介入の強化"},{"t":"金融政策による対症療法"}],"ans":0,"e":"金融政策は構造政策を後押しする緩和的な環境を作れるが、構造政策そのものを代替することはできない。"},{"ty":"mc","q":"1990年代以降、日本の企業部門の資金過不足はどう変化したか。","ch":[{"t":"変化していない"},{"t":"資金不足から資金余剰へ"},{"t":"一貫して資金不足"},{"t":"資金余剰から資金不足へ"}],"ans":1,"e":"貯蓄超過経済。企業が資金の借り手でなくなったことが、金融政策の効きにくさの背景にある。"}]}]},{"id":"ch11","label":"第11章くわしく","kind":"quiz","hint":"第11章（非伝統的金融政策）を、用語・数値・仕組みまで細かく確認します。","sections":[{"label":"概要と導入の経緯","title":"1. 概要と導入の経緯","note":"\u003cp>問1の「導入の経緯」パート。伝統的政策が行き詰まった理由と、日本の政策史の年表がここ。\u003c/p>","items":[{"ty":"mc","q":"日本の政策金利として日本銀行が誘導目標を定めているものはどれか。","ch":[{"t":"10年物国債利回り"},{"t":"短期プライムレート"},{"t":"オーバーナイト物無担保コールレート"},{"t":"公定歩合（基準割引率）"}],"ans":2,"e":"翌日物（オーバーナイト）の無担保コールレート。第13回では誘導目標0.5%として示されている。アメリカはFFレート、ECBはリファイナンスレート・ESTR。"},{"ty":"mc","q":"ELB（effective lower bound）の訳語として正しいものはどれか。","ch":[{"t":"期待インフレ率の下限"},{"t":"名目金利の均衡水準"},{"t":"名目金利の実効下限"},{"t":"実質金利の上限"}],"ans":2,"e":"実効下限。ぴったりゼロではなく「実効的な」下限と呼ぶのは、現金の保管・輸送コストの分だけゼロより下に押し下げる余地があるから。"},{"ty":"mc","q":"「非伝統的金融政策」と呼ばれる状態を、教科書はどう定義しているか。","ch":[{"t":"政策金利をゼロ%に固定する政策すべて"},{"t":"中央銀行が国債を購入する政策すべて"},{"t":"ELB制約のもとで、政策金利の調整により経済変動と物価を安定させる伝統的金融政策が機能しない状態が常態化したときに採られる政策"},{"t":"インフレ目標を数値で公表する政策"}],"ans":2,"e":"定義の軸は「金利操作が効かなくなったこと」。国債購入やインフレ目標そのものが非伝統的なのではない。"},{"ty":"mc","q":"BOX11-1のわが国の非伝統的金融政策の歴史で、ゼロ金利政策が実施された期間はどれか。","ch":[{"t":"2001年3月〜2006年3月"},{"t":"1997年〜1998年"},{"t":"1999年2月〜2000年8月"},{"t":"2010年10月〜2013年3月"}],"ans":2,"e":"1999年2月〜2000年8月。1997〜98年はアジア金融危機、2001年3月〜2006年3月が量的緩和政策、2010年10月〜2013年3月が包括的な金融緩和政策。"},{"ty":"mc","q":"量的緩和政策（第1期）が実施された期間はどれか。","ch":[{"t":"1999年2月〜2000年8月"},{"t":"2008年〜2009年"},{"t":"2013年4月〜"},{"t":"2001年3月〜2006年3月"}],"ans":3,"e":"2001年3月〜2006年3月。2013年4月からは量的・質的金融緩和政策（QQE）。"},{"ty":"mc","q":"包括的な金融緩和政策が実施された期間はどれか。","ch":[{"t":"1999年2月〜2000年8月"},{"t":"2001年3月〜2006年3月"},{"t":"2010年10月〜2013年3月"},{"t":"2016年〜2024年"}],"ans":2,"e":"グローバル金融危機（2008〜2009年）を受けて2010年10月に導入され、QQE開始の2013年3月まで。"},{"ty":"mc","q":"量的・質的金融緩和政策（QQE）が開始された時期はどれか。","ch":[{"t":"2013年4月"},{"t":"2016年1月"},{"t":"2010年10月"},{"t":"2001年3月"}],"ans":0,"e":"2013年4月。黒田東彦総裁の就任（2013年3月20日）直後であり、日銀のバランスシートが劇的に拡大する起点。"},{"ty":"mc","q":"2008年4月から2013年3月まで日本銀行総裁を務めたのは誰か。","ch":[{"t":"福井俊彦（第29代）"},{"t":"黒田東彦（第31代）"},{"t":"白川方明（第30代）"},{"t":"速水優（第28代）"}],"ans":2,"e":"第30代 白川方明。グローバル金融危機と包括的金融緩和の時期。速水優は1998〜2003、福井俊彦は2003〜2008、黒田東彦は2013〜2023。"},{"ty":"mc","q":"2013年3月から2023年4月まで日本銀行総裁を務めたのは誰か。","ch":[{"t":"三重野康（第26代）"},{"t":"黒田東彦（第31代）"},{"t":"白川方明（第30代）"},{"t":"植田和男（第32代）"}],"ans":1,"e":"第31代 黒田東彦。QQEの導入者。後任は2023年4月からの第32代 植田和男。"},{"ty":"mc","q":"図11-2「中央銀行のバランスシート規模」が示している日銀の特徴はどれか。","ch":[{"t":"2013年以降ほぼ横ばいであること"},{"t":"資産の大半が外貨建て資産であること"},{"t":"経済規模と比べて突出して巨額であること"},{"t":"主要国のなかで最も小さいこと"}],"ans":2,"e":"経済規模比で突出して大きい。これが出口戦略の順序が変わった理由に直結するので、経緯と出口の両方で使える事実。"}]},{"label":"類型化と2つの経路","title":"2. 類型化と2つの経路","note":"\u003cp>手段パートの骨格。ここを押さえると、以降の個別政策がどこに位置するか迷わなくなる。\u003c/p>","items":[{"ty":"mc","q":"非伝統的金融政策の政策手段を概念的に整理すると、2つの経路に分けられる。1つは量的緩和の経路だが、もう1つは何か。","ch":[{"t":"将来の政策金利の予想に働きかけるフォワードガイダンスの経路"},{"t":"為替レートに働きかける為替介入の経路"},{"t":"銀行の貸出態度に働きかける窓口指導の経路"},{"t":"財政支出に働きかける協調の経路"}],"ans":0,"e":"①フォワードガイダンスの経路（将来の政策金利の予想に働きかける）と②量的緩和の経路の2本立て。"},{"ty":"mc","q":"量的緩和の経路は、何に働きかける経路として定義されているか。","ch":[{"t":"家計の貯蓄率に働きかける"},{"t":"さまざまな金融資産を購入し、資産価格やそこに含まれるプレミアムに働きかける"},{"t":"民間銀行の自己資本比率に働きかける"},{"t":"政府の国債発行計画に働きかける"}],"ans":1,"e":"資産価格とプレミアム。長期金利＝将来の短期金利の予想の平均＋タームプレミアム、と分解したとき、FGは前半に、量的緩和は後半に効く。"},{"ty":"mc","q":"非伝統的金融政策が働きかける対象として、教科書が挙げている2つはどれか。","ch":[{"t":"金融システムの安定化と、落ち込んだ経済活動水準の押上げ"},{"t":"財政の健全化と、経常収支の改善"},{"t":"物価の安定と、為替相場の安定"},{"t":"雇用の最大化と、国際協調"}],"ans":0,"e":"1)金融システム安定化（金融市場の安定確保・企業金融の円滑化）＝最後の貸し手（LLR）機能、2)金融危機によって落ち込んだ経済活動水準の押上げ。"},{"ty":"mc","q":"LLR（lender of last resort）は日本語でどう訳されるか。","ch":[{"t":"流動性供給比率"},{"t":"長期資金供給オペ"},{"t":"最終的な借り手"},{"t":"最後の貸し手"}],"ans":3,"e":"最後の貸し手。金融システム安定化の側面で登場する。"}]},{"label":"出口戦略","title":"3. 出口戦略","note":"\u003cp>問1の3本柱のひとつ。教科書では章の最後ではなく2節(3)にあるので見落としやすい。\u003c/p>","items":[{"ty":"mc","q":"出口における「政策の順序付け」を表す英語はどれか。","ch":[{"t":"rebalancing"},{"t":"sequencing"},{"t":"forward guidance"},{"t":"tapering"}],"ans":1,"e":"sequencing。何を先にやるかの順番の問題であることを示す語。テーパリングは買入ペースの縮小そのものを指す別の語。"},{"ty":"mc","q":"グローバル金融危機以前に想定されていた出口の順序として正しいものはどれか。","ch":[{"t":"バランスシートは維持したまま、預金準備率を引き上げる"},{"t":"政策金利を引き上げてから、バランスシートを縮小する"},{"t":"超過準備に付利したうえで、バランスシートを縮小する"},{"t":"バランスシートを縮小して超過準備を解消し、そのうえで政策金利を引き上げる"}],"ans":3,"e":"1)バランスシート縮小→超過準備解消 2)政策金利引き上げ、の順。超過準備が残っていると短期金利が上がらないため、先に解消する必要があった。"},{"ty":"mc","q":"コロナ禍以降に採られている出口の順序として正しいものはどれか。","ch":[{"t":"大規模な資産買入オペの規模を徐々に縮小し、超過準備に付利することで政策金利を引き上げる"},{"t":"バランスシートをゼロまで縮小してから政策金利を引き上げる"},{"t":"銀行券発行残高を減らして超過準備を吸収する"},{"t":"政策金利をマイナスに深掘りしてから資産を売却する"}],"ans":0,"e":"1)テーパリング 2)超過準備に付利→政策金利引き上げ。バランスシートが大規模化し、縮小完了を待てなくなったために順序が変わった。"},{"ty":"mc","q":"出口の順序がグローバル金融危機以前と現在とで変わった、最大の理由はどれか。","ch":[{"t":"預金準備率制度が廃止されたため"},{"t":"コール市場が消滅したため"},{"t":"バランスシートが大規模化し、縮小の完了を待ってから利上げすることができなくなったため"},{"t":"インフレ目標が2%から4%に引き上げられたため"}],"ans":2,"e":"規模の問題。ここを一文で書けると出口パートの説得力が上がる。"},{"ty":"mc","q":"テーパリング（tapering）の正確な意味はどれか。","ch":[{"t":"保有資産を市場で売却して残高を減らすこと"},{"t":"大規模な資産買入オペの規模（ペース）を徐々に縮小していくこと"},{"t":"政策金利を段階的に引き上げること"},{"t":"準備預金への付利を段階的に引き下げること"}],"ans":1,"e":"「買うペースを落とす」であって「残高を減らす」ではない。買い続けている限り残高はまだ増える。ここは混同しやすい。"},{"ty":"mc","q":"IOR金利とは何か。","ch":[{"t":"銀行間の無担保翌日物取引の実勢金利"},{"t":"中央銀行が民間銀行から預かっている準備預金に対して支払う金利"},{"t":"中央銀行が民間銀行に貸し出す際に受け取る金利"},{"t":"国債の入札利回りの加重平均"}],"ans":1,"e":"Interest on Reserves。準備預金への付利。出口局面ではこれを引き上げることで市場金利の下限をつくり、超過準備を抱えたまま利上げできる。"},{"ty":"mc","q":"ON RRP（オーバーナイト・リバースレポ）金利の説明として正しいものはどれか。","ch":[{"t":"ECBが銀行に適用する中央銀行預金金利"},{"t":"日本銀行が国債を買い入れる際の応札利回り"},{"t":"FRBが民間銀行に一晩だけ資金を貸し出す際に受け取る金利"},{"t":"FRBが金融機関やMMFなどから米国債を担保に一晩だけ資金を借り入れる際に支払う金利"}],"ans":3,"e":"米国の制度。FRBが資金を「借りる」側になる取引で、付利とあわせて短期金利の下限を形成する。"},{"ty":"mc","q":"出口局面で懸念される「逆ざや」とはどのような状態か。","ch":[{"t":"長期金利が短期金利を下回る状態"},{"t":"民間銀行の貸出金利が調達金利を下回る状態"},{"t":"中央銀行が受け取る資産の利息より、準備預金に支払う金利のほうが大きくなり、中央銀行が損失を被る状態"},{"t":"インフレ率が政策金利を上回る状態"}],"ans":2,"e":"低金利期に買った長期国債の利回りは固定されている一方、出口で付利を引き上げると支払いが急拡大する。中銀の金利支払いが急速に拡大するリスクとして第13回に明記されている。"}]},{"label":"金利政策の拡張","title":"4. 金利政策の拡張","note":"\u003cp>フォワードガイダンス・マイナス金利・YCC。3節。図11-5〜11-10が対応する。\u003c/p>","items":[{"ty":"mc","q":"フォワードガイダンスの定義として正しいものはどれか。","ch":[{"t":"インフレ率の目標値を数値で定めること"},{"t":"中央銀行が毎月の資産買入額を事前に公表すること"},{"t":"中央銀行が先行きの金融政策の運営方針を示し、一定の条件を満たすまでその運営を続けることを約束すること"},{"t":"政府と中央銀行が共同声明を出すこと"}],"ans":2,"e":"「方針を示す」だけでなく「条件を満たすまで続けると約束する」ところまでが定義。約束（コミットメント）が本質。"},{"ty":"mc","q":"フォワードガイダンスは、教科書ではどう位置づけられているか。","ch":[{"t":"政策金利を操作する伝統的金融政策の自然な拡張"},{"t":"財政政策との協調政策"},{"t":"伝統的金融政策とはまったく異質な新しい政策"},{"t":"金融システム安定化のための規制政策"}],"ans":0,"e":"「自然な拡張」。金利という同じ変数を、時間軸方向に伸ばして操作しているだけ、という理解。"},{"ty":"mc","q":"フォワードガイダンスの理論的説明として教科書が挙げているのはどれか。","ch":[{"t":"マネタリーベースを増やすことで物価が比例的に上昇する"},{"t":"為替減価を通じて輸出を増やす"},{"t":"現在の政策金利の低下幅が不足する分、通常より長期に低金利を継続することで、将来の金融緩和効果を前借りする"},{"t":"銀行の自己資本を増強して貸出を増やす"}],"ans":2,"e":"「前借り（借り入れ）」という表現がキーワード。ELB制約で足りない緩和を、将来から持ってくる。"},{"ty":"mc","q":"フォワードガイダンスが有効に機能したとき、イールドカーブはどう変化するか。","ch":[{"t":"10年超のゾーンだけが低下する"},{"t":"全体が右上がりに急傾斜する"},{"t":"短期ゾーンだけが急激に立ち上がる"},{"t":"短期から中期のゾーンにかけて水平になる"}],"ans":3,"e":"将来も低金利が続くと予想されるため、期間が延びても金利が上がらず、短中期が水平化する（図11-5）。"},{"ty":"mc","q":"フォワードガイダンスの限界として教科書が挙げているものはどれか。","ch":[{"t":"財政赤字が小さいと効果がない"},{"t":"国債市場の流動性が高すぎると効果がない"},{"t":"為替が変動相場制でないと効果がない"},{"t":"長期金利の水準がすでに低ければ効果がなく、前借りする余地がない"}],"ans":3,"e":"図11-6。下げしろがなければ約束しても意味がない、という単純だが本質的な限界。"},{"ty":"mc","q":"マイナス金利政策の仕組みとして正しいものはどれか。","ch":[{"t":"国債の発行金利をマイナスに設定する"},{"t":"銀行の貸出金利に上限規制をかける"},{"t":"中央銀行当座預金にマイナスの金利を課すことで、名目金利の実効下限（ELB）制約を若干押し下げる"},{"t":"市中の現金にマイナスの金利を課す"}],"ans":2,"e":"対象は中央銀行当座預金であって、家計の預金や現金ではない。ELBという壁そのものを少しだけ下に動かす政策。"},{"ty":"mc","q":"マイナス金利導入以前、名目金利ゼロが下限となっていたのはなぜか。","ch":[{"t":"銀行が預金を受け入れなくなるため"},{"t":"国債の利回りがゼロを下回らないため"},{"t":"現金と準備預金が完全代替となり、準備預金の需要曲線がゼロの水準で屈折して水平になるため"},{"t":"法律で金利の下限がゼロと定められていたため"}],"ans":2,"e":"図11-7。ゼロを下回るなら現金で持てばよいので需要が無限に膨らみ、需要曲線がゼロで水平になる。だから供給を増やしても金利は下がらない。"},{"ty":"mc","q":"マイナス金利導入後、準備預金の需要曲線はどう変化するか。","ch":[{"t":"垂直になる"},{"t":"右上がりに転じる"},{"t":"超過準備の一定部分にペナルティを課すことで、ゼロ以下の水準でも右下がりの形状がつくり出される"},{"t":"ゼロの水準で完全に水平のままとなる"}],"ans":2,"e":"人工的に「持ちたくないもの」にすることで、ゼロ以下でも需要曲線が右下がりになる。第13回はこの状態を「廃棄物のようにお金を払って引き取ってもらう」と表現している。"},{"ty":"mc","q":"イールドカーブコントロール（YCC）政策の前提となる考え方はどれか。","ch":[{"t":"長期金利は短期金利のような精緻なコントロールはできないが、大規模な市場介入を行えばある程度までコントロール可能である"},{"t":"長期金利は市場に任せるべきでコントロールすべきでない"},{"t":"長期金利は短期金利と同様に精緻にコントロールできる"},{"t":"長期金利は為替介入を通じてのみ操作できる"}],"ans":0,"e":"「精緻には無理だが、ある程度は可能」という限定つきの前提。ここを正確に書けると理解の深さが伝わる。"},{"ty":"mc","q":"図11-10が示す長期金利の制御可能性について、正しい記述はどれか。","ch":[{"t":"10年までの満期の金利はほぼゼロで変動せず、イールドカーブの変動は主として10年を超えるゾーンで生じている"},{"t":"5年以内のゾーンのみ変動している"},{"t":"10年までの金利が大きく変動し、10年超は固定されている"},{"t":"全期間にわたって金利が均等に変動している"}],"ans":0,"e":"操作できている範囲の外側で変動が起きている、という事実。ここからYCCの効果の限界の議論につながる。"},{"ty":"mc","q":"YCCの効果について教科書が導いている結論はどれか。","ch":[{"t":"イールドカーブ変動を通じた有効需要刺激効果は極めて限定的で、金融政策により成長率とインフレ率を能動的に押し上げることはできない"},{"t":"YCCは短期金利の操作より強力である"},{"t":"イールドカーブを操作すれば成長率とインフレ率を自在に押し上げられる"},{"t":"長期金利の操作は物価にのみ影響し、産出量には影響しない"}],"ans":0,"e":"「能動的に押し上げることができない」という強い結論。締めの評価パートで使える。"}]},{"label":"量的緩和政策","title":"5. 量的緩和政策","note":"\u003cp>4節。バランスシートの見方とポートフォリオリバランス効果、銀行券ルールが山場。\u003c/p>","items":[{"ty":"mc","q":"量的緩和政策を中央銀行バランスシートの観点から整理するとき、注目する2つの側面はどれか。","ch":[{"t":"国内と海外"},{"t":"資産と負債"},{"t":"短期と長期"},{"t":"規模（構成は変えずに量だけ）と構成（量は変えずに構成だけ）"}],"ans":3,"e":"①規模と②構成。QQEの「量的」が規模、「質的」が構成（ETF・REITなどリスク性資産の購入）に対応すると理解すると整理しやすい。"},{"ty":"mc","q":"ポートフォリオリバランス効果が成立するための前提はどれか。","ch":[{"t":"為替が固定相場であること"},{"t":"銀行が自己資本規制を受けていないこと"},{"t":"短期政府証券と長期国債が完全代替であること"},{"t":"短期政府証券と長期国債、あるいはマネタリーベースと他の金融資産が、互いに不完全代替であること"}],"ans":3,"e":"不完全代替が前提。完全代替なら、いくら買っても価格も金利も動かず政策は無効になる。効果の限界を論じるときの土台。"},{"ty":"mc","q":"ポートフォリオリバランス効果によって影響を受けるものとして、教科書が挙げているのはどれか。","ch":[{"t":"銀行の自己資本比率"},{"t":"預金準備率"},{"t":"タームプレミアムやイールドカーブ全体"},{"t":"財政赤字の対GDP比"}],"ans":2,"e":"短期政府証券と長期国債が不完全代替であるため、長期国債を買うとタームプレミアムが圧縮され、カーブ全体に影響する。"},{"ty":"mc","q":"BOX11-5で、リーマンショック後のFedのバランスシートで特に増加したものはどれか。","ch":[{"t":"MBS（住宅ローン担保証券）等"},{"t":"ETF"},{"t":"REIT"},{"t":"外貨準備"}],"ans":0,"e":"Fedはリーマンショックを受けてMBS等を大量に購入した。日銀は2013年4月のQQE以降に長期国債、さらにETF・REITというリスク性資産を購入している点が対照的。"},{"ty":"mc","q":"銀行券ルールとはどのようなルールか。","ch":[{"t":"銀行券の発行を毎年一定率で増やすもの"},{"t":"長期国債の保有残高の上限を、銀行券発行残高までとするもの"},{"t":"銀行券をすべてデジタル通貨に置き換えるもの"},{"t":"銀行券の発行残高の上限を、長期国債保有残高までとするもの"}],"ans":1,"e":"保有残高の上限＝銀行券発行残高。中央銀行が国債を無制限に抱え込まないための歯止め。"},{"ty":"mc","q":"銀行券ルールが果たしていた役割として、教科書が挙げているのはどれか。","ch":[{"t":"財政ファイナンス（日銀の国債の直接買入れ）との明確な線引き"},{"t":"マクロプルーデンス政策との線引き"},{"t":"為替介入との線引き"},{"t":"預金保険制度との線引き"}],"ans":0,"e":"財政ファイナンスとの線引き。これを超えて買い入れることが非伝統的金融政策の特徴であり、同時に論争点でもある。"},{"ty":"mc","q":"BOX11-6によれば、銀行券発行残高を超える長期国債の買入れは、日銀が保有する長期国債のどの程度に相当するか。","ch":[{"t":"約5割"},{"t":"ほぼ全額"},{"t":"約8割"},{"t":"約2割"}],"ans":2,"e":"8割。銀行券ルールが実質的に大きく踏み越えられていることを示す数値。"}]},{"label":"効果と限界","title":"6. 効果と限界（AD-AS拡張）","note":"\u003cp>5節。問1では「必ずしも必要ない」と明言されているので、締めの評価に使う程度でよい。ただし理屈は理解しておく。\u003c/p>","items":[{"ty":"mc","q":"ELB制約を考慮したAD曲線が、ELBに抵触した領域で右上がりになるのはなぜか。","ch":[{"t":"インフレ率の低下が名目賃金を引き上げるから"},{"t":"インフレ率の低下が財政支出を増やすから"},{"t":"インフレ率の低下が輸出を増やすから"},{"t":"インフレ率が低下しても名目政策金利を下げられないため、実質利子率がかえって上昇するから"}],"ans":3,"e":"政策金利＝実質利子率＋インフレ率。名目が動かせないとき、インフレ率↓は実質利子率↑を意味する。需要はさらに縮小し、AD曲線が右上がりに折れ曲がる。"},{"ty":"mc","q":"ELB制約に抵触していない通常の領域で、AD曲線が右下がりになるのはなぜか。","ch":[{"t":"インフレ率が低下すると輸入が減るから"},{"t":"インフレ率が低下すると実質利子率が低下し、需要が刺激されるから"},{"t":"インフレ率が低下すると名目賃金が下がるから"},{"t":"インフレ率が低下すると税収が増えるから"}],"ans":1,"e":"中央銀行が名目金利を下げられる限り、インフレ率↓→実質利子率↓となり、通常の右下がりのAD曲線になる。"},{"ty":"mc","q":"大規模な負の総需要ショックが起きた場合に生じる問題はどれか。","ch":[{"t":"AS曲線が垂直になる"},{"t":"インフレ率がELB以下に低下し、政策金利を引き下げられないため産出量が大きく低下する"},{"t":"名目金利と実質金利が一致する"},{"t":"インフレ率が急上昇し、政策金利を引き上げられなくなる"}],"ans":1,"e":"図11-18。小規模ショックなら金利引き下げで対応できるが、大規模ショックではELBに突き当たり、産出量の落ち込みが深くなる。"},{"ty":"mc","q":"AD-AS分析の枠組みで、マイナス金利政策の効果はどう表現されるか。","ch":[{"t":"潜在産出量を引き上げる"},{"t":"AD曲線を右方にシフトさせる"},{"t":"AS曲線を上方にシフトさせる"},{"t":"ELB制約そのものを若干引き下げる"}],"ans":3,"e":"制約の位置を動かす政策。フォワードガイダンスは長期金利を下げる形で、同じく金利政策の拡張として整理される。"},{"ty":"mc","q":"AD-AS分析の枠組みで、量的緩和政策の効果はどう表現されるか。","ch":[{"t":"借り手の外部資金調達プレミアムを低下させ、AD曲線を右方にシフトさせる"},{"t":"潜在産出量を低下させる"},{"t":"ELB制約そのものを引き下げる"},{"t":"AS曲線を下方にシフトさせる"}],"ans":0,"e":"外部資金調達プレミアムの低下→AD曲線の右方シフト（E2⇒E4）。"},{"ty":"mc","q":"期待チャネルを通じた緩和効果は、AD-AS分析でどう表現されるか。","ch":[{"t":"長期インフレ予想を押し上げ、AS曲線を上方にシフトさせる"},{"t":"潜在産出量を引き上げる"},{"t":"ELB制約を引き上げる"},{"t":"AD曲線を左方にシフトさせる"}],"ans":0,"e":"政策アナウンスメントや政策行動で長期インフレ予想に働きかけ（π*⇒π**）、AS曲線が上方シフトしてAD曲線の屈曲点で交差する（E2⇒E5）。"},{"ty":"mc","q":"期待チャネルの有効性について、教科書が釘を刺している点はどれか。","ch":[{"t":"期待は財政政策によってのみ動く"},{"t":"中央銀行が高いインフレ目標を掲げても、自動的に人々から信認されるわけではない"},{"t":"インフレ目標を掲げれば必ず期待は動く"},{"t":"期待は観測できないため政策対象にならない"}],"ans":1,"e":"信認は掲げるだけでは得られない。第7章の柔軟なインフレ目標政策における「公約→実行→信認」の順序とつながる論点。"},{"ty":"mc","q":"AD-AS分析の拡張による非伝統的金融政策の効果分析のまとめとして、正しいものはどれか。","ch":[{"t":"AD曲線を大幅に上方シフトさせたり、長期インフレ予想を大きく押し上げたりといった効果が期待できない限り、その有効性には限界がある"},{"t":"非伝統的金融政策は伝統的金融政策より常に強力である"},{"t":"非伝統的金融政策は産出量にのみ効果があり物価には効果がない"},{"t":"非伝統的金融政策には副作用がないため、長く続けても問題ない"}],"ans":0,"e":"章全体の結論。問1の締めで一文使うと、単なる説明で終わらない答案になる。"}]}]},{"id":"essay","label":"論述の骨格","kind":"read","hint":"論述の中心になる部分です。まず何も見ずに自力で書き出してから、答えを開いてください。","sections":[{"label":"論述","title":"7. 論述の骨格チェック","note":"","items":[{"ty":"read","h":"問1の答案の全体構成を、見出しレベルで書き出しなさい。","sub":"","body":"・導入の経緯：伝統的金融政策の行き詰まり\n・政策手段：2つの経路と3つの手段\n・出口戦略：順序付けと現在の方式\n・効果と限界：締めの評価\n\n【書き方】\n問題文が「必ず導入の経緯、政策手段、出口戦略について説明しなさい」と指定しているので、この3つは必ず見出しとして立てる。4つ目の評価は加点要素。答案用紙は表裏を埋める分量が推奨されているので、3本柱それぞれに同程度の分量を配分する意識を持つ。","kw":[]},{"ty":"read","h":"「導入の経緯」を、200字程度で書き出しなさい。","sub":"","body":"・伝統的金融政策＝政策金利（無担保コールレート）の操作\n・名目金利の実効下限（ELB）制約に到達し、追加緩和ができない状態が常態化\n・デフレ・低成長の長期化\n・年表：アジア金融危機(1997-98)→ゼロ金利(1999.2-2000.8)→量的緩和(2001.3-2006.3)→グローバル金融危機(2008-09)→包括的緩和(2010.10-2013.3)→QQE(2013.4-)→マイナス金利・YCC(2016)\n\n【書き方】\n「金利を下げるという手段が使えなくなった」という一点に絞って書き、そのうえで年表で肉付けする。図11-1（政策金利の推移）と図11-2（バランスシート規模）を引くと具体性が出る。","kw":[]},{"ty":"read","h":"「政策手段」を、2つの経路と3つの手段に整理して書き出しなさい。","sub":"","body":"・経路①：将来の政策金利の予想に働きかけるフォワードガイダンスの経路\n・経路②：金融資産を購入し資産価格・プレミアムに働きかける量的緩和の経路\n・手段1 フォワードガイダンス：低金利継続を約束→長期金利低下＝将来の緩和効果の前借り。限界＝下げしろがなければ無効\n・手段2 マイナス金利：中央銀行当座預金にマイナス金利を課しELB制約自体を押し下げる。準備需要曲線がゼロ以下でも右下がりに\n・手段3 量的緩和・YCC：長期国債等を大量購入。ポートフォリオリバランス効果（不完全代替が前提）。YCCは長期金利を直接誘導\n\n【書き方】\n長期金利＝将来の短期金利の予想の平均＋タームプレミアム、と分解して「FGは前半、量的緩和は後半に効く」と書けると、2つの経路の意味が明確になる。図11-7（マイナス金利）と図11-13（量的緩和の概念図）を描き添えると加点が見込める。","kw":[]},{"ty":"read","h":"「出口戦略」を、200字程度で書き出しなさい。","sub":"","body":"・政策の順序付け（sequencing）が論点\n・グローバル金融危機以前：①バランスシート縮小→超過準備解消 ②政策金利引き上げ\n・コロナ禍以降：①テーパリング（買入ペースの縮小）②超過準備への付利→政策金利引き上げ\n・順序が変わった理由＝バランスシートが大規模化し、縮小完了を待てなくなったため\n・副作用：中銀の金利支払いが急拡大し逆ざやのリスク（IOR金利）\n\n【書き方】\n「なぜ順序が変わったのか」を書けるかどうかが分かれ目。単に2パターンを並べるのではなく、規模の問題が方式を変えさせた、という因果で結ぶ。","kw":[]},{"ty":"read","h":"「効果と限界」を、締めとして100字程度で書き出しなさい。","sub":"","body":"・AD曲線を大幅に上方シフトさせたり、長期インフレ予想を大きく押し上げたりする効果が期待できない限り、有効性には限界がある\n・中央銀行が高いインフレ目標を掲げても自動的に信認されるわけではない\n・YCC：イールドカーブ変動を通じた有効需要刺激効果は極めて限定的\n・銀行券ルールを大きく超える国債保有＝財政ファイナンスとの線引きの問題\n\n【書き方】\n問1では総需要＝総供給分析は必須ではないと明言されているので、AD-ASの図を描き込む必要はない。結論部分の一文だけ借りてくれば十分。","kw":[]},{"ty":"read","h":"非伝統的金融政策が効果を持つための前提条件を、2つ挙げて説明しなさい。","sub":"","body":"・不完全代替：短期政府証券と長期国債、マネタリーベースと他の金融資産が完全代替でないこと。完全代替なら量的緩和は無効\n・信認：フォワードガイダンスも期待チャネルも、中央銀行の約束が信じられて初めて機能する\n\n【書き方】\n「効く／効かない」を分ける条件を意識して書けると、政策を暗記しただけの答案と差がつく。教科書が繰り返す「限界」の議論はすべてこの2つに帰着する。","kw":[]}]}]}]};</script>
 <script>
-const LEC=[
-{k:"導入",title:"非伝統的金融政策とは（導入の経緯）",
-note:'<div class="note"><h3>問1の論述骨格（暗記する）</h3><ul><li><b>経緯</b>：伝統的金融政策＝政策金利の操作。しかし名目金利の<b>実効下限（ELB）</b>に達すると機能しなくなり、その状態が常態化 → 非伝統的金融政策へ</li><li><b>手段</b>：①金利政策の拡張（フォワードガイダンス・マイナス金利・YCC）②量的緩和（資産買入によるバランスシート拡大）</li><li><b>出口</b>：①中銀バランスシート規模の縮小（テーパリング）→ 超過準備の解消 ②超過準備への付利（IOR）→ 政策金利の引き上げ</li><li><b>締め</b>：日銀のバランスシートが経済規模比で突出して巨額 → 出口には逆ざやのリスク。第13章の論点（低体温症経済・政府債務）に接続できると加点</li></ul></div>',
-qs:[
-{q:"伝統的金融政策が機能しなくなる原因となる、名目金利の下限を何というか。",a:"実効下限（ELB）",d:["ゼロ金利制約のみ","流動性の罠","自然利子率"],e:"ELB＝effective lower bound。政策金利の調整で経済変動と物価を安定させる伝統的金融政策が機能しない状態が常態化した。"},
-{q:"日本の政策金利にあたるものはどれか。",a:"オーバーナイト物無担保コールレート",d:["長期プライムレート","10年国債利回り","公定歩合"],e:"この誘導目標を操作するのが伝統的金融政策。"},
-{q:"日本でゼロ金利政策が実施された時期はいつか。",a:"1999年2月〜2000年8月",d:["2001年3月〜2006年3月","2010年10月〜2013年3月","2013年4月〜"],e:"①アジア金融危機(1997-98)→②ゼロ金利(1999-2000)→③量的緩和(2001-2006)→④グローバル金融危機(2008-09)→⑤包括的緩和(2010-2013)→⑥QQE(2013-)の流れ。"},
-{q:"量的緩和政策が実施された時期はいつか。",a:"2001年3月〜2006年3月",d:["1999年2月〜2000年8月","2010年10月〜2013年3月","2013年4月〜"],e:"ゼロ金利政策の次の段階。"},
-{q:"量的・質的金融緩和（QQE）が開始されたのはいつか。",a:"2013年4月",d:["2010年10月","2016年1月","2008年4月"],e:"黒田総裁の就任（2013年3月20日）直後から。"},
-{q:"包括的な金融緩和政策が実施された時期はいつか。",a:"2010年10月〜2013年3月",d:["2001年3月〜2006年3月","1999年2月〜2000年8月","2013年4月〜"],e:"グローバル金融危機(2008-09)を受けた白川総裁時代の政策。"},
-{q:"2013年3月から2023年4月まで日銀総裁を務めたのは誰か。",a:"黒田東彦",d:["白川方明","植田和男","福井俊彦"],e:"第31代。第30代が白川方明（2008-2013）、第32代が植田和男（2023-）。"},
-{q:"現在（2023年4月〜）の日銀総裁は誰か。",a:"植田和男",d:["黒田東彦","白川方明","雨宮正佳"],e:"第32代総裁。"}
-]},
-{k:"類型",title:"非伝統的金融政策の類型化",
-note:'<div class="note"><h3>2つの経路（答案の柱になる）</h3><ul><li><b>フォワードガイダンスの経路</b>：将来の政策金利の予想に働きかける</li><li><b>量的緩和の経路</b>：さまざまな金融資産を購入し、資産価格やそこに含まれるプレミアムに働きかける</li></ul></div>',
-qs:[
-{q:"将来の政策金利の予想に働きかける経路を何というか。",a:"フォワードガイダンスの経路",d:["量的緩和の経路","ポートフォリオ・リバランス経路","信用緩和の経路"],e:"もう一つが、金融資産を購入して資産価格やプレミアムに働きかける量的緩和の経路。"},
-{q:"金融危機の際、中央銀行が担う金融システム安定化の機能を何というか。",a:"最後の貸し手（LLR）",d:["量的緩和","フォワードガイダンス","マクロプルーデンス"],e:"lender of last resort。金融市場の安定確保・企業金融の円滑化のために働く。"},
-{q:"非伝統的金融政策が働きかける対象として挙げられている2つは何か。",a:"金融システムの安定化と、落ち込んだ経済活動水準の押上げ",d:["物価の安定と為替の安定","財政再建と成長戦略","銀行収益の改善と株価の維持"],e:"金融危機への対応と、景気の押し上げの2面がある。"}
-]},
-{k:"手段1",title:"手段（1）金利政策の拡張",
-qs:[
-{q:"中央銀行が先行きの政策運営方針を示し、一定の条件を満たすまで続けると約束する政策を何というか。",a:"フォワードガイダンス",d:["マイナス金利政策","イールドカーブ・コントロール","量的緩和"],e:"将来も低金利が継続するという期待形成を通じて長期金利を低下させ、追加的な金融緩和効果を生む。"},
-{q:"フォワードガイダンスの理論的説明として正しいものはどれか。",a:"通常より長期に低金利を継続することで、将来の金融緩和効果を前借りする",d:["現在の政策金利をマイナスにする","中央銀行が国債を大量に買い入れる","為替介入によって円安に誘導する"],e:"ELB制約で現在の金利低下幅が不足する分を、期間の長さで補う考え方。"},
-{q:"フォワードガイダンスが有効に機能したとき、イールドカーブはどうなるか。",a:"短期から中期のゾーンにかけて水平になる",d:["全体が右上がりに急になる","長期ゾーンだけが低下する","逆イールドになる"],e:"将来も低金利が続くという期待が、その期間の金利を押し下げるため。"},
-{q:"フォワードガイダンスの限界として挙げられているものはどれか。",a:"長期金利の水準が低ければ効果がなく、前借りの余地がない",d:["中央銀行の信認が高すぎると効かない","財政赤字を拡大させる","為替が不安定になる"],e:"すでに長期金利が十分低い状況では、これ以上前借りできない。"},
-{q:"マイナス金利政策とは、どこにマイナスの金利を課す政策か。",a:"中央銀行当座預金",d:["普通預金","国債","貸出金"],e:"若干でも名目金利の実効下限（ELB）制約を押し下げることが目的。"},
-{q:"マイナス金利導入以前、名目金利の下限がゼロであった理由はどれか。",a:"現金と準備預金が完全代替になるため",d:["法律で禁止されていたため","銀行が反対したため","物価が下がるため"],e:"金利がマイナスなら現金で持てばよいので、準備預金の需要曲線がゼロで屈折して水平になる。"}
-]},
-{k:"手段2",title:"手段（2）量的緩和政策",
-qs:[
-{q:"中央銀行が大規模な資産買入を行うことで拡大するものはどれか。",a:"中央銀行のバランスシート",d:["政策金利","財政支出","預金準備率"],e:"日銀のバランスシートは経済規模と比べて突出して巨額になっている。"},
-{q:"量的緩和の経路が働きかける対象はどれか。",a:"資産価格やそこに含まれるプレミアム",d:["将来の政策金利の予想","銀行の貸出態度","家計の貯蓄率"],e:"フォワードガイダンスが「予想」に働きかけるのに対し、量的緩和は「資産価格」に働きかける。"}
-]},
-{k:"出口",title:"出口戦略（正常化）",
-note:'<div class="note"><h3>出口の順序（sequencing）</h3><ul><li><b>グローバル金融危機以前</b>：1) バランスシート縮小 → 超過準備の解消 → 2) 政策金利の引き上げ</li><li><b>コロナ禍以降</b>（バランスシートが大規模化）：1) 大規模な資産買入オペの規模を徐々に縮小（<b>テーパリング</b>）→ 2) 超過準備に<b>付利</b>して政策金利を引き上げ</li><li><b>リスク</b>：中銀の金利支払いが急速に拡大 → <b>逆ざや</b>のリスク</li></ul></div>',
-qs:[
-{q:"出口戦略における政策の順序付けを何というか。",a:"sequencing（シークエンシング）",d:["テーパリング","ノーマライゼーション","リバランス"],e:"①中銀バランスシート規模の縮小 ②政策金利のゼロ以上への引き上げ、という順序。"},
-{q:"大規模な資産買入オペの規模を徐々に縮小することを何というか。",a:"テーパリング",d:["シークエンシング","リバースレポ","オペレーション・ツイスト"],e:"コロナ禍以降のバランスシート大規模化を受けた出口の第一段階。"},
-{q:"中央銀行が民間銀行から預かっている準備預金に対して支払う金利を何というか。",a:"IOR金利",d:["ON RRP金利","コールレート","公定歩合"],e:"Interest on Reserves。超過準備に付利することで政策金利を引き上げる手段になる。"},
-{q:"米国FRBが金融機関やMMFから米国債を担保に一晩だけ資金を借り入れる際に支払う金利を何というか。",a:"ON RRP金利",d:["IOR金利","フェデラルファンド金利","プライムレート"],e:"オーバーナイト・リバースレポ金利。"},
-{q:"出口戦略で懸念される「逆ざや」とは何が原因で生じるか。",a:"中銀の金利支払いが急速に拡大すること",d:["資産価格が上昇すること","為替が円高になること","財政赤字が縮小すること"],e:"付利によって支払う金利が、保有資産から得られる収益を上回る状態。"}
-]},
-{k:"AD-AS",title:"効果：総需要＝総供給分析の拡張",
-qs:[
-{q:"ELB制約に抵触していない通常の状態では、インフレ率の低下は実質利子率にどう作用するか。",a:"実質利子率が低下し、AD曲線は右下がりになる",d:["実質利子率が上昇し、AD曲線は右上がりになる","実質利子率は変化しない","AD曲線が垂直になる"],e:"政策金利＝実質利子率＋インフレ率。通常は政策金利を下げられるので実質利子率も下がる。"},
-{q:"ELB制約に抵触した状態でインフレ率が低下すると、何が起きるか。",a:"実質利子率が上昇し、AD曲線が右上がりになる",d:["実質利子率が低下する","AD曲線が右下がりのままになる","AS曲線が左シフトする"],e:"政策金利をこれ以上下げられないため、インフレ率の低下分だけ実質利子率が上がってしまう。"},
-{q:"大規模な負のADショックが起きた場合、小規模な場合と何が異なるか。",a:"インフレ率がELB以下に低下し、政策金利を引き下げられなくなる",d:["AS曲線が右シフトする","物価が上昇する","財政政策が不要になる"],e:"ELB制約に抵触することで、通常の金融政策による調整が効かなくなる。"}
-]},
-{k:"将来展望",title:"金融政策の将来展望（第13章）",
-note:'<div class="note"><h3>締めで使える論点</h3><ul><li><b>二つの境界線の消滅</b>：①循環と趨勢（成長トレンドの低下）②貨幣と短期債（ゼロ金利で完全代替 → 金融政策と財政政策の一体化）</li><li><b>低体温症経済</b>：低成長・低インフレ・低名目金利の三つの「低」</li><li><b>処方箋</b>：金融政策による対症療法ではなく、構造的な対応が必要。金融政策は構造政策を代替できない</li></ul></div>',
-qs:[
-{q:"「二つの境界線の消滅」として挙げられているものはどれか。",a:"循環と趨勢の境界線／貨幣と短期債の境界線",d:["財政と金融の境界線／内外の境界線","短期と長期の境界線／実物と金融の境界線","官と民の境界線／新旧の境界線"],e:"①成長トレンドの低下により循環と趨勢の区別が曖昧に ②ゼロ金利で貨幣と短期証券がほぼ完全代替に。"},
-{q:"貨幣と短期債の境界線が消滅すると、何が起きるか。",a:"金融政策と財政政策の一体化",d:["為替の変動が拡大する","インフレが加速する","銀行が不要になる"],e:"ゼロ金利下では貨幣と短期証券がほぼ完全代替になるため。"},
-{q:"「低体温症経済」を特徴づける三つの「低」とは何か。",a:"低成長・低インフレ・低名目金利",d:["低賃金・低雇用・低消費","低金利・低株価・低為替","低出生率・低生産性・低投資"],e:"インフレ率が経済活動の体温計、お金が血液。大量に供給されても血の巡りが悪い状態。"},
-{q:"2000〜2019年の日本の平均成長率はおよそ何％か。",a:"0.9%",d:["3.0%","7.2%","2.1%"],e:"1960-79：7.2%、1980-99：3.0%、2000-19：0.9%と低下してきた。"},
-{q:"低体温症経済に対する処方箋として正しいものはどれか。",a:"体質改善を図る構造的な対応",d:["金融政策による対症療法","財政支出の一律削減","為替介入の強化"],e:"金融政策は構造政策を後押しする緩和的な環境を作れるが、構造政策そのものを代替することはできない。"},
-{q:"1990年代以降、日本の企業部門の資金過不足はどう変化したか。",a:"資金不足から資金余剰へ",d:["資金余剰から資金不足へ","変化していない","一貫して資金不足"],e:"貯蓄超過経済。企業が資金の借り手でなくなったことが、金融政策の効きにくさの背景にある。"}
-]}
-];
+/* 試験対策クイズ集 共通エンジン ------------------------------------------
+   QUIZ(deck) で起動する。外部依存なし。
+   1科目1ページの版でも、全科目を1ファイルにまとめた版でも同じものを使う。 */
+var QUIZ = (function () {
+  'use strict';
 
-const S={};let cur=0,wrongOnly=false;
-const ORD={},PICK={};
-const TOTAL=LEC.reduce((a,l)=>a+l.qs.length,0);
-const SK='kinq';
-function shuf(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function order(li,qi){
-  const k=li+'_'+qi;
-  if(!ORD[k]){const q=LEC[li].qs[qi];ORD[k]=shuf([{t:q.a,ok:1}].concat(q.d.map(t=>({t,ok:0}))));}
-  return ORD[k];
-}
-function tabs(){
-  const el=document.getElementById('tabs');el.innerHTML='';
-  LEC.forEach((l,i)=>{
-    const b=document.createElement('button');
-    b.className='tab'+(i===cur?' on':'');
-    let done=0;for(let q=0;q<l.qs.length;q++)if(S[i+'_'+q])done++;
-    if(done===l.qs.length)b.className+=' done';
-    b.innerHTML=esc(l.k)+'<small>'+done+'/'+l.qs.length+'</small>';
-    b.onclick=()=>{cur=i;wrongOnly=false;rb();render();window.scrollTo(0,0);};
-    el.appendChild(b);
+  var active = null;
+  document.addEventListener('keydown', function (e) {
+    if (active && active.onKey) active.onKey(e);
   });
-}
-function rb(){document.getElementById('ba').style.display='none';document.getElementById('bw').style.display='';}
-function render(){
-  tabs();
-  const l=LEC[cur],m=document.getElementById('main');
-  let h='<h2>'+esc(l.title)+'</h2>';
-  if(l.note&&!wrongOnly)h+=l.note;
-  let shown=0;
-  l.qs.forEach((q,qi)=>{
-    const k=cur+'_'+qi,st=S[k];
-    if(wrongOnly&&(!st||st.ok))return;
-    shown++;
-    h+='<div class="q'+(st?(st.ok?' ok':' ng'):'')+'"><div class="qh"><span class="qn">Q'+(qi+1)+'</span><span class="qt">'+esc(q.q)+'</span></div><div class="opts">';
-    order(cur,qi).forEach((it,i)=>{
-      let cls='o';
-      if(st){if(it.ok)cls+=' c';else if(st.sel===i)cls+=' x';}
-      const mk=st?(it.ok?'✓':(st.sel===i?'✕':(i+1))):(i+1);
-      h+='<div class="'+cls+'" data-q="'+qi+'" data-i="'+i+'"><i>'+mk+'</i><span>'+esc(it.t)+'</span></div>';
+
+  return function mount(DECK) {
+
+  var $ = function (id) { return document.getElementById(id); };
+  function E(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  /* ---------------- 状態 ---------------- */
+  var KEY = 'kq-' + DECK.slug;
+  var S = {};          // 解答記録  "mode|sec|q" -> 1(正解) / 0(不正解)
+  var mi = 0;          // 選択中のモード
+  var sec = -1;        // 選択中の範囲（-1 = ぜんぶ）
+  var view = DECK.defaultView || 'quiz';
+  var only = false;    // ✕だけ
+  var ix = 0;          // 出題リスト内の位置
+  var list = [];       // [[secIndex, qIndex], ...]
+  var st = null;       // 解答中の一時状態
+
+  function mode() { return DECK.modes[mi]; }
+  function sections() { return mode().sections; }
+  function qkey(si, qi) { return mode().id + '|' + si + '|' + qi; }
+
+  function save() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify({ S: S, m: mi, v: view }));
+    } catch (e) {}
+  }
+  function load() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (!raw) return;
+      var o = JSON.parse(raw);
+      if (o.S) S = o.S;
+      if (typeof o.m === 'number' && DECK.modes[o.m]) mi = o.m;
+      if (o.v === 'quiz' || o.v === 'list') view = o.v;
+    } catch (e) {}
+  }
+
+  /* ---------------- 出題リスト ---------------- */
+  function build() {
+    var out = [];
+    sections().forEach(function (sc, si) {
+      if (sec >= 0 && si !== sec) return;
+      sc.items.forEach(function (it, qi) {
+        if (only && S[qkey(si, qi)] !== 0) return;
+        out.push([si, qi]);
+      });
     });
-    h+='</div>';
-    if(!st)h+='<div class="act"><button data-check="'+qi+'">答え合わせ</button><span class="hint" data-cnt="'+qi+'"></span></div>';
-    else h+='<div class="exp"><b class="'+(st.ok?'ok':'ng')+'">'+(st.ok?'正解':'不正解')+'</b>　'+esc(q.e)+'</div>';
-    h+='</div>';
-  });
-  if(!shown)h+='<div class="msg">この章に間違えた問題はありません。</div>';
-  m.innerHTML=h;bind();stats();
-}
-function bind(){
-  document.querySelectorAll('.o').forEach(el=>{
-    const qi=+el.dataset.q,i=+el.dataset.i,k=cur+'_'+qi;
-    if(S[k])return;
-    el.onclick=()=>{PICK[k]=i;el.parentNode.querySelectorAll('.o').forEach(x=>x.classList.remove('sel'));el.classList.add('sel');
-      const c=document.querySelector('[data-cnt="'+qi+'"]');if(c)c.textContent='';};
-  });
-  document.querySelectorAll('[data-check]').forEach(b=>{
-    const qi=+b.dataset.check,k=cur+'_'+qi;
-    b.onclick=()=>{
-      if(PICK[k]===undefined){const c=document.querySelector('[data-cnt="'+qi+'"]');if(c)c.textContent='選択肢を選んでください';return;}
-      S[k]={sel:PICK[k],ok:!!order(cur,qi)[PICK[k]].ok};save();render();
-    };
-  });
-}
-function stats(){
-  const l=LEC[cur];let d=0,o=0;
-  l.qs.forEach((q,qi)=>{const st=S[cur+'_'+qi];if(st){d++;if(st.ok)o++;}});
-  document.getElementById('s1').textContent=d+' / '+l.qs.length;
-  document.getElementById('s2').textContent=o;
-  document.getElementById('s3').textContent=d-o;
-  document.getElementById('s4').textContent=d?Math.round(o/d*100)+'%':'—';
-  let ad=0,ao=0;
-  LEC.forEach((L,li)=>L.qs.forEach((q,qi)=>{const st=S[li+'_'+qi];if(st){ad++;if(st.ok)ao++;}}));
-  document.getElementById('pbar').style.width=Math.round(ad/TOTAL*100)+'%';
-  document.getElementById('plab').textContent='全体の進捗 '+ad+' / '+TOTAL+' 問';
-  document.getElementById('prate').textContent=ad?('正答率 '+Math.round(ao/ad*100)+'%'):'';
-}
-function save(){try{localStorage.setItem(SK,JSON.stringify(S));}catch(e){}}
-function load(){try{const v=localStorage.getItem(SK);if(v)Object.assign(S,JSON.parse(v));}catch(e){}}
-document.getElementById('bw').onclick=function(){wrongOnly=true;this.style.display='none';document.getElementById('ba').style.display='';render();};
-document.getElementById('ba').onclick=function(){wrongOnly=false;this.style.display='none';document.getElementById('bw').style.display='';render();};
-document.getElementById('br').onclick=function(){LEC[cur].qs.forEach((q,qi)=>{delete S[cur+'_'+qi];delete PICK[cur+'_'+qi];delete ORD[cur+'_'+qi];});wrongOnly=false;rb();save();render();};
-document.getElementById('brall').onclick=function(){
-  if(!confirm('全ての解答記録を消します。よろしいですか？'))return;
-  Object.keys(S).forEach(k=>delete S[k]);Object.keys(ORD).forEach(k=>delete ORD[k]);Object.keys(PICK).forEach(k=>delete PICK[k]);
-  wrongOnly=false;rb();save();render();};
-load();render();
+    return out;
+  }
+  function wrongCount() {
+    var n = 0;
+    sections().forEach(function (sc, si) {
+      sc.items.forEach(function (it, qi) { if (S[qkey(si, qi)] === 0) n++; });
+    });
+    return n;
+  }
+  function tally() {
+    var done = 0, ok = 0;
+    list.forEach(function (p) {
+      var v = S[qkey(p[0], p[1])];
+      if (v === 0 || v === 1) { done++; if (v === 1) ok++; }
+    });
+    return { done: done, ok: ok, total: list.length };
+  }
 
-</script></body></html>
+  /* ---------------- 描画：ヘッダ周り ---------------- */
+  function drawModes() {
+    var el = $('modes'), hint = $('modehint');
+    if (DECK.modes.length < 2) { el.style.display = 'none'; hint.style.display = 'none'; return; }
+    el.innerHTML = DECK.modes.map(function (m, i) {
+      return '<button data-m="' + i + '"' + (i === mi ? ' class="on"' : '') + '>' + E(m.label) + '</button>';
+    }).join('');
+    el.querySelectorAll('[data-m]').forEach(function (b) {
+      b.onclick = function () { mi = +b.dataset.m; sec = -1; only = false; ix = 0; st = null; save(); draw(); window.scrollTo(0, 0); };
+    });
+    hint.textContent = mode().hint || '';
+    hint.style.display = mode().hint ? '' : 'none';
+  }
+
+  function drawChips() {
+    var el = $('chips');
+    var scs = sections();
+    if (scs.length < 2) { el.style.display = 'none'; el.innerHTML = ''; return; }
+    el.style.display = '';
+    var h = '<button class="chip' + (sec < 0 ? ' on' : '') + '" data-s="-1">ぜんぶ</button>';
+    scs.forEach(function (sc, si) {
+      h += '<button class="chip' + (si === sec ? ' on' : '') + '" data-s="' + si + '">' +
+        E(sc.label || sc.title) + '<small>' + sc.items.length + '</small></button>';
+    });
+    el.innerHTML = h;
+    el.querySelectorAll('[data-s]').forEach(function (b) {
+      b.onclick = function () { sec = +b.dataset.s; ix = 0; st = null; draw(); window.scrollTo(0, 0); };
+    });
+  }
+
+  function drawHud() {
+    var t = tally();
+    var hud = $('hud'), track = $('track');
+    if (view === 'list' || mode().kind === 'read') { hud.style.display = 'none'; track.style.display = 'none'; return; }
+    hud.style.display = ''; track.style.display = '';
+    var pos = Math.min(ix + 1, t.total);
+    hud.innerHTML = t.total
+      ? '<span class="n">' + pos + ' / ' + t.total + ' 問</span><span class="sp"></span>' +
+        '<span class="ok">○ ' + t.ok + '</span><span class="ng">✕ ' + (t.done - t.ok) + '</span>'
+      : '';
+    track.querySelector('i').style.width = (t.total ? Math.round(t.done / t.total * 100) : 0) + '%';
+  }
+
+  // 出題ビューでは「いま解いている範囲」のノートを出す（「ぜんぶ」でも問題に合わせて切り替わる）
+  var noteAt = -1;
+  function drawNote(si) {
+    var el = $('note');
+    var scs = sections();
+    var at = (si === undefined || si < 0) ? sec : si;
+    var note = (at >= 0 && scs[at] && scs[at].note) ? scs[at].note : '';
+    if (!note || view === 'list') { el.innerHTML = ''; noteAt = -1; return; }
+    if (noteAt === at) return; // 同じ範囲を解いている間は開閉状態を保つ
+    noteAt = at;
+    el.innerHTML = '<details class="note"><summary>要点ノート（' +
+      E(scs[at].label || '') + '）</summary><div class="body">' + note + '</div></details>';
+  }
+
+  /* ---------------- 描画：本文 ---------------- */
+  function draw() {
+    if (sec >= sections().length) sec = -1;
+    noteAt = -1;
+    drawModes(); drawChips(); drawNote();
+    list = build();
+    if (ix >= list.length) ix = Math.max(list.length - 1, 0);
+    document.body.classList.toggle('hide', false);
+    if (view === 'list' || mode().kind === 'read') drawList(); else drawQuiz();
+    drawHud(); drawFoot();
+  }
+
+  /* --- 出題ビュー --- */
+  function drawQuiz() {
+    var stage = $('stage'), nav = $('nav');
+    if (!list.length) {
+      stage.innerHTML = '<div class="empty">' +
+        (only ? '間違えた問題はありません。' : 'この範囲に問題がありません。') + '</div>';
+      nav.innerHTML = '';
+      return;
+    }
+    if (ix >= list.length) return drawDone();
+
+    var si = list[ix][0], qi = list[ix][1];
+    var sc = sections()[si], it = sc.items[qi];
+    drawNote(si);
+    var rec = S[qkey(si, qi)];
+    var mine = st && st.si === si && st.qi === qi ? st : null;
+    var answered = (mine && mine.done) ? mine
+      : (rec === 0 || rec === 1 ? { si: si, qi: qi, ok: rec === 1, pick: null, done: true } : null);
+    var pending = (mine && !mine.done && mine.picks) ? mine.picks : [];
+    var revealed = !!(mine && mine.reveal);
+
+    var h = '<div class="card"><p class="src">' + E(sc.title) + '</p>';
+
+    if (it.ty === 'wrong') {
+      h += '<p class="qtext">' + sentence(it, !!answered) + '</p>';
+      h += '<p class="ask">誤っているのはどれ？</p>' + choices(it, answered, pending);
+    } else if (it.ty === 'mc') {
+      h += '<p class="qtext">' + blanked(it.q, answered ? it.ch[it.ans].t : null) + '</p>' + choices(it, answered, pending);
+    } else if (it.ty === 'ms') {
+      h += '<p class="qtext">' + E(it.q) + '</p>';
+      h += '<p class="ask">正しいものを2つ選んでください</p>' + choices(it, answered, pending);
+    } else if (it.ty === 'recall') {
+      h += '<p class="qtext">' + blanked(it.q, (answered || revealed) ? it.a : null) + '</p>';
+      if (!answered && !revealed) {
+        h += '<div class="btns"><button class="btn pri" data-act="reveal">答えを見る</button></div>' +
+          '<p class="ask" style="margin:10px 0 0">まず頭のなかで答えてから押してください。</p>';
+      } else {
+        h += '<div class="fix' + (it.a.length > 40 ? ' long' : '') + '"><span class="lbl">答え</span><b>' + E(it.a) + '</b></div>';
+        if (!answered) {
+          h += '<div class="btns"><button class="btn y" data-mark="1">○ 言えた</button>' +
+            '<button class="btn n" data-mark="0">✕ 言えなかった</button></div>';
+        }
+      }
+    }
+
+    if (answered) h += result(it, answered);
+    h += '</div>';
+    stage.innerHTML = h;
+
+    nav.innerHTML = '<button data-go="-1"' + (ix === 0 ? ' disabled' : '') + '>← もどる</button>' +
+      '<span class="sp"></span>' +
+      '<button data-go="1" class="' + (answered ? 'pri' : '') + '">' +
+      (ix === list.length - 1 ? '結果を見る' : 'つぎへ →') + '</button>';
+
+    bindQuiz(it, si, qi, !!answered);
+  }
+
+  function sentence(it, reveal) {
+    if (!reveal || it.badFrom < 0) return E(it.segs.join(''));
+    // 誤り箇所は連続しているので、まとめて1つの <u> で囲む
+    return E(it.segs.slice(0, it.badFrom).join('')) +
+      '<u class="bad">' + E(it.segs.slice(it.badFrom, it.badTo + 1).join('')) + '</u>' +
+      E(it.segs.slice(it.badTo + 1).join(''));
+  }
+  function blanked(q, fill) {
+    var parts = String(q).split('（　）');
+    if (parts.length < 2) return E(q);
+    var b = fill === null || fill === undefined
+      ? '<span class="blank">　　</span>'
+      : '<span class="blank on">' + E(fill) + '</span>';
+    return E(parts[0]) + b + E(parts.slice(1).join('（　）'));
+  }
+
+  function choices(it, answered, pending) {
+    var multi = it.ty === 'ms';
+    var picks = pending || [];
+    var h = '<div class="choices">';
+    it.ch.forEach(function (c, i) {
+      var cls = 'ch' + (c.none ? ' none' : '');
+      var mark = i + 1;
+      if (answered) {
+        var isAns = multi ? it.ans.indexOf(i) >= 0 : i === it.ans;
+        var wasPicked = answered.picks ? answered.picks.indexOf(i) >= 0 : answered.pick === i;
+        if (isAns) { cls += ' correct'; mark = '✓'; }
+        else if (wasPicked) { cls += ' miss'; mark = '✕'; }
+      } else if (picks.indexOf(i) >= 0) {
+        cls += ' pick';
+      }
+      h += '<button class="' + cls + '" data-i="' + i + '"' + (answered ? ' disabled' : '') + '>' +
+        '<i>' + mark + '</i><span>' + E(c.t) + '</span></button>';
+    });
+    h += '</div>';
+    if (multi && !answered) {
+      h += '<div class="btns"><button class="btn pri" data-act="grade"' +
+        (picks.length === 2 ? '' : ' disabled') + '>答え合わせ</button></div>';
+    }
+    return h;
+  }
+
+  function result(it, a) {
+    var h = '<div class="verdict ' + (a.ok ? 'y' : 'n') + '">' + (a.ok ? '正解' : '不正解') + '</div>';
+    if (it.ty === 'wrong') {
+      h += it.fix
+        ? '<div class="fix"><span class="lbl">正しくは</span><b>' + E(it.fix) + '</b></div>'
+        : '<div class="fix"><b>この文に誤りはありません。</b></div>';
+    }
+    if (it.e) h += '<div class="exp">' + E(it.e) + '</div>';
+    return h;
+  }
+
+  function bindQuiz(it, si, qi, answered) {
+    var stage = $('stage');
+    stage.querySelectorAll('.ch').forEach(function (b) {
+      if (answered) return;
+      b.onclick = function () {
+        var i = +b.dataset.i;
+        if (it.ty === 'ms') {
+          var picks = (st && st.si === si && st.qi === qi && !st.done && st.picks) ? st.picks.slice() : [];
+          var at = picks.indexOf(i);
+          if (at >= 0) picks.splice(at, 1);
+          else if (picks.length < 2) picks.push(i);
+          st = { si: si, qi: qi, picks: picks };
+          drawQuiz();
+        } else {
+          grade(it, si, qi, [i]);
+        }
+      };
+    });
+    var act = stage.querySelector('[data-act="grade"]');
+    if (act) act.onclick = function () { grade(it, si, qi, st.picks); };
+    var rev = stage.querySelector('[data-act="reveal"]');
+    if (rev) rev.onclick = function () { st = { si: si, qi: qi, reveal: true }; drawQuiz(); };
+    stage.querySelectorAll('[data-mark]').forEach(function (b) {
+      b.onclick = function () { grade(it, si, qi, null, +b.dataset.mark === 1); };
+    });
+    $('nav').querySelectorAll('[data-go]').forEach(function (b) {
+      b.onclick = function () { step(+b.dataset.go); };
+    });
+  }
+
+  function grade(it, si, qi, picks, selfOk) {
+    var ok;
+    if (it.ty === 'ms') {
+      ok = picks.length === 2 && picks.every(function (p) { return it.ans.indexOf(p) >= 0; });
+    } else if (it.ty === 'recall') {
+      ok = !!selfOk;
+    } else {
+      ok = picks[0] === it.ans;
+    }
+    S[qkey(si, qi)] = ok ? 1 : 0;
+    st = { si: si, qi: qi, ok: ok, pick: picks ? picks[0] : null, picks: picks || [], done: true };
+    save();
+    drawQuiz(); drawHud(); drawFoot();
+  }
+
+  function step(d) {
+    var n = ix + d;
+    if (n < 0) return;
+    ix = n; st = null;
+    if (ix >= list.length) { drawDone(); drawHud(); }
+    else drawQuiz();
+    drawHud();
+    window.scrollTo(0, 0);
+  }
+
+  function drawDone() {
+    $('note').innerHTML = ''; noteAt = -1;
+    var t = tally();
+    var rate = t.done ? Math.round(t.ok / t.done * 100) : 0;
+    var wrong = wrongCount();
+    var h = '<div class="done"><p class="big">' + t.ok + ' / ' + t.done + '</p>' +
+      '<p class="rate">正答率 ' + rate + '％</p><div class="btns">';
+    if (wrong) h += '<button class="btn pri" data-act="review">✕だった' + wrong + '問を復習</button>';
+    h += '<button class="btn" data-act="restart">はじめから</button></div></div>';
+    $('stage').innerHTML = h;
+    $('nav').innerHTML = '<button data-go="-1">← もどる</button>';
+    $('stage').querySelectorAll('[data-act]').forEach(function (b) {
+      b.onclick = function () {
+        if (b.dataset.act === 'review') { only = true; sec = -1; }
+        ix = 0; st = null; draw(); window.scrollTo(0, 0);
+      };
+    });
+    $('nav').querySelectorAll('[data-go]').forEach(function (b) {
+      b.onclick = function () { step(-1); };
+    });
+  }
+
+  /* --- 一覧ビュー --- */
+  function drawList() {
+    var h = '';
+    sections().forEach(function (sc, si) {
+      if (sec >= 0 && si !== sec) return;
+      h += '<div class="lsec"><h2>' + E(sc.title) + '</h2>';
+      if (sc.note) h += '<details class="note" open><summary>要点ノート</summary><div class="body">' + sc.note + '</div></details>';
+      sc.items.forEach(function (it) {
+        if (it.ty === 'read') {
+          h += '<div class="doc"><h3>' + E(it.h) + '</h3>' +
+            (it.sub ? '<p class="why">' + E(it.sub) + '</p>' : '') +
+            '<pre>' + E(it.body) + '</pre>' +
+            (it.kw && it.kw.length ? '<div class="kw">' + it.kw.map(function (k) { return '<span>' + E(k) + '</span>'; }).join('') + '</div>' : '') +
+            '</div>';
+          return;
+        }
+        if (it.ty === 'wrong') {
+          h += '<div class="item ' + (it.fix ? 'err' : 'clean') + '"><p class="s">' + sentence(it, true) + '</p>' +
+            (it.fix
+              ? '<p class="a"><span class="lbl">正しくは</span><b>' + E(it.fix) + '</b></p>'
+              : '<p class="note-ok">✓ この文に誤りはありません</p>') +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        } else if (it.ty === 'recall') {
+          h += '<div class="item"><p class="s">' + blanked(it.q, it.a) + '</p>' +
+            (it.q.indexOf('（　）') < 0 ? '<p class="a' + (it.a.length > 40 ? ' long' : '') + '"><span class="lbl">答え</span><b>' + E(it.a) + '</b></p>' : '') +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        } else if (it.ty === 'ms') {
+          h += '<div class="item"><p class="s">' + E(it.q) + '</p><p class="a"><span class="lbl">正しいもの</span><b>' +
+            it.ans.map(function (i) { return E(it.ch[i].t); }).join('</b>／<b>') + '</b></p>' +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        } else {
+          h += '<div class="item"><p class="s">' + blanked(it.q, it.ch[it.ans].t) + '</p>' +
+            (it.q.indexOf('（　）') < 0 ? '<p class="a"><span class="lbl">答え</span><b>' + E(it.ch[it.ans].t) + '</b></p>' : '') +
+            (it.e ? '<p class="ex">' + E(it.e) + '</p>' : '') + '</div>';
+        }
+      });
+      h += '</div>';
+    });
+    $('stage').innerHTML = h || '<div class="empty">表示できる項目がありません。</div>';
+    $('nav').innerHTML = '';
+  }
+
+  /* ---------------- フッタの操作 ---------------- */
+  function drawFoot() {
+    var el = $('tools');
+    var readOnly = mode().kind === 'read';
+    var h = '';
+    if (!readOnly) {
+      h += '<button data-v="quiz" class="' + (view === 'quiz' ? 'on' : '') + '">1問ずつ解く</button>';
+      h += '<button data-v="list" class="' + (view === 'list' ? 'on' : '') + '">一覧で読む</button>';
+    }
+    if (!readOnly && view === 'list') h += '<button data-act="hide">答えを隠す</button>';
+    if (!readOnly && view === 'quiz') {
+      var w = wrongCount();
+      h += '<button data-act="only" class="' + (only ? 'on' : '') + '"' + (w || only ? '' : ' disabled') +
+        '>✕だけ復習' + (w ? '（' + w + '）' : '') + '</button>';
+      h += '<button data-act="reset">記録を消す</button>';
+    }
+    el.innerHTML = h;
+    el.querySelectorAll('[data-v]').forEach(function (b) {
+      b.onclick = function () { view = b.dataset.v; only = false; ix = 0; st = null; save(); draw(); window.scrollTo(0, 0); };
+    });
+    el.querySelectorAll('[data-act]').forEach(function (b) {
+      b.onclick = function () {
+        var a = b.dataset.act;
+        if (a === 'only') { only = !only; if (only) sec = -1; ix = 0; st = null; draw(); window.scrollTo(0, 0); }
+        else if (a === 'hide') {
+          var on = document.body.classList.toggle('hide');
+          b.textContent = on ? '答えを表示' : '答えを隠す';
+          b.classList.toggle('on', on);
+        } else if (a === 'reset') {
+          if (!confirm('この' + mode().label + 'の解答記録を消します。よろしいですか？')) return;
+          Object.keys(S).forEach(function (k) { if (k.indexOf(mode().id + '|') === 0) delete S[k]; });
+          only = false; ix = 0; st = null; save(); draw();
+        }
+      };
+    });
+    $('keys').style.display = (view === 'quiz' && !readOnly) ? '' : 'none';
+  }
+
+  /* ---------------- キーボード ---------------- */
+  function onKey(e) {
+    if (view !== 'quiz' || mode().kind === 'read') return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea') return;
+    var k = e.key;
+    if (k === 'ArrowRight' || k === 'Enter') { e.preventDefault(); step(1); return; }
+    if (k === 'ArrowLeft') { e.preventDefault(); step(-1); return; }
+    if (/^[1-9]$/.test(k)) {
+      var btns = $('stage').querySelectorAll('.ch:not([disabled])');
+      var i = +k - 1;
+      if (btns[i]) { e.preventDefault(); btns[i].click(); }
+      return;
+    }
+    if (k === ' ') {
+      var b = $('stage').querySelector('[data-act="reveal"],[data-act="grade"]');
+      if (b && !b.disabled) { e.preventDefault(); b.click(); }
+    }
+  }
+
+  /* ---------------- 起動 ---------------- */
+  load();
+  draw();
+  active = { onKey: onKey };
+  return active;
+
+  };
+})();
+
+QUIZ(DECK);
+</script>
+<!-- DADS-A11Y:START -->
+<script id="dads-a11y">
+(function(){
+  'use strict';
+  function all(sel,root){return Array.prototype.slice.call((root||document).querySelectorAll(sel));}
+  function setButtonTypes(root){all('button',root).forEach(function(b){if(!b.hasAttribute('type'))b.type='button';});}
+  function enhance(){
+    var main=document.querySelector('.wrap')||document.body;
+    if(!main.id)main.id='main-content';
+    main.setAttribute('role','main');
+    if(!document.querySelector('.dads-skip')){
+      var skip=document.createElement('a');skip.className='dads-skip';skip.href='#'+main.id;skip.textContent='本文へ移動';
+      document.body.insertBefore(skip,document.body.firstChild);
+    }
+    var h1=document.querySelector('h1');
+    if(h1){if(!h1.id)h1.id='page-title';main.setAttribute('aria-labelledby',h1.id);}
+
+    var modes=document.getElementById('modes');
+    if(modes){
+      modes.setAttribute('role','tablist');modes.setAttribute('aria-label','学習モード');
+      all('button',modes).forEach(function(b,i){
+        b.setAttribute('role','tab');b.setAttribute('aria-controls','stage');
+        var on=b.classList.contains('on');b.setAttribute('aria-selected',on?'true':'false');b.tabIndex=on?0:-1;
+      });
+    }
+    var chips=document.getElementById('chips');
+    if(chips){chips.setAttribute('role','group');chips.setAttribute('aria-label','出題範囲');
+      all('button',chips).forEach(function(b){b.setAttribute('aria-pressed',b.classList.contains('on')?'true':'false');});}
+    var tools=document.getElementById('tools');
+    if(tools){tools.setAttribute('role','group');tools.setAttribute('aria-label','表示と復習の設定');
+      all('button.on',tools).forEach(function(b){b.setAttribute('aria-pressed','true');});}
+    var hud=document.getElementById('hud');if(hud){hud.setAttribute('role','status');hud.setAttribute('aria-live','polite');}
+    var stage=document.getElementById('stage');if(stage){stage.setAttribute('role','region');stage.setAttribute('aria-label','問題と解答');}
+    var nav=document.getElementById('nav');if(nav){nav.setAttribute('aria-label','問題の移動');}
+    var track=document.getElementById('track');
+    if(track){
+      var bar=track.querySelector('i'),pct=bar?parseFloat(bar.style.width)||0:0;
+      track.setAttribute('role','progressbar');track.setAttribute('aria-label','学習の進捗');
+      track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax','100');track.setAttribute('aria-valuenow',String(Math.round(pct)));
+    }
+    all('.choices').forEach(function(c){c.setAttribute('role','group');c.setAttribute('aria-label','解答の選択肢');});
+    all('.ch').forEach(function(b){
+      b.setAttribute('aria-pressed',b.classList.contains('pick')?'true':'false');
+      if(b.classList.contains('correct'))b.setAttribute('aria-label','正解: '+b.textContent.trim());
+      if(b.classList.contains('miss'))b.setAttribute('aria-label','選択した不正解: '+b.textContent.trim());
+    });
+    all('details.note').forEach(function(d){var s=d.querySelector('summary');if(s)s.setAttribute('aria-label',(s.textContent||'要点ノート')+'を開閉');});
+    setButtonTypes(document);
+  }
+  var queued=false;
+  function schedule(){if(queued)return;queued=true;requestAnimationFrame(function(){queued=false;enhance();});}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){enhance();new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class','style','open']});});
+  else{enhance();new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class','style','open']});}
+})();
+</script>
+<!-- DADS-A11Y:END -->
+</body></html>
